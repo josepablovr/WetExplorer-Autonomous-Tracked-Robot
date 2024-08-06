@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+  <xacro:include filename="$(find maxxii)/urdf/maxii.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/front_wheel.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/rear_wheel.xacro"/>
+
+  <!-- Accessories -->
+  <xacro:include filename="$(find maxxii)/urdf/accessories/gps.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/accessories/mag.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/accessories/laser.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/accessories/intel_realsense.xacro"/>
+  <xacro:include filename="$(find maxxii)/urdf/accessories/velodyne_vlp16.xacro"/>
+
+
+
+  <xacro:property name="position_left" value="0.305" />
+  <xacro:property name="position_right" value="-0.315" />
+
+  <xacro:maxii/>
+  <xacro:front_wheel left_right="left" radius="0.15" length="0.13" position="${position_left}"/>
+  <xacro:front_wheel left_right="right" radius="0.15" length="0.13" position="${position_right}"/>
+  <xacro:rear_wheel left_right="left" radius="0.12" length="0.13" position="${position_left}"/>
+  <xacro:rear_wheel left_right="right" radius="0.12" length="0.13" position="${position_right}"/>
+  <xacro:robot_gps x="0.05" y="0" z="0.1875" gps_size="0.1"/>
+  <xacro:robot_mag x="0" y="0.0" z="0.1" mag_size="0.1"/>
+
+  <!-- <xacro:robot_laser x="0.0" y="0.0" z="0.245" laser_size="0.1"/> -->
+  <xacro:intel_realsense x="0.1" y="0.0" z="0.5"/>
+  <xacro:velodyne_vlp16/>
+
+  <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/</robotNamespace>
+      </plugin>
+  </gazebo>
+
+
+</robot>

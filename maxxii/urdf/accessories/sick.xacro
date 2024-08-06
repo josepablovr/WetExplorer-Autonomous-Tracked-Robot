@@ -1,0 +1,32 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find lms1xx)/urdf/sick_lms1xx.urdf.xacro" />
+
+  <xacro:macro name="sick_lms1xx_mount" params="prefix">
+
+    <link name="${prefix}_laser_mount">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${-M_PI/2}" />
+        <geometry>
+          <!-- Origin of this mesh is the base of the bracket. -->
+          <mesh filename="package://husky_description/meshes/accessories/lms1xx_mount.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 .0585" rpy="0 0 0" />
+        <geometry>
+          <box size=".1 .108 .117" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}_laser_joint" type="fixed">
+      <!-- This offset is from the base of the bracket to the LIDAR's focal point. -->
+      <origin xyz="0.0352 0 0.0566" rpy="${M_PI} 0 0" />
+      <parent link="${prefix}_laser_mount" />
+      <child link="${prefix}_laser" />
+    </joint>
+
+  </xacro:macro>
+
+</robot>
