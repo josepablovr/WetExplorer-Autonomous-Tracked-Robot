@@ -1,0 +1,9 @@
+<launch>
+  <!-- Load the robot description parameter from the xacro file -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find maxxii)/urdf/robot.xacro" />
+
+  <!-- Launch RViz -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find maxxii)/rviz/default.rviz" required="true" /> -->
+  <!-- Launch RViz with default configuration -->
+  <node name="rviz" pkg="rviz" type="rviz" args="" required="true" />
+</launch>

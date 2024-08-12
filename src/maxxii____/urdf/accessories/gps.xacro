@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_gps">
+
+    <xacro:macro name='default_inertia' params='mass x:=0 y:=0 z:=0'>
+        <inertial>
+            <origin xyz='${x} ${y} ${z}'/>
+            <mass value='${mass}'/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="robot_gps" params="x y z gps_size">
+
+        <gazebo reference="gps_link">
+          <material>Gazebo/Blue</material>
+       </gazebo>
+
+        <link name="gps_link">
+            <visual>
+                <geometry>
+                    <box size="${gps_size/2} ${gps_size/2} ${gps_size/4}"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <material name="blue">
+                    <color rgba="0 0 1.0 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${gps_size/2} ${gps_size/2} ${gps_size/4}"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+            </collision>
+            <xacro:default_inertia mass="0.01"/>
+        </link>
+
+        <joint name="gps_joint" type="fixed">
+            <parent link="base_link"/>
+            <child link="gps_link"/>
+            <origin rpy="0 0 0" xyz="${x} ${y} ${z}"/>
+            <!--        <origin rpy="0 0 0" xyz="1.05 0 3"/>-->
+        </joint>
+
+        <gazebo>
+            <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
+               <updateRate>40</updateRate>
+               <robotNamespace>/</robotNamespace>
+               <bodyName>gps_link</bodyName>
+               <topicName>robot/fix</topicName>
+               <velocityTopicName>robot/vel</velocityTopicName>
+               <referenceLatitude>40.0599536</referenceLatitude>
+               <referenceLongitude>18.3458069</referenceLongitude>
+               <referenceHeading>0</referenceHeading>
+               <referenceAltitude>0</referenceAltitude>
+               <drift>0.0001 0.0001 0.0001</drift>
+               <status>1</status>
+               <service>1</service>
+            </plugin>
+        </gazebo>
+    </xacro:macro>
+</robot>

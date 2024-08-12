@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load robot description parameter -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find maxxii)/urdf/robot.xacro" />
+
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.4"/>
+  <arg name="yaw" default="0.0"/>
+
+  <!-- Optionally disable teleop control -->
+  <arg name="joystick" default="true" />
+
+  <group ns="$(arg robot_namespace)">
+
+    <!-- <group if="$(arg multimaster)">
+      <include file="$(find husky_description)/launch/description.launch" >
+        <arg name="robot_namespace" value="$(arg robot_namespace)"/>
+      </include>
+
+      <include file="$(find multimaster_launch)/launch/multimaster_gazebo_robot.launch">
+        <arg name="gazebo_interface" value="$(find husky_control)/config/gazebo_interface.yaml" />
+        <arg name="robot_namespace" value="$(arg robot_namespace)"/>
+      </include> -->
+
+      <!-- For multimaster bringup, need to load the controller config -->
+      <!-- <rosparam command="load" file="$(find husky_control)/config/control.yaml" />
+    </group> -->
+
+    <!-- For single master bringup, run robot control on the gazebo master -->
+    <!-- Note that husky_description/description.launch is already included in husky_control/control.launch. -->
+    <!-- <group unless="$(arg multimaster)"> -->
+    
+    <include file="$(find husky_control)/launch/teleop.launch">
+        <arg name="joystick" value="$(arg joystick)" />
+    </include>
+    <!-- </group> -->
+
+ 
+
+    <!-- Spawn robot in gazebo -->
+    <node name="spawn_maxxii_model" pkg="gazebo_ros" type="spawn_model"
+        args="-x 0
+              -y 0
+              -z 0.5
+              -Y 1
+              -unpause
+              -urdf
+              -param robot_description
+              -model robot
+              -robot_namespace $(arg robot_namespace)" />
+
+  </group>
+  
+
+  <!-- Load controller configuration -->
+  <rosparam command="load" file="$(find maxxii)/config/controllers.yaml" />
+
+  <!-- Spawn controllers -->
+  <node name="base_controller_spawner" pkg="controller_manager" type="spawner"
+        args="husky_joint_publisher husky_velocity_controller"/>
+  <rosparam param="wheel_radius_multiplier" ns="husky_velocity_controller" subst_value="True">
+        $(optenv HUSKY_WHEEL_MULTIPLIER 1.0)
+  </rosparam>
+  
+  
+  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen">
+    <param name="link_name" value="base_link" />
+  </node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find husky_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="husky_velocity_controller/cmd_vel"/>
+  </node>
+  <!-- Optionally, you can start other controllers here -->
+  <!-- <node name="velocity_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen">
+    <param name="controllers" value="velocity_controller" />
+  </node> -->
+</launch>

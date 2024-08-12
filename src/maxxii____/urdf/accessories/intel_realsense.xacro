@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="intel_realsense" params=" x y z">
+
+      <!--
+        The gazebo plugin aligns the depth data with the Z axis, with X=left and Y=up
+        ROS expects the depth data along the X axis, with Y=left and Z=up
+        This link only exists to give the gazebo plugin the correctly-oriented frame
+      -->
+      <gazebo reference="realsense">
+          <material>Gazebo/White</material>
+      </gazebo>
+
+      <link name="realsense">
+        <visual>
+            <!--
+            the model's origin is in the middle & it's rotated to lie in
+            the optical standard with X left, Y up, and Z forward
+            -->
+            <origin xyz="0.0115 0 0.0100" rpy="1.570796 0 1.570796" />
+            <geometry>
+            <!-- Origin of this mesh is the base of the bracket. -->
+              <mesh filename="package://realsense2_description/meshes/d435.dae" />
+            </geometry>
+            <material name="white">
+              <color rgba="1 1 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+            <!-- Origin of this mesh is the base of the bracket. -->
+              <mesh filename="package://realsense2_description/meshes/d435.dae" />
+            </geometry>
+            <origin xyz="0.0115 0 0.0100" rpy="1.570796 0 1.570796" />
+        </collision>
+      </link>
+
+      <joint name="realsense_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="realsense"/>
+        <origin xyz="${x} ${y} ${z}" rpy="0 0 1.57"/>
+      </joint>
+
+      <gazebo reference="realsense">
+        <turnGravityOff>true</turnGravityOff>
+        <sensor type="depth" name="realsense_depth">
+          <update_rate>30</update_rate>
+          <camera>
+            <!-- 75x65 degree FOV for the depth sensor -->
+            <horizontal_fov>1.5184351666666667</horizontal_fov>
+            <vertical_fov>1.0122901111111111</vertical_fov>
+
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <!-- TODO: check what format the Realsense hardware delivers and set this to match! -->
+              <format>RGB_INT8</format>
+            </image>
+            <clip>
+              <!-- give the color sensor a maximum range of 50m so that the simulation renders nicely -->
+              <near>0.01</near>
+              <far>50.0</far>
+            </clip>
+          </camera>
+          <plugin name="kinect_controller" filename="libgazebo_ros_openni_kinect.so">
+            <baseline>0.2</baseline>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>30</updateRate>
+            <cameraName>robot/camera</cameraName>
+            <imageTopicName>color/image_raw</imageTopicName>
+            <cameraInfoTopicName>color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>depth/image_rect_raw</depthImageTopicName>
+            <depthImageInfoTopicName>depth/camera_info</depthImageInfoTopicName>
+            <pointCloudTopicName>depth/color/points</pointCloudTopicName>
+            <frameName>realsense</frameName>
+            <pointCloudCutoff>0.105</pointCloudCutoff>
+            <pointCloudCutoffMax>8.0</pointCloudCutoffMax>
+            <distortionK1>0.00000001</distortionK1>
+            <distortionK2>0.00000001</distortionK2>
+            <distortionK3>0.00000001</distortionK3>
+            <distortionT1>0.00000001</distortionT1>
+            <distortionT2>0.00000001</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </sensor>
+      </gazebo>
+
+
+  </xacro:macro>
+</robot>

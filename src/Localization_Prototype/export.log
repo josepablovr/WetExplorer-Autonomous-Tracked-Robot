@@ -1,0 +1,269 @@
+2024-06-27 15:02:55,177 INFO  Logger.cs: 70 - 
+--------------------------------------------------------------------------------
+2024-06-27 15:02:55,236 INFO  Logger.cs: 71 - Logging commencing for SW2URDF exporter
+2024-06-27 15:02:55,239 INFO  Logger.cs: 73 - Commit version 1.6.0-4-g7f85cfe
+2024-06-27 15:02:55,240 INFO  Logger.cs: 74 - Build version 1.6.7995.38578
+2024-06-27 15:02:55,261 INFO  SwAddin.cs: 192 - Attempting to connect to SW
+2024-06-27 15:02:55,262 INFO  SwAddin.cs: 197 - Setting up callbacks
+2024-06-27 15:02:55,264 INFO  SwAddin.cs: 201 - Setting up command manager
+2024-06-27 15:02:55,266 INFO  SwAddin.cs: 204 - Adding command manager
+2024-06-27 15:02:55,273 INFO  SwAddin.cs: 263 - Adding Assembly export to file menu
+2024-06-27 15:02:55,275 INFO  SwAddin.cs: 272 - Adding Part export to file menu
+2024-06-27 15:02:55,275 INFO  SwAddin.cs: 210 - Adding event handlers
+2024-06-27 15:02:55,365 INFO  SwAddin.cs: 217 - Connecting plugin to SolidWorks
+2024-06-27 15:05:18,886 INFO  SwAddin.cs: 294 - Assembly export called for file Localization_Prototype
+2024-06-27 15:05:18,892 INFO  SwAddin.cs: 299 - Save is required
+2024-06-27 15:05:18,894 INFO  SwAddin.cs: 313 - Saving assembly
+2024-06-27 15:05:22,102 INFO  SwAddin.cs: 316 - Opening property manager
+2024-06-27 15:05:22,158 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Localization_Prototype
+2024-06-27 15:05:22,171 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:05:22,172 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in Localization_Prototype
+2024-06-27 15:05:22,173 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:05:22,176 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:05:22,179 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer_Mount-1
+2024-06-27 15:05:22,180 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:05:22,183 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer_Mount-1
+2024-06-27 15:05:22,184 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from IMU_mount-1
+2024-06-27 15:05:22,185 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:05:22,186 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in IMU_mount-1
+2024-06-27 15:05:22,187 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,188 INFO  ExportHelperExtension.cs: 1136 - Found 43 in GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,189 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,190 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from MOT0110_0_3D-1
+2024-06-27 15:05:22,191 INFO  ExportHelperExtension.cs: 1136 - Found 23 in MOT0110_0_3D-1
+2024-06-27 15:05:22,192 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in MOT0110_0_3D-1
+2024-06-27 15:05:22,193 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer-1
+2024-06-27 15:05:22,194 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:05:22,195 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer-1
+2024-06-27 15:05:22,196 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Battery_Assembly-1
+2024-06-27 15:05:22,197 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:05:22,198 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Battery_Assembly-1
+2024-06-27 15:05:22,199 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Localization_Prototype
+2024-06-27 15:05:22,200 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:05:22,202 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Localization_Prototype
+2024-06-27 15:05:22,203 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:05:22,204 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:05:22,205 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer_Mount-1
+2024-06-27 15:05:22,206 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:05:22,208 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer_Mount-1
+2024-06-27 15:05:22,209 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from IMU_mount-1
+2024-06-27 15:05:22,210 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:05:22,211 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in IMU_mount-1
+2024-06-27 15:05:22,213 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,214 INFO  ExportHelperExtension.cs: 1136 - Found 43 in GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,216 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in GPS_Assembly - Preliminary-1
+2024-06-27 15:05:22,216 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from MOT0110_0_3D-1
+2024-06-27 15:05:22,217 INFO  ExportHelperExtension.cs: 1136 - Found 23 in MOT0110_0_3D-1
+2024-06-27 15:05:22,218 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in MOT0110_0_3D-1
+2024-06-27 15:05:22,220 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer-1
+2024-06-27 15:05:22,221 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:05:22,221 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer-1
+2024-06-27 15:05:22,222 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Battery_Assembly-1
+2024-06-27 15:05:22,223 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:05:22,224 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Battery_Assembly-1
+2024-06-27 15:05:22,776 INFO  SwAddin.cs: 339 - Loading config tree
+2024-06-27 15:05:22,785 INFO  ExportPropertyManagerExtension.cs: 520 - Starting new configuration
+2024-06-27 15:05:22,793 INFO  SwAddin.cs: 344 - Showing property manager
+2024-06-27 15:05:30,621 INFO  ExportPropertyManager.cs: 1018 - OnComboboxSelectionChanged called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:05:39,008 INFO  ExportPropertyManager.cs: 1136 - OnNumberBoxTrackingCompleted called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:05:45,448 INFO  ExportPropertyManager.cs: 416 - Configuration canceled
+2024-06-27 15:05:45,563 INFO  ExportPropertyManager.cs: 1142 - AfterClose called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:21:24,107 INFO  SwAddin.cs: 294 - Assembly export called for file Localization_Prototype
+2024-06-27 15:21:26,542 INFO  SwAddin.cs: 313 - Saving assembly
+2024-06-27 15:21:30,266 INFO  SwAddin.cs: 316 - Opening property manager
+2024-06-27 15:21:30,267 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Localization_Prototype
+2024-06-27 15:21:30,268 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:21:30,270 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in Localization_Prototype
+2024-06-27 15:21:30,271 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:21:30,272 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:21:30,272 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer_Mount-1
+2024-06-27 15:21:30,273 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:21:30,274 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer_Mount-1
+2024-06-27 15:21:30,275 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from IMU_mount-1
+2024-06-27 15:21:30,276 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:21:30,277 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in IMU_mount-1
+2024-06-27 15:21:30,277 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,278 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,279 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,280 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from MOT0110_0_3D-1
+2024-06-27 15:21:30,281 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:21:30,282 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in MOT0110_0_3D-1
+2024-06-27 15:21:30,283 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer-1
+2024-06-27 15:21:30,284 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:21:30,284 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer-1
+2024-06-27 15:21:30,285 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Battery_Assembly-1
+2024-06-27 15:21:30,286 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:21:30,287 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Battery_Assembly-1
+2024-06-27 15:21:30,287 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Localization_Prototype
+2024-06-27 15:21:30,288 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:21:30,289 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Localization_Prototype
+2024-06-27 15:21:30,290 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:21:30,292 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:21:30,293 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer_Mount-1
+2024-06-27 15:21:30,294 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:21:30,296 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer_Mount-1
+2024-06-27 15:21:30,297 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from IMU_mount-1
+2024-06-27 15:21:30,298 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:21:30,299 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in IMU_mount-1
+2024-06-27 15:21:30,300 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,301 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,303 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in GPS_Assembly - Preliminary-1
+2024-06-27 15:21:30,304 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from MOT0110_0_3D-1
+2024-06-27 15:21:30,305 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:21:30,311 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in MOT0110_0_3D-1
+2024-06-27 15:21:30,312 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer-1
+2024-06-27 15:21:30,348 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:21:30,350 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer-1
+2024-06-27 15:21:30,351 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Battery_Assembly-1
+2024-06-27 15:21:30,352 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:21:30,353 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Battery_Assembly-1
+2024-06-27 15:21:30,659 INFO  SwAddin.cs: 339 - Loading config tree
+2024-06-27 15:21:30,660 INFO  ExportPropertyManagerExtension.cs: 520 - Starting new configuration
+2024-06-27 15:21:30,666 INFO  SwAddin.cs: 344 - Showing property manager
+2024-06-27 15:21:35,336 INFO  ExportPropertyManager.cs: 1136 - OnNumberBoxTrackingCompleted called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:21:35,575 INFO  ExportPropertyManager.cs: 1136 - OnNumberBoxTrackingCompleted called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:21:43,854 INFO  ExportPropertyManager.cs: 1018 - OnComboboxSelectionChanged called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:21:54,445 INFO  ExportPropertyManager.cs: 1018 - OnComboboxSelectionChanged called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:22:16,696 INFO  ExportPropertyManager.cs: 416 - Configuration canceled
+2024-06-27 15:22:16,830 INFO  ExportPropertyManager.cs: 1142 - AfterClose called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:22:20,844 INFO  SwAddin.cs: 294 - Assembly export called for file Localization_Prototype
+2024-06-27 15:22:22,391 INFO  SwAddin.cs: 313 - Saving assembly
+2024-06-27 15:22:26,204 INFO  SwAddin.cs: 316 - Opening property manager
+2024-06-27 15:22:26,205 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Localization_Prototype
+2024-06-27 15:22:26,206 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:22:26,207 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in Localization_Prototype
+2024-06-27 15:22:26,208 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:22:26,209 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:22:26,209 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer_Mount-1
+2024-06-27 15:22:26,210 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:22:26,211 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer_Mount-1
+2024-06-27 15:22:26,212 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from IMU_mount-1
+2024-06-27 15:22:26,213 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:22:26,214 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in IMU_mount-1
+2024-06-27 15:22:26,214 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,215 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,217 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,217 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from MOT0110_0_3D-1
+2024-06-27 15:22:26,219 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:22:26,220 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in MOT0110_0_3D-1
+2024-06-27 15:22:26,220 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer-1
+2024-06-27 15:22:26,221 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:22:26,223 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer-1
+2024-06-27 15:22:26,224 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Battery_Assembly-1
+2024-06-27 15:22:26,225 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:22:26,225 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Battery_Assembly-1
+2024-06-27 15:22:26,226 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Localization_Prototype
+2024-06-27 15:22:26,227 INFO  ExportHelperExtension.cs: 1136 - Found 44 in Localization_Prototype
+2024-06-27 15:22:26,228 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Localization_Prototype
+2024-06-27 15:22:26,228 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:22:26,229 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:22:26,230 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer_Mount-1
+2024-06-27 15:22:26,231 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:22:26,232 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer_Mount-1
+2024-06-27 15:22:26,232 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from IMU_mount-1
+2024-06-27 15:22:26,233 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:22:26,234 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in IMU_mount-1
+2024-06-27 15:22:26,235 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,236 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,237 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:26,238 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from MOT0110_0_3D-1
+2024-06-27 15:22:26,238 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:22:26,239 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in MOT0110_0_3D-1
+2024-06-27 15:22:26,240 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer-1
+2024-06-27 15:22:26,241 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:22:26,242 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer-1
+2024-06-27 15:22:26,242 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Battery_Assembly-1
+2024-06-27 15:22:26,243 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:22:26,244 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Battery_Assembly-1
+2024-06-27 15:22:26,347 INFO  SwAddin.cs: 339 - Loading config tree
+2024-06-27 15:22:26,348 INFO  ExportPropertyManagerExtension.cs: 520 - Starting new configuration
+2024-06-27 15:22:26,352 INFO  SwAddin.cs: 344 - Showing property manager
+2024-06-27 15:22:30,786 INFO  ExportPropertyManager.cs: 1018 - OnComboboxSelectionChanged called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:22:40,513 INFO  ExportPropertyManager.cs: 422 - Configuration saved
+2024-06-27 15:22:41,427 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Localization_Prototype
+2024-06-27 15:22:41,437 INFO  ExportHelperExtension.cs: 1136 - Found 45 in Localization_Prototype
+2024-06-27 15:22:41,438 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in Localization_Prototype
+2024-06-27 15:22:41,439 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:22:41,439 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:22:41,440 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer_Mount-1
+2024-06-27 15:22:41,441 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:22:41,442 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer_Mount-1
+2024-06-27 15:22:41,442 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from IMU_mount-1
+2024-06-27 15:22:41,443 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:22:41,444 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in IMU_mount-1
+2024-06-27 15:22:41,445 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,446 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,447 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,448 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from MOT0110_0_3D-1
+2024-06-27 15:22:41,448 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:22:41,449 INFO  ExportHelperExtension.cs: 1145 - Found 1 features of type [CoordSys] in MOT0110_0_3D-1
+2024-06-27 15:22:41,450 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Computer-1
+2024-06-27 15:22:41,451 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:22:41,452 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Computer-1
+2024-06-27 15:22:41,452 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [CoordSys] from Battery_Assembly-1
+2024-06-27 15:22:41,453 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:22:41,454 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [CoordSys] in Battery_Assembly-1
+2024-06-27 15:22:41,454 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Localization_Prototype
+2024-06-27 15:22:41,455 INFO  ExportHelperExtension.cs: 1136 - Found 45 in Localization_Prototype
+2024-06-27 15:22:41,456 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Localization_Prototype
+2024-06-27 15:22:41,457 INFO  ExportHelperExtension.cs: 1148 - Proceeding through assembly components
+2024-06-27 15:22:41,457 INFO  ExportHelperExtension.cs: 1160 - 6 components to check
+2024-06-27 15:22:41,458 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer_Mount-1
+2024-06-27 15:22:41,458 INFO  ExportHelperExtension.cs: 1136 - Found 33 in Computer_Mount-1
+2024-06-27 15:22:41,459 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer_Mount-1
+2024-06-27 15:22:41,460 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from IMU_mount-1
+2024-06-27 15:22:41,461 INFO  ExportHelperExtension.cs: 1136 - Found 29 in IMU_mount-1
+2024-06-27 15:22:41,461 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in IMU_mount-1
+2024-06-27 15:22:41,462 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,463 INFO  ExportHelperExtension.cs: 1136 - Found 50 in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,464 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in GPS_Assembly - Preliminary-1
+2024-06-27 15:22:41,464 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from MOT0110_0_3D-1
+2024-06-27 15:22:41,465 INFO  ExportHelperExtension.cs: 1136 - Found 29 in MOT0110_0_3D-1
+2024-06-27 15:22:41,466 INFO  ExportHelperExtension.cs: 1145 - Found 2 features of type [RefAxis] in MOT0110_0_3D-1
+2024-06-27 15:22:41,467 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Computer-1
+2024-06-27 15:22:41,467 INFO  ExportHelperExtension.cs: 1136 - Found 36 in Computer-1
+2024-06-27 15:22:41,468 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Computer-1
+2024-06-27 15:22:41,469 INFO  ExportHelperExtension.cs: 1125 - Retrieving features of type [RefAxis] from Battery_Assembly-1
+2024-06-27 15:22:41,470 INFO  ExportHelperExtension.cs: 1136 - Found 26 in Battery_Assembly-1
+2024-06-27 15:22:41,470 INFO  ExportHelperExtension.cs: 1145 - Found 0 features of type [RefAxis] in Battery_Assembly-1
+2024-06-27 15:22:41,606 INFO  ExportPropertyManager.cs: 1142 - AfterClose called. This method no longer throws an Exception. It just silently does nothing. Ok, except for this logging message
+2024-06-27 15:23:54,743 INFO  AssemblyExportForm.cs: 253 - Completing URDF export
+2024-06-27 15:23:54,764 INFO  ConfigurationSerialization.cs: 276 - URDF Configuration found
+<Link z:Id="i1" xmlns="http://schemas.datacontract.org/2004/07/SW2URDF" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/"><Attributes><Attribute z:Id="i2"><AttributeType>name</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema">base_link</Value></Attribute></Attributes><ChildElements><URDFElement z:Id="i3" i:type="Inertial"><Attributes/><ChildElements><URDFElement z:Id="i4" i:type="Origin"><Attributes><Attribute z:Id="i5"><AttributeType>xyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute><Attribute z:Id="i6"><AttributeType>rpy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>origin</ElementName><required>false</required><RPYAttribute z:Ref="i6"/><XYZAttribute z:Ref="i5"/><isCustomized>false</isCustomized></URDFElement><URDFElement z:Id="i7" i:type="Mass"><Attributes><Attribute z:Id="i8"><AttributeType>value</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute></Attributes><ChildElements/><ElementName>mass</ElementName><required>false</required><ValueAttribute z:Ref="i8"/></URDFElement><URDFElement z:Id="i9" i:type="Inertia"><Attributes><Attribute z:Id="i10"><AttributeType>ixx</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute><Attribute z:Id="i11"><AttributeType>ixy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute><Attribute z:Id="i12"><AttributeType>ixz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute><Attribute z:Id="i13"><AttributeType>iyy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute><Attribute z:Id="i14"><AttributeType>iyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute><Attribute z:Id="i15"><AttributeType>izz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:double" xmlns:a="http://www.w3.org/2001/XMLSchema">0</Value></Attribute></Attributes><ChildElements/><ElementName>inertia</ElementName><required>false</required><IxxAttribute z:Ref="i10"/><IxyAttribute z:Ref="i11"/><IxzAttribute z:Ref="i12"/><IyyAttribute z:Ref="i13"/><IyzAttribute z:Ref="i14"/><IzzAttribute z:Ref="i15"/></URDFElement></ChildElements><ElementName>inertial</ElementName><required>false</required><Inertia z:Ref="i9"/><Mass z:Ref="i7"/><Origin z:Ref="i4"/></URDFElement><URDFElement z:Id="i16" i:type="Visual"><Attributes/><ChildElements><URDFElement z:Id="i17" i:type="Origin"><Attributes><Attribute z:Id="i18"><AttributeType>xyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute><Attribute z:Id="i19"><AttributeType>rpy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>origin</ElementName><required>false</required><RPYAttribute z:Ref="i19"/><XYZAttribute z:Ref="i18"/><isCustomized>false</isCustomized></URDFElement><URDFElement z:Id="i20" i:type="Geometry"><Attributes/><ChildElements><URDFElement z:Id="i21" i:type="Mesh"><Attributes><Attribute z:Id="i22"><AttributeType>filename</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>mesh</ElementName><required>false</required><FilenameAttribute z:Ref="i22"/></URDFElement></ChildElements><ElementName>geometry</ElementName><required>true</required><Mesh z:Ref="i21"/></URDFElement><URDFElement z:Id="i23" i:type="Material"><Attributes><Attribute z:Id="i24"><AttributeType>name</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema"/></Attribute></Attributes><ChildElements><URDFElement z:Id="i25" i:type="Color"><Attributes><Attribute z:Id="i26"><AttributeType>rgba</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>1</a:double><a:double>1</a:double><a:double>1</a:double><a:double>1</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>color</ElementName><required>false</required><RGBAAttribute z:Ref="i26"/></URDFElement><URDFElement z:Id="i27" i:type="Texture"><Attributes><Attribute z:Id="i28"><AttributeType>filename</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>texture</ElementName><required>false</required><FilenameAttribute z:Ref="i28"/><wFilename/></URDFElement></ChildElements><ElementName>material</ElementName><required>false</required><Color z:Ref="i25"/><NameAttribute z:Ref="i24"/><Texture z:Ref="i27"/></URDFElement></ChildElements><ElementName>visual</ElementName><required>false</required><Geometry z:Ref="i20"/><Material z:Ref="i23"/><Origin z:Ref="i17"/></URDFElement><URDFElement z:Id="i29" i:type="Collision"><Attributes/><ChildElements><URDFElement z:Id="i30" i:type="Origin"><Attributes><Attribute z:Id="i31"><AttributeType>xyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute><Attribute z:Id="i32"><AttributeType>rpy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>origin</ElementName><required>false</required><RPYAttribute z:Ref="i32"/><XYZAttribute z:Ref="i31"/><isCustomized>false</isCustomized></URDFElement><URDFElement z:Id="i33" i:type="Geometry"><Attributes/><ChildElements><URDFElement z:Id="i34" i:type="Mesh"><Attributes><Attribute z:Id="i35"><AttributeType>filename</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>mesh</ElementName><required>false</required><FilenameAttribute z:Ref="i35"/></URDFElement></ChildElements><ElementName>geometry</ElementName><required>true</required><Mesh z:Ref="i34"/></URDFElement></ChildElements><ElementName>collision</ElementName><required>false</required><Geometry z:Ref="i33"/><Origin z:Ref="i30"/></URDFElement><URDFElement z:Id="i36" i:type="Joint"><Attributes><Attribute z:Id="i37"><AttributeType>name</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema"/></Attribute><Attribute z:Id="i38"><AttributeType>type</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema"/></Attribute></Attributes><ChildElements><URDFElement z:Id="i39" i:type="Origin"><Attributes><Attribute z:Id="i40"><AttributeType>xyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute><Attribute z:Id="i41"><AttributeType>rpy</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>origin</ElementName><required>false</required><RPYAttribute z:Ref="i41"/><XYZAttribute z:Ref="i40"/><isCustomized>false</isCustomized></URDFElement><URDFElement z:Id="i42" i:type="ParentLink"><Attributes><Attribute z:Id="i43"><AttributeType>link</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema"/></Attribute></Attributes><ChildElements/><ElementName>parent</ElementName><required>true</required><NameAttribute z:Ref="i43"/></URDFElement><URDFElement z:Id="i44" i:type="ChildLink"><Attributes><Attribute z:Id="i45"><AttributeType>link</AttributeType><IsRequired>true</IsRequired><Value i:type="a:string" xmlns:a="http://www.w3.org/2001/XMLSchema"/></Attribute></Attributes><ChildElements/><ElementName>child</ElementName><required>true</required><NameAttribute z:Ref="i45"/></URDFElement><URDFElement z:Id="i46" i:type="Axis"><Attributes><Attribute z:Id="i47"><AttributeType>xyz</AttributeType><IsRequired>true</IsRequired><Value i:type="a:ArrayOfdouble" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:double>0</a:double><a:double>0</a:double><a:double>0</a:double></Value></Attribute></Attributes><ChildElements/><ElementName>axis</ElementName><required>false</required><XYZAttribute z:Ref="i47"/></URDFElement><URDFElement z:Id="i48" i:type="Limit"><Attributes><Attribute z:Id="i49"><AttributeType>lower</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i50"><AttributeType>upper</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i51"><AttributeType>effort</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i52"><AttributeType>velocity</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>limit</ElementName><required>false</required><EffortAttribute z:Ref="i51"/><LowerAttribute z:Ref="i49"/><UpperAttribute z:Ref="i50"/><VelocityAttribute z:Ref="i52"/></URDFElement><URDFElement z:Id="i53" i:type="Calibration"><Attributes><Attribute z:Id="i54"><AttributeType>rising</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i55"><AttributeType>falling</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>calibration</ElementName><required>false</required><FallingAttribute z:Ref="i55"/><RisingAttribute z:Ref="i54"/></URDFElement><URDFElement z:Id="i56" i:type="Dynamics"><Attributes><Attribute z:Id="i57"><AttributeType>damping</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i58"><AttributeType>friction</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>dynamics</ElementName><required>false</required><DampingAttribute z:Ref="i57"/><FrictionAttribute z:Ref="i58"/></URDFElement><URDFElement z:Id="i59" i:type="SafetyController"><Attributes><Attribute z:Id="i60"><AttributeType>soft_upper_limit</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i61"><AttributeType>soft_lower_limit</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i62"><AttributeType>k_position</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i63"><AttributeType>k_velocity</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>safety_controller</ElementName><required>false</required><KPositionAttribute z:Ref="i62"/><KVelocityAttribute z:Ref="i63"/><SoftLowerAttribute z:Ref="i61"/><SoftUpperAttribute z:Ref="i60"/></URDFElement><URDFElement z:Id="i64" i:type="Mimic"><Attributes><Attribute z:Id="i65"><AttributeType>joint</AttributeType><IsRequired>true</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i66"><AttributeType>multiplier</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute><Attribute z:Id="i67"><AttributeType>offset</AttributeType><IsRequired>false</IsRequired><Value i:nil="true"/></Attribute></Attributes><ChildElements/><ElementName>mimic</ElementName><required>false</required><JointNameAttribute z:Ref="i65"/><MultiplierAttribute z:Ref="i66"/><OffsetAttribute z:Ref="i67"/></URDFElement></ChildElements><ElementName>joint</ElementName><required>false</required><Axis z:Ref="i46"/><AxisName/><Calibration z:Ref="i53"/><Child z:Ref="i44"/><CoordinateSystemName>COM_Coordinnate</CoordinateSystemName><Dynamics z:Ref="i56"/><Limit z:Ref="i48"/><Mimic z:Ref="i64"/><NameAttribute z:Ref="i37"/><Origin z:Ref="i39"/><Parent z:Ref="i42"/><Safety z:Ref="i59"/><TypeAttribute z:Ref="i38"/></URDFElement></ChildElements><ElementName>link</ElementName><required>true</required><Children/><Collision z:Ref="i29"/><Inertial z:Ref="i3"/><Joint z:Ref="i36"/><NameAttribute z:Ref="i2"/><Parent i:nil="true"/><STLQualityFine>false</STLQualityFine><SWComponentPIDs xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/><SWMainComponentPID i:nil="true"/><Visual z:Ref="i16"/><isFixedFrame>false</isFixedFrame><isIncomplete>false</isIncomplete></Link>
+2024-06-27 15:24:20,190 INFO  AssemblyExportForm.cs: 309 - Saving URDF package to C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype
+2024-06-27 15:24:20,194 INFO  ExportHelper.cs: 147 - Beginning the export process
+2024-06-27 15:24:20,196 INFO  ExportHelper.cs: 153 - Creating package directories with name Localization_Prototype and save path C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype
+2024-06-27 15:25:33,662 INFO  ExportHelper.cs: 162 - Creating CMakeLists.txt at C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\CMakeLists.txt
+2024-06-27 15:25:33,664 INFO  ExportHelper.cs: 166 - Creating joint names config at C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\config\joint_names_Localization_Prototype.yaml
+2024-06-27 15:25:33,668 INFO  ExportHelper.cs: 170 - Creating package.xml at C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\package.xml
+2024-06-27 15:25:33,670 INFO  PackageXMLWriter.cs: 21 - Creating package.xml at C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\package.xml
+2024-06-27 15:25:33,678 INFO  ExportHelper.cs: 177 - Creating RVIZ launch file in C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\launch\
+2024-06-27 15:25:33,683 INFO  ExportHelper.cs: 182 - Creating Gazebo launch file in C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\launch\
+2024-06-27 15:25:33,686 INFO  ExportHelper.cs: 187 - Saving existing STL preferences
+2024-06-27 15:25:33,687 INFO  ExportHelper.cs: 450 - Saving users preferences
+2024-06-27 15:25:33,689 INFO  ExportHelper.cs: 190 - Modifying STL preferences
+2024-06-27 15:25:33,690 INFO  ExportHelper.cs: 464 - Setting STL preferences
+2024-06-27 15:25:33,720 INFO  ExportHelper.cs: 196 - Found 0 hidden components 
+2024-06-27 15:25:33,721 INFO  ExportHelper.cs: 197 - Hiding all components
+2024-06-27 15:25:35,285 INFO  ExportHelper.cs: 204 - Beginning individual files export
+2024-06-27 15:25:35,291 INFO  ExportHelper.cs: 270 - Exporting link: base_link
+2024-06-27 15:25:35,292 INFO  ExportHelper.cs: 272 - Link base_link has 0 children
+2024-06-27 15:25:35,294 INFO  ExportHelper.cs: 317 - base_link: Exporting STL with coordinate frame COM_Coordinnate
+2024-06-27 15:25:35,295 INFO  ExportHelper.cs: 322 - base_link: Reference geometry name 
+2024-06-27 15:25:35,324 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\meshes\base_link.STL
+2024-06-27 15:25:35,493 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2024-06-27 15:25:35,503 WARN  ExportHelper.cs: 408 - Correcting the STL C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\meshes\base_link.STL failed. This STL may not be readable by ROS or other CAD programs
+System.IO.IOException: El proceso no puede obtener acceso al archivo 'C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\meshes\base_link.STL' porque está siendo utilizado en otro proceso.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   en SW2URDF.URDFExport.ExportHelper.CorrectSTLMesh(String filename) en C:\Users\Stephen Brawner\workspace\solidworks_urdf_exporter\SW2URDF\URDFExport\ExportHelper.cs:línea 408
+2024-06-27 15:25:35,514 WARN  ExportHelper.cs: 343 - There was an issue exporting the STL for base_link. It may not be readable by CAD programs that aren't SolidWorks
+2024-06-27 15:25:35,515 INFO  ExportHelper.cs: 145 - Showing all components except previously hidden components
+2024-06-27 15:26:09,357 INFO  ExportHelper.cs: 145 - Resetting STL preferences
+2024-06-27 15:26:09,359 INFO  ExportHelper.cs: 478 - Returning STL preferences to user preferences
+2024-06-27 15:26:09,360 INFO  ExportHelper.cs: 228 - Writing URDF file to C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\urdf\Localization_Prototype.urdf
+2024-06-27 15:26:09,552 INFO  CSVImportExport.cs: 32 - Writing CSV file C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\urdf\Localization_Prototype.csv
+2024-06-27 15:26:09,620 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2024-06-27 15:26:09,623 INFO  ExportHelper.cs: 234 - Copying log file
+2024-06-27 15:26:09,632 INFO  ExportHelper.cs: 439 - Copying C:\Users\Jose Pablo\sw2urdf_logs\sw2urdf.log to C:\Users\Jose Pablo\Documents\WetGuard\3D\Protype\Localization_Prototype\export.log

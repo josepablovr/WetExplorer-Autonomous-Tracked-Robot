@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+  
+  <!-- Include other Xacro files -->
+  <xacro:include filename="$(find max_light_pkg)/urdf/remastered/max_light_remastered.xacro"/>
+  <xacro:include filename="$(find max_light_pkg)/urdf/remastered/front_wheel.xacro"/>
+  <xacro:include filename="$(find max_light_pkg)/urdf/remastered/rear_wheel.xacro"/>
+
+  <xacro:include filename="$(find max_light_pkg)/urdf/remastered/mid_front_wheel.xacro"/>
+  <xacro:include filename="$(find max_light_pkg)/urdf/remastered/mid_rear_wheel.xacro"/>
+
+  <!-- Define properties -->
+  <xacro:property name="position_left" value="0.3054"/>
+  <xacro:property name="position_right" value="-0.3054"/>
+
+
+
+  <!-- Use macros and properties -->
+ 
+  <xacro:front_wheel left_right="left" radius="0.075" length="0.123" position="${position_left}"/>
+  <xacro:front_wheel left_right="right" radius="0.075" length="0.123" position="${position_right}"/>
+  <xacro:rear_wheel left_right="left" radius="0.09" length="0.123" position="${position_left}"/>
+  <xacro:rear_wheel left_right="right" radius="0.09" length="0.123" position="${position_right}"/>
+  
+  <xacro:mid_front_wheel left_right="left" radius="0.055" length="0.123" position="${position_left}"/>
+  <xacro:mid_front_wheel left_right="right" radius="0.055" length="0.123" position="${position_right}"/>
+  <xacro:mid_rear_wheel left_right="left" radius="0.055" length="0.123" position="${position_left}"/>
+  <xacro:mid_rear_wheel left_right="right" radius="0.055" length="0.123" position="${position_right}"/>
+
+  <!-- Gazebo plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+    
+
+
+  <gazebo>
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+      <!-- <robotNamespace>$(arg robot_namespace)</robotNamespace> -->
+      <updateRate>50.0</updateRate>
+      <bodyName>imu_link</bodyName>
+      <topicName>imu/data</topicName>
+      <accelDrift>0.005 0.005 0.005</accelDrift>
+      <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
+      <rateDrift>0.005 0.005 0.005 </rateDrift>
+      <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
+      <headingDrift>0.005</headingDrift>
+      <headingGaussianNoise>0.005</headingGaussianNoise>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
+      <!-- <robotNamespace>$(arg robot_namespace)</robotNamespace> -->
+      <updateRate>5</updateRate>
+      <bodyName>base_link</bodyName>
+      <frameId>base_link</frameId>
+      <topicName>navsat/fix</topicName>
+      <velocityTopicName>navsat/vel</velocityTopicName>
+      <referenceLatitude>$(optenv GAZEBO_WORLD_LAT 49.9)</referenceLatitude>
+      <referenceLongitude>$(optenv GAZEBO_WORLD_LON 8.9)</referenceLongitude>
+      <referenceHeading>0</referenceHeading>
+      <referenceAltitude>0</referenceAltitude>
+      <drift>0.001 0.001 0.001</drift> 
+      <gaussiannoise>0.05 0.05 0.05</gaussiannoise> 
+      <velocitydrift>0.1 0.1 0.1</velocitydrift> 
+      <velocitygaussiannoise>0.1 0.1 0.1</velocitygaussiannoise>       
+    </plugin>
+  </gazebo>
+
+ 
+
+</robot>
