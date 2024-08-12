@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="heightmap">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>model://winding_valley_heightmap/materials/textures/heightmap.png</uri>
+            <!-- Update the size to 20m x 20m with an appropriate height scale -->
+            <size>15 15 0.15</size> <!-- Adjusted the height proportionally to maintain terrain features -->
+            <pose>0 0 0 0 0 0</pose>
+          </heightmap>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <heightmap>          
+            
+            
+            
+            <texture>
+              <diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>10</size>
+            </texture>      
+            <texture>
+              <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>10</size>
+            </texture>      
+            <!-- Adjust the blend parameters to control texture transitions -->
+            <blend>
+              <min_height>0.2</min_height> <!-- Grass texture starts blending at 0.1 meters -->
+              <fade_dist>0.5</fade_dist>   <!-- Blend over 0.5 meters distance -->
+            </blend>
+          
+          
+        
+            
+            
+               
+          
+            <uri>model://winding_valley_heightmap/materials/textures/heightmap.png</uri>
+            <!-- Update the size to match the collision size -->
+            <size>15 15 0.15</size> <!-- Adjusted to maintain visual consistency with collision geometry -->
+            <pose>0 0 0 0 0 0</pose>
+          </heightmap>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>
+

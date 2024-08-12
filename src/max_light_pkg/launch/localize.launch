@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+
+
+
+
+ 
+
+
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" output="screen">
+	  <param name="frequency" value="50"/>
+	  <param name="magnetic_declination_radians" value="0"/>
+	  <param name="wait_for_datum" value="false"/>
+	  <param name="yaw_offset" value="1.57"/>
+	  <param name="zero_altitude" value="false"/>      
+	  <param name="publish_filtered_gps" value="false"/>
+	  <param name="broadcast_utm_transform" value="false"/>    
+	  <remap from="/imu/data" to="/imu/data" />
+	  <remap from="/gps/fix" to="/navsat/fix" />
+	  <remap from="/odometry/filtered" to="/odometry/filtered_map" />
+  </node>
+
+  <node pkg="max_light_pkg" type="odometry_transformation.py" name="gps_correction" output="screen" />
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_gps" output="screen">
+	  <rosparam command="load" file="$(find max_light_pkg)/config/ekf_gps2.yaml" />
+	  <remap from="/odometry/filtered" to="/odometry/filtered_map" />
+  </node>
+
+
+  
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find max_light_pkg)/config/localization.yaml" />
+  </node>
+  
+  
+  
+  
+  
+
+</launch>

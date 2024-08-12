@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="maxii">
+
+  
+
+ 
+  
+  <xacro:macro name="maxii">
+    
+    <!-- Define materials EOOO -->
+    <material name="green">
+       <color rgba="0 1 0 1.0"/>
+    </material>
+    <material name="red">
+      <color rgba="0.8902 0.05098 0 1" />
+    </material>
+    <material name="black">
+       <color rgba="0 0 0 1.0"/>
+    </material>
+    <material name="grey">
+      <color rgba="0.41176 0.41176 0.41176 1" />
+    </material>
+    <material name="light_grey">
+      <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+    </material>
+    
+
+
+    <link name="base_link">
+    </link>
+
+    <link name="chassis_link">
+      <inertial>
+        <origin
+          xyz="0.010639 -1.5867E-06 0.059548"
+          rpy="0 0 0" />
+        <mass
+          value="25" />
+        <inertia
+          ixx="0.036113"
+          ixy="4.1487E-07"
+          ixz="-0.0003018"
+          iyy="0.031777"
+          iyz="2.5523E-07"
+          izz="0.062176" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/chassis.STL" />
+        </geometry>
+        <material name="green"/>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 -0.0502"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/collision_chassis.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    
+
+    <link name="power_pulley_right_link">
+      <inertial>
+        <origin
+          xyz="-0.078721 -0.30457 0.0704"
+          rpy="0 0 0" />
+        <mass
+          value="0.35" />
+        <inertia
+          ixx="0.00053897"
+          ixy="-2.9966E-20"
+          ixz="-1.3954E-18"
+          iyy="0.001058"
+          iyz="2.1649E-19"
+          izz="0.00053897" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/power_pulley_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/power_pulley_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint
+      name="power_pulley_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_right_link" />
+      <axis
+        xyz="0 1 0" />
+    </joint>
+
+
+
+    <link name="power_pulley_left_link">
+      <inertial>
+        <origin
+          xyz="-0.078721 0.30443 0.0704"
+          rpy="0 0 0" />
+        <mass
+          value="0.35" />
+        <inertia
+          ixx="0.00053897"
+          ixy="-3.7325E-20"
+          ixz="-1.2964E-18"
+          iyy="0.001058"
+          iyz="2.2374E-19"
+          izz="0.00053897" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/power_pulley_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/power_pulley_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="power_pulley_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+    <link
+      name="track_left_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="5" />
+        <inertia
+          ixx="0.04031"
+          ixy="1.0901E-19"
+          ixz="-0.010974"
+          iyy="0.14721"
+          iyz="1.0426E-17"
+          izz="0.1123" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/track_left_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/track_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="track_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+    <link name="track_right_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 -0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="5" />
+        <inertia
+          ixx="0.04031"
+          ixy="-1.0048E-17"
+          ixz="-0.010974"
+          iyy="0.14721"
+          iyz="-5.2198E-18"
+          izz="0.1123" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/track_right_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/track_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="track_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulleys_left_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="5" />
+        <inertia
+          ixx="0.0064758"
+          ixy="-1.9692E-14"
+          ixz="8.0179E-08"
+          iyy="0.0081222"
+          iyz="1.9683E-12"
+          izz="0.0064765" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulleys_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulleys_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulleys_right_link"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulleys_right_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 -0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="5" />
+        <inertia
+          ixx="0.0064758"
+          ixy="-1.9692E-14"
+          ixz="8.0179E-08"
+          iyy="0.0081222"
+          iyz="1.9683E-12"
+          izz="0.0064765" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulleys_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulleys_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulleys_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_left_link">
+      <inertial>
+        <origin
+          xyz="0.010549 0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0016086"
+          ixy="7.9893E-10"
+          ixz="-0.001062"
+          iyy="0.010902"
+          iyz="4.4205E-09"
+          izz="0.0092936" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulley_support_left_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulley_support_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulley_support_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_right_link">
+      <inertial>
+        <origin
+          xyz="0.01055 -0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0016085"
+          ixy="5.4128E-10"
+          ixz="-0.001062"
+          iyy="0.010902"
+          iyz="4.4903E-09"
+          izz="0.0092937" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulley_support_right_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/pulley_support_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulley_support_right_link"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+
+    <link name="gps_link">
+      <inertial>
+        <origin
+          xyz="0.00255724263800499 6.74998029170205E-10 0.378798505443558"
+          rpy="0 0 0" />
+        <mass
+          value="0.771115955640971" />
+        <inertia
+          ixx="0.0309273975284616"
+          ixy="5.17044806797719E-11"
+          ixz="-3.22977757397866E-08"
+          iyy="0.0012660769066914"
+          iyz="-1.25336120843784E-11"
+          izz="0.0303821249165596" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/extra/gps_link.STL" />
+        </geometry>
+        <material name="light_grey"/>
+      </visual>
+    <!--  <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_remastered - assembly_RR/meshes/gps_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+    <joint
+      name="gps_joint"
+      type="fixed">
+      <origin
+        xyz="-0.0065 0.5501 0.51167"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="gps_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+    <link
+      name="imu_link">
+      <inertial>
+        <origin
+          xyz="0.00133855041780856 8.57757393439786E-05 0.165286670101197"
+          rpy="0 0 0" />
+        <mass
+          value="0.00959464796722072" />
+        <inertia
+          ixx="1.30281027931083E-06"
+          ixy="-1.56746685866237E-11"
+          ixz="4.93823027630107E-11"
+          iyy="1.27869196687109E-06"
+          iyz="-6.22065563257456E-09"
+          izz="2.51111665492874E-06" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_pkg/meshes/extra/imu_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://max_light_remastered - assembly_RR/meshes/imu_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+    <joint
+      name="imu_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0.165286670101197"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="imu_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+
+
+
+
+
+    <!-- Control -->
+    <!-- Gazebo plugin for ROS Control -->
+
+    <gazebo reference="chassis_link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="pulleys_right_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="pulleys_left_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="power_pulley_left_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="power_pulley_right_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <gazebo reference="track_left_link">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+
+    <gazebo reference="track_right_link">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+
+    
+
+    <gazebo reference="pulley_support_left_link">
+      <material>Gazebo/Red</material>
+    </gazebo>
+    <gazebo reference="pulley_support_right_link">
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="gps_link">
+      <material>Gazebo/LightGrey</material>
+    </gazebo>
+    
+    <gazebo reference="imu_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+  </xacro:macro>
+
+  <xacro:maxii/>
+</robot>

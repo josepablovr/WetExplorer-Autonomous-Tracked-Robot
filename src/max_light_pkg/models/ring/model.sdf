@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="ring">
+    <!-- Set the model as static -->
+    <static>true</static>
+    
+    <!-- Give the base link a unique name -->
+    <link name="base">
+      <!-- Offset the base by half the length of the cylinder -->
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.001087473</ixx>
+          <iyy>0.001087473</iyy>
+          <izz>0.001092437</izz>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <collision name="base_collision">
+        <geometry>
+          <cylinder>
+            <!-- Radius and length provided by Velodyne -->
+            <radius>.15</radius>
+            <length>.11</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <!-- The visual is mostly a copy of the collision -->
+      <visual name="base_visual">
+        <!-- Offset the visual by half the base's height. We are not rotating
+             mesh since symmetrical -->
+        <pose>-0.15 0.15 -0.055 1.57 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ring/meshes/tube_mesh.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient> <!-- Ambient color: blue -->
+          <specular>0.1 0.1 0.1 1</specular> <!-- Small specular highlight -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
