@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load robot description parameter -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find maxxii)/urdf/robot.xacro" />
+
+  <!-- Load the controller configuration -->
+  <param name="controller_config" type="string" value="$(find maxxii)/config/controllers.yaml" />
+
+  <!-- Start the Robot State Publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+ 
+  <!-- Start the Controller Manager -->
+  <node name="controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen">
+    <param name="config" value="$(find maxxii)/config/controller.yaml"/>
+    <param name="update_rate" value="100"/>
+    <rosparam file="$(find maxxii)/config/controllers.yaml" command="load"/>
+  </node>
+
+  <!-- Optionally, you can start other controllers here -->
+  <!-- <node name="velocity_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen">
+    <param name="controllers" value="velocity_controller" />
+  </node> -->
+</launch>

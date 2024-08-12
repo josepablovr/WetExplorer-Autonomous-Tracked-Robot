@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_mag">
+
+    <xacro:macro name='default_inertia' params='mass x:=0 y:=0 z:=0'>
+        <inertial>
+            <origin xyz='${x} ${y} ${z}'/>
+            <mass value='${mass}'/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="robot_mag" params="x y z mag_size">
+
+        <gazebo reference="mag_link">
+          <material>Gazebo/Purple</material>
+       </gazebo>
+
+        <link name="mag_link">
+            <visual>
+                <geometry>
+                    <box size="${mag_size} ${mag_size} ${mag_size}"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <material name="purple">
+                    <color rgba="0.611 0.317 0.73 1"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${mag_size} ${mag_size} ${mag_size}"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+            </collision>
+            <xacro:default_inertia mass="0.01"/>
+        </link>
+
+        <joint name="mag_joint" type="fixed">
+            <parent link="base_link"/>
+            <child link="mag_link"/>
+            <origin rpy="0 0 0" xyz="${x} ${y} ${z}"/>
+        </joint>
+
+        <gazebo>
+            <plugin name="magnetometer" filename="libhector_gazebo_ros_magnetic.so">
+                <updateRate>40.0</updateRate>
+                <bodyname>mag_link</bodyname>
+                <topicName>robot/mag</topicName>
+                <referenceHeading>0</referenceHeading>
+                <!-- declinazione è l'angolo tra polo nord geofrafico e polo nord magnetico -->
+                <declination>0.0</declination> <!--polo nord geografico e polo nord magnetico sono allineati --> 
+                <inclination>60.0</inclination>
+                <offset>0 0 0</offset>
+                <driftFrequency>0 0 0</driftFrequency>
+                <gaussianNoise>0 0 0</gaussianNoise>
+            </plugin>
+        </gazebo>
+    </xacro:macro>
+</robot>
