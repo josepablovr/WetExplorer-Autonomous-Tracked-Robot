@@ -1,0 +1,31 @@
+<launch>
+  <arg name="forward0" default="10" />
+  <arg name="steer0" default="30" />
+  <arg name="stop0" default="1" />
+  <arg name="forward1" default="100" />
+  <arg name="steer1" default="30" />
+  <arg name="stop1" default="0" />
+  <arg name="forward2" default="100" />
+  <arg name="steer2" default="30" />
+  <arg name="stop2" default="0" />
+  <arg name="forward3" default="100" />
+  <arg name="steer3" default="0" />
+  <arg name="stop3" default="0" />
+ 
+
+  <node pkg="robo_base" type="robo_plan" name="robo_plan" output="screen"> 
+    <param name="forward0" value="$(arg forward0)" />
+    <param name="steer0" value="$(arg steer0)" />
+    <param name="stop0" value="$(arg stop0)" />
+    <param name="forward1" value="$(arg forward1)" />
+    <param name="steer1" value="$(arg steer1)" />
+    <param name="stop1" value="$(arg stop1)" />
+    <param name="forward2" value="$(arg forward2)" />
+    <param name="steer2" value="$(arg steer2)" />
+    <param name="stop2" value="$(arg stop2)" />
+     <param name="forward3" value="$(arg forward3)" />
+    <param name="steer3" value="$(arg steer3)" />
+    <param name="stop3" value="$(arg stop3)" />  
+   
+  </node>
+</launch>
