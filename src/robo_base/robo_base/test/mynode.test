@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="xbot" type="xbot_joy" name="xbot_base" />
+  <test test-name="mynode" pkg="xbot_base" type="test_mynode" />
+</launch>

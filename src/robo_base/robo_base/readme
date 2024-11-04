@@ -1,0 +1,15 @@
+/robo/velocity
+timestamp, angular_vel, linear_vel, distance_sx, distance_dx , vel_sx , vel_dx , vel_linear, w
+
+/robo/sys
+timestamp, pwm_sx, pwm_dx, temp (MCU, side 1, side 2, point1, point2), volt (internal, battery, 5V output), current (motor1, motor2)
+
+To launch the main node:
+
+@> roslaunch robo_base base.launch port:=/dev/ttyS0
+
+To launch the plan node, roslaunch the following node in a new window:
+
+@>roslaunch robo_base plan.launch 
+
+
