@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="maxii">
+
+  
+
+ 
+  
+  <xacro:macro name="maxii">
+    
+    <!-- Define materials EOOO -->
+    <material name="green">
+       <color rgba="0 1 0 1.0"/>
+    </material>
+    <material name="red">
+      <color rgba="0.8902 0.05098 0 1" />
+    </material>
+    <material name="black">
+       <color rgba="0 0 0 1.0"/>
+    </material>
+    <material name="grey">
+      <color rgba="0.41176 0.41176 0.41176 1" />
+    </material>
+    <material name="light_grey">
+      <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+    </material>
+    
+
+
+    <link name="base_link">
+    </link>
+
+    <link name="chassis_link">
+      <inertial>
+        <origin
+          xyz="0.010639 -1.5867E-06 0.059548"
+          rpy="0 0 0" />
+        <mass
+        value="30" />
+      <inertia
+        ixx="0.754053311196988"
+        ixy="4.1492E-07"
+        ixz="-0.0003018"
+        iyy="1.18387960831444"
+        iyz="2.5523E-07"
+        izz="1.65941599180835" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+        </geometry>
+        <material name="green"/>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    
+
+    <link name="power_pulley_right_link">
+      <inertial>
+        <origin
+          xyz="0.0 0.0 0.0"
+          rpy="0 0 0" />
+        <mass
+        value="0.35" />
+        <inertia
+          ixx="0.000602093"
+          ixy="-4.6464E-21"
+          ixz="-1.4155E-18"
+          iyy="0.001181908"
+          iyz="3.0888E-19"
+          izz="0.000602093" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0.078721 0.30457 -0.0704"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/power_pulley_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+      <joint
+      name="power_pulley_right_joint"
+      type="continuous">
+      <origin
+        xyz="-0.078721 -0.30457 0.0704"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_right_link" />
+      <axis
+        xyz="0 1 0" />
+    </joint>
+
+
+    <transmission name="trans_right_sprocket">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="power_pulley_right_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor_right_sprocket">
+        <mechanicalReduction>100</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="right_sprocket">
+        <gravity>true</gravity>
+        <mu1>0.5</mu1>
+        <mu2>0.5</mu2>
+        <kd>10</kd>
+        <kp>10000000000.0</kp>
+        <fdir1>0 0 1</fdir1>
+        <selfCollide>false</selfCollide>
+    </gazebo>
+
+
+
+    <link name="power_pulley_left_link">
+      <inertial>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+          <mass
+          value="0.35" />
+        <inertia
+          ixx="0.000602093"
+          ixy="-5.0671E-20"
+          ixz="-1.5394E-18"
+          iyy="0.001181908"
+          iyz="2.1375E-19"
+          izz="0.000602093" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0.078721 -0.30443 -0.0704"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/power_pulley_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint
+      name="power_pulley_left_joint"
+      type="continuous">
+      <origin
+        xyz="-0.078721 0.30443 0.0704"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_left_link" />
+      <axis
+        xyz="0 1 0" />
+    </joint>
+
+    <transmission name="trans_left_sprocket">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="power_pulley_left_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor_left_sprocket">
+        <mechanicalReduction>100</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="left_sprocket">
+        <gravity>true</gravity>
+        <mu1>0.5</mu1>
+        <mu2>0.5</mu2>
+        <kd>10</kd>
+        <kp>10000000000.0</kp>
+        <fdir1>0 0 1</fdir1>
+        <selfCollide>false</selfCollide>
+    </gazebo>
+
+
+
+    <link
+      name="track_left_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="3" />
+        <inertia
+          ixx="0.094232"
+          ixy="-1.3409E-17"
+          ixz="0.025653"
+          iyy="0.34414"
+          iyz="7.2097E-18"
+          izz="0.26251" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_left_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_left_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    
+
+
+    <joint name="track_left_joint"
+      type="revolute">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_left_link" />
+      <axis
+        xyz="0 0 0" />
+      "<limit velocity="6.5" effort="1000" lower="0" upper="0" />"
+    </joint>
+
+    <gazebo reference="track_left_link">
+        <disableFixedJointLumping>true</disableFixedJointLumping> 
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <gravity>true</gravity>
+        <mu1>0.3</mu1>
+        <mu2>0.5</mu2>
+        <kd>1</kd>
+        <kp>10000000000.0</kp>
+        <fdir1>0 1 0</fdir1>
+        <selfCollide>false</selfCollide>
+    </gazebo>
+
+
+    <link name="track_right_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 -0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="3" />
+        <inertia
+          ixx="0.094231632"
+          ixy="-6.3364E-18"
+          ixz="0.025652857"
+          iyy="0.344135139"
+          iyz="-4.0857E-18"
+          izz="0.262511007" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_right_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0.0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_right_link.STL" />
+        </geometry>
+      </collision>  
+
+    </link>
+
+    
+
+    <joint name="track_right_joint"
+      type="revolute">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_right_link" />
+      <axis
+        xyz="0 0 0" />
+      "<limit velocity="6.5" effort="1000" lower="0" upper="0" />"
+    </joint>
+    <gazebo reference="track_right_link">     
+        <disableFixedJointLumping>true</disableFixedJointLumping> 
+        <preserveFixedJoint>true</preserveFixedJoint>
+        <gravity>true</gravity>
+        <mu1>0.3</mu1>
+        <mu2>0.5</mu2>
+        <kd>1</kd>
+        <kp>10000000000.0</kp>
+        <fdir1>0 1 0</fdir1>
+        <selfCollide>false</selfCollide>
+    </gazebo>
+
+    <link name="pulleys_left_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="8" />
+        <inertia
+          ixx="0.041405"
+          ixy="-1.9692E-14"
+          ixz="0.049785"
+          iyy="0.45937"
+          iyz="1.9683E-12"
+          izz="0.43339" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulleys_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulleys_right_link"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulleys_right_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 -0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="8" />
+        <inertia
+          ixx="0.041405"
+          ixy="-1.9692E-14"
+          ixz="0.049785"
+          iyy="0.45937"
+          iyz="1.9683E-12"
+          izz="0.43339" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulleys_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulleys_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_left_link">
+      <inertial>
+        <origin
+          xyz="0.010549 0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0094955"
+          ixy="7.9893E-10"
+          ixz="0.0032109"
+          iyy="0.033011"
+          iyz="4.4205E-09"
+          izz="0.032755" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulley_support_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulley_support_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_right_link">
+      <inertial>
+        <origin
+          xyz="0.01055 -0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0094955"
+          ixy="5.4128E-10"
+          ixz="0.0032109"
+          iyy="0.033011"
+          iyz="4.4903E-09"
+          izz="0.032755" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulley_support_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulley_support_right_link"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+  
+
+
+
+
+
+    <!-- Control -->
+    <!-- Gazebo plugin for ROS Control -->
+
+    <gazebo reference="chassis_link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+
+    <gazebo reference="pulleys_right_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="pulleys_left_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="power_pulley_left_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="power_pulley_right_link">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <gazebo reference="track_left_link">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+
+    <gazebo reference="track_right_link">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+
+    
+
+    <gazebo reference="pulley_support_left_link">
+      <material>Gazebo/Red</material>
+    </gazebo>
+    <gazebo reference="pulley_support_right_link">
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+
+    <gazebo>
+      <plugin filename="libSimpleTrackedVehiclePlugin.so" name="simple_tracked_vehicle">
+        <body>base_link</body>
+        <left_track>track_left_link</left_track>
+        <right_track>track_right_link</right_track>
+        <steering_efficiency>0.6</steering_efficiency>
+        <tracks_separation>0.6108</tracks_separation>
+
+        <max_velocity>1.5</max_velocity>
+        <max_acceleration>1.4</max_acceleration>
+
+
+        <track_mu>1.0</track_mu>
+        <track_mu2>0.5</track_mu2>
+
+
+
+      </plugin> 
+      <gui>
+          <plugin name="keyboard" filename="libKeyboardGUIPlugin.so"/>
+      </gui>
+      <plugin filename="libKeysToCmdVelPlugin.so" name="keyboard_control">
+          <publish_as_twist>true</publish_as_twist>
+          <cmd_vel_topic>~/WetExplorer/cmd_vel_twist</cmd_vel_topic>
+      </plugin>
+
+
+        <!-- setup of the interface -->
+      <plugin name='tracked_vehicle_interface' filename='libgazebo_ros_tracked_vehicle_interface.so'>
+        <commandROSTopic>/WetExplorer/cmd_vel</commandROSTopic>
+        <commandIGNTopic>~/WetExplorer/cmd_vel_twist</commandIGNTopic>
+        <!-- <odometryTopic>~odom</odometryTopic>    -->
+        <trackSpeedTopic>~/WetExplorer/track_speed</trackSpeedTopic>  <!-- gazebo topic of SimpleTrackedVehicle -->
+        
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <odometryFrame>gazebo_odom</odometryFrame>
+        
+        <tracks_separation>0.6108</tracks_separation>
+        <publishOdomTF>False</publishOdomTF>
+        <updateRate>50.0</updateRate> 
+        
+        <!-- <odometrySource>encoder</odometrySource> --> <!-- [encoder,world] - choose world for ground truth -->
+      </plugin>
+
+
+
+
+    </gazebo>
+ 
+    
+
+  </xacro:macro>
+
+  <xacro:maxii/>
+</robot>

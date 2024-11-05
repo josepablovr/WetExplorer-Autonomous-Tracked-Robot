@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="chamber">
+
+  
+
+  <link name="chamber_link">
+    <inertial>
+      <origin
+        xyz="2.36663367236822E-08 -3.62764920206824E-07 0.112028093480707"
+        rpy="0 0 0" />
+      <mass
+        value="4.3" />
+      <!-- <inertia
+        ixx="0.121584298042475"
+        ixy="1.87464423239069E-07"
+        ixz="3.63372981043431E-10"
+        iyy="0.121582038471339"
+        iyz="-1.37446553113027E-07"
+        izz="0.0900435390588684" />
+    </inertial> -->
+    <inertia
+        ixx="0.04"
+        ixy="1.87464423239069E-07"
+        ixz="3.63372981043431E-10"
+        iyy="0.04"
+        iyz="-1.37446553113027E-07"
+        izz="0.03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/chamber_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/chamber_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint name="chamber_joint"
+    type="prismatic">
+    <origin
+      xyz="0.48712 0 -0.014912"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.19"
+      upper="0"
+      effort="1000"
+      velocity="0.2" />
+  </joint>
+
+
+  <transmission name="chamber_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="chamber_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="linear_actuator">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo reference="chamber_link">
+      <material>Gazebo/White</material>
+  </gazebo>
+
+  
+
+</robot>

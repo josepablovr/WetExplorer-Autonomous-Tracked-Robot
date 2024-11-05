@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="linear_actuator">
+
+  
+  <link
+    name="linear_actuator_support_link">
+    <inertial>
+      <origin
+        xyz="0.3307 -0.00010296 0.38719"
+        rpy="0 0 0" />
+      <mass
+        value="0.85835" />
+      <inertia
+        ixx="0.03987041"
+        ixy="-7.3555E-18"
+        ixz="1.0338E-15"
+        iyy="0.038475591"
+        iyz="-1.3409E-16"
+        izz="0.009264212" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/linear_actuator_support_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://WETExplorer/meshes/linear_actuator_support_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="linear_actuator_support_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linear_actuator_support_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="linear_actuator_link">
+    <inertial>
+      <origin
+        xyz="0.477173894922705 2.75613143209235E-05 0.506433436893996"
+        rpy="0 0 0" />
+      <mass
+        value="0.71234067254501" />
+      <inertia
+        ixx="0.00330962424668868"
+        ixy="2.21774531522033E-07"
+        ixz="-7.23615341714777E-07"
+        iyy="0.00334074039108581"
+        iyz="2.87681151500603E-07"
+        izz="0.000229121280801185" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/linear_actuator_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/linear_actuator_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="linear_actuator_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linear_actuator_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="linear_actuator_link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
+
+  <link
+    name="prismatic_link">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.143458901377515"
+        rpy="0 0 0" />
+      <mass
+        value="0.14496084881217" />
+      <inertia
+        ixx="0.000997897349092488"
+        ixy="1.17400522028665E-13"
+        ixz="-1.40067550336596E-11"
+        iyy="0.000997913372548"
+        iyz="1.27630788642497E-11"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/prismatic_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.317647058823529 0.317647058823529 0.317647058823529 1" />
+      </material>
+    </visual>
+
+   <!--  <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://WetExplorer/meshes/prismatic_link.STL" />
+      </geometry>
+    </collision> -->
+
+  </link>
+  <joint  name="prismatic_joint"
+    type="prismatic">
+    <origin
+      xyz="0.487119766611187 0 0.28207382031817"      
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prismatic_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.2"
+      upper="0.1"
+      effort="100"
+      velocity="0.2" />
+    <dynamics
+      damping="5.0"
+      friction="1.0" />
+  </joint>
+
+  <gazebo reference="prismatic_link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <transmission name="prismatic_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="prismatic_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="linear_actuator">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>100</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+
+  <link name="coupling_link">
+    <inertial>
+      <origin
+        xyz="-6.94444501903035E-14 -8.64361057851561E-14 -0.0159055914887256"
+        rpy="0 0 0" />
+      <mass
+        value="0.0412993057621487" />
+      <inertia
+        ixx="9.0281092010965E-06"
+        ixy="-4.97246409732665E-22"
+        ixz="1.21034305222665E-19"
+        iyy="8.85438920464544E-06"
+        iyz="-1.83404715262312E-20"
+        izz="6.36003097759157E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/coupling_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/coupling_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="coupling_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="prismatic_link" />
+    <child
+      link="coupling_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <link
+    name="chamber_holder_link">
+    <inertial>
+      <origin
+        xyz="-4.86832796298131E-14 -8.67972069565515E-14 -0.0338990017532478"
+        rpy="0 0 0" />
+      <mass
+        value="0.140871992285228" />
+      <inertia
+        ixx="6.92073594832431E-05"
+        ixy="1.64701968699973E-20"
+        ixz="-8.24465622310215E-19"
+        iyy="0.000799561957260634"
+        iyz="-4.0321672240104E-19"
+        izz="0.000750032259420385" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.03"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.03"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chamber_holder_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="coupling_link" />
+    <child
+      link="chamber_holder_link" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="1.0"
+      friction="0.3" />
+    <limit lower="-0.175" upper="0.175" effort="100" velocity="1.0" />  
+  </joint>
+  <gazebo>
+    <!-- joint torsional spring plugin -->
+    <plugin name="knee_joint_torsional_spring" filename="libgazebo_joint_torsional_spring.so">
+      <kx>10.0</kx>
+      <set_point>0</set_point>
+      <joint>chamber_holder_joint</joint>
+    </plugin>
+  </gazebo>
+  
+  <link
+    name="chamber_link">
+    <inertial>
+      <origin
+        xyz="-4.89053242347381E-14 -8.80336480113112E-14 -0.09893"
+        rpy="0 0 0" />
+      <mass
+        value="4.3" />
+      <inertia
+        ixx="0.0869903"
+        ixy="-2.3796E-17"
+        ixz="-1.2239E-17"
+        iyy="0.08699038"
+        iyz="3.5966E-16"
+        izz="0.027228954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.11093"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0.11093"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chamber_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.08093"
+      rpy="0 0 0" />
+    <parent
+      link="chamber_holder_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="1 0 0" />
+    <dynamics
+      damping="1.0"
+      friction="0.33" />
+    <limit lower="-0.175" upper="0.175" effort="100" velocity="1.0" />  
+  </joint>
+
+  <gazebo>
+    <!-- joint torsional spring plugin -->
+    <plugin name="knee_joint_torsional_spring" filename="libgazebo_joint_torsional_spring.so">
+      <kx>10.0</kx>
+      <set_point>0</set_point>
+      <joint>chamber_joint</joint>
+    </plugin>
+  </gazebo>
+
+  <link name="TCP">    
+  </link>
+
+  <joint
+    name="tcp_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.310908"
+      rpy="0 0 0" />
+    <parent
+      link="chamber_link" />
+    <child
+      link="TCP" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+
+  
+
+
+</robot>

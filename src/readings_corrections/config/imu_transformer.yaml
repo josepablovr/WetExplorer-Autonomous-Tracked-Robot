@@ -1,6 +1,0 @@
-imu_transformer_node:
-  target_frame: gps
-  imu_in:
-    data: /imu/data_raw
-  imu_out:
-    data: /imu/data_transformed
