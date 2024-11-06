@@ -106,9 +106,37 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update
 
 
+   
+RUN apt-get update && apt-get install -y \    
+    ros-noetic-ros-control\
+    ros-noetic-ros-controllers\
+    && apt-get clean 
 
 
 
+
+RUN apt-get update && apt-get install -y \    
+    ros-noetic-plotjuggler-ros\
+    netcat\
+    nano\
+    curl\
+    && pip install scipy\
+    && apt-get clean 
+    
+ENV DEBIAN_FRONTEND=noninteractive   
+RUN apt-get update
+RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg\
+	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null\
+	&&apt-get update\
+	&&apt-get install -y ignition-fortress\
+    	&&apt-get clean
+    
+    
+RUN apt-get update && apt-get install -y \    
+    coinor-libipopt-dev\
+    libnlopt-cxx-dev\
+    && apt-get clean 
+    
 
 ARG USERNAME=ros
 ARG USER_UID=1000
@@ -127,11 +155,16 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN usermod -aG dialout ${USERNAME} 
 
+RUN usermod -aG dialout ${USERNAME} 
+COPY /config/.bashrc /home/ros/.bashrc
+COPY /config/hosts /etc/hosts
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 CMD ["bash"]
+
+
+ 
 
 
 WORKDIR /catkin_ws
