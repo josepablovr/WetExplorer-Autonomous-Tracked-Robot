@@ -20,8 +20,9 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 
 ### Simulation
 
+
 - Digital twin in Gazebo with accurate mass and inertia parameters for each main link.
-- Simulation of tracked vehicle dynamics (not using wheels!).
+- Accurate simulation of tracks, we're not using wheels! (based on in-built plugin by [M. Pecka](https://doi.org/10.48550/arXiv.1703.04316)
 - Linear actuation of the chamber simulated.
 - Manual control via Bluetooth joystick.
 - Angular and linear speed feed-forward controllers.
@@ -38,7 +39,7 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 - Absolute position sensor fusion with RTK GPS, moving base for heading, and odometry-based fusion. Positioning error is within 5 cm.
 - IMU post-processing and gravity removal tailored for the Phidget Spatial 3/3/3, considering response time of angles.
 - Validated accurate kinematic model in real life.
-<img src="imgs/Sensor_Fusion.gif" alt="GZ" width="600"/>
+<img src="imgs/Sensor_Fusion.gif" alt="GZ" width="700"/>
 
 *Note:* The yellow curve is GPS data, the blue curve is initial sensor fusion, and the green curve shows the final sensor fusion, exhibiting high accuracy in both position and velocity.
 
@@ -220,6 +221,31 @@ catkin_make --only-pkg-with-deps wetexplorer_hardware
 ```
 roslaunch wetexplorer_hardware gps.launch
 ```
+
+
+## Robot Chassis
+
+We are using the platform Robodyne MaxII, which receives commands and provide feedback via RS232 protocol.
+We tunned the internal PIDs of both motors using the RoboteQ Motor Driver Interface, they are running on the close-loop velocity setting.
+
+### Running the Hardware Interface in ROS
+
+
+#### 1. Build the package
+To build the robot base package, run the following command:
+
+    catkin_make --only-pkg-with-deps robo_base
+
+#### 2. Allow ROS commands
+Start by launching the ROS node to enable command modes:
+
+    roslaunch robo_base mode.launch
+Note: It is very important to run this node at first in order to allow the motors to receive direct velocity commands.
+
+## 3. Start the server mode
+To start the base server, run:
+
+    roslaunch robo_base base.launch
 
 ### Note:
 This work has been entirely developed by myself, José Vásquez.
