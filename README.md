@@ -34,6 +34,7 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 <img src="imgs/goals.gif" alt="GZ" width="600"/>
 
 ### Real-Life Implementation
+<img src="imgs/robo_real.jpg" alt="GZ" width="600"/>
 
 - Velocity sensor fusion (IMU and kinematic model) using an Unscented Kalman filter.
 - Absolute position sensor fusion with RTK GPS, moving base for heading, and odometry-based fusion. Positioning error is within 5 cm.
@@ -225,9 +226,9 @@ roslaunch wetexplorer_hardware gps.launch
 
 ## Robot Chassis
 
-We are using the platform Robodyne MaxII, which receives commands and provide feedback via RS232 protocol.
-We tunned the internal PIDs of both motors using the RoboteQ Motor Driver Interface, they are running on the close-loop velocity setting.
-
+We are using the platform Robodyne MAXII, which receives commands and provide feedback via RS232 protocol.
+We tuned the internal PIDs of both motors using the RoboteQ Motor Driver Interface, which are now running on the close-loop velocity setting.
+Note: the default platform comes with an open-loop mode and receives power percentage commands instead of velocity.
 ### Running the Hardware Interface in ROS
 
 
@@ -242,7 +243,7 @@ Start by launching the ROS node to enable command modes:
     roslaunch robo_base mode.launch
 Note: It is very important to run this node at first in order to allow the motors to receive direct velocity commands.
 
-## 3. Start the server mode
+### 3. Start the server mode
 To start the base server, run:
 
     roslaunch robo_base base.launch
