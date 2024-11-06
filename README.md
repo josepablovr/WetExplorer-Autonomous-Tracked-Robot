@@ -6,7 +6,7 @@ The WetGuard project aims to monitor greenhouse gas emissions in wetlands. Distu
 
 The automated sampling task works as follows:
 
-<img src="imgs/explanation.png" alt="explanation" width="300"/>
+<img src="imgs/explanation.png" alt="explanation" width="600"/>
 
 All the sensors combined make up a 25 kg payload. This sampling process must be performed periodically, at night, and even after rain, so it’s essential to have an autonomous system conducting the task.
 
@@ -14,7 +14,7 @@ All the sensors combined make up a 25 kg payload. This sampling process must be 
 
 WetExplorer is a tracked robot that navigates autonomously in wetlands, locating the rings needed for sampling and operating the gas analyzer sensors.
 
-<img src="imgs/WetExplorer_Intro.png" alt="Robot" width="400"/>
+<img src="imgs/WetExplorer_Intro.png" alt="Robot" width="600"/>
 
 ## Highlights of the Current Version and My Contributions to the Project
 
@@ -27,10 +27,10 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 - Angular and linear speed feed-forward controllers.
 - GPS and IMU simulation for sensor fusion design.
 - Sprocket wheel simulation for kinematic model validation.
-<img src="imgs/D_Twin.gif" alt="GZ" width="400"/>
+<img src="imgs/D_Twin.gif" alt="GZ" width="500"/>
 
 - Mission planning and terrain simulation.
-<img src="imgs/goals.gif" alt="GZ" width="400"/>
+<img src="imgs/goals.gif" alt="GZ" width="600"/>
 
 ### Real-Life Implementation
 
@@ -38,7 +38,7 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 - Absolute position sensor fusion with RTK GPS, moving base for heading, and odometry-based fusion. Positioning error is within 5 cm.
 - IMU post-processing and gravity removal tailored for the Phidget Spatial 3/3/3, considering response time of angles.
 - Validated accurate kinematic model in real life.
-<img src="imgs/Sensor_Fusion.gif" alt="GZ" width="400"/>
+<img src="imgs/Sensor_Fusion.gif" alt="GZ" width="600"/>
 
 *Note:* The yellow curve is GPS data, the blue curve is initial sensor fusion, and the green curve shows the final sensor fusion, exhibiting high accuracy in both position and velocity.
 
@@ -98,7 +98,7 @@ roslaunch wetexplorer_navigation localize.launch
 
 Compare the different odometry techniques’ performance:
 
-<img src="imgs/localization.jpg" alt="GZ" width="400"/>
+<img src="imgs/localization.png" alt="GZ" width="600"/>
 
 ### Enable Goal-Based Navigation
 
