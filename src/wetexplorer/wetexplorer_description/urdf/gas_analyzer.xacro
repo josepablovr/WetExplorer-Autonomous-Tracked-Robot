@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gas">
+
+  
+
+  <link name="gas_analyzer_link">
+    <inertial>
+      <origin
+        xyz="-0.18424 -1.1028E-14 0.27892"
+        rpy="0 0 0" />
+      <mass
+        value="21" />
+      <inertia
+        ixx="0.870247786"
+        ixy="-4.0644E-17"
+        ixz="-5.0732E-14"
+        iyy="0.508970755"
+        iyz="2.2193E-06"
+        izz="1.267160807" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/gas_analyzer_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/gas_analyzer_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint name="gas_analyzer_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gas_analyzer_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link  name="gas_analyzer_support_link">
+      <inertial>
+        <origin
+          xyz="-0.275706184833266 -0.000499999999996648 0.140749889633038"
+          rpy="0 0 0" />
+        <mass
+          value="0.368742782325377" />
+        <inertia
+          ixx="0.00190482822580085"
+          ixy="-7.39176047021131E-18"
+          ixz="1.4537800387309E-19"
+          iyy="0.000678496254349348"
+          iyz="1.7389698194462E-17"
+          izz="0.00192596845096462" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/gas_analyzer_support_link.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        </material>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://WETExplorer/meshes/gas_analyzer_support_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+    <joint
+      name="gas_analyzer_support_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="gas_analyzer_support_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+
+
+
+  <gazebo reference="gas_analyzer_link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="gas_analyzer_support_link">
+      <material>Gazebo/LightGrey</material>
+  </gazebo>
+
+</robot>

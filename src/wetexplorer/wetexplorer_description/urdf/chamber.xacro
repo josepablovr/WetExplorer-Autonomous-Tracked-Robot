@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="chamber">
+<xacro:include filename="$(find wetexplorer_description)/urdf/cylinder_inertia.xacro"/>
+  
+
+  <xacro:property name="mass" value="1.0" />
+  <xacro:property name="radius" value="0.015" />
+  <xacro:property name="length" value="0.2" />
+
+  <link name="chamber_link">
+
+      <inertial>
+          <origin xyz="0 0 0"/>
+          <mass value="${mass}"/>
+          <!-- Inertia matrix calculation for a cylinder -->
+          <inertia 
+              ixx="${mass * ((3 * radius * radius) + (length * length)) / 12}" 
+              ixy="0.0" 
+              ixz="0.0" 
+              iyy="${mass * ((3 * radius * radius) + (length * length)) / 12}"
+              iyz="0.0" 
+              izz="${mass * ((3 * radius * radius) + (length * length)) / 12}" />
+      </inertial>
+
+
+      <visual>
+          <geometry>
+              <cylinder radius="${radius}" length="${length}" />
+          </geometry>
+      </visual>
+      
+      
+
+  </link>
+
+
+
+  <joint name="chamber_joint"
+    type="prismatic">
+    <origin
+      xyz="0.48712 0 0.30"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.19"
+      upper="0"
+      effort="75"
+      velocity="0.2" />
+    <dynamics damping="3.0" friction="0.3"/>
+  </joint>
+
+
+  <transmission name="chamber_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="chamber_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+    </joint>  
+    <actuator name="linear_actuator">
+      <hardwareInterface>hardware_interface/VelocityJointInterface </hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo reference="chamber_link">
+      <material>Gazebo/White</material>
+  </gazebo>
+
+  
+
+
+
+  
+
+
+
+
+  <link name="chamber_link_2">
+    <inertial>
+      <origin
+        xyz="0 0 -0.18"
+        rpy="0 0 0" />
+      <mass
+        value="4.3" />
+      <!-- <inertia
+        ixx="0.121584298042475"
+        ixy="1.87464423239069E-07"
+        ixz="3.63372981043431E-10"
+        iyy="0.121582038471339"
+        iyz="-1.37446553113027E-07"
+        izz="0.0900435390588684" />
+    </inertial> -->
+    <inertia
+        ixx="0.19725143352" ixy="0.00000639" ixz="-0.00004543"
+        iyy="0.19725150883" iyz="-0.00000194"
+        izz="0.03318878268"/> 
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.290"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/chamber_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.290"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/chamber_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+
+  <joint name="chamber_joint_2" type="revolute">
+    <origin xyz="0 0 -0.1" rpy="0 0 0" />
+    <parent link="chamber_link" />
+    <child link="chamber_link_2" />
+    <axis xyz="1 0 0" />
+    <dynamics dampling="1000.0" friction="0.3"/>    
+    <limit lower="-0.175" upper="0.175" effort="1000" velocity="1.0" />  
+
+  </joint>
+  <gazebo>
+    <!-- joint torsional spring plugin -->
+    <plugin name="knee_joint_torsional_spring" filename="libgazebo_joint_torsional_spring.so">
+      <kx>1.0</kx>
+      <set_point>0</set_point>
+      <joint>chamber_joint_2</joint>
+    </plugin>
+  </gazebo>
+
+</robot>

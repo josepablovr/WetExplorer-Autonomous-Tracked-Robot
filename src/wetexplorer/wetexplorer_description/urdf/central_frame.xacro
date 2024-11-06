@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gps">
+
+  
+
+  <link
+    name="central_frame_link">
+    <inertial>
+      <origin
+        xyz="0.0024513 7.0323E-16 0.17392"
+        rpy="0 0 0" />
+      <mass
+        value="0.37448" />
+      <inertia
+        ixx="0.003129"
+        ixy="-3.0438E-20"
+        ixz="8.6565E-20"
+        iyy="0.00035721"
+        iyz="2.1645E-17"
+        izz="0.0034198" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/WETExplorer/central_frame_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://WETExplorer/meshes/central_frame_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="central_frame_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="central_frame_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <gazebo reference="central_frame_link">
+      <material>Gazebo/LightGrey</material>
+  </gazebo>
+
+</robot>

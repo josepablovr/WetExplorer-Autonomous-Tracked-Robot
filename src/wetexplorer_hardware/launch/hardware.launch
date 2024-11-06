@@ -1,8 +1,0 @@
-<launch>
-
-  <include file="$(find wetexplorer_hardware)/launch/gps.launch">
-      </include>
-  <include file="$(find phidgets_spatial)/launch/spatial.launch">
-      </include>
-  
-</launch>

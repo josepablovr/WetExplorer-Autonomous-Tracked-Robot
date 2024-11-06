@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rear_wheel">
+
+<xacro:include filename="$(find max_light_pkg)/urdf/cylinder_inertia.xacro"/>
+
+<xacro:macro name="rear_wheel" params="left_right radius length position mu">
+
+    <xacro:property name="mass" value="2" />
+
+    <link name="rear_${left_right}_wheel">
+        <!-- <visual>
+            <geometry>
+                <cylinder radius="${radius}" length="${length}" />
+            </geometry>
+        </visual> -->
+        <!-- <collision>
+            <geometry>
+                <cylinder radius="${radius}" length="${length}" />
+            </geometry>
+        </collision> -->
+
+        
+        <xacro:cylinder_inertia mass="${mass}" radius="${radius}" length="${length}"/>
+    </link>
+
+    <joint name="rear_${left_right}_wheel_joint" type="continuous">
+        <origin xyz="-0.2682 ${position} 0.1109" rpy=" -1.570796 0 0" /> 
+        <parent link="base_link" />
+        <child link="rear_${left_right}_wheel" />
+        <axis  xyz="0 0 1" />
+
+    </joint>
+
+    <transmission name="trans_rear_${left_right}_wheel">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rear_${left_right}_wheel_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor_rear_${left_right}_wheel">
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="rear_${left_right}_wheel">
+        <gravity>true</gravity>
+        <mu1>${mu}</mu1>
+        <mu2>${mu}</mu2>
+        <kd>1</kd>
+        <kp>10000000000.0</kp>
+        <fdir1>0 0 1</fdir1>
+        <selfCollide>false</selfCollide>
+    </gazebo>
+
+</xacro:macro>
+
+</robot>

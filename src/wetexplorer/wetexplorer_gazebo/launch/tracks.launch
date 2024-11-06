@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+ 
+  <include file="$(find wetexplorer_description)/launch/description.launch"> 
+  </include>
+
+
+  <!-- Load controller configuration -->
+  <rosparam command="load" file="$(find wetexplorer_gazebo)/config/tracked_controllers.yaml" />
+
+   <node name="controller_manager" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+        args="joint_state_controller 
+              linear_controller                   
+              left_sprocket_controller
+              right_sprocket_controller"
+              />
+
+
+<!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+
+  </node>
+
+
+  <node pkg="wetexplorer_gazebo" type="chamber_joy.py" name="chamber_control_joystick" output="screen" />
+
+
+</launch>

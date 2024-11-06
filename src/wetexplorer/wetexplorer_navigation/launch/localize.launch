@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+Software License Agreement (BSD)
+
+\file      description.launch
+\authors   Paul Bovbel <pbovbel@clearpathrobotics.com>, Prasenjit Mukherjee <pmukherj@clearpathrobotics.com>
+\copyright Copyright (c) 2015, Clearpath Robotics, Inc., All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that
+the following conditions are met:
+ * Redistributions of source code must retain the above copyright notice, this list of conditions and the
+   following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the 
+   following disclaimer in the documentation and/or other materials provided with the distribution.
+ * Neither the name of Clearpath Robotics nor the names of its contributors may be used to endorse or promote
+   products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WAR-
+RANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, IN-
+DIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE
+)ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<launch>
+
+    <!-- <include file="$(find wetexplorer_navigation)/launch/odom_fusion.launch">
+      </include> -->
+
+    
+
+    
+    <node pkg="wetexplorer_navigation" type="Position_Control.py" name="TCP_Odometry" output="screen" />
+
+
+    <node pkg="robot_localization" type="ukf_localization_node" name="ukf_localization_gps" output="screen">
+        <rosparam command="load" file="$(find wetexplorer_navigation)/config/sensor_fusion_full.yaml" />
+        <remap from="/odometry/filtered" to="/odometry/filtered_map" />
+    </node>
+
+
+
+
+
+    <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" output="screen">
+        <param name="frequency" value="5"/>
+        <param name="magnetic_declination_radians" value="0"/>
+        <param name="wait_for_datum" value="false"/>
+        <param name="yaw_offset" value="0.0"/>
+        <param name="zero_altitude" value="true"/>      
+        <param name="publish_filtered_gps" value="false"/>
+        <param name="broadcast_utm_transform" value="false"/>    
+        <param name="use_odometry_yaw" value="false"/>  
+        <remap from="/imu/data" to="/imu/gps_heading_corrected" />
+        <remap from="/gps/fix" to="/gps/fix" />
+        
+        <remap from="/odometry/filtered" to="/odometry/filtered_map" />
+    </node>
+
+
+    
+
+</launch>

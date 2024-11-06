@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find phidgets_spatial)/launch/spatial.launch">
+        </include>
+
+</launch>

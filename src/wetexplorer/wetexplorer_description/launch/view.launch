@@ -1,0 +1,72 @@
+<launch>
+  
+  <arg
+    name="model" />
+  <param name="robot_description" command="$(find xacro)/xacro $(find wetexplorer_description)/urdf/Robot_System.xacro" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wetexplorer_description)/rviz/default.rviz" required="true" />
+  <!-- Launch RViz with default configuration -->
+
+  <!--  Transforms  -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_imu" args="0.07776 -0.0027 0.02915 -1 0 0 0 base_link imu_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_gps_tf" args="0 0.55 -0.009 0 0 0 1 base_link gps" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_heading_tf" args="0 0 0 0 0 0 1 base_link gps_heading" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_imu_r" args="0.07776 -0.0027 0.02915 0 0 0 1 base_link imu_link2" />
+
+<!-- Base to chassis -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="base_to_chassis" args="0 0 0 0 0 0 base_link chassis_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_central_frame" args="0 0 0 0 0 0 chassis_link central_frame_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_gas_analyzer" args="0 0 0 0 0 0 chassis_link gas_analyzer_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_s_gas_analyzer" args="0 0 0 0 0 0 chassis_link gas_analyzer_support_link" />
+<!-- Chassis to power_pulley_right -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_power_pulley_right" args="-0.078721 -0.30457 0.0704 0 0 0 chassis_link power_pulley_right_link" />
+
+<!-- Chassis to power_pulley_left -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_power_pulley_left" args="-0.078721 0.30443 0.0704 0 0 0 chassis_link power_pulley_left_link" />
+
+<!-- Chassis to track_left -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_track_left" args="0 0 0 0 0 0 chassis_link track_left_link" />
+
+<!-- Chassis to track_right -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_track_right" args="0 0 0 0 0 0 chassis_link track_right_link" />
+
+<!-- Chassis to pulleys_left -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_pulleys_left" args="0 0 0 0 0 0 chassis_link pulleys_left_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_pulleys_right" args="0 0 0 0 0 0 chassis_link pulleys_right_link" />
+<!-- Chassis to pulley_support_right -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_pulley_support_right" args="0 0 0 0 0 0 chassis_link pulley_support_right_link" />
+
+<!-- Chassis to pulley_support_left -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_pulley_support_left" args="0 0 0 0 0 0 chassis_link pulley_support_left_link" />
+
+<!-- Chassis to imu -->
+<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_imu" args="0.00278 0 0.16463 0 0 0 chassis_link imu_link" /> -->
+
+<!-- Chassis to gps_frame -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_gps_frame" args="0 0 0 0 0 0 chassis_link gps_frame_link" />
+
+<!-- GPS frame to gps -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="gps_frame_to_gps" args="0.105414522198752 0.550000000000003 0.521670978379597 0 0 0 gps_frame_link gps_link" />
+
+<!-- Chassis to linear_actuator_support -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_linear_actuator_support" args="0 0 0 0 0 0 chassis_link linear_actuator_support_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chassis_to_linear_actuator" args="0 0 0 0 0 0 chassis_link linear_actuator_link" />
+
+<!-- Linear actuator support to prismatic -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="linear_actuator_support_to_prismatic" args="0.487119766611187 0 0.28207382031817 0 0 0 linear_actuator_support_link prismatic_link" />
+
+<!-- Prismatic to coupling -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="prismatic_to_coupling" args="0 0 0 0 0 0 prismatic_link coupling_link" />
+
+<!-- Coupling to chamber_holder -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="coupling_to_chamber_holder" args="0 0 0 0 0 0 coupling_link chamber_holder_link" />
+
+<!-- Chamber holder to chamber -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="chamber_holder_to_chamber" args="0 0 -0.08093 0 0 0 chamber_holder_link chamber_link" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="chamber_to_TCP" args="0 0 0.0 0 0 0 chamber_link TCP" />
+
+
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_world" args="0 0 0 0 0 0 1 world map" />
+<node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher_odom" args="0 0 0 0 0 0 1 world odom" />
+
+
+</launch>
