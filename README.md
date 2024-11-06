@@ -22,7 +22,7 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 
 
 - Digital twin in Gazebo with accurate mass and inertia parameters for each main link.
-- Accurate simulation of tracks, we're not using wheels! (based on in-built plugin by [M. Pecka](https://doi.org/10.48550/arXiv.1703.04316)
+- Accurate simulation of tracks, we're not using wheels! (based on built-in plugin by [M. Pecka](https://doi.org/10.48550/arXiv.1703.04316))
 - Linear actuation of the chamber simulated.
 - Manual control via Bluetooth joystick.
 - Angular and linear speed feed-forward controllers.
@@ -228,7 +228,9 @@ roslaunch wetexplorer_hardware gps.launch
 
 We are using the platform Robodyne MAXII, which receives commands and provide feedback via RS232 protocol.
 We tuned the internal PIDs of both motors using the RoboteQ Motor Driver Interface, which are now running on the close-loop velocity setting.
+
 Note: the default platform comes with an open-loop mode and receives power percentage commands instead of velocity.
+
 ### Running the Hardware Interface in ROS
 
 
