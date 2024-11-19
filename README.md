@@ -141,7 +141,7 @@ git clone https://github.com/josepablovr/WetExplorer-Autonomous-Tracked-Robot
 ### 2. Build the Image
 ```
 cd ROS_docker
-sudo docker build -t wetguard .
+sudo docker build -t wetexplorer .
 ```
 
 ## Running the Docker Container
@@ -158,7 +158,7 @@ This will run a container named "cont" with the following features:
 Run the following command:
 
 ```
-sudo docker run --rm --name cont -it --user ros --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY -v /home/pablo/ROS_docker/catkin_ws:/catkin_ws -v /dev:/dev --device-cgroup-rule='c *:* rmw' -v ~/mapproxy:/mapproxy -v /home/pablo/ROS_docker/workspace:/workspace wetguard /bin/bash
+sudo docker run --rm --name cont -it --user ros --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY -v /home/pablo/humble/WetExplorer-Autonomous-Tracked-Robot:/ros2_ws -v /dev:/dev --device-cgroup-rule='c *:* rmw' wetexplorer /bin/bash
 ```
 
 ### 2. Open Another Terminal Window
