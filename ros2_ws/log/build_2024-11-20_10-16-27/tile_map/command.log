@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/tile_map': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map
+Invoked command in '/ros2_ws/build/tile_map' returned '1': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map

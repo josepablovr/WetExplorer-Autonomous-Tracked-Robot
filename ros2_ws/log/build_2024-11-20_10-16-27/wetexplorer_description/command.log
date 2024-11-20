@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_description -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_description

@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/wetexplorer_navigation': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_navigation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_navigation
+Invoked command in '/ros2_ws/build/wetexplorer_navigation' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_navigation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_navigation
