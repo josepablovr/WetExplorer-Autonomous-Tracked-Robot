@@ -25,7 +25,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/extra/aluminium_frame_link.STL" />
+          filename="package://wetexplorer_description/meshes/WETExplorer/gas_analyzer_support_link.STL" />
       </geometry>
       <material
         name="">
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/extra/aluminium_frame_link.STL" />
+          filename="package://max_light_pkg/meshes/extra/aluminium_frame_link.STL" />
       </geometry>
     </collision> -->
   </link>
