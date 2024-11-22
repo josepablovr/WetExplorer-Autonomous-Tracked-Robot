@@ -15,7 +15,8 @@ find_package(urdf REQUIRED)
 install(DIRECTORY launch meshes urdf
   DESTINATION share/${PROJECT_NAME}
 )
+install(DIRECTORY meshes DESTINATION share/${PROJECT_NAME})
 
 ament_export_dependencies(xacro)
-ament_export_dependencies(urdf)
+
 ament_package()

@@ -217,7 +217,7 @@
     </link>
 
 
-    <joint name="pulleys_right_link"
+    <joint name="pulleys_left_joint"
       type="fixed">
       <origin
         xyz="0 0 0"
@@ -365,7 +365,7 @@
     </link>
 
 
-    <joint name="pulley_support_right_link"
+    <joint name="pulley_support_right_joint"
       type="fixed">
       <origin
         xyz="0 0 0"
