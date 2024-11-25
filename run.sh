@@ -1,5 +1,7 @@
 #!/bin/bash
+
 export WETEXPLORER_WS=$(pwd)
+
 # Define variables for container and image names
 CONTAINER_NAME="cont"
 IMAGE_NAME="wetguard"
