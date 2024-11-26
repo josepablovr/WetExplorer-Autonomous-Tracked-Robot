@@ -10,34 +10,6 @@ RUN apt-get install -y sudo
 # Install software-properties-common
 RUN apt-get install -y software-properties-common
 
-# Install ROS 2 Humble packages
-# RUN apt-get update && apt-get install -y \
-#     ros-humble-urdf \
-#     ros-humble-rviz2 \
-#     ros-humble-cv-bridge \
-#     ros-humble-qt-gui \
-#     ros-humble-mapviz \
-#     ros-humble-mapviz-plugins \
-#     ros-humble-tf2 \
-#     ros-humble-rqt-graph \
-#     ros-humble-rqt-tf-tree \
-#     ros-humble-rqt-plot \
-#     ros-humble-xacro \
-#     ros-humble-gazebo-ros-pkgs \
-#     ros-humble-ros-control \
-#     ros-humble-ros-controllers \
-#     ros-humble-plotjuggler-ros \
-#     ros-humble-imu-transformer \
-#     ros-humble-rviz-imu-plugin \
-#     ros-humble-joint-state-publisher-gui \
-#     ros-humble-robot-localization \
-#     ros-humble-hector-gazebo-plugins \
-#     ros-humble-husky-desktop \
-#     ros-humble-husky-simulator \
-#     ros-humble-husky-navigation \
-#     ros-humble-ros-base \
-#     && apt-get clean
-
 # Install system dependencies (libusb, usbutils, etc.)
 RUN apt-get update && apt-get install -y \
     libusb-1.0-0 \
@@ -68,6 +40,36 @@ RUN apt-get update && apt-get install -y \
     libnlopt-cxx-dev \
     && apt-get clean
 
+
+
+
+
+# Install ROS Dependecencies:
+
+
+RUN apt-get update && apt-get install -y \
+    ros-humble-urdf \
+    ros-humble-xacro \
+    ros-humble-ros-gz-bridge \
+    ros-humble-ros-gz-sim\
+    ros-humble-joy \
+    ros-humble-teleop-twist-joy \
+    ros-humble-twist-stamper \
+    ros-humble-twist-mux \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-joint-state-publisher \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-ign-ros2-control \
+    ros-humble-rviz2 \
+    ros-humble-ros-gz-image \
+    ros-humble-rqt \
+    ros-humble-rqt-graph \
+    && apt-get clean
+
+# Update package list
+RUN apt-get update
+
 # Create a non-root user
 ARG USERNAME=ros
 ARG USER_UID=1000
@@ -90,11 +92,13 @@ RUN usermod -aG dialout ${USERNAME}
 # Copy config files
 COPY /config/.bashrc /home/ros/.bashrc
 COPY /config/hosts /etc/hosts
-COPY entrypoint.sh /entrypoint.shcolco
+#COPY entrypoint.sh /entrypoint.shcolco
+
+
 
 # Set the entrypoint and default command
-ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
-CMD ["bash"]
+#ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+
 
 # Set working directory
 WORKDIR /ros2_ws

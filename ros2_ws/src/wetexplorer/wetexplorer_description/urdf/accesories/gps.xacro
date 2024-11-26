@@ -117,22 +117,15 @@
       <material>Gazebo/Black</material>
   </gazebo>
 
+
+
+
   <gazebo>
-    <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
-      <!-- <robotNamespace>$(arg robot_namespace)</robotNamespace> -->
-      <updateRate>5.0</updateRate>
-      <bodyName>gps_link</bodyName>
-      <frameId>base_link</frameId>
-      <topicName>navsat/fix</topicName>
-      <velocityTopicName>navsat/vel</velocityTopicName>
-      <referenceLatitude>$(optenv GAZEBO_WORLD_LAT 49.9)</referenceLatitude>
-      <referenceLongitude>$(optenv GAZEBO_WORLD_LON 8.9)</referenceLongitude>
-      <referenceHeading>0</referenceHeading>
-      <referenceAltitude>0</referenceAltitude>
-      <drift>0.001 0.001 0.001</drift> 
-      <gaussiannoise>0.05 0.05 0.05</gaussiannoise> 
-      
-    </plugin>
+    <sensor name="navsat_sensor" type="navsat">
+      <always_on>1</always_on>
+      <update_rate>5.0</update_rate>
+      <topic>navsat/fix</topic>
+    </sensor>
   </gazebo>
 
 </robot>

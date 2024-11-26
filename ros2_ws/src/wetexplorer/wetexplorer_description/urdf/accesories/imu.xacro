@@ -45,8 +45,21 @@
 
 
   <gazebo>
-    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
-      <!-- <robotNamespace>$(arg robot_namespace)</robotNamespace> -->
+
+    <plugin filename="gz-sim-imu-system"
+        name="gz::sim::systems::Imu">
+    </plugin>
+
+    <sensor name="imu_sensor" type="imu">
+      <always_on>1</always_on>
+      <bodyName>imu_link</bodyName>
+      <update_rate>250.0</update_rate>
+      <visualize>true</visualize>
+      <topic>imu/data</topic>
+    </sensor>
+
+    <!-- <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+    
       <updateRate>250.0</updateRate>
       <bodyName>imu_link</bodyName>
       <topicName>imu/data</topicName>
@@ -56,7 +69,7 @@
       <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
       <headingDrift>0.00</headingDrift>
       <headingGaussianNoise>0.0</headingGaussianNoise>
-    </plugin>
+    </plugin> -->
   </gazebo>
 
 
