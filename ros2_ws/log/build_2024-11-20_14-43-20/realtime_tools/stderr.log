@@ -1,0 +1,3 @@
+gmake[2]: *** [CMakeFiles/realtime_server_goal_handle_tests.dir/build.make:76: CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:444: CMakeFiles/realtime_server_goal_handle_tests.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

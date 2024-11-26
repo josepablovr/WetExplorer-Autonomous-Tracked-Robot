@@ -1,0 +1,8 @@
+[0.047s] Invoking command in '/ros2_ws/build/wetexplorer_hardware': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware
+[0.096s] -- Configuring incomplete, errors occurred!
+[0.097s] See also "/ros2_ws/build/wetexplorer_hardware/CMakeFiles/CMakeOutput.log".
+[0.097s] [31mCMake Error at CMakeLists.txt:8 (catkin_package):
+[0.097s]   Unknown CMake command "catkin_package".
+[0.097s] 
+[0.097s] [0m
+[0.119s] Invoked command in '/ros2_ws/build/wetexplorer_hardware' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware

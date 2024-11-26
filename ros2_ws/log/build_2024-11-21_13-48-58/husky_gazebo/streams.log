@@ -1,0 +1,52 @@
+[0.021s] Invoking command in '/ros2_ws/build/husky_gazebo': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_gazebo
+[0.117s] -- The C compiler identification is GNU 11.4.0
+[0.216s] -- The CXX compiler identification is GNU 11.4.0
+[0.229s] -- Detecting C compiler ABI info
+[0.342s] -- Detecting C compiler ABI info - done
+[0.355s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.356s] -- Detecting C compile features
+[0.357s] -- Detecting C compile features - done
+[0.363s] -- Detecting CXX compiler ABI info
+[0.497s] -- Detecting CXX compiler ABI info - done
+[0.509s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.510s] -- Detecting CXX compile features
+[0.511s] -- Detecting CXX compile features - done
+[0.516s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.733s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.900s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[1.017s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[1.124s] -- Configuring done
+[1.130s] -- Generating done
+[1.131s] -- Build files have been written to: /ros2_ws/build/husky_gazebo
+[1.140s] Invoked command in '/ros2_ws/build/husky_gazebo' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_gazebo
+[1.143s] Invoking command in '/ros2_ws/build/husky_gazebo': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_gazebo -- -j12 -l12
+[1.207s] Invoked command in '/ros2_ws/build/husky_gazebo' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_gazebo -- -j12 -l12
+[1.258s] Invoking command in '/ros2_ws/build/husky_gazebo': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_gazebo
+[1.269s] -- Install configuration: ""
+[1.270s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch
+[1.270s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_playpen.launch
+[1.270s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/realsense.launch
+[1.270s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_empty_world.launch
+[1.271s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/spawn_husky.launch
+[1.271s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_playpen.launch.py
+[1.271s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/multi_husky_playpen.launch
+[1.272s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/gazebo.launch.py
+[1.272s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/playpen.launch
+[1.272s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/worlds
+[1.273s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/worlds/clearpath_playpen.world
+[1.274s] -- Installing: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/package_run_dependencies/husky_gazebo
+[1.274s] -- Installing: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/parent_prefix_path/husky_gazebo
+[1.274s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/ament_prefix_path.sh
+[1.275s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/ament_prefix_path.dsv
+[1.275s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/path.sh
+[1.275s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/path.dsv
+[1.275s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.bash
+[1.275s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.sh
+[1.276s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.zsh
+[1.276s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.dsv
+[1.276s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/package.dsv
+[1.277s] -- Installing: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/packages/husky_gazebo
+[1.277s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/cmake/husky_gazeboConfig.cmake
+[1.277s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/cmake/husky_gazeboConfig-version.cmake
+[1.278s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/package.xml
+[1.281s] Invoked command in '/ros2_ws/build/husky_gazebo' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_gazebo

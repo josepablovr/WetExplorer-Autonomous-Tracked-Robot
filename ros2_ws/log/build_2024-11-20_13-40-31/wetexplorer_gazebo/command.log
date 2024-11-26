@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/wetexplorer_gazebo': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_gazebo -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo

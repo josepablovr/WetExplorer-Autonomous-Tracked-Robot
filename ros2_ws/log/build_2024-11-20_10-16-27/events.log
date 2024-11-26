@@ -1,0 +1,421 @@
+[0.000000] (-) TimerEvent: {}
+[0.000106] (husky_description) JobQueued: {'identifier': 'husky_description', 'dependencies': OrderedDict()}
+[0.000130] (husky_msgs) JobQueued: {'identifier': 'husky_msgs', 'dependencies': OrderedDict()}
+[0.000148] (mapviz_plugins) JobQueued: {'identifier': 'mapviz_plugins', 'dependencies': OrderedDict()}
+[0.000174] (robo_base) JobQueued: {'identifier': 'robo_base', 'dependencies': OrderedDict()}
+[0.000202] (rtcm_msgs) JobQueued: {'identifier': 'rtcm_msgs', 'dependencies': OrderedDict()}
+[0.000254] (tile_map) JobQueued: {'identifier': 'tile_map', 'dependencies': OrderedDict()}
+[0.000327] (wetexplorer_control) JobQueued: {'identifier': 'wetexplorer_control', 'dependencies': OrderedDict()}
+[0.000355] (wetexplorer_description) JobQueued: {'identifier': 'wetexplorer_description', 'dependencies': OrderedDict()}
+[0.000384] (wetexplorer_gazebo) JobQueued: {'identifier': 'wetexplorer_gazebo', 'dependencies': OrderedDict()}
+[0.000446] (wetexplorer_hardware) JobQueued: {'identifier': 'wetexplorer_hardware', 'dependencies': OrderedDict()}
+[0.000479] (wetexplorer_navigation) JobQueued: {'identifier': 'wetexplorer_navigation', 'dependencies': OrderedDict()}
+[0.000501] (husky_base) JobQueued: {'identifier': 'husky_base', 'dependencies': OrderedDict([('husky_msgs', '/ros2_ws/install/husky_msgs')])}
+[0.000543] (husky_control) JobQueued: {'identifier': 'husky_control', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description')])}
+[0.000560] (husky_viz) JobQueued: {'identifier': 'husky_viz', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description')])}
+[0.000576] (husky_bringup) JobQueued: {'identifier': 'husky_bringup', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_base', '/ros2_ws/install/husky_base'), ('husky_control', '/ros2_ws/install/husky_control')])}
+[0.000598] (husky_desktop) JobQueued: {'identifier': 'husky_desktop', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_viz', '/ros2_ws/install/husky_viz')])}
+[0.000616] (husky_gazebo) JobQueued: {'identifier': 'husky_gazebo', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_control', '/ros2_ws/install/husky_control')])}
+[0.000632] (husky_robot) JobQueued: {'identifier': 'husky_robot', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_base', '/ros2_ws/install/husky_base'), ('husky_control', '/ros2_ws/install/husky_control'), ('husky_bringup', '/ros2_ws/install/husky_bringup')])}
+[0.000649] (husky_simulator) JobQueued: {'identifier': 'husky_simulator', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_control', '/ros2_ws/install/husky_control'), ('husky_gazebo', '/ros2_ws/install/husky_gazebo')])}
+[0.000670] (husky_description) JobStarted: {'identifier': 'husky_description'}
+[0.006794] (husky_msgs) JobStarted: {'identifier': 'husky_msgs'}
+[0.009461] (mapviz_plugins) JobStarted: {'identifier': 'mapviz_plugins'}
+[0.012895] (robo_base) JobStarted: {'identifier': 'robo_base'}
+[0.016754] (rtcm_msgs) JobStarted: {'identifier': 'rtcm_msgs'}
+[0.019596] (tile_map) JobStarted: {'identifier': 'tile_map'}
+[0.023243] (wetexplorer_control) JobStarted: {'identifier': 'wetexplorer_control'}
+[0.025407] (wetexplorer_description) JobStarted: {'identifier': 'wetexplorer_description'}
+[0.027994] (wetexplorer_gazebo) JobStarted: {'identifier': 'wetexplorer_gazebo'}
+[0.032300] (wetexplorer_hardware) JobStarted: {'identifier': 'wetexplorer_hardware'}
+[0.035209] (wetexplorer_navigation) JobStarted: {'identifier': 'wetexplorer_navigation'}
+[0.049194] (husky_description) JobProgress: {'identifier': 'husky_description', 'progress': 'cmake'}
+[0.049414] (husky_description) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/husky-humble-devel/husky_description', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_description'], 'cwd': '/ros2_ws/build/husky_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.051402] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'cmake'}
+[0.051718] (husky_msgs) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/husky-humble-devel/husky_msgs', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_msgs'], 'cwd': '/ros2_ws/build/husky_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.053902] (mapviz_plugins) JobProgress: {'identifier': 'mapviz_plugins', 'progress': 'cmake'}
+[0.053956] (mapviz_plugins) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/mapviz_plugins', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins'], 'cwd': '/ros2_ws/build/mapviz_plugins', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/mapviz_plugins'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.055574] (robo_base) JobProgress: {'identifier': 'robo_base', 'progress': 'cmake'}
+[0.055669] (robo_base) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/robo_base/robo_base', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base'], 'cwd': '/ros2_ws/build/robo_base', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/robo_base'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.057245] (rtcm_msgs) JobProgress: {'identifier': 'rtcm_msgs', 'progress': 'cmake'}
+[0.057494] (rtcm_msgs) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/rtcm_msgs', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/rtcm_msgs'], 'cwd': '/ros2_ws/build/rtcm_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/rtcm_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.060333] (tile_map) JobProgress: {'identifier': 'tile_map', 'progress': 'cmake'}
+[0.060396] (tile_map) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/tile_map', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map'], 'cwd': '/ros2_ws/build/tile_map', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/tile_map'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.062302] (wetexplorer_control) JobProgress: {'identifier': 'wetexplorer_control', 'progress': 'cmake'}
+[0.062354] (wetexplorer_control) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_control', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control'], 'cwd': '/ros2_ws/build/wetexplorer_control', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.065271] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'cmake'}
+[0.065384] (wetexplorer_description) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_description', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_description'], 'cwd': '/ros2_ws/build/wetexplorer_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.066271] (wetexplorer_gazebo) JobProgress: {'identifier': 'wetexplorer_gazebo', 'progress': 'cmake'}
+[0.066321] (wetexplorer_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_gazebo', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo'], 'cwd': '/ros2_ws/build/wetexplorer_gazebo', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.068370] (wetexplorer_hardware) JobProgress: {'identifier': 'wetexplorer_hardware', 'progress': 'cmake'}
+[0.068442] (wetexplorer_hardware) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_hardware', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware'], 'cwd': '/ros2_ws/build/wetexplorer_hardware', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_hardware'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.072003] (wetexplorer_navigation) JobProgress: {'identifier': 'wetexplorer_navigation', 'progress': 'cmake'}
+[0.072096] (wetexplorer_navigation) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_navigation', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_navigation'], 'cwd': '/ros2_ws/build/wetexplorer_navigation', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_navigation'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.077562] (mapviz_plugins) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.077804] (mapviz_plugins) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.077938] (mapviz_plugins) StderrLine: {'line': b'  CMake.\n'}
+[0.078065] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.078189] (mapviz_plugins) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.078320] (mapviz_plugins) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.078443] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.078971] (mapviz_plugins) StderrLine: {'line': b'\x1b[0m\n'}
+[0.079106] (robo_base) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.079221] (robo_base) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.079319] (robo_base) StderrLine: {'line': b'  CMake.\n'}
+[0.079414] (robo_base) StderrLine: {'line': b'\n'}
+[0.080174] (robo_base) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.080306] (robo_base) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.080401] (robo_base) StderrLine: {'line': b'\n'}
+[0.080501] (robo_base) StderrLine: {'line': b'\x1b[0m\n'}
+[0.081593] (tile_map) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.081799] (tile_map) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.081942] (tile_map) StderrLine: {'line': b'  CMake.\n'}
+[0.082072] (tile_map) StderrLine: {'line': b'\n'}
+[0.082196] (tile_map) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.082305] (tile_map) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.082413] (tile_map) StderrLine: {'line': b'\n'}
+[0.082549] (tile_map) StderrLine: {'line': b'\x1b[0m\n'}
+[0.099199] (-) TimerEvent: {}
+[0.142241] (husky_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.147553] (husky_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.150566] (rtcm_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.153786] (robo_base) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.154500] (mapviz_plugins) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.157031] (wetexplorer_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.157857] (tile_map) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.165310] (wetexplorer_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199302] (-) TimerEvent: {}
+[0.235272] (rtcm_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.238222] (husky_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.247673] (husky_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.250742] (robo_base) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.250988] (husky_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.251573] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.260595] (wetexplorer_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.261933] (tile_map) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.262569] (husky_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.264332] (robo_base) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.264569] (mapviz_plugins) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.268760] (wetexplorer_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.273113] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.276210] (tile_map) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.276795] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.282121] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299396] (-) TimerEvent: {}
+[0.352100] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.357795] (husky_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.366677] (rtcm_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.367534] (husky_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.367744] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.368136] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.372424] (robo_base) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.373319] (husky_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.373652] (husky_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.373788] (husky_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.378517] (husky_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.379120] (husky_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.379656] (husky_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.380821] (husky_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.383691] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.384625] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.385254] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.387024] (husky_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.391175] (tile_map) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.391371] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.393933] (robo_base) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.394331] (robo_base) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.395149] (robo_base) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.398687] (wetexplorer_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.400259] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.400428] (-) TimerEvent: {}
+[0.400670] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.401032] (robo_base) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.401931] (mapviz_plugins) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.402492] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.403280] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.406853] (tile_map) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.407937] (tile_map) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.408146] (tile_map) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.410537] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.411588] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.413526] (tile_map) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.417845] (wetexplorer_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.418763] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.420115] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.426967] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.501543] (-) TimerEvent: {}
+[0.507647] (husky_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.518649] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.520343] (husky_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.521230] (husky_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.521563] (husky_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.530114] (husky_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.530316] (husky_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.532030] (rtcm_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.532396] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.533529] (rtcm_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.536908] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.537142] (rtcm_msgs) StdoutLine: {'line': b'-- Found ros_environment: 3.2.2 (/opt/ros/humble/share/ros_environment/cmake)\n'}
+[0.539082] (husky_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.539528] (husky_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.540523] (rtcm_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.540771] (husky_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.543537] (husky_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.544037] (robo_base) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.545622] (tile_map) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.547908] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.551800] (wetexplorer_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.552010] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.553605] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.553825] (wetexplorer_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.556164] (wetexplorer_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.558481] (tile_map) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.560592] (tile_map) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.560765] (tile_map) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.568687] (wetexplorer_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.569191] (robo_base) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.569372] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.572513] (mapviz_plugins) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.572912] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.573029] (wetexplorer_control) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (catkin_package):\n'}
+[0.573152] (wetexplorer_control) StderrLine: {'line': b'  Unknown CMake command "catkin_package".\n'}
+[0.573241] (wetexplorer_control) StderrLine: {'line': b'\n'}
+[0.573333] (wetexplorer_control) StderrLine: {'line': b'\x1b[0m\n'}
+[0.573428] (robo_base) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.573598] (robo_base) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.573688] (mapviz_plugins) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.573774] (wetexplorer_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.573859] (wetexplorer_control) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.573944] (wetexplorer_control) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_control/CMakeFiles/CMakeOutput.log".\n'}
+[0.577458] (wetexplorer_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.577732] (wetexplorer_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.577854] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.577960] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.578054] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.578149] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.578238] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.578331] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.578424] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.578537] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.578636] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.578728] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.578822] (wetexplorer_control) CommandEnded: {'returncode': 1}
+[0.579457] (tile_map) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:13 (find_package):\n'}
+[0.580555] (tile_map) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.581156] (tile_map) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.581276] (tile_map) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.581375] (tile_map) StderrLine: {'line': b'\n'}
+[0.581485] (tile_map) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.581593] (tile_map) StderrLine: {'line': b'  of the following names:\n'}
+[0.581684] (tile_map) StderrLine: {'line': b'\n'}
+[0.581783] (tile_map) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.581887] (tile_map) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.581979] (tile_map) StderrLine: {'line': b'\n'}
+[0.582064] (tile_map) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.582154] (tile_map) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.582249] (tile_map) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.582353] (tile_map) StderrLine: {'line': b'  installed.\n'}
+[0.582441] (tile_map) StderrLine: {'line': b'\n'}
+[0.582554] (tile_map) StderrLine: {'line': b'\x1b[0m\n'}
+[0.582649] (tile_map) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.582752] (tile_map) StdoutLine: {'line': b'See also "/ros2_ws/build/tile_map/CMakeFiles/CMakeOutput.log".\n'}
+[0.585375] (wetexplorer_hardware) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.585873] (wetexplorer_hardware) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.586086] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.586191] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.586283] (wetexplorer_hardware) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.586387] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.586503] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.586827] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.586951] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.587068] (wetexplorer_hardware) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.587221] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.587341] (wetexplorer_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.587459] (wetexplorer_hardware) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.587596] (wetexplorer_hardware) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_hardware/CMakeFiles/CMakeOutput.log".\n'}
+[0.587745] (wetexplorer_hardware) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (catkin_package):\n'}
+[0.588022] (wetexplorer_hardware) StderrLine: {'line': b'  Unknown CMake command "catkin_package".\n'}
+[0.588079] (wetexplorer_hardware) StderrLine: {'line': b'\n'}
+[0.588150] (wetexplorer_hardware) StderrLine: {'line': b'\x1b[0m\n'}
+[0.588208] (tile_map) CommandEnded: {'returncode': 1}
+[0.590484] (wetexplorer_hardware) CommandEnded: {'returncode': 1}
+[0.591144] (wetexplorer_navigation) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.591382] (wetexplorer_navigation) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.591788] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.591965] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.592109] (wetexplorer_navigation) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.592234] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.592333] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.592440] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.592641] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.592753] (wetexplorer_navigation) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.592862] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.592978] (wetexplorer_navigation) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.593082] (wetexplorer_navigation) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.593174] (wetexplorer_navigation) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_navigation/CMakeFiles/CMakeOutput.log".\n'}
+[0.593290] (wetexplorer_navigation) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.593903] (wetexplorer_navigation) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.594390] (wetexplorer_navigation) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.594520] (wetexplorer_navigation) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.594639] (wetexplorer_navigation) StderrLine: {'line': b'\n'}
+[0.594732] (wetexplorer_navigation) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.594818] (wetexplorer_navigation) StderrLine: {'line': b'  of the following names:\n'}
+[0.594903] (wetexplorer_navigation) StderrLine: {'line': b'\n'}
+[0.594983] (wetexplorer_navigation) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.595065] (wetexplorer_navigation) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.595145] (wetexplorer_navigation) StderrLine: {'line': b'\n'}
+[0.595224] (wetexplorer_navigation) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.595308] (wetexplorer_navigation) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.595390] (wetexplorer_navigation) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.595481] (wetexplorer_navigation) StderrLine: {'line': b'  installed.\n'}
+[0.595580] (wetexplorer_navigation) StderrLine: {'line': b'\n'}
+[0.595674] (wetexplorer_navigation) StderrLine: {'line': b'\x1b[0m\n'}
+[0.595757] (wetexplorer_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.595870] (wetexplorer_gazebo) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.595955] (wetexplorer_gazebo) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.596039] (wetexplorer_gazebo) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.596120] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.596200] (wetexplorer_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.596283] (robo_base) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:7 (find_package):\n'}
+[0.596381] (robo_base) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.596491] (robo_base) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.596589] (robo_base) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.596673] (robo_base) StderrLine: {'line': b'\n'}
+[0.596752] (robo_base) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.596833] (robo_base) StderrLine: {'line': b'  of the following names:\n'}
+[0.596915] (robo_base) StderrLine: {'line': b'\n'}
+[0.596995] (robo_base) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.597076] (robo_base) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.597156] (robo_base) StderrLine: {'line': b'\n'}
+[0.597235] (robo_base) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.597315] (robo_base) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.597398] (robo_base) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.598163] (robo_base) StderrLine: {'line': b'  installed.\n'}
+[0.598284] (robo_base) StderrLine: {'line': b'\n'}
+[0.598836] (robo_base) StderrLine: {'line': b'\x1b[0m\n'}
+[0.599283] (robo_base) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.599514] (robo_base) StdoutLine: {'line': b'See also "/ros2_ws/build/robo_base/CMakeFiles/CMakeOutput.log".\n'}
+[0.599665] (mapviz_plugins) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.599961] (mapviz_plugins) StdoutLine: {'line': b'See also "/ros2_ws/build/mapviz_plugins/CMakeFiles/CMakeOutput.log".\n'}
+[0.600102] (mapviz_plugins) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:31 (find_package):\n'}
+[0.600390] (mapviz_plugins) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.600519] (mapviz_plugins) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.600630] (mapviz_plugins) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.600745] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.600843] (mapviz_plugins) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.600943] (mapviz_plugins) StderrLine: {'line': b'  of the following names:\n'}
+[0.601041] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.601138] (mapviz_plugins) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.601235] (mapviz_plugins) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.601335] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.601434] (mapviz_plugins) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.601613] (-) TimerEvent: {}
+[0.602619] (wetexplorer_gazebo) StderrLine: {'line': b'  of the following names:\n'}
+[0.603172] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.603303] (wetexplorer_gazebo) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.603706] (wetexplorer_gazebo) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.604522] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.605041] (wetexplorer_gazebo) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.605172] (wetexplorer_gazebo) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.605281] (wetexplorer_gazebo) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.605378] (wetexplorer_gazebo) StderrLine: {'line': b'  installed.\n'}
+[0.605478] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.605707] (wetexplorer_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[0.605860] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.605992] (wetexplorer_gazebo) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[0.606098] (mapviz_plugins) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.606257] (mapviz_plugins) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.606361] (mapviz_plugins) StderrLine: {'line': b'  installed.\n'}
+[0.606469] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.606852] (mapviz_plugins) StderrLine: {'line': b'\x1b[0m\n'}
+[0.606951] (wetexplorer_navigation) CommandEnded: {'returncode': 1}
+[0.607826] (mapviz_plugins) CommandEnded: {'returncode': 1}
+[0.621567] (wetexplorer_control) JobEnded: {'identifier': 'wetexplorer_control', 'rc': 1}
+[0.622958] (robo_base) CommandEnded: {'returncode': 1}
+[0.623469] (wetexplorer_gazebo) CommandEnded: {'returncode': 1}
+[0.626016] (mapviz_plugins) JobEnded: {'identifier': 'mapviz_plugins', 'rc': 'SIGINT'}
+[0.627382] (tile_map) JobEnded: {'identifier': 'tile_map', 'rc': 'SIGINT'}
+[0.627776] (wetexplorer_gazebo) JobEnded: {'identifier': 'wetexplorer_gazebo', 'rc': 'SIGINT'}
+[0.628128] (robo_base) JobEnded: {'identifier': 'robo_base', 'rc': 'SIGINT'}
+[0.628455] (wetexplorer_hardware) JobEnded: {'identifier': 'wetexplorer_hardware', 'rc': 'SIGINT'}
+[0.628766] (wetexplorer_navigation) JobEnded: {'identifier': 'wetexplorer_navigation', 'rc': 'SIGINT'}
+[0.684032] (husky_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.693922] (husky_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.696651] (rtcm_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.701746] (-) TimerEvent: {}
+[0.703721] (wetexplorer_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.768983] (husky_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.778933] (husky_description) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[0.786070] (wetexplorer_description) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[0.800617] (husky_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.801821] (-) TimerEvent: {}
+[0.805738] (husky_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.811371] (rtcm_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.813989] (husky_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.815919] (rtcm_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.823876] (rtcm_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.826120] (husky_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.835595] (rtcm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.842503] (husky_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.851229] (rtcm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.869378] (husky_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.877979] (rtcm_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.891319] (husky_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.895701] (husky_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.897041] (husky_description) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/husky_description\n'}
+[0.901909] (-) TimerEvent: {}
+[0.902609] (husky_description) JobEnded: {'identifier': 'husky_description', 'rc': 'SIGINT'}
+[0.903165] (wetexplorer_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.906629] (wetexplorer_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.907536] (wetexplorer_description) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/wetexplorer_description\n'}
+[0.912655] (wetexplorer_description) JobEnded: {'identifier': 'wetexplorer_description', 'rc': 'SIGINT'}
+[1.002033] (-) TimerEvent: {}
+[1.102272] (-) TimerEvent: {}
+[1.112958] (husky_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.122376] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.12.11 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)\n'}
+[1.124292] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.12.11 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)\n'}
+[1.126238] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.12.11 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)\n'}
+[1.128385] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.202395] (-) TimerEvent: {}
+[1.302643] (-) TimerEvent: {}
+[1.402945] (-) TimerEvent: {}
+[1.419238] (husky_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.457300] (rtcm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.503062] (-) TimerEvent: {}
+[1.535823] (husky_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.551590] (husky_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.552976] (husky_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.570510] (husky_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.570764] (husky_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.570847] (husky_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.570905] (husky_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.574788] (rtcm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.585046] (husky_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.592070] (rtcm_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.593333] (rtcm_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.603189] (-) TimerEvent: {}
+[1.610642] (rtcm_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.610884] (rtcm_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.610968] (rtcm_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.611025] (rtcm_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.624937] (rtcm_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.630477] (husky_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.664732] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.12.11 (/opt/ros/humble/share/ament_cmake_flake8/cmake)\n'}
+[1.666123] (husky_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.666515] (rtcm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.12.11 (/opt/ros/humble/share/ament_cmake_pep257/cmake)\n'}
+[1.668573] (husky_msgs) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/husky_msgs\n'}
+[1.673689] (husky_msgs) JobEnded: {'identifier': 'husky_msgs', 'rc': 'SIGINT'}
+[1.674624] (rtcm_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.703290] (-) TimerEvent: {}
+[1.709560] (rtcm_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.712054] (rtcm_msgs) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/rtcm_msgs\n'}
+[1.717549] (rtcm_msgs) JobEnded: {'identifier': 'rtcm_msgs', 'rc': 'SIGINT'}
+[1.728399] (husky_base) JobSkipped: {'identifier': 'husky_base'}
+[1.728461] (husky_control) JobSkipped: {'identifier': 'husky_control'}
+[1.728491] (husky_viz) JobSkipped: {'identifier': 'husky_viz'}
+[1.728511] (husky_bringup) JobSkipped: {'identifier': 'husky_bringup'}
+[1.728528] (husky_desktop) JobSkipped: {'identifier': 'husky_desktop'}
+[1.728543] (husky_gazebo) JobSkipped: {'identifier': 'husky_gazebo'}
+[1.728556] (husky_robot) JobSkipped: {'identifier': 'husky_robot'}
+[1.728574] (husky_simulator) JobSkipped: {'identifier': 'husky_simulator'}
+[1.728589] (-) EventReactorShutdown: {}

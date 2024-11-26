@@ -1,0 +1,55 @@
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  6%] Built target ament_cmake_python_copy_rtcm_msgs
+[  9%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_generator_c.dir/rosidl_generator_c/rtcm_msgs/msg/detail/message__functions.c.o[0m
+running egg_info
+creating rtcm_msgs.egg-info
+writing rtcm_msgs.egg-info/PKG-INFO
+writing dependency_links to rtcm_msgs.egg-info/dependency_links.txt
+writing top-level names to rtcm_msgs.egg-info/top_level.txt
+writing manifest file 'rtcm_msgs.egg-info/SOURCES.txt'
+reading manifest file 'rtcm_msgs.egg-info/SOURCES.txt'
+writing manifest file 'rtcm_msgs.egg-info/SOURCES.txt'
+[ 12%] [32m[1mLinking C shared library librtcm_msgs__rosidl_generator_c.so[0m
+[ 12%] Built target ament_cmake_python_build_rtcm_msgs_egg
+[ 12%] Built target rtcm_msgs__cpp
+[ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 22%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 22%] Built target rtcm_msgs__rosidl_generator_c
+[ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rtcm_msgs/msg/message__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rtcm_msgs/msg/message__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rtcm_msgs/msg/detail/message__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rtcm_msgs/msg/detail/message__type_support_c.cpp.o[0m
+[ 48%] [32m[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_c.so[0m
+[ 51%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rtcm_msgs/msg/detail/message__type_support.c.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rtcm_msgs/msg/detail/dds_fastrtps/message__type_support.cpp.o[0m
+[ 54%] Built target rtcm_msgs__rosidl_typesupport_c
+[ 58%] [32m[1mLinking C shared library librtcm_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 58%] Built target rtcm_msgs__rosidl_typesupport_introspection_c
+[ 61%] [32m[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_cpp.so[0m
+[ 61%] Built target rtcm_msgs__rosidl_typesupport_cpp
+[ 64%] [32m[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 64%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_c
+[ 67%] [32m[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 70%] [32m[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 70%] Built target rtcm_msgs__rosidl_typesupport_introspection_cpp
+[ 70%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_cpp
+[ 70%] Built target rtcm_msgs
+[ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 74%] Built target rtcm_msgs__py
+[ 77%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_generator_py.dir/rosidl_generator_py/rtcm_msgs/msg/_message_s.c.o[0m
+[ 80%] [32m[1mLinking C shared library rosidl_generator_py/rtcm_msgs/librtcm_msgs__rosidl_generator_py.so[0m
+[ 80%] Built target rtcm_msgs__rosidl_generator_py
+[ 87%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target rtcm_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target rtcm_msgs__rosidl_typesupport_c__pyext
+[100%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_c__pyext

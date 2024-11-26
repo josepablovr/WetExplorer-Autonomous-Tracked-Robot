@@ -1,0 +1,12 @@
+[0.048s] Invoking command in '/ros2_ws/build/mapviz_plugins': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins
+[0.078s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.078s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.079s]   CMake.
+[0.079s] 
+[0.079s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.079s]   CMake that the project does not need compatibility with older versions.
+[0.079s] 
+[0.081s] [0m
+[0.169s] -- The C compiler identification is GNU 11.4.0
+[0.284s] -- The CXX compiler identification is GNU 11.4.0
+[0.298s] -- Detecting C compiler ABI info

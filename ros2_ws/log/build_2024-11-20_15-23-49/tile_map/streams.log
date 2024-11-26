@@ -1,0 +1,41 @@
+[0.039s] Invoking command in '/ros2_ws/build/tile_map': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map
+[0.682s] -- The C compiler identification is GNU 11.4.0
+[0.682s] -- The CXX compiler identification is GNU 11.4.0
+[0.683s] -- Detecting C compiler ABI info
+[0.684s] -- Detecting C compiler ABI info - done
+[0.684s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.686s] -- Detecting C compile features
+[0.687s] -- Detecting C compile features - done
+[0.687s] -- Detecting CXX compiler ABI info
+[0.687s] -- Detecting CXX compiler ABI info - done
+[0.687s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.687s] -- Detecting CXX compile features
+[0.687s] -- Detecting CXX compile features - done
+[0.687s] -- Configuring incomplete, errors occurred!
+[0.687s] See also "/ros2_ws/build/tile_map/CMakeFiles/CMakeOutput.log".
+[0.691s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.691s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.691s]   CMake.
+[0.692s] 
+[0.692s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.692s]   CMake that the project does not need compatibility with older versions.
+[0.692s] 
+[0.692s] [0m
+[0.692s] [31mCMake Error at CMakeLists.txt:13 (find_package):
+[0.692s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.692s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.693s]   CMake did not find one.
+[0.693s] 
+[0.693s]   Could not find a package configuration file provided by "catkin" with any
+[0.693s]   of the following names:
+[0.694s] 
+[0.694s]     catkinConfig.cmake
+[0.696s]     catkin-config.cmake
+[0.696s] 
+[0.696s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.696s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.696s]   provides a separate development package or SDK, be sure it has been
+[0.696s]   installed.
+[0.696s] 
+[0.697s] [0m
+[0.715s] Invoked command in '/ros2_ws/build/tile_map' returned '1': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map

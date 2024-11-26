@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="maxii">
+
+  
+
+ 
+  <!-- Define materials EOOO -->
+    <material name="green">
+       <color rgba="0 1 0 1.0"/>
+    </material>
+    <material name="red">
+      <color rgba="0.8902 0.05098 0 1" />
+    </material>
+    <material name="black">
+       <color rgba="0 0 0 1.0"/>
+    </material>
+    <material name="grey">
+      <color rgba="0.41176 0.41176 0.41176 1" />
+    </material>
+    <material name="light_grey">
+      <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+    </material>
+    
+
+
+    <link name="base_link">
+    </link>
+
+    <link name="chassis_link">
+      <inertial>
+        <origin
+          xyz="0.010639 -1.5867E-06 0.059548"
+          rpy="0 0 0" />
+        <mass
+        value="30" />
+      <inertia
+        ixx="0.754053311196988"
+        ixy="4.1492E-07"
+        ixz="-0.0003018"
+        iyy="1.18387960831444"
+        iyz="2.5523E-07"
+        izz="1.65941599180835" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+        </geometry>
+        <material name="green"/>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    
+
+    <link name="power_pulley_right_link">
+      <inertial>
+        <origin
+          xyz="0.0 0.0 0.0"
+          rpy="0 0 0" />
+        <mass
+        value="0.35" />
+        <inertia
+          ixx="0.000602093"
+          ixy="-4.6464E-21"
+          ixz="-1.4155E-18"
+          iyy="0.001181908"
+          iyz="3.0888E-19"
+          izz="0.000602093" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0.078721 0.30457 -0.0704"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/power_pulley_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+      <joint
+      name="power_pulley_right_joint"
+      type="continuous">
+      <origin
+        xyz="-0.078721 -0.30457 0.0704"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_right_link" />
+      <axis
+        xyz="0 1 0" />
+    </joint>
+
+
+
+
+    <link name="power_pulley_left_link">
+      <inertial>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+          <mass
+          value="0.35" />
+        <inertia
+          ixx="0.000602093"
+          ixy="-5.0671E-20"
+          ixz="-1.5394E-18"
+          iyy="0.001181908"
+          iyz="2.1375E-19"
+          izz="0.000602093" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0.078721 -0.30443 -0.0704"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/power_pulley_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint
+      name="power_pulley_left_joint"
+      type="continuous">
+      <origin
+        xyz="-0.078721 0.30443 0.0704"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="power_pulley_left_link" />
+      <axis
+        xyz="0 1 0" />
+    </joint>
+
+
+    <link name="pulleys_left_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="8" />
+        <inertia
+          ixx="0.041405"
+          ixy="-1.9692E-14"
+          ixz="0.049785"
+          iyy="0.45937"
+          iyz="1.9683E-12"
+          izz="0.43339" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulleys_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulleys_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulleys_right_link">
+      <inertial>
+        <origin
+          xyz="-0.024058 -0.3045 -0.098307"
+          rpy="0 0 0" />
+        <mass
+          value="8" />
+        <inertia
+          ixx="0.041405"
+          ixy="-1.9692E-14"
+          ixz="0.049785"
+          iyy="0.45937"
+          iyz="1.9683E-12"
+          izz="0.43339" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL" />
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulleys_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulleys_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulleys_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_left_link">
+      <inertial>
+        <origin
+          xyz="0.010549 0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0094955"
+          ixy="7.9893E-10"
+          ixz="0.0032109"
+          iyy="0.033011"
+          iyz="4.4205E-09"
+          izz="0.032755" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulley_support_left_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+    <joint name="pulley_support_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_left_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+
+    <link name="pulley_support_right_link">
+      <inertial>
+        <origin
+          xyz="0.01055 -0.30555 -0.039386"
+          rpy="0 0 0" />
+        <mass
+          value="1.5" />
+        <inertia
+          ixx="0.0094955"
+          ixy="5.4128E-10"
+          ixz="0.0032109"
+          iyy="0.033011"
+          iyz="4.4903E-09"
+          izz="0.032755" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL" />
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <!-- <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/pulley_support_right_link.STL" />
+        </geometry>
+      </collision> -->
+    </link>
+
+
+    <joint name="pulley_support_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="pulley_support_right_link" />
+      <axis
+        xyz="0 0 0" />
+    </joint><!-- Define materials EOOO -->
+    
+
+ 
+</robot>

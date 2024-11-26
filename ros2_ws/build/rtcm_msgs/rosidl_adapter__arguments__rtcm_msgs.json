@@ -1,0 +1,6 @@
+{
+  "package_name": "rtcm_msgs",
+  "non_idl_tuples": [
+    "/ros2_ws/src/rtcm_msgs:msg/Message.msg"
+  ]
+}

@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/ros2_ws/src/wetexplorer/wetexplorer_gazebo/meshes": No such file or
+  directory.
+
+[0m

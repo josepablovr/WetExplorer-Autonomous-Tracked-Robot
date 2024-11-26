@@ -1,0 +1,219 @@
+[0.051s] Invoking command in '/ros2_ws/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/control_msgs -- -j12 -l12
+[0.161s] [35m[1mConsolidate compiler generated dependencies of target control_msgs__rosidl_generator_c[0m
+[0.178s] [  0%] Built target control_msgs__cpp
+[0.198s] [  0%] Built target ament_cmake_python_copy_control_msgs
+[0.250s] [  1%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.259s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.260s] [ 15%] Built target control_msgs__rosidl_generator_c
+[0.269s] [ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[0.269s] [ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.270s] [ 18%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.292s] [ 19%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[0.762s] running egg_info
+[0.765s] writing control_msgs.egg-info/PKG-INFO
+[0.765s] writing dependency_links to control_msgs.egg-info/dependency_links.txt
+[0.765s] writing top-level names to control_msgs.egg-info/top_level.txt
+[0.774s] reading manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.777s] writing manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.850s] [ 19%] Built target ament_cmake_python_build_control_msgs_egg
+[4.800s] [ 19%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/parallel_gripper_command__type_support.cpp.o[0m
+[4.800s] [ 20%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/follow_joint_trajectory__type_support.cpp.o[0m
+[4.801s] [ 19%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/joint_trajectory__type_support.cpp.o[0m
+[4.809s] [ 20%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/gripper_command__type_support.cpp.o[0m
+[4.816s] [ 20%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/single_joint_position__type_support.cpp.o[0m
+[4.817s] [ 21%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/point_head__type_support.cpp.o[0m
+[4.829s] [ 22%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/admittance_controller_state__type_support.cpp.o[0m
+[4.948s] [ 22%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/dynamic_interface_group_values__type_support.cpp.o[0m
+[4.961s] [ 23%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/dynamic_joint_state__type_support.cpp.o[0m
+[4.968s] [ 23%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/gripper_command__type_support.cpp.o[0m
+[4.976s] [ 24%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/interface_value__type_support.cpp.o[0m
+[4.979s] [ 24%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_component_tolerance__type_support.cpp.o[0m
+[4.981s] [ 24%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_controller_state__type_support.cpp.o[0m
+[5.004s] [ 25%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_jog__type_support.cpp.o[0m
+[5.042s] [ 25%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_tolerance__type_support.cpp.o[0m
+[5.065s] [ 26%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_trajectory_controller_state__type_support.cpp.o[0m
+[5.071s] [ 26%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/mecanum_drive_controller_state__type_support.cpp.o[0m
+[5.074s] [ 26%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/multi_dof_state_stamped__type_support.cpp.o[0m
+[5.079s] [ 27%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/multi_dof_command__type_support.cpp.o[0m
+[5.085s] [ 28%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/pid_state__type_support.cpp.o[0m
+[5.121s] [ 28%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/single_dof_state_stamped__type_support.cpp.o[0m
+[5.129s] [ 28%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/single_dof_state__type_support.cpp.o[0m
+[5.184s] [ 29%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/steering_controller_status__type_support.cpp.o[0m
+[5.184s] [ 29%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/srv/query_calibration_state__type_support.cpp.o[0m
+[5.189s] [ 30%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/srv/query_trajectory_state__type_support.cpp.o[0m
+[5.293s] [ 30%] [32m[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_c.so[0m
+[5.489s] [ 30%] Built target control_msgs__rosidl_typesupport_c
+[6.387s] [ 30%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/gripper_command__type_support.cpp.o[0m
+[6.389s] [ 31%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/follow_joint_trajectory__type_support.cpp.o[0m
+[6.394s] [ 31%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/parallel_gripper_command__type_support.cpp.o[0m
+[6.396s] [ 32%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/admittance_controller_state__type_support.cpp.o[0m
+[6.396s] [ 33%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/point_head__type_support.cpp.o[0m
+[6.397s] [ 33%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/joint_trajectory__type_support.cpp.o[0m
+[6.405s] [ 33%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/single_joint_position__type_support.cpp.o[0m
+[6.409s] [ 33%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/dynamic_interface_group_values__type_support.cpp.o[0m
+[7.105s] [ 34%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/dynamic_joint_state__type_support.cpp.o[0m
+[7.181s] [ 34%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/gripper_command__type_support.cpp.o[0m
+[7.417s] [ 35%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/interface_value__type_support.cpp.o[0m
+[7.576s] [ 35%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_component_tolerance__type_support.cpp.o[0m
+[7.656s] [ 35%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_controller_state__type_support.cpp.o[0m
+[7.850s] [ 36%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_jog__type_support.cpp.o[0m
+[7.887s] [ 36%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_tolerance__type_support.cpp.o[0m
+[7.904s] [ 37%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_trajectory_controller_state__type_support.cpp.o[0m
+[7.979s] [ 37%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/parallel_gripper_command__type_support.cpp.o[0m
+[7.990s] [ 38%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/follow_joint_trajectory__type_support.cpp.o[0m
+[8.009s] [ 38%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/gripper_command__type_support.cpp.o[0m
+[8.066s] [ 39%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/joint_trajectory__type_support.cpp.o[0m
+[8.321s] [ 39%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/point_head__type_support.cpp.o[0m
+[8.365s] [ 40%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp.o[0m
+[8.960s] [ 40%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/admittance_controller_state__type_support.cpp.o[0m
+[9.034s] [ 40%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/dynamic_interface_group_values__type_support.cpp.o[0m
+[9.074s] [ 40%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/mecanum_drive_controller_state__type_support.cpp.o[0m
+[9.284s] [ 40%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/parallel_gripper_command__type_support.c.o[0m
+[9.538s] [ 41%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/follow_joint_trajectory__type_support.c.o[0m
+[9.557s] [ 41%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/parallel_gripper_command__type_support.cpp.o[0m
+[9.666s] [ 42%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/follow_joint_trajectory__type_support.cpp.o[0m
+[9.899s] [ 42%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/gripper_command__type_support.c.o[0m
+[9.996s] [ 43%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/multi_dof_command__type_support.cpp.o[0m
+[10.070s] [ 44%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/joint_trajectory__type_support.c.o[0m
+[10.147s] [ 44%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/gripper_command__type_support.cpp.o[0m
+[10.282s] [ 45%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/joint_trajectory__type_support.cpp.o[0m
+[10.309s] [ 45%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/point_head__type_support.c.o[0m
+[10.415s] [ 46%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/single_joint_position__type_support.c.o[0m
+[10.539s] [ 47%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/pid_state__type_support.cpp.o[0m
+[10.541s] [ 47%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/multi_dof_state_stamped__type_support.cpp.o[0m
+[10.557s] [ 47%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/admittance_controller_state__type_support.c.o[0m
+[10.764s] [ 47%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/dynamic_interface_group_values__type_support.c.o[0m
+[10.779s] [ 47%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/parallel_gripper_command__type_support_c.cpp.o[0m
+[10.856s] [ 47%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/point_head__type_support.cpp.o[0m
+[10.929s] [ 47%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/single_dof_state__type_support.cpp.o[0m
+[10.963s] [ 48%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/dynamic_joint_state__type_support.c.o[0m
+[10.974s] [ 49%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/dynamic_joint_state__type_support.cpp.o[0m
+[11.188s] [ 49%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/gripper_command__type_support.c.o[0m
+[11.227s] [ 49%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/gripper_command__type_support.cpp.o[0m
+[11.289s] [ 50%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/interface_value__type_support.c.o[0m
+[11.374s] [ 51%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/interface_value__type_support.cpp.o[0m
+[11.429s] [ 51%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_component_tolerance__type_support.c.o[0m
+[11.487s] [ 51%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/single_dof_state_stamped__type_support.cpp.o[0m
+[11.556s] [ 52%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/follow_joint_trajectory__type_support_c.cpp.o[0m
+[11.560s] [ 52%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/single_joint_position__type_support.cpp.o[0m
+[11.612s] [ 53%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_controller_state__type_support.c.o[0m
+[11.800s] [ 53%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_jog__type_support.c.o[0m
+[11.907s] [ 54%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_tolerance__type_support.c.o[0m
+[11.925s] [ 54%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_trajectory_controller_state__type_support.c.o[0m
+[12.035s] [ 55%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/steering_controller_status__type_support.cpp.o[0m
+[12.081s] [ 56%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/admittance_controller_state__type_support.cpp.o[0m
+[12.102s] [ 56%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/mecanum_drive_controller_state__type_support.c.o[0m
+[12.194s] [ 56%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/gripper_command__type_support_c.cpp.o[0m
+[12.274s] [ 57%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/multi_dof_command__type_support.c.o[0m
+[12.428s] [ 57%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/multi_dof_state_stamped__type_support.c.o[0m
+[12.439s] [ 57%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_component_tolerance__type_support.cpp.o[0m
+[12.468s] [ 57%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/srv/query_calibration_state__type_support.cpp.o[0m
+[12.497s] [ 57%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/dynamic_interface_group_values__type_support.cpp.o[0m
+[12.551s] [ 58%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/pid_state__type_support.c.o[0m
+[12.654s] [ 58%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/single_dof_state__type_support.c.o[0m
+[12.722s] [ 59%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/joint_trajectory__type_support_c.cpp.o[0m
+[12.779s] [ 60%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/single_dof_state_stamped__type_support.c.o[0m
+[12.891s] [ 60%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/steering_controller_status__type_support.c.o[0m
+[12.987s] [ 60%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/point_head__type_support_c.cpp.o[0m
+[12.991s] [ 61%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_controller_state__type_support.cpp.o[0m
+[13.087s] [ 62%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/srv/detail/query_calibration_state__type_support.c.o[0m
+[13.143s] [ 63%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/dynamic_joint_state__type_support.cpp.o[0m
+[13.237s] [ 63%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/srv/detail/query_trajectory_state__type_support.c.o[0m
+[13.294s] [ 64%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/srv/query_trajectory_state__type_support.cpp.o[0m
+[13.354s] [ 64%] [32m[1mLinking C shared library libcontrol_msgs__rosidl_typesupport_introspection_c.so[0m
+[13.420s] [ 64%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/single_joint_position__type_support_c.cpp.o[0m
+[13.483s] [ 64%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/gripper_command__type_support.cpp.o[0m
+[13.531s] [ 64%] Built target control_msgs__rosidl_typesupport_introspection_c
+[13.575s] [ 64%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_jog__type_support.cpp.o[0m
+[13.654s] [ 65%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/interface_value__type_support.cpp.o[0m
+[13.878s] [ 66%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/admittance_controller_state__type_support_c.cpp.o[0m
+[13.928s] [ 67%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_tolerance__type_support.cpp.o[0m
+[14.013s] [ 67%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_trajectory_controller_state__type_support.cpp.o[0m
+[14.031s] [ 67%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/dynamic_interface_group_values__type_support_c.cpp.o[0m
+[14.192s] [ 67%] [32m[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_cpp.so[0m
+[14.314s] [ 67%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/mecanum_drive_controller_state__type_support.cpp.o[0m
+[14.385s] [ 67%] Built target control_msgs__rosidl_typesupport_cpp
+[14.402s] [ 68%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/dynamic_joint_state__type_support_c.cpp.o[0m
+[14.426s] [ 68%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/gripper_command__type_support_c.cpp.o[0m
+[14.688s] [ 69%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/multi_dof_command__type_support.cpp.o[0m
+[14.869s] [ 69%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_component_tolerance__type_support.cpp.o[0m
+[14.921s] [ 70%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_controller_state__type_support.cpp.o[0m
+[14.951s] [ 71%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/interface_value__type_support_c.cpp.o[0m
+[15.056s] [ 71%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_jog__type_support.cpp.o[0m
+[15.180s] [ 71%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/multi_dof_state_stamped__type_support.cpp.o[0m
+[15.426s] [ 72%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/pid_state__type_support.cpp.o[0m
+[15.484s] [ 72%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_tolerance__type_support.cpp.o[0m
+[15.633s] [ 72%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/single_dof_state__type_support.cpp.o[0m
+[15.648s] [ 72%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_component_tolerance__type_support_c.cpp.o[0m
+[15.777s] [ 73%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_controller_state__type_support_c.cpp.o[0m
+[15.826s] [ 74%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/single_dof_state_stamped__type_support.cpp.o[0m
+[16.136s] [ 75%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_trajectory_controller_state__type_support.cpp.o[0m
+[16.250s] [ 75%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/steering_controller_status__type_support.cpp.o[0m
+[16.479s] [ 76%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/srv/detail/query_calibration_state__type_support.cpp.o[0m
+[16.521s] [ 76%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_jog__type_support_c.cpp.o[0m
+[16.612s] [ 76%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_tolerance__type_support_c.cpp.o[0m
+[16.851s] [ 76%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/srv/detail/query_trajectory_state__type_support.cpp.o[0m
+[16.908s] [ 76%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/mecanum_drive_controller_state__type_support_c.cpp.o[0m
+[17.010s] [ 77%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_trajectory_controller_state__type_support_c.cpp.o[0m
+[17.015s] [ 77%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/mecanum_drive_controller_state__type_support.cpp.o[0m
+[17.092s] [ 78%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/multi_dof_command__type_support_c.cpp.o[0m
+[17.550s] [ 78%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/multi_dof_state_stamped__type_support_c.cpp.o[0m
+[17.685s] [ 79%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/pid_state__type_support_c.cpp.o[0m
+[17.806s] [ 80%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/single_dof_state_stamped__type_support.cpp.o[0m
+[17.907s] [ 81%] [32m[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[18.040s] [ 81%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/single_dof_state__type_support_c.cpp.o[0m
+[18.042s] [ 81%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/steering_controller_status__type_support.cpp.o[0m
+[18.171s] [ 81%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/single_dof_state__type_support.cpp.o[0m
+[18.196s] [ 82%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/single_dof_state_stamped__type_support_c.cpp.o[0m
+[18.405s] [ 82%] Built target control_msgs__rosidl_typesupport_introspection_cpp
+[18.434s] [ 82%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/steering_controller_status__type_support_c.cpp.o[0m
+[18.561s] [ 82%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/srv/detail/query_calibration_state__type_support_c.cpp.o[0m
+[18.781s] [ 83%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/srv/detail/dds_fastrtps/query_trajectory_state__type_support.cpp.o[0m
+[18.976s] [ 84%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/srv/detail/query_trajectory_state__type_support_c.cpp.o[0m
+[19.166s] [ 84%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/srv/detail/dds_fastrtps/query_calibration_state__type_support.cpp.o[0m
+[19.389s] [ 85%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/pid_state__type_support.cpp.o[0m
+[19.842s] [ 85%] [32m[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[20.033s] [ 85%] Built target control_msgs__rosidl_typesupport_fastrtps_c
+[20.139s] [ 85%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/multi_dof_state_stamped__type_support.cpp.o[0m
+[20.753s] [ 86%] [32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/multi_dof_command__type_support.cpp.o[0m
+[21.457s] [ 86%] [32m[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[21.672s] [ 86%] Built target control_msgs__rosidl_typesupport_fastrtps_cpp
+[21.775s] [ 86%] Built target control_msgs
+[21.805s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[30.688s] [ 86%] Built target control_msgs__py
+[30.712s] [ 86%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_parallel_gripper_command_s.c.o[0m
+[30.712s] [ 86%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_follow_joint_trajectory_s.c.o[0m
+[30.712s] [ 87%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_gripper_command_s.c.o[0m
+[30.713s] [ 87%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_joint_trajectory_s.c.o[0m
+[30.713s] [ 88%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_point_head_s.c.o[0m
+[30.897s] [ 88%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_gripper_command_s.c.o[0m
+[30.897s] [ 88%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_interface_value_s.c.o[0m
+[30.898s] [ 89%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_joint_component_tolerance_s.c.o[0m
+[30.913s] [ 89%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_joint_controller_state_s.c.o[0m
+[30.922s] [ 90%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_joint_jog_s.c.o[0m
+[30.928s] [ 90%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_joint_tolerance_s.c.o[0m
+[30.954s] [ 91%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_joint_trajectory_controller_state_s.c.o[0m
+[31.018s] [ 91%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_mecanum_drive_controller_state_s.c.o[0m
+[31.027s] [ 92%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_multi_dof_command_s.c.o[0m
+[31.035s] [ 92%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_multi_dof_state_stamped_s.c.o[0m
+[31.043s] [ 92%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_pid_state_s.c.o[0m
+[31.070s] [ 93%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_single_dof_state_s.c.o[0m
+[31.111s] [ 93%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_single_dof_state_stamped_s.c.o[0m
+[31.149s] [ 94%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_steering_controller_status_s.c.o[0m
+[31.159s] [ 94%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/srv/_query_calibration_state_s.c.o[0m
+[31.165s] [ 95%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/srv/_query_trajectory_state_s.c.o[0m
+[31.172s] [ 96%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_dynamic_joint_state_s.c.o[0m
+[31.178s] [ 96%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_dynamic_interface_group_values_s.c.o[0m
+[31.203s] [ 97%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/msg/_admittance_controller_state_s.c.o[0m
+[31.288s] [ 97%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_py.dir/rosidl_generator_py/control_msgs/action/_single_joint_position_s.c.o[0m
+[31.452s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/control_msgs/libcontrol_msgs__rosidl_generator_py.so[0m
+[31.506s] [ 97%] Built target control_msgs__rosidl_generator_py
+[31.528s] [ 99%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/control_msgs/_control_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[31.528s] [ 99%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/control_msgs/_control_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[31.529s] [100%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/control_msgs/_control_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[31.848s] [100%] [32m[1mLinking C shared library rosidl_generator_py/control_msgs/control_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[31.848s] [100%] [32m[1mLinking C shared library rosidl_generator_py/control_msgs/control_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[31.859s] [100%] [32m[1mLinking C shared library rosidl_generator_py/control_msgs/control_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[31.906s] [100%] Built target control_msgs__rosidl_typesupport_c__pyext
+[31.906s] [100%] Built target control_msgs__rosidl_typesupport_fastrtps_c__pyext
+[31.917s] [100%] Built target control_msgs__rosidl_typesupport_introspection_c__pyext

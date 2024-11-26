@@ -1,0 +1,33 @@
+[0.052s] Invoking command in '/ros2_ws/build/realtime_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/realtime_tools -- -j12 -l12
+[0.139s] [35m[1mConsolidate compiler generated dependencies of target realtime_tools[0m
+[0.142s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.145s] [35m[1mConsolidate compiler generated dependencies of target thread_priority[0m
+[0.146s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.178s] [  7%] Built target thread_priority
+[0.206s] [ 17%] Built target realtime_tools
+[0.222s] [ 25%] Built target gmock_main
+[0.238s] [ 35%] Built target gmock
+[0.260s] [35m[1mConsolidate compiler generated dependencies of target thread_priority_tests[0m
+[0.261s] [35m[1mConsolidate compiler generated dependencies of target realtime_box_tests[0m
+[0.263s] [ 39%] [32mBuilding CXX object CMakeFiles/realtime_box_best_effort_tests.dir/test/realtime_box_best_effort_tests.cpp.o[0m
+[0.264s] [35m[1mConsolidate compiler generated dependencies of target test_async_function_handler[0m
+[0.270s] [ 42%] [32mBuilding CXX object CMakeFiles/realtime_buffer_tests.dir/test/realtime_buffer_tests.cpp.o[0m
+[0.277s] [ 46%] [32mBuilding CXX object CMakeFiles/realtime_publisher_tests.dir/test/realtime_publisher_tests.cpp.o[0m
+[0.284s] [ 57%] [32mBuilding CXX object CMakeFiles/realtime_clock_tests.dir/test/realtime_clock_tests.cpp.o[0m
+[0.284s] [ 57%] Built target thread_priority_tests
+[0.303s] [ 60%] [32mBuilding CXX object CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o[0m
+[0.319s] [ 67%] Built target realtime_box_tests
+[0.319s] [ 71%] [32mBuilding CXX object CMakeFiles/realtime_publisher_tests_non_polling.dir/test/realtime_publisher_tests_non_polling.cpp.o[0m
+[0.361s] [ 78%] Built target test_async_function_handler
+[3.966s] [ 82%] [32m[1mLinking CXX executable realtime_buffer_tests[0m
+[4.107s] [ 85%] [32m[1mLinking CXX executable realtime_clock_tests[0m
+[4.799s] [ 85%] Built target realtime_clock_tests
+[4.811s] [ 85%] Built target realtime_buffer_tests
+[5.674s] [ 89%] [32m[1mLinking CXX executable realtime_box_best_effort_tests[0m
+[6.190s] [ 89%] Built target realtime_box_best_effort_tests
+[15.712s] [ 92%] [32m[1mLinking CXX executable realtime_server_goal_handle_tests[0m
+[17.608s] [ 92%] Built target realtime_server_goal_handle_tests
+[22.466s] [ 96%] [32m[1mLinking CXX executable realtime_publisher_tests_non_polling[0m
+[23.330s] [ 96%] Built target realtime_publisher_tests_non_polling
+[23.491s] [100%] [32m[1mLinking CXX executable realtime_publisher_tests[0m
+[24.279s] [100%] Built target realtime_publisher_tests

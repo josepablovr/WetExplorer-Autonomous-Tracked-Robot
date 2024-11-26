@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12
+Invoked command in '/ros2_ws/build/rtcm_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12

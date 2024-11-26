@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/robo_base': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base
+Invoked command in '/ros2_ws/build/robo_base' returned '1': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base

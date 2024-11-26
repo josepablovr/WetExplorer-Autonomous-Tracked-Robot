@@ -1,0 +1,6 @@
+Invoking command in '/ros2_ws/build/ros2_control_test_assets': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/ros2_control/ros2_control_test_assets -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/ros2_control_test_assets
+Invoked command in '/ros2_ws/build/ros2_control_test_assets' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/ros2_control/ros2_control_test_assets -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/ros2_control_test_assets
+Invoking command in '/ros2_ws/build/ros2_control_test_assets': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/ros2_control_test_assets -- -j12 -l12
+Invoked command in '/ros2_ws/build/ros2_control_test_assets' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/ros2_control_test_assets -- -j12 -l12
+Invoking command in '/ros2_ws/build/ros2_control_test_assets': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/ros2_control_test_assets
+Invoked command in '/ros2_ws/build/ros2_control_test_assets' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/ros2_control_test_assets

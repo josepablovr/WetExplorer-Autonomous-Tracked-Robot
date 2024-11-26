@@ -1,0 +1,31 @@
+[0.025s] Invoking command in '/ros2_ws/build/husky_gazebo': CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_gazebo -- -j12 -l12
+[0.095s] Invoked command in '/ros2_ws/build/husky_gazebo' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_gazebo -- -j12 -l12
+[0.150s] Invoking command in '/ros2_ws/build/husky_gazebo': CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_gazebo
+[0.163s] -- Install configuration: ""
+[0.163s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch
+[0.164s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_playpen.launch
+[0.164s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/realsense.launch
+[0.164s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_empty_world.launch
+[0.164s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/spawn_husky.launch
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/husky_playpen.launch.py
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/multi_husky_playpen.launch
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/gazebo.launch.py
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/launch/playpen.launch
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/worlds
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/worlds/clearpath_playpen.world
+[0.165s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/package_run_dependencies/husky_gazebo
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/parent_prefix_path/husky_gazebo
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/ament_prefix_path.sh
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/ament_prefix_path.dsv
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/path.sh
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/environment/path.dsv
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.bash
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.sh
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.zsh
+[0.166s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/local_setup.dsv
+[0.167s] -- Installing: /ros2_ws/install/husky_gazebo/share/husky_gazebo/package.dsv
+[0.167s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/ament_index/resource_index/packages/husky_gazebo
+[0.167s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/cmake/husky_gazeboConfig.cmake
+[0.167s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/cmake/husky_gazeboConfig-version.cmake
+[0.168s] -- Up-to-date: /ros2_ws/install/husky_gazebo/share/husky_gazebo/package.xml
+[0.169s] Invoked command in '/ros2_ws/build/husky_gazebo' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_gazebo

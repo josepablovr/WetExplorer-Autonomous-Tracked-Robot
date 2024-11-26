@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:8 (catkin_package):
+  Unknown CMake command "catkin_package".
+
+[0m

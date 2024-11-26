@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load robot description parameter -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find max_light_pkg)/urdf/WETExplorer/robot_remastered.xacro" />
+
+
+
+  <!-- Load controller configuration -->
+  <rosparam command="load" file="$(find max_light_pkg)/config/controllers.yaml" />
+
+ 
+  
+
+
+  <!-- Load controller configuration -->
+  <rosparam command="load" file="$(find max_light_pkg)/config/linear_controller.yaml" />
+
+   <node name="controller_manager" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+        args="joint_state_controller 
+              linear_controller 
+              rear_left_wheel_velocity_controller 
+              rear_right_wheel_velocity_controller 
+              front_left_wheel_velocity_controller 
+              front_right_wheel_velocity_controller              
+              left_sprocket_controller
+              right_sprocket_controller
+              wheel_1_right_velocity_controller
+              wheel_2_right_velocity_controller
+              wheel_3_right_velocity_controller
+              wheel_4_right_velocity_controller
+              wheel_5_right_velocity_controller
+              wheel_6_right_velocity_controller
+              wheel_7_right_velocity_controller
+              wheel_8_right_velocity_controller
+              wheel_9_right_velocity_controller
+              wheel_10_right_velocity_controller
+
+             
+
+              wheel_1_left_velocity_controller
+              wheel_2_left_velocity_controller
+              wheel_3_left_velocity_controller
+              wheel_4_left_velocity_controller
+              wheel_5_left_velocity_controller
+              wheel_6_left_velocity_controller
+              wheel_7_left_velocity_controller
+              wheel_8_left_velocity_controller
+              wheel_9_left_velocity_controller
+              wheel_10_left_velocity_controller
+              wheel_11_right_velocity_controller
+              wheel_12_right_velocity_controller
+              wheel_13_right_velocity_controller
+              wheel_14_right_velocity_controller
+              wheel_15_right_velocity_controller
+              wheel_16_right_velocity_controller
+              wheel_17_right_velocity_controller
+              wheel_18_right_velocity_controller
+              wheel_19_right_velocity_controller
+              wheel_20_right_velocity_controller
+
+              wheel_11_left_velocity_controller
+              wheel_12_left_velocity_controller
+              wheel_13_left_velocity_controller
+              wheel_14_left_velocity_controller
+              wheel_15_left_velocity_controller
+              wheel_16_left_velocity_controller
+              wheel_17_left_velocity_controller
+              wheel_18_left_velocity_controller
+              wheel_19_left_velocity_controller
+              wheel_20_left_velocity_controller     
+              "
+
+              />
+
+
+<!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher2" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+
+  </node>
+
+  <include file="$(find max_light_pkg)/launch/teleop.launch">   
+  </include>
+  
+  <node pkg="max_light_pkg" type="chamber_joy.py" name="chamber_control_joystick" output="screen" />
+  
+  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen">
+    <param name="link_name" value="base_link" />
+  </node>
+
+
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find husky_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="husky_velocity_controller/cmd_vel"/>
+  </node>
+  <!-- Optionally, you can start other controllers here -->
+  <!-- <node name="velocity_controller" pkg="controller_manager" type="spawner" respawn="false" output="screen">
+    <param name="controllers" value="velocity_controller" />
+  </node> -->
+</launch>

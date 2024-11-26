@@ -1,0 +1,110 @@
+[0.000000] (-) TimerEvent: {}
+[0.001258] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.001320] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.001356] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.001469] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.001679] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.001783] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.001842] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.001890] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.002030] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.002061] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.002090] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.002118] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.002147] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.002175] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.002202] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.002229] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.002257] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.002285] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.002313] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.002342] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.002369] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.002397] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.002424] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.002451] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.002483] (articubot_one) JobQueued: {'identifier': 'articubot_one', 'dependencies': OrderedDict()}
+[0.002516] (articubot_one) JobStarted: {'identifier': 'articubot_one'}
+[0.031223] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'cmake'}
+[0.032733] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/articubot_one', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/articubot_one'], 'cwd': '/ros2_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.055976] (articubot_one) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099513] (-) TimerEvent: {}
+[0.199847] (-) TimerEvent: {}
+[0.250850] (articubot_one) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.265691] (articubot_one) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.299933] (-) TimerEvent: {}
+[0.390979] (articubot_one) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.400030] (-) TimerEvent: {}
+[0.417006] (articubot_one) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.420189] (articubot_one) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.422033] (articubot_one) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.433738] (articubot_one) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.435824] (articubot_one) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.442881] (articubot_one) StdoutLine: {'line': b'-- Generating done\n'}
+[0.445438] (articubot_one) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/articubot_one\n'}
+[0.449735] (articubot_one) CommandEnded: {'returncode': 0}
+[0.450566] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'build'}
+[0.452622] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/articubot_one', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.500136] (-) TimerEvent: {}
+[0.518566] (articubot_one) CommandEnded: {'returncode': 0}
+[0.555722] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'install'}
+[0.570871] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/articubot_one'], 'cwd': '/ros2_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.583304] (articubot_one) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.584181] (articubot_one) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.584934] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_robot.yaml\n'}
+[0.585159] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_sim.yaml\n'}
+[0.585345] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/config.rviz\n'}
+[0.585527] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz\n'}
+[0.585777] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/empty.yaml\n'}
+[0.586067] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/gaz_ros2_ctl_use_sim.yaml\n'}
+[0.586259] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/gz_bridge.yaml\n'}
+[0.586485] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/joystick.yaml\n'}
+[0.586718] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/main.rviz\n'}
+[0.586987] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/map.rviz\n'}
+[0.587181] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml\n'}
+[0.587417] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/my_controllers.yaml\n'}
+[0.587530] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/nav2_params.yaml\n'}
+[0.587625] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/twist_mux.yaml\n'}
+[0.587719] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz\n'}
+[0.587897] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/camera.xacro\n'}
+[0.588078] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/depth_camera.xacro\n'}
+[0.588240] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/face.xacro\n'}
+[0.588410] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro\n'}
+[0.588638] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro\n'}
+[0.588812] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/lidar.xacro\n'}
+[0.589015] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/my_robot.urdf\n'}
+[0.589199] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro\n'}
+[0.589416] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro\n'}
+[0.589649] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/description/ros2_control.xacro\n'}
+[0.590013] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/ball_tracker.launch.py\n'}
+[0.590210] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/camera.launch.py\n'}
+[0.590462] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/joystick.launch.py\n'}
+[0.590686] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_robot.launch.py\n'}
+[0.590945] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py\n'}
+[0.591204] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/localization_launch.py\n'}
+[0.591428] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/navigation_launch.py\n'}
+[0.591677] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/online_async_launch.py\n'}
+[0.591961] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/rplidar.launch.py\n'}
+[0.592132] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py\n'}
+[0.592332] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/launch/sim.launch.py\n'}
+[0.592511] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/worlds/empty.world\n'}
+[0.592744] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world\n'}
+[0.592975] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one\n'}
+[0.593197] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one\n'}
+[0.593426] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh\n'}
+[0.593606] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv\n'}
+[0.593901] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.sh\n'}
+[0.594153] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.dsv\n'}
+[0.594380] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.bash\n'}
+[0.594649] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.sh\n'}
+[0.594886] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.zsh\n'}
+[0.595082] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.dsv\n'}
+[0.595257] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/package.dsv\n'}
+[0.600266] (-) TimerEvent: {}
+[0.611707] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one\n'}
+[0.612048] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake\n'}
+[0.612319] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake\n'}
+[0.612631] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/articubot_one/share/articubot_one/package.xml\n'}
+[0.615542] (articubot_one) CommandEnded: {'returncode': 0}
+[0.690153] (articubot_one) JobEnded: {'identifier': 'articubot_one', 'rc': 0}
+[0.691315] (-) EventReactorShutdown: {}

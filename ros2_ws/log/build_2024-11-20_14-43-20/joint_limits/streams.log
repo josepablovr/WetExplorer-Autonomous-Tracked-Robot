@@ -1,0 +1,10 @@
+[0.509s] Invoking command in '/ros2_ws/build/joint_limits': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/joint_limits -- -j12 -l12
+[0.676s] [ 16%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.688s] [ 33%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[2.015s] [ 50%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.130s] [ 50%] Built target gtest_main
+[6.027s] [ 66%] [32m[1mLinking CXX static library libgtest.a[0m
+[6.212s] [ 66%] Built target gtest
+[6.288s] [ 83%] [32mBuilding CXX object CMakeFiles/joint_limits_rosparam_test.dir/test/joint_limits_rosparam_test.cpp.o[0m
+[15.901s] [100%] [32m[1mLinking CXX executable joint_limits_rosparam_test[0m
+[16.327s] [100%] Built target joint_limits_rosparam_test

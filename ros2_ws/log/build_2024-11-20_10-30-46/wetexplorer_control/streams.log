@@ -1,0 +1,8 @@
+[0.038s] Invoking command in '/ros2_ws/build/wetexplorer_control': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control
+[0.076s] -- Configuring incomplete, errors occurred!
+[0.077s] See also "/ros2_ws/build/wetexplorer_control/CMakeFiles/CMakeOutput.log".
+[0.077s] [31mCMake Error at CMakeLists.txt:8 (catkin_package):
+[0.078s]   Unknown CMake command "catkin_package".
+[0.078s] 
+[0.084s] [0m
+[0.084s] Invoked command in '/ros2_ws/build/wetexplorer_control' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control

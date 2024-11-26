@@ -1,0 +1,2 @@
+[0.050s] Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12
+[0.141s] Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12

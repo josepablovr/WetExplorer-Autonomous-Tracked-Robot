@@ -1,5 +1,0 @@
-<launch>  
-  <arg
-    name="model" />
-  <param name="robot_description" command="$(find xacro)/xacro $(find wetexplorer_description)/urdf/Robot_System.xacro" />  
-</launch>

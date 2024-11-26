@@ -1,0 +1,430 @@
+[0.000000] (-) TimerEvent: {}
+[0.001133] (husky_description) JobQueued: {'identifier': 'husky_description', 'dependencies': OrderedDict()}
+[0.001219] (husky_msgs) JobQueued: {'identifier': 'husky_msgs', 'dependencies': OrderedDict()}
+[0.001241] (mapviz_plugins) JobQueued: {'identifier': 'mapviz_plugins', 'dependencies': OrderedDict()}
+[0.001259] (robo_base) JobQueued: {'identifier': 'robo_base', 'dependencies': OrderedDict()}
+[0.001276] (rtcm_msgs) JobQueued: {'identifier': 'rtcm_msgs', 'dependencies': OrderedDict()}
+[0.001292] (tile_map) JobQueued: {'identifier': 'tile_map', 'dependencies': OrderedDict()}
+[0.001308] (turtlebot3_fake_node) JobQueued: {'identifier': 'turtlebot3_fake_node', 'dependencies': OrderedDict()}
+[0.001323] (turtlebot3_gazebo) JobQueued: {'identifier': 'turtlebot3_gazebo', 'dependencies': OrderedDict()}
+[0.001339] (wetexplorer_control) JobQueued: {'identifier': 'wetexplorer_control', 'dependencies': OrderedDict()}
+[0.001354] (wetexplorer_description) JobQueued: {'identifier': 'wetexplorer_description', 'dependencies': OrderedDict()}
+[0.001374] (wetexplorer_gazebo) JobQueued: {'identifier': 'wetexplorer_gazebo', 'dependencies': OrderedDict()}
+[0.001390] (wetexplorer_hardware) JobQueued: {'identifier': 'wetexplorer_hardware', 'dependencies': OrderedDict()}
+[0.001405] (wetexplorer_navigation) JobQueued: {'identifier': 'wetexplorer_navigation', 'dependencies': OrderedDict()}
+[0.001421] (husky_base) JobQueued: {'identifier': 'husky_base', 'dependencies': OrderedDict([('husky_msgs', '/ros2_ws/install/husky_msgs')])}
+[0.001439] (husky_control) JobQueued: {'identifier': 'husky_control', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description')])}
+[0.001457] (husky_viz) JobQueued: {'identifier': 'husky_viz', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description')])}
+[0.001474] (turtlebot3_simulations) JobQueued: {'identifier': 'turtlebot3_simulations', 'dependencies': OrderedDict([('turtlebot3_fake_node', '/ros2_ws/install/turtlebot3_fake_node'), ('turtlebot3_gazebo', '/ros2_ws/install/turtlebot3_gazebo')])}
+[0.001493] (husky_bringup) JobQueued: {'identifier': 'husky_bringup', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_base', '/ros2_ws/install/husky_base'), ('husky_control', '/ros2_ws/install/husky_control')])}
+[0.001513] (husky_desktop) JobQueued: {'identifier': 'husky_desktop', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_viz', '/ros2_ws/install/husky_viz')])}
+[0.001535] (husky_gazebo) JobQueued: {'identifier': 'husky_gazebo', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_control', '/ros2_ws/install/husky_control')])}
+[0.001553] (husky_robot) JobQueued: {'identifier': 'husky_robot', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_base', '/ros2_ws/install/husky_base'), ('husky_control', '/ros2_ws/install/husky_control'), ('husky_bringup', '/ros2_ws/install/husky_bringup')])}
+[0.001572] (husky_simulator) JobQueued: {'identifier': 'husky_simulator', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_control', '/ros2_ws/install/husky_control'), ('husky_gazebo', '/ros2_ws/install/husky_gazebo')])}
+[0.001590] (husky_description) JobStarted: {'identifier': 'husky_description'}
+[0.009151] (husky_msgs) JobStarted: {'identifier': 'husky_msgs'}
+[0.012659] (turtlebot3_fake_node) JobStarted: {'identifier': 'turtlebot3_fake_node'}
+[0.016340] (turtlebot3_gazebo) JobStarted: {'identifier': 'turtlebot3_gazebo'}
+[0.020570] (mapviz_plugins) JobStarted: {'identifier': 'mapviz_plugins'}
+[0.023369] (robo_base) JobStarted: {'identifier': 'robo_base'}
+[0.037202] (rtcm_msgs) JobStarted: {'identifier': 'rtcm_msgs'}
+[0.040543] (tile_map) JobStarted: {'identifier': 'tile_map'}
+[0.044558] (wetexplorer_control) JobStarted: {'identifier': 'wetexplorer_control'}
+[0.048392] (wetexplorer_description) JobStarted: {'identifier': 'wetexplorer_description'}
+[0.051552] (wetexplorer_gazebo) JobStarted: {'identifier': 'wetexplorer_gazebo'}
+[0.054295] (wetexplorer_hardware) JobStarted: {'identifier': 'wetexplorer_hardware'}
+[0.060790] (husky_description) JobProgress: {'identifier': 'husky_description', 'progress': 'cmake'}
+[0.061402] (husky_description) JobProgress: {'identifier': 'husky_description', 'progress': 'build'}
+[0.062133] (husky_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_description', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.064425] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'cmake'}
+[0.065522] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'build'}
+[0.065883] (husky_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_msgs', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.068170] (turtlebot3_fake_node) JobProgress: {'identifier': 'turtlebot3_fake_node', 'progress': 'cmake'}
+[0.068206] (turtlebot3_fake_node) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3_fake_node'], 'cwd': '/ros2_ws/build/turtlebot3_fake_node', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/turtlebot3_fake_node'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.070196] (turtlebot3_gazebo) JobProgress: {'identifier': 'turtlebot3_gazebo', 'progress': 'cmake'}
+[0.070276] (turtlebot3_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3_gazebo'], 'cwd': '/ros2_ws/build/turtlebot3_gazebo', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/turtlebot3_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.072097] (mapviz_plugins) JobProgress: {'identifier': 'mapviz_plugins', 'progress': 'cmake'}
+[0.072153] (mapviz_plugins) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/mapviz_plugins', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins'], 'cwd': '/ros2_ws/build/mapviz_plugins', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/mapviz_plugins'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.073492] (robo_base) JobProgress: {'identifier': 'robo_base', 'progress': 'cmake'}
+[0.073970] (robo_base) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/robo_base/robo_base', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base'], 'cwd': '/ros2_ws/build/robo_base', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/robo_base'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.076143] (rtcm_msgs) JobProgress: {'identifier': 'rtcm_msgs', 'progress': 'cmake'}
+[0.076742] (rtcm_msgs) JobProgress: {'identifier': 'rtcm_msgs', 'progress': 'build'}
+[0.078029] (rtcm_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/rtcm_msgs', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/rtcm_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/rtcm_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.079775] (tile_map) JobProgress: {'identifier': 'tile_map', 'progress': 'cmake'}
+[0.080313] (tile_map) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/tile_map', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map'], 'cwd': '/ros2_ws/build/tile_map', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/tile_map'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.082691] (wetexplorer_control) JobProgress: {'identifier': 'wetexplorer_control', 'progress': 'cmake'}
+[0.083174] (wetexplorer_control) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_control', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control'], 'cwd': '/ros2_ws/build/wetexplorer_control', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.086925] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'cmake'}
+[0.087041] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'build'}
+[0.087099] (wetexplorer_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/wetexplorer_description', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/wetexplorer_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.090410] (wetexplorer_gazebo) JobProgress: {'identifier': 'wetexplorer_gazebo', 'progress': 'cmake'}
+[0.090615] (wetexplorer_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_gazebo', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo'], 'cwd': '/ros2_ws/build/wetexplorer_gazebo', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.095482] (wetexplorer_hardware) JobProgress: {'identifier': 'wetexplorer_hardware', 'progress': 'cmake'}
+[0.100423] (wetexplorer_hardware) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/wetexplorer/wetexplorer_hardware', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware'], 'cwd': '/ros2_ws/build/wetexplorer_hardware', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_hardware'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.101577] (-) TimerEvent: {}
+[0.110676] (mapviz_plugins) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.111033] (mapviz_plugins) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.111176] (mapviz_plugins) StderrLine: {'line': b'  CMake.\n'}
+[0.111285] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.111381] (mapviz_plugins) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.111474] (mapviz_plugins) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.111566] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.111651] (mapviz_plugins) StderrLine: {'line': b'\x1b[0m\n'}
+[0.116374] (robo_base) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.119645] (robo_base) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.122486] (robo_base) StderrLine: {'line': b'  CMake.\n'}
+[0.124148] (robo_base) StderrLine: {'line': b'\n'}
+[0.124312] (robo_base) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.124455] (robo_base) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.124581] (robo_base) StderrLine: {'line': b'\n'}
+[0.124687] (robo_base) StderrLine: {'line': b'\x1b[0m\n'}
+[0.124793] (tile_map) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.127398] (tile_map) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.128629] (tile_map) StderrLine: {'line': b'  CMake.\n'}
+[0.128815] (tile_map) StderrLine: {'line': b'\n'}
+[0.128970] (tile_map) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.129103] (tile_map) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.129239] (tile_map) StderrLine: {'line': b'\n'}
+[0.129372] (tile_map) StderrLine: {'line': b'\x1b[0m\n'}
+[0.129505] (wetexplorer_control) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.129673] (wetexplorer_control) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_control/CMakeFiles/CMakeOutput.log".\n'}
+[0.129794] (wetexplorer_control) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (catkin_package):\n'}
+[0.129945] (wetexplorer_control) StderrLine: {'line': b'  Unknown CMake command "catkin_package".\n'}
+[0.130054] (wetexplorer_control) StderrLine: {'line': b'\n'}
+[0.130166] (wetexplorer_control) StderrLine: {'line': b'\x1b[0m\n'}
+[0.130270] (wetexplorer_control) CommandEnded: {'returncode': 1}
+[0.130569] (mapviz_plugins) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:31 (find_package):\n'}
+[0.130688] (mapviz_plugins) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.130784] (mapviz_plugins) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.130927] (mapviz_plugins) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.131021] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.131108] (mapviz_plugins) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.131194] (mapviz_plugins) StderrLine: {'line': b'  of the following names:\n'}
+[0.131279] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.131362] (mapviz_plugins) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.131443] (mapviz_plugins) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.131539] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.131651] (mapviz_plugins) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.131751] (mapviz_plugins) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.138060] (mapviz_plugins) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.139022] (mapviz_plugins) StderrLine: {'line': b'  installed.\n'}
+[0.139214] (mapviz_plugins) StderrLine: {'line': b'\n'}
+[0.139336] (mapviz_plugins) StderrLine: {'line': b'\x1b[0m\n'}
+[0.139443] (mapviz_plugins) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.139582] (mapviz_plugins) StdoutLine: {'line': b'See also "/ros2_ws/build/mapviz_plugins/CMakeFiles/CMakeOutput.log".\n'}
+[0.139694] (husky_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.139859] (robo_base) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:7 (find_package):\n'}
+[0.140024] (robo_base) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.140140] (robo_base) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.140245] (robo_base) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.140349] (robo_base) StderrLine: {'line': b'\n'}
+[0.140452] (robo_base) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.140566] (robo_base) StderrLine: {'line': b'  of the following names:\n'}
+[0.140667] (robo_base) StderrLine: {'line': b'\n'}
+[0.140765] (robo_base) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.140897] (robo_base) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.141016] (robo_base) StderrLine: {'line': b'\n'}
+[0.141251] (robo_base) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.141371] (robo_base) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.141483] (robo_base) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.141586] (robo_base) StderrLine: {'line': b'  installed.\n'}
+[0.141690] (robo_base) StderrLine: {'line': b'\n'}
+[0.141792] (robo_base) StderrLine: {'line': b'\x1b[0m\n'}
+[0.141958] (robo_base) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.142106] (robo_base) StdoutLine: {'line': b'See also "/ros2_ws/build/robo_base/CMakeFiles/CMakeOutput.log".\n'}
+[0.142228] (husky_description) CommandEnded: {'returncode': 0}
+[0.142618] (tile_map) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.142778] (tile_map) StdoutLine: {'line': b'See also "/ros2_ws/build/tile_map/CMakeFiles/CMakeOutput.log".\n'}
+[0.142912] (tile_map) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:13 (find_package):\n'}
+[0.143028] (tile_map) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.143133] (tile_map) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.143238] (tile_map) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.143341] (tile_map) StderrLine: {'line': b'\n'}
+[0.143453] (tile_map) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.143556] (tile_map) StderrLine: {'line': b'  of the following names:\n'}
+[0.143669] (tile_map) StderrLine: {'line': b'\n'}
+[0.143781] (tile_map) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.143920] (tile_map) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.144050] (tile_map) StderrLine: {'line': b'\n'}
+[0.145790] (tile_map) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.150297] (tile_map) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.150488] (tile_map) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.150615] (tile_map) StderrLine: {'line': b'  installed.\n'}
+[0.150725] (tile_map) StderrLine: {'line': b'\n'}
+[0.150841] (tile_map) StderrLine: {'line': b'\x1b[0m\n'}
+[0.150963] (wetexplorer_hardware) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.151151] (wetexplorer_hardware) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_hardware/CMakeFiles/CMakeOutput.log".\n'}
+[0.151274] (wetexplorer_hardware) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (catkin_package):\n'}
+[0.151398] (wetexplorer_hardware) StderrLine: {'line': b'  Unknown CMake command "catkin_package".\n'}
+[0.151505] (wetexplorer_hardware) StderrLine: {'line': b'\n'}
+[0.151610] (wetexplorer_hardware) StderrLine: {'line': b'\x1b[0m\n'}
+[0.151728] (mapviz_plugins) CommandEnded: {'returncode': 1}
+[0.153444] (wetexplorer_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:10 (find_package):\n'}
+[0.155928] (wetexplorer_gazebo) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.156088] (wetexplorer_gazebo) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.156195] (wetexplorer_gazebo) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.162674] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.162838] (wetexplorer_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.162981] (wetexplorer_gazebo) StderrLine: {'line': b'  of the following names:\n'}
+[0.163143] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.163268] (wetexplorer_gazebo) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.163384] (wetexplorer_gazebo) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.163496] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.163606] (wetexplorer_gazebo) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.163717] (wetexplorer_gazebo) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.163837] (wetexplorer_gazebo) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.164245] (wetexplorer_gazebo) StderrLine: {'line': b'  installed.\n'}
+[0.164934] (wetexplorer_gazebo) StderrLine: {'line': b'\n'}
+[0.165162] (wetexplorer_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[0.165327] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.167539] (wetexplorer_gazebo) StdoutLine: {'line': b'See also "/ros2_ws/build/wetexplorer_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[0.167725] (rtcm_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.167921] (husky_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.168080] (robo_base) CommandEnded: {'returncode': 1}
+[0.168848] (husky_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_husky_msgs\n'}
+[0.173132] (wetexplorer_hardware) CommandEnded: {'returncode': 1}
+[0.173508] (rtcm_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.183878] (turtlebot3_fake_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.184408] (turtlebot3_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.184654] (tile_map) CommandEnded: {'returncode': 1}
+[0.186729] (wetexplorer_gazebo) CommandEnded: {'returncode': 1}
+[0.187086] (rtcm_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_rtcm_msgs\n'}
+[0.198681] (wetexplorer_control) JobEnded: {'identifier': 'wetexplorer_control', 'rc': 1}
+[0.200977] (wetexplorer_gazebo) JobEnded: {'identifier': 'wetexplorer_gazebo', 'rc': 'SIGINT'}
+[0.201374] (tile_map) JobEnded: {'identifier': 'tile_map', 'rc': 'SIGINT'}
+[0.201737] (-) TimerEvent: {}
+[0.201929] (mapviz_plugins) JobEnded: {'identifier': 'mapviz_plugins', 'rc': 'SIGINT'}
+[0.202342] (wetexplorer_description) JobEnded: {'identifier': 'wetexplorer_description', 'rc': 'SIGINT'}
+[0.202718] (husky_description) JobEnded: {'identifier': 'husky_description', 'rc': 'SIGINT'}
+[0.203086] (robo_base) JobEnded: {'identifier': 'robo_base', 'rc': 'SIGINT'}
+[0.203453] (wetexplorer_hardware) JobEnded: {'identifier': 'wetexplorer_hardware', 'rc': 'SIGINT'}
+[0.239080] (turtlebot3_fake_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.242999] (turtlebot3_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.249754] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.250308] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.301848] (-) TimerEvent: {}
+[0.326147] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.332273] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.335642] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.335897] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.336255] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.339478] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.345740] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.346087] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.346675] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.351230] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.401943] (-) TimerEvent: {}
+[0.417931] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.425776] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.426132] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.426638] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.429224] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.442738] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.450125] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.450478] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.451176] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.454102] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.463549] (rtcm_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_generator_c.dir/rosidl_generator_c/rtcm_msgs/msg/detail/message__functions.c.o\x1b[0m\n'}
+[0.486805] (husky_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.487752] (husky_msgs) StdoutLine: {'line': b'creating husky_msgs.egg-info\n'}
+[0.488099] (husky_msgs) StdoutLine: {'line': b'writing husky_msgs.egg-info/PKG-INFO\n'}
+[0.488279] (husky_msgs) StdoutLine: {'line': b'writing dependency_links to husky_msgs.egg-info/dependency_links.txt\n'}
+[0.488483] (husky_msgs) StdoutLine: {'line': b'writing top-level names to husky_msgs.egg-info/top_level.txt\n'}
+[0.488658] (husky_msgs) StdoutLine: {'line': b"writing manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.492056] (husky_msgs) StdoutLine: {'line': b"reading manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.492862] (husky_msgs) StdoutLine: {'line': b"writing manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.502025] (-) TimerEvent: {}
+[0.503284] (rtcm_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.504148] (rtcm_msgs) StdoutLine: {'line': b'creating rtcm_msgs.egg-info\n'}
+[0.504381] (rtcm_msgs) StdoutLine: {'line': b'writing rtcm_msgs.egg-info/PKG-INFO\n'}
+[0.504589] (rtcm_msgs) StdoutLine: {'line': b'writing dependency_links to rtcm_msgs.egg-info/dependency_links.txt\n'}
+[0.504822] (rtcm_msgs) StdoutLine: {'line': b'writing top-level names to rtcm_msgs.egg-info/top_level.txt\n'}
+[0.505043] (rtcm_msgs) StdoutLine: {'line': b"writing manifest file 'rtcm_msgs.egg-info/SOURCES.txt'\n"}
+[0.507950] (rtcm_msgs) StdoutLine: {'line': b"reading manifest file 'rtcm_msgs.egg-info/SOURCES.txt'\n"}
+[0.508711] (rtcm_msgs) StdoutLine: {'line': b"writing manifest file 'rtcm_msgs.egg-info/SOURCES.txt'\n"}
+[0.542104] (husky_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_husky_msgs_egg\n'}
+[0.552431] (rtcm_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library librtcm_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[0.556379] (rtcm_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_build_rtcm_msgs_egg\n'}
+[0.562311] (rtcm_msgs) StdoutLine: {'line': b'[ 12%] Built target rtcm_msgs__cpp\n'}
+[0.566249] (husky_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_c.dir/rosidl_generator_c/husky_msgs/msg/detail/husky_status__functions.c.o\x1b[0m\n'}
+[0.573409] (rtcm_msgs) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.573646] (rtcm_msgs) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.575213] (rtcm_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.580232] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.602107] (rtcm_msgs) StdoutLine: {'line': b'[ 22%] Built target rtcm_msgs__rosidl_generator_c\n'}
+[0.602320] (-) TimerEvent: {}
+[0.605878] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.614523] (rtcm_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.616360] (rtcm_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[0.616500] (rtcm_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.648703] (husky_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library libhusky_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[0.698452] (husky_msgs) StdoutLine: {'line': b'[ 12%] Built target husky_msgs__cpp\n'}
+[0.703147] (-) TimerEvent: {}
+[0.709575] (husky_msgs) StdoutLine: {'line': b'[ 12%] Built target husky_msgs__rosidl_generator_c\n'}
+[0.713030] (husky_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.713502] (husky_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.716057] (husky_msgs) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.724420] (husky_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.727842] (turtlebot3_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:23 (find_package):\n'}
+[0.728040] (turtlebot3_gazebo) StderrLine: {'line': b'  By not providing "Findgazebo.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.728155] (turtlebot3_gazebo) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "gazebo", but\n'}
+[0.728259] (turtlebot3_gazebo) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.728360] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[0.728458] (turtlebot3_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by "gazebo" with any\n'}
+[0.728560] (turtlebot3_gazebo) StderrLine: {'line': b'  of the following names:\n'}
+[0.728659] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[0.728755] (turtlebot3_gazebo) StderrLine: {'line': b'    gazeboConfig.cmake\n'}
+[0.728882] (turtlebot3_gazebo) StderrLine: {'line': b'    gazebo-config.cmake\n'}
+[0.728989] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[0.729089] (turtlebot3_gazebo) StderrLine: {'line': b'  Add the installation prefix of "gazebo" to CMAKE_PREFIX_PATH or set\n'}
+[0.729200] (turtlebot3_gazebo) StderrLine: {'line': b'  "gazebo_DIR" to a directory containing one of the above files.  If "gazebo"\n'}
+[0.729301] (turtlebot3_gazebo) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.729404] (turtlebot3_gazebo) StderrLine: {'line': b'  installed.\n'}
+[0.729505] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[0.729606] (turtlebot3_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[0.733007] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.733209] (turtlebot3_gazebo) StdoutLine: {'line': b'See also "/ros2_ws/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[0.733373] (husky_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[0.735518] (husky_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.735909] (turtlebot3_gazebo) JobEnded: {'identifier': 'turtlebot3_gazebo', 'rc': 'SIGINT'}
+[0.750929] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.803243] (-) TimerEvent: {}
+[0.815840] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.824100] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.838478] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.861881] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.897303] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.903332] (-) TimerEvent: {}
+[1.003666] (-) TimerEvent: {}
+[1.005353] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.019642] (rtcm_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rtcm_msgs/msg/message__type_support.cpp.o\x1b[0m\n'}
+[1.033488] (rtcm_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rtcm_msgs/msg/message__type_support.cpp.o\x1b[0m\n'}
+[1.037721] (rtcm_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rtcm_msgs/msg/detail/message__type_support.cpp.o\x1b[0m\n'}
+[1.063286] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.069051] (rtcm_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rtcm_msgs/msg/detail/message__type_support_c.cpp.o\x1b[0m\n'}
+[1.089252] (rtcm_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.092896] (rtcm_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rtcm_msgs/msg/detail/message__type_support.c.o\x1b[0m\n'}
+[1.098984] (rtcm_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rtcm_msgs/msg/detail/dds_fastrtps/message__type_support.cpp.o\x1b[0m\n'}
+[1.105151] (-) TimerEvent: {}
+[1.159603] (rtcm_msgs) StdoutLine: {'line': b'[ 54%] Built target rtcm_msgs__rosidl_typesupport_c\n'}
+[1.170781] (rtcm_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library librtcm_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.181936] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.187741] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.205324] (-) TimerEvent: {}
+[1.218724] (rtcm_msgs) StdoutLine: {'line': b'[ 58%] Built target rtcm_msgs__rosidl_typesupport_introspection_c\n'}
+[1.305469] (-) TimerEvent: {}
+[1.316981] (husky_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/husky_msgs/msg/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.334319] (husky_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/husky_msgs/msg/detail/husky_status__type_support.c.o\x1b[0m\n'}
+[1.342907] (husky_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/husky_msgs/msg/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.348231] (husky_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/husky_msgs/msg/detail/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.355318] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.363706] (husky_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.371949] (husky_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/husky_msgs/msg/detail/dds_fastrtps/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.378848] (husky_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/husky_msgs/msg/detail/husky_status__type_support_c.cpp.o\x1b[0m\n'}
+[1.385718] (husky_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library libhusky_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.405571] (-) TimerEvent: {}
+[1.409042] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.428519] (husky_msgs) StdoutLine: {'line': b'[ 58%] Built target husky_msgs__rosidl_typesupport_c\n'}
+[1.432423] (husky_msgs) StdoutLine: {'line': b'[ 58%] Built target husky_msgs__rosidl_typesupport_introspection_c\n'}
+[1.480243] (turtlebot3_fake_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.497970] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.501750] (rtcm_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.505674] (-) TimerEvent: {}
+[1.567091] (rtcm_msgs) StdoutLine: {'line': b'[ 61%] Built target rtcm_msgs__rosidl_typesupport_cpp\n'}
+[1.579633] (rtcm_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.600462] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.600799] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.605777] (-) TimerEvent: {}
+[1.679995] (rtcm_msgs) StdoutLine: {'line': b'[ 64%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.695689] (rtcm_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.705880] (-) TimerEvent: {}
+[1.711751] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.713466] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.750902] (rtcm_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library librtcm_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.767753] (husky_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.795196] (rtcm_msgs) StdoutLine: {'line': b'[ 70%] Built target rtcm_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.797462] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.805990] (-) TimerEvent: {}
+[1.811579] (husky_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.813319] (husky_msgs) StdoutLine: {'line': b'[ 64%] Built target husky_msgs__rosidl_typesupport_cpp\n'}
+[1.823979] (husky_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.837570] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.842691] (rtcm_msgs) StdoutLine: {'line': b'[ 70%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.857746] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found tf2_msgs: 0.25.7 (/opt/ros/humble/share/tf2_msgs/cmake)\n'}
+[1.864103] (rtcm_msgs) StdoutLine: {'line': b'[ 70%] Built target rtcm_msgs\n'}
+[1.886747] (rtcm_msgs) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[1.898905] (husky_msgs) StdoutLine: {'line': b'[ 67%] Built target husky_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.901253] (husky_msgs) StdoutLine: {'line': b'[ 67%] Built target husky_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.906067] (-) TimerEvent: {}
+[1.919976] (husky_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.937572] (turtlebot3_fake_node) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:25 (find_package):\n'}
+[1.937792] (turtlebot3_fake_node) StderrLine: {'line': b'  By not providing "Findturtlebot3_msgs.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.937904] (turtlebot3_fake_node) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.937999] (turtlebot3_fake_node) StderrLine: {'line': b'  "turtlebot3_msgs", but CMake did not find one.\n'}
+[1.938058] (turtlebot3_fake_node) StderrLine: {'line': b'\n'}
+[1.938114] (turtlebot3_fake_node) StderrLine: {'line': b'  Could not find a package configuration file provided by "turtlebot3_msgs"\n'}
+[1.938169] (turtlebot3_fake_node) StderrLine: {'line': b'  with any of the following names:\n'}
+[1.938223] (turtlebot3_fake_node) StderrLine: {'line': b'\n'}
+[1.938277] (turtlebot3_fake_node) StderrLine: {'line': b'    turtlebot3_msgsConfig.cmake\n'}
+[1.938331] (turtlebot3_fake_node) StderrLine: {'line': b'    turtlebot3_msgs-config.cmake\n'}
+[1.938385] (turtlebot3_fake_node) StderrLine: {'line': b'\n'}
+[1.938437] (turtlebot3_fake_node) StderrLine: {'line': b'  Add the installation prefix of "turtlebot3_msgs" to CMAKE_PREFIX_PATH or\n'}
+[1.938491] (turtlebot3_fake_node) StderrLine: {'line': b'  set "turtlebot3_msgs_DIR" to a directory containing one of the above files.\n'}
+[1.938543] (turtlebot3_fake_node) StderrLine: {'line': b'  If "turtlebot3_msgs" provides a separate development package or SDK, be\n'}
+[1.938596] (turtlebot3_fake_node) StderrLine: {'line': b'  sure it has been installed.\n'}
+[1.938649] (turtlebot3_fake_node) StderrLine: {'line': b'\n'}
+[1.938700] (turtlebot3_fake_node) StderrLine: {'line': b'\x1b[0m\n'}
+[1.938752] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.938823] (turtlebot3_fake_node) StdoutLine: {'line': b'See also "/ros2_ws/build/turtlebot3_fake_node/CMakeFiles/CMakeOutput.log".\n'}
+[1.948970] (turtlebot3_fake_node) JobEnded: {'identifier': 'turtlebot3_fake_node', 'rc': 'SIGINT'}
+[1.992712] (husky_msgs) StdoutLine: {'line': b'[ 70%] Built target husky_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.006179] (-) TimerEvent: {}
+[2.011229] (husky_msgs) StdoutLine: {'line': b'[ 70%] Built target husky_msgs\n'}
+[2.030113] (husky_msgs) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.106300] (-) TimerEvent: {}
+[2.177028] (rtcm_msgs) StdoutLine: {'line': b'[ 74%] Built target rtcm_msgs__py\n'}
+[2.195134] (rtcm_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_generator_py.dir/rosidl_generator_py/rtcm_msgs/msg/_message_s.c.o\x1b[0m\n'}
+[2.206424] (-) TimerEvent: {}
+[2.306685] (-) TimerEvent: {}
+[2.326133] (rtcm_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rtcm_msgs/librtcm_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[2.364708] (rtcm_msgs) StdoutLine: {'line': b'[ 80%] Built target rtcm_msgs__rosidl_generator_py\n'}
+[2.383213] (rtcm_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.383461] (rtcm_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.383528] (rtcm_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/rtcm_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rtcm_msgs/_rtcm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.406839] (-) TimerEvent: {}
+[2.485794] (husky_msgs) StdoutLine: {'line': b'[ 74%] Built target husky_msgs__py\n'}
+[2.488546] (rtcm_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.488689] (rtcm_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.488757] (rtcm_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rtcm_msgs/rtcm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.504919] (husky_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_py.dir/rosidl_generator_py/husky_msgs/msg/_husky_status_s.c.o\x1b[0m\n'}
+[2.506938] (-) TimerEvent: {}
+[2.526234] (rtcm_msgs) StdoutLine: {'line': b'[100%] Built target rtcm_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[2.526384] (rtcm_msgs) StdoutLine: {'line': b'[100%] Built target rtcm_msgs__rosidl_typesupport_c__pyext\n'}
+[2.526451] (rtcm_msgs) StdoutLine: {'line': b'[100%] Built target rtcm_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.537162] (rtcm_msgs) JobEnded: {'identifier': 'rtcm_msgs', 'rc': 'SIGINT'}
+[2.607026] (-) TimerEvent: {}
+[2.621736] (husky_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/libhusky_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[2.659388] (husky_msgs) StdoutLine: {'line': b'[ 80%] Built target husky_msgs__rosidl_generator_py\n'}
+[2.678240] (husky_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.678394] (husky_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.678475] (husky_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.707129] (-) TimerEvent: {}
+[2.782442] (husky_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.782596] (husky_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.782664] (husky_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.807255] (-) TimerEvent: {}
+[2.819756] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.819993] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[2.820134] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_c__pyext\n'}
+[2.830474] (husky_msgs) JobEnded: {'identifier': 'husky_msgs', 'rc': 'SIGINT'}
+[2.841139] (wetexplorer_navigation) JobSkipped: {'identifier': 'wetexplorer_navigation'}
+[2.841229] (husky_base) JobSkipped: {'identifier': 'husky_base'}
+[2.841255] (husky_control) JobSkipped: {'identifier': 'husky_control'}
+[2.841274] (husky_viz) JobSkipped: {'identifier': 'husky_viz'}
+[2.841291] (turtlebot3_simulations) JobSkipped: {'identifier': 'turtlebot3_simulations'}
+[2.841307] (husky_bringup) JobSkipped: {'identifier': 'husky_bringup'}
+[2.841323] (husky_desktop) JobSkipped: {'identifier': 'husky_desktop'}
+[2.841339] (husky_gazebo) JobSkipped: {'identifier': 'husky_gazebo'}
+[2.841374] (husky_robot) JobSkipped: {'identifier': 'husky_robot'}
+[2.841405] (husky_simulator) JobSkipped: {'identifier': 'husky_simulator'}
+[2.841433] (-) EventReactorShutdown: {}

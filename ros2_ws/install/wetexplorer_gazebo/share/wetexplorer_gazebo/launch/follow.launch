@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  
+
+
+  <node pkg="max_light_pkg" type="kinematic_controller_PI.py" name="controller" output="screen" />
+ 
+
+</launch>

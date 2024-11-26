@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/wetexplorer_hardware': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware
+Invoked command in '/ros2_ws/build/wetexplorer_hardware' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware

@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.000307] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000434] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000494] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000620] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000739] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000799] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000842] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.000908] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.000946] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.000997] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.001091] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.001122] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.001150] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001201] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001229] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001285] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001314] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001358] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001387] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001418] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001446] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001488] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.001521] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001555] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.001592] (wetexplorer_gazebo) JobQueued: {'identifier': 'wetexplorer_gazebo', 'dependencies': OrderedDict()}
+[0.001632] (wetexplorer_gazebo) JobStarted: {'identifier': 'wetexplorer_gazebo'}
+[0.021858] (wetexplorer_gazebo) JobProgress: {'identifier': 'wetexplorer_gazebo', 'progress': 'cmake'}
+[0.023290] (wetexplorer_gazebo) JobProgress: {'identifier': 'wetexplorer_gazebo', 'progress': 'build'}
+[0.024783] (wetexplorer_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/wetexplorer_gazebo', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/wetexplorer_gazebo', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/wetexplorer_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/ros2_ws/install/wetexplorer_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one')]), 'shell': False}
+[0.098566] (-) TimerEvent: {}
+[0.139851] (wetexplorer_gazebo) CommandEnded: {'returncode': 0}
+[0.177810] (wetexplorer_gazebo) JobProgress: {'identifier': 'wetexplorer_gazebo', 'progress': 'install'}
+[0.193021] (wetexplorer_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/wetexplorer_gazebo'], 'cwd': '/ros2_ws/build/wetexplorer_gazebo', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/wetexplorer_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/ros2_ws/install/wetexplorer_gazebo:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/husky_viz:/ros2_ws/install/husky_simulator:/ros2_ws/install/husky_robot:/ros2_ws/install/husky_bringup:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_gazebo:/ros2_ws/install/husky_control:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one')]), 'shell': False}
+[0.198675] (-) TimerEvent: {}
+[0.206273] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.206670] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch\n'}
+[0.206867] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/follow.launch\n'}
+[0.207261] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/gazebo.launch\n'}
+[0.207432] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/view.launch\n'}
+[0.207627] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/kinematics.launch\n'}
+[0.207791] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/world.launch\n'}
+[0.208102] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked.launch\n'}
+[0.208410] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/navigate.launch\n'}
+[0.208601] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracks.launch\n'}
+[0.208773] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/display.launch\n'}
+[0.209077] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/teleop.launch\n'}
+[0.209356] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked_wetland.launch\n'}
+[0.209528] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/sim.launch.py\n'}
+[0.209780] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/localize.launch\n'}
+[0.209974] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/control.launch\n'}
+[0.210083] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/empty.launch\n'}
+[0.210194] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/meshes\n'}
+[0.210337] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/urdf\n'}
+[0.210436] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/package_run_dependencies/wetexplorer_gazebo\n'}
+[0.210537] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/parent_prefix_path/wetexplorer_gazebo\n'}
+[0.210635] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/ament_prefix_path.sh\n'}
+[0.210786] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/ament_prefix_path.dsv\n'}
+[0.210900] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/path.sh\n'}
+[0.211155] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/path.dsv\n'}
+[0.211254] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.bash\n'}
+[0.211347] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.sh\n'}
+[0.211439] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.zsh\n'}
+[0.211530] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.dsv\n'}
+[0.211620] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/package.dsv\n'}
+[0.211766] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/packages/wetexplorer_gazebo\n'}
+[0.211948] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.212144] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/wetexplorer_gazeboConfig.cmake\n'}
+[0.212325] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/wetexplorer_gazeboConfig-version.cmake\n'}
+[0.212513] (wetexplorer_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/package.xml\n'}
+[0.214322] (wetexplorer_gazebo) CommandEnded: {'returncode': 0}
+[0.298848] (-) TimerEvent: {}
+[0.354082] (wetexplorer_gazebo) JobEnded: {'identifier': 'wetexplorer_gazebo', 'rc': 0}
+[0.355268] (-) EventReactorShutdown: {}

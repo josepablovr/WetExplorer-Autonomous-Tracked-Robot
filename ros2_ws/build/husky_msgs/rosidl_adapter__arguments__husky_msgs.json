@@ -1,0 +1,6 @@
+{
+  "package_name": "husky_msgs",
+  "non_idl_tuples": [
+    "/ros2_ws/src/husky-humble-devel/husky_msgs:msg/HuskyStatus.msg"
+  ]
+}

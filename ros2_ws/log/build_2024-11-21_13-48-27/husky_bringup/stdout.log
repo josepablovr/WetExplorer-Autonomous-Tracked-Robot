@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /ros2_ws/build/husky_bringup
+-- Install configuration: ""
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config/mag_config_default.yaml
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch/accessories.launch.py
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-clearpath.rules
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/README.md
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-hokuyo.rules
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/52-ftdi.rules
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-logitech.rules
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/10-microstrain.rules
+-- Installing: /ros2_ws/install/husky_bringup/lib/husky_bringup/install
+-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/package_run_dependencies/husky_bringup
+-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/parent_prefix_path/husky_bringup
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.sh
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.dsv
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.sh
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.dsv
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.bash
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.sh
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.zsh
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.dsv
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.dsv
+-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/packages/husky_bringup
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig.cmake
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig-version.cmake
+-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.xml

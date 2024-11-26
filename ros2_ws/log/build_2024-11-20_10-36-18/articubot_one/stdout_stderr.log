@@ -1,0 +1,78 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /ros2_ws/build/articubot_one
+-- Install configuration: ""
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/main.rviz
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_sim.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/empty.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/my_controllers.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/map.rviz
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/twist_mux.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/gz_bridge.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/joystick.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_robot.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/nav2_params.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/config/gaz_ros2_ctl_use_sim.yaml
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/depth_camera.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/camera.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/face.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/ros2_control.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/description/lidar.xacro
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_robot.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/joystick.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/navigation_launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/online_async_launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/ball_tracker.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/camera.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/rplidar.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/launch/localization_launch.py
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/worlds
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/worlds/empty.world
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world
+-- Installing: /ros2_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
+-- Installing: /ros2_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.sh
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.dsv
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.bash
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.sh
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.zsh
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.dsv
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/package.dsv
+-- Installing: /ros2_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
+-- Installing: /ros2_ws/install/articubot_one/share/articubot_one/package.xml

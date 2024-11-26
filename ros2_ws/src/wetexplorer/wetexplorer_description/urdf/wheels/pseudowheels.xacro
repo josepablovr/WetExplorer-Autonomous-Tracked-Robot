@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Define properties -->
+  <xacro:property name="total_wheels" value="2" />
+  <xacro:property name="total_mass" value="2.0" />
+  <xacro:property name="radius" value="0.075" />
+  <xacro:property name="length" value="0.05" />
+  <xacro:property name="left_y" value="0.3054" />
+  <xacro:property name="right_y" value="-0.3054" />
+  <xacro:property name="z_pos" value="${-0.2009 + radius}" />
+  <xacro:property name="mu" value="0.5"/>
+
+  
+  <!-- Macro to create a single wheel -->
+  <xacro:macro name="create_wheel" params="index side mass x_pos mu">
+    <xacro:property name="wheel_name" value="wheel_${index}_${side}" />
+
+    <!-- Determine the Y position based on the side -->
+    <xacro:if value="${side == 'left'}">
+      <xacro:property name="y_pos" value="${left_y}" />
+    </xacro:if>
+    <xacro:unless value="${side == 'left'}">
+      <xacro:property name="y_pos" value="${right_y}" />
+    </xacro:unless>
+    
+    <link name="${wheel_name}">
+      <!-- Uncomment visual if needed -->
+      <!--
+      <visual>
+        <geometry>
+          <cylinder radius="${radius}" length="${length}" />
+        </geometry>
+      </visual>
+      -->
+      <collision>
+        <geometry>
+          <cylinder radius="${radius}" length="${length}" />
+        </geometry>
+      </collision>
+      <xacro:cylinder_inertia mass="${mass/total_wheels}" radius="${radius}" length="${length}"/>
+    </link>
+
+    <joint name="${wheel_name}_joint" type="continuous">
+      <origin xyz="${x_pos} ${y_pos} ${z_pos}" rpy="-1.570796 0 0" />
+      <parent link="base_link" />
+      <child link="${wheel_name}" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <transmission name="trans_${wheel_name}">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${wheel_name}_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor_${wheel_name}">
+        <mechanicalReduction>100</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <gazebo reference="${wheel_name}">
+      <gravity>true</gravity>
+      <mu1>${mu}</mu1>
+      <mu2>${mu}</mu2>
+      <kd>1</kd>
+      <kp>10000000000.0</kp>
+      <fdir1>1 0 0</fdir1>
+      <selfCollide>false</selfCollide>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Loop to create 10 wheels for each side -->
+  <xacro:macro name="loop" params="count">
+    <xacro:if value="${count}">
+      <xacro:property name="mass" value="${total_mass / 20}" />
+      <!-- Calculate x position for the wheel, ensuring correct syntax -->
+      <xacro:property name="x_pos" value="${-0.2682 + (0.186601 + 0.2682) / (total_wheels - 1) * (count - 1)}" />
+      
+      <!-- Create left and right wheels -->
+      <xacro:create_wheel index="${count}" side="left" mass="${mass}" x_pos="${x_pos}" mu="${mu}"/>
+      <xacro:create_wheel index="${count}" side="right" mass="${mass}" x_pos="${x_pos}" mu="${mu}"/>
+      
+      <!-- Recursively call loop -->
+      <xacro:loop count="${count-1}" />
+    </xacro:if>
+  </xacro:macro>
+
+  <!-- Start the loop with 10 iterations -->
+  <xacro:loop count="${total_wheels}" />
+  
+
+</robot>

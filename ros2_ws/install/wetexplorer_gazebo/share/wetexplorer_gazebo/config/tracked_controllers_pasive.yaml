@@ -1,0 +1,439 @@
+
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100 
+
+linear_controller:
+  type: velocity_controllers/JointPositionController
+  joint: prismatic_joint
+  pid: {p: 100.0, i: 0.001, d: 0.01}
+
+
+# Velocity Controllers for Individual Wheels
+rear_left_wheel_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "rear_left_wheel_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+rear_right_wheel_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "rear_right_wheel_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+front_left_wheel_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "front_left_wheel_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+front_right_wheel_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "front_right_wheel_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+    
+    
+    
+
+
+left_sprocket_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "power_pulley_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+right_sprocket_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "power_pulley_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+
+
+
+
+
+#Middle wheels Right:
+
+wheel_1_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_1_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_2_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_2_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_3_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_3_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_4_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_4_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_5_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_5_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_6_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_6_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_7_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_7_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_8_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_8_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_9_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_9_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+wheel_10_right_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_10_right_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+# wheel_11_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_11_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_12_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_12_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_13_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_13_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_14_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_14_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_15_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_15_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_16_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_16_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_17_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_17_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_18_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_18_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_19_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_19_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_20_right_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_20_right_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+
+
+
+
+
+#LEFT MIDLE:
+wheel_1_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_1_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_2_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_2_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_3_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_3_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_4_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_4_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_5_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_5_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_6_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_6_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_7_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_7_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_8_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_8_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+
+wheel_9_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_9_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+wheel_10_left_velocity_controller:
+  type: "velocity_controllers/JointVelocityController"
+  joint: "wheel_10_left_joint"
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 0.01
+    i_clamp: 0.0
+# wheel_11_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_11_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_12_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_12_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_13_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_13_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_14_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_14_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_15_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_15_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_16_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_16_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_17_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_17_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_18_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_18_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_19_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_19_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0
+
+# wheel_20_left_velocity_controller:
+#   type: "velocity_controllers/JointVelocityController"
+#   joint: "wheel_20_left_joint"
+#   pid:
+#     p: 1.0
+#     i: 0.0
+#     d: 0.01
+#     i_clamp: 0.0

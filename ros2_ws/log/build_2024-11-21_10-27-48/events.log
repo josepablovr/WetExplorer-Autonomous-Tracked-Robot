@@ -1,0 +1,119 @@
+[0.000000] (-) TimerEvent: {}
+[0.000189] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000402] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000496] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000528] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000557] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000585] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000644] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.000703] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.000731] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.000785] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.000839] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.000869] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.000924] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.000975] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001003] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001065] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001093] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001137] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001244] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001273] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001327] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001355] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.001395] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001429] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.001468] (wetexplorer_description) JobQueued: {'identifier': 'wetexplorer_description', 'dependencies': OrderedDict()}
+[0.001525] (wetexplorer_description) JobStarted: {'identifier': 'wetexplorer_description'}
+[0.030956] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'cmake'}
+[0.032086] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'build'}
+[0.033135] (wetexplorer_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/wetexplorer_description', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/wetexplorer_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.098249] (wetexplorer_description) CommandEnded: {'returncode': 0}
+[0.099013] (-) TimerEvent: {}
+[0.134647] (wetexplorer_description) JobProgress: {'identifier': 'wetexplorer_description', 'progress': 'install'}
+[0.151025] (wetexplorer_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/wetexplorer_description'], 'cwd': '/ros2_ws/build/wetexplorer_description', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/wetexplorer_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.162977] (wetexplorer_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.164110] (wetexplorer_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.165052] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/description.launch.py\n'}
+[0.165384] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/rsp.launch.py\n'}
+[0.165689] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/view.launch\n'}
+[0.166997] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/TCP.STL\n'}
+[0.167334] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/base_link.STL\n'}
+[0.167730] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/central_frame_link.STL\n'}
+[0.168019] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL\n'}
+[0.168339] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_link.STL\n'}
+[0.168738] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chassis.STL\n'}
+[0.169066] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/coupling_link.STL\n'}
+[0.169398] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_link.STL\n'}
+[0.169823] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_support_link.STL\n'}
+[0.170149] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_frame_link.STL\n'}
+[0.170445] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_link.STL\n'}
+[0.170787] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/imu_link.STL\n'}
+[0.171073] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_link.STL\n'}
+[0.171388] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_support_link.STL\n'}
+[0.171757] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL\n'}
+[0.172081] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL\n'}
+[0.172421] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/prismatic_link.STL\n'}
+[0.172762] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL\n'}
+[0.173084] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL\n'}
+[0.173558] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL\n'}
+[0.173915] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL\n'}
+[0.174282] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_left_link.STL\n'}
+[0.174593] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_right_link.STL\n'}
+[0.174916] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/base_link.STL\n'}
+[0.175210] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/chassis.STL\n'}
+[0.175508] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/collision_chassis.STL\n'}
+[0.175803] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/aluminium_frame_link.STL\n'}
+[0.176106] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_link.STL\n'}
+[0.176448] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_original.STL\n'}
+[0.176776] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gas_analyzer_link.STL\n'}
+[0.177132] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link.STL\n'}
+[0.177517] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link_2.STL\n'}
+[0.178088] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/imu_link.STL\n'}
+[0.178645] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/linear_actuator_link.STL\n'}
+[0.179114] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_left_link.STL\n'}
+[0.179400] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_right_link.STL\n'}
+[0.179694] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_left_link.STL\n'}
+[0.179991] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_right_link.STL\n'}
+[0.180311] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_left_link.STL\n'}
+[0.180639] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_right_link.STL\n'}
+[0.180954] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_left_link.STL\n'}
+[0.181267] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_right_link.STL\n'}
+[0.182415] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/aluminium_frame.xacro\n'}
+[0.197073] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/chamber.xacro\n'}
+[0.199141] (-) TimerEvent: {}
+[0.213990] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/gas_analyzer.xacro\n'}
+[0.228920] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/gps.xacro\n'}
+[0.243338] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/imu.xacro\n'}
+[0.258319] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Accesories/linear_actuator.xacro\n'}
+[0.272610] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Robot_System.xacro\n'}
+[0.272979] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/WETExplorer_chassis.xacro\n'}
+[0.273151] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Wheels/front_wheel.xacro\n'}
+[0.287609] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Wheels/pseudowheels.xacro\n'}
+[0.299261] (-) TimerEvent: {}
+[0.301847] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Wheels/rear_wheel.xacro\n'}
+[0.316327] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Wheels/tracks_static.xacro\n'}
+[0.330637] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/central_frame.xacro\n'}
+[0.330870] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/chassis.xacro\n'}
+[0.345962] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/cylinder_inertia.xacro\n'}
+[0.346379] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels.xacro\n'}
+[0.360209] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/package_run_dependencies/wetexplorer_description\n'}
+[0.360650] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/parent_prefix_path/wetexplorer_description\n'}
+[0.360922] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/ament_prefix_path.sh\n'}
+[0.361145] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/ament_prefix_path.dsv\n'}
+[0.361353] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/path.sh\n'}
+[0.361653] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/path.dsv\n'}
+[0.361921] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.bash\n'}
+[0.362193] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.sh\n'}
+[0.362426] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.zsh\n'}
+[0.362851] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.dsv\n'}
+[0.363087] (wetexplorer_description) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/package.dsv\n'}
+[0.377608] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/packages/wetexplorer_description\n'}
+[0.377962] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.378151] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/wetexplorer_descriptionConfig.cmake\n'}
+[0.378292] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/wetexplorer_descriptionConfig-version.cmake\n'}
+[0.378499] (wetexplorer_description) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/package.xml\n'}
+[0.381837] (wetexplorer_description) CommandEnded: {'returncode': 0}
+[0.399935] (-) TimerEvent: {}
+[0.452690] (wetexplorer_description) JobEnded: {'identifier': 'wetexplorer_description', 'rc': 0}
+[0.453751] (-) EventReactorShutdown: {}

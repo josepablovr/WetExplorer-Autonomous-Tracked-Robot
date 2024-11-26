@@ -1,0 +1,4 @@
+source;share/husky_bringup/local_setup.bash
+source;share/husky_bringup/local_setup.dsv
+source;share/husky_bringup/local_setup.sh
+source;share/husky_bringup/local_setup.zsh

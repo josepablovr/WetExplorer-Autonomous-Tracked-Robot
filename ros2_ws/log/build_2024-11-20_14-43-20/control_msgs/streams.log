@@ -1,0 +1,46 @@
+[0.065s] Invoking command in '/ros2_ws/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/control_msgs -- -j12 -l12
+[0.591s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.591s] [  1%] Built target ament_cmake_python_copy_control_msgs
+[0.591s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.725s] running egg_info
+[0.726s] creating control_msgs.egg-info
+[0.732s] writing control_msgs.egg-info/PKG-INFO
+[0.732s] writing dependency_links to control_msgs.egg-info/dependency_links.txt
+[0.733s] writing top-level names to control_msgs.egg-info/top_level.txt
+[0.733s] writing manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.745s] reading manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.745s] writing manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.874s] [  1%] Built target ament_cmake_python_build_control_msgs_egg
+[12.392s] [  1%] Built target control_msgs__cpp
+[12.539s] [  1%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/parallel_gripper_command__functions.c.o[0m
+[12.902s] [  2%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/dynamic_joint_state__functions.c.o[0m
+[13.002s] [  2%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/gripper_command__functions.c.o[0m
+[13.109s] [  3%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/interface_value__functions.c.o[0m
+[13.217s] [  3%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_component_tolerance__functions.c.o[0m
+[13.308s] [  4%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_controller_state__functions.c.o[0m
+[13.414s] [  4%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_jog__functions.c.o[0m
+[13.526s] [  5%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_tolerance__functions.c.o[0m
+[13.657s] [  5%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_trajectory_controller_state__functions.c.o[0m
+[13.811s] [  5%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/mecanum_drive_controller_state__functions.c.o[0m
+[13.901s] [  6%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/multi_dof_command__functions.c.o[0m
+[14.023s] [  6%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/multi_dof_state_stamped__functions.c.o[0m
+[14.117s] [  7%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/pid_state__functions.c.o[0m
+[14.231s] [  7%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/single_dof_state__functions.c.o[0m
+[14.320s] [  8%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/single_dof_state_stamped__functions.c.o[0m
+[14.416s] [  8%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/steering_controller_status__functions.c.o[0m
+[14.502s] [  9%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/srv/detail/query_calibration_state__functions.c.o[0m
+[14.615s] [  9%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/srv/detail/query_trajectory_state__functions.c.o[0m
+[14.757s] [  9%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/dynamic_interface_group_values__functions.c.o[0m
+[14.865s] [  9%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/admittance_controller_state__functions.c.o[0m
+[15.003s] [ 10%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/single_joint_position__functions.c.o[0m
+[15.290s] [ 10%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/point_head__functions.c.o[0m
+[15.607s] [ 11%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/joint_trajectory__functions.c.o[0m
+[15.892s] [ 11%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/gripper_command__functions.c.o[0m
+[16.162s] [ 12%] [32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/follow_joint_trajectory__functions.c.o[0m
+[16.463s] [ 13%] [32m[1mLinking C shared library libcontrol_msgs__rosidl_generator_c.so[0m
+[16.564s] [ 13%] Built target control_msgs__rosidl_generator_c
+[16.588s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[22.520s] gmake[2]: *** Deleting file 'rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp'
+[22.520s] gmake[2]: *** [CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:295: rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp] Interrupt
+[22.522s] gmake[1]: *** [CMakeFiles/Makefile2:368: CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/all] Interrupt
+[22.523s] gmake: *** [Makefile:146: all] Interrupt

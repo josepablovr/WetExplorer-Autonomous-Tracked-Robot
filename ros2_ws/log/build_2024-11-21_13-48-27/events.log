@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000206] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000337] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000385] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000459] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000527] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000597] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.000727] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.000840] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.000944] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.001023] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.001055] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.001085] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001114] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001142] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001170] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001198] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001226] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001254] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001309] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001385] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001418] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.001446] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.001474] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001501] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.001533] (husky_bringup) JobQueued: {'identifier': 'husky_bringup', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_base', '/ros2_ws/install/husky_base'), ('husky_control', '/ros2_ws/install/husky_control')])}
+[0.001605] (husky_bringup) JobStarted: {'identifier': 'husky_bringup'}
+[0.034864] (husky_bringup) JobProgress: {'identifier': 'husky_bringup', 'progress': 'cmake'}
+[0.035588] (husky_bringup) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/husky-humble-devel/husky_bringup', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_bringup'], 'cwd': '/ros2_ws/build/husky_bringup', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_bringup'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.098762] (-) TimerEvent: {}
+[0.136437] (husky_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.198904] (-) TimerEvent: {}
+[0.244327] (husky_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.256710] (husky_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299045] (-) TimerEvent: {}
+[0.373821] (husky_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.392685] (husky_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.393056] (husky_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.393677] (husky_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.398840] (husky_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399111] (-) TimerEvent: {}
+[0.499399] (-) TimerEvent: {}
+[0.538793] (husky_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.552053] (husky_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.552655] (husky_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.553686] (husky_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.559322] (husky_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.599495] (-) TimerEvent: {}
+[0.699797] (-) TimerEvent: {}
+[0.784354] (husky_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.799930] (-) TimerEvent: {}
+[0.900226] (-) TimerEvent: {}
+[1.000567] (-) TimerEvent: {}
+[1.072830] (husky_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.077821] (husky_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[1.079263] (husky_bringup) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/husky_bringup\n'}
+[1.085707] (husky_bringup) CommandEnded: {'returncode': 0}
+[1.086766] (husky_bringup) JobProgress: {'identifier': 'husky_bringup', 'progress': 'build'}
+[1.088303] (husky_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_bringup', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_bringup', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_bringup'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[1.100696] (-) TimerEvent: {}
+[1.156427] (husky_bringup) CommandEnded: {'returncode': 0}
+[1.193357] (husky_bringup) JobProgress: {'identifier': 'husky_bringup', 'progress': 'install'}
+[1.200809] (-) TimerEvent: {}
+[1.206580] (husky_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/husky_bringup'], 'cwd': '/ros2_ws/build/husky_bringup', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_bringup'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[1.220345] (husky_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.220963] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config\n'}
+[1.221210] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config/mag_config_default.yaml\n'}
+[1.221490] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch\n'}
+[1.221639] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch/accessories.launch.py\n'}
+[1.221884] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev\n'}
+[1.222036] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-clearpath.rules\n'}
+[1.222215] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/README.md\n'}
+[1.222660] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-hokuyo.rules\n'}
+[1.223037] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/52-ftdi.rules\n'}
+[1.223415] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-logitech.rules\n'}
+[1.223697] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/10-microstrain.rules\n'}
+[1.224218] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/lib/husky_bringup/install\n'}
+[1.224801] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/package_run_dependencies/husky_bringup\n'}
+[1.225137] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/parent_prefix_path/husky_bringup\n'}
+[1.225560] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.sh\n'}
+[1.225867] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.dsv\n'}
+[1.226152] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.sh\n'}
+[1.226486] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.dsv\n'}
+[1.226756] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.bash\n'}
+[1.227119] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.sh\n'}
+[1.227448] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.zsh\n'}
+[1.227847] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.dsv\n'}
+[1.228150] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.dsv\n'}
+[1.228670] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/packages/husky_bringup\n'}
+[1.229083] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig.cmake\n'}
+[1.229422] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig-version.cmake\n'}
+[1.229706] (husky_bringup) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.xml\n'}
+[1.232443] (husky_bringup) CommandEnded: {'returncode': 0}
+[1.298390] (husky_bringup) JobEnded: {'identifier': 'husky_bringup', 'rc': 0}
+[1.299610] (-) EventReactorShutdown: {}

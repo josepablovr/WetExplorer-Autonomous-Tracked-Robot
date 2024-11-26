@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Wetexplorer">
+
+  
+  
+  <xacro:include filename="$(find wetexplorer_description)/urdf/cylinder_inertia.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/chassis_static.xacro" />
+    
+  <xacro:include filename="$(find wetexplorer_description)/urdf/wheels/tracks_static.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/wheels/pseudowheels.xacro" />
+
+
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/aluminium_frame.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/central_frame.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gas_analyzer.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/linear_actuator.xacro" />
+
+</robot>

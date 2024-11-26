@@ -1,0 +1,20 @@
+[0.037s] Invoking command in '/ros2_ws/build/wetexplorer_hardware': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware
+[0.553s] -- The C compiler identification is GNU 11.4.0
+[0.554s] -- The CXX compiler identification is GNU 11.4.0
+[0.554s] -- Detecting C compiler ABI info
+[0.554s] -- Detecting C compiler ABI info - done
+[0.554s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.554s] -- Detecting C compile features
+[0.554s] -- Detecting C compile features - done
+[0.555s] -- Detecting CXX compiler ABI info
+[0.555s] -- Detecting CXX compiler ABI info - done
+[0.555s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.555s] -- Detecting CXX compile features
+[0.555s] -- Detecting CXX compile features - done
+[0.555s] -- Configuring incomplete, errors occurred!
+[0.555s] See also "/ros2_ws/build/wetexplorer_hardware/CMakeFiles/CMakeOutput.log".
+[0.556s] [31mCMake Error at CMakeLists.txt:8 (catkin_package):
+[0.556s]   Unknown CMake command "catkin_package".
+[0.556s] 
+[0.556s] [0m
+[0.559s] Invoked command in '/ros2_ws/build/wetexplorer_hardware' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_hardware -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_hardware

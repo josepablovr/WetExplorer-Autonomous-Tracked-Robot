@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tracks">
+
+  
+
+    <link
+      name="track_left_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="3" />
+        <inertia
+          ixx="0.094232"
+          ixy="-1.3409E-17"
+          ixz="0.025653"
+          iyy="0.34414"
+          iyz="7.2097E-18"
+          izz="0.26251" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_left_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>      
+    </link>
+
+    
+
+    <joint name="track_left_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_left_link" />      
+    </joint>
+
+   
+
+    <link name="track_right_link">
+      <inertial>
+        <origin
+          xyz="-0.0001779 -0.3045 -0.043666"
+          rpy="0 0 0" />
+        <mass
+          value="3" />
+        <inertia
+          ixx="0.094231632"
+          ixy="-6.3364E-18"
+          ixz="0.025652857"
+          iyy="0.344135139"
+          iyz="-4.0857E-18"
+          izz="0.262511007" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://wetexplorer_description/meshes/WETExplorer/track_right_link.STL" />
+        </geometry>
+        <material name="black"/>
+      </visual>
+     
+
+    </link>
+
+    
+    <joint name="track_right_joint"
+      type="fixed">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="track_right_link" />
+      
+    </joint>
+
+ 
+</robot>

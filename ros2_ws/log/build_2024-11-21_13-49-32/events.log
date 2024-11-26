@@ -1,0 +1,92 @@
+[0.000000] (-) TimerEvent: {}
+[0.000362] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000437] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000495] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000544] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000587] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000641] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000702] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.000780] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.001157] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.001279] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.001364] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.001401] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001429] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001457] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001537] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001566] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001636] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001705] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001769] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001807] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001833] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.001894] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.001922] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001969] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.002021] (husky_viz) JobQueued: {'identifier': 'husky_viz', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description')])}
+[0.002158] (husky_viz) JobStarted: {'identifier': 'husky_viz'}
+[0.019119] (husky_viz) JobProgress: {'identifier': 'husky_viz', 'progress': 'cmake'}
+[0.019578] (husky_viz) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/husky-humble-devel/husky_viz', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_viz'], 'cwd': '/ros2_ws/build/husky_viz', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_viz'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.099095] (-) TimerEvent: {}
+[0.118424] (husky_viz) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199230] (-) TimerEvent: {}
+[0.222174] (husky_viz) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.234391] (husky_viz) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299365] (-) TimerEvent: {}
+[0.352313] (husky_viz) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.365199] (husky_viz) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.365574] (husky_viz) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.366245] (husky_viz) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.371610] (husky_viz) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399501] (-) TimerEvent: {}
+[0.499929] (-) TimerEvent: {}
+[0.507765] (husky_viz) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.522112] (husky_viz) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.522628] (husky_viz) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.523384] (husky_viz) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.528725] (husky_viz) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600020] (-) TimerEvent: {}
+[0.700367] (-) TimerEvent: {}
+[0.750470] (husky_viz) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.800531] (-) TimerEvent: {}
+[0.900990] (-) TimerEvent: {}
+[1.001337] (-) TimerEvent: {}
+[1.024790] (husky_viz) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.029650] (husky_viz) StdoutLine: {'line': b'-- Generating done\n'}
+[1.031017] (husky_viz) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/husky_viz\n'}
+[1.038452] (husky_viz) CommandEnded: {'returncode': 0}
+[1.039243] (husky_viz) JobProgress: {'identifier': 'husky_viz', 'progress': 'build'}
+[1.041514] (husky_viz) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_viz', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_viz', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_viz'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[1.101492] (-) TimerEvent: {}
+[1.105779] (husky_viz) CommandEnded: {'returncode': 0}
+[1.142492] (husky_viz) JobProgress: {'identifier': 'husky_viz', 'progress': 'install'}
+[1.156623] (husky_viz) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/husky_viz'], 'cwd': '/ros2_ws/build/husky_viz', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_viz'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[1.169535] (husky_viz) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.169995] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/launch\n'}
+[1.170208] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/launch/view_model.launch\n'}
+[1.170431] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/launch/view_model_launch.py\n'}
+[1.170640] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/launch/view_robot.launch\n'}
+[1.171015] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/launch/view_robot_launch.py\n'}
+[1.171281] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/rviz\n'}
+[1.171525] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/rviz/robot.rviz\n'}
+[1.171821] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/rviz/model.rviz\n'}
+[1.172272] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/rviz/test.rviz\n'}
+[1.173007] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/ament_index/resource_index/package_run_dependencies/husky_viz\n'}
+[1.173324] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/ament_index/resource_index/parent_prefix_path/husky_viz\n'}
+[1.173655] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/environment/ament_prefix_path.sh\n'}
+[1.173933] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/environment/ament_prefix_path.dsv\n'}
+[1.174196] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/environment/path.sh\n'}
+[1.174469] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/environment/path.dsv\n'}
+[1.174712] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/local_setup.bash\n'}
+[1.174951] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/local_setup.sh\n'}
+[1.175210] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/local_setup.zsh\n'}
+[1.175474] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/local_setup.dsv\n'}
+[1.175766] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/package.dsv\n'}
+[1.176296] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/ament_index/resource_index/packages/husky_viz\n'}
+[1.176783] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/cmake/husky_vizConfig.cmake\n'}
+[1.177086] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/cmake/husky_vizConfig-version.cmake\n'}
+[1.177462] (husky_viz) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_viz/share/husky_viz/package.xml\n'}
+[1.181071] (husky_viz) CommandEnded: {'returncode': 0}
+[1.201640] (-) TimerEvent: {}
+[1.245139] (husky_viz) JobEnded: {'identifier': 'husky_viz', 'rc': 0}
+[1.246332] (-) EventReactorShutdown: {}

@@ -1,0 +1,128 @@
+[0.021s] Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /ros2_ws/build/wetexplorer_description -- -j12 -l12
+[0.086s] Invoked command in '/ros2_ws/build/wetexplorer_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /ros2_ws/build/wetexplorer_description -- -j12 -l12
+[0.140s] Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /ros2_ws/build/wetexplorer_description
+[0.151s] -- Install configuration: ""
+[0.152s] -- Execute custom install script
+[0.153s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/description.launch.py
+[0.153s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/rsp.launch.py
+[0.153s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/launch/view.launch
+[0.154s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/TCP.STL
+[0.169s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/base_link.STL
+[0.184s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/central_frame_link.STL
+[0.199s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL
+[0.214s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_link.STL
+[0.228s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chassis.STL
+[0.244s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/coupling_link.STL
+[0.261s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_link.STL
+[0.276s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_support_link.STL
+[0.293s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_frame_link.STL
+[0.309s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_link.STL
+[0.324s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/imu_link.STL
+[0.340s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_link.STL
+[0.355s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_support_link.STL
+[0.369s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL
+[0.384s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL
+[0.398s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/prismatic_link.STL
+[0.412s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL
+[0.427s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL
+[0.442s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL
+[0.456s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL
+[0.471s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_left_link.STL
+[0.485s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_right_link.STL
+[0.500s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/aluminium_frame_link.STL
+[0.514s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/base_link.STL
+[0.528s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/chassis.STL
+[0.543s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/collision_chassis.STL
+[0.558s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/aluminium_frame_link.STL
+[0.572s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_link.STL
+[0.586s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_original.STL
+[0.600s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gas_analyzer_link.STL
+[0.614s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link.STL
+[0.629s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link_2.STL
+[0.645s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/imu_link.STL
+[0.659s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/linear_actuator_link.STL
+[0.673s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_left_link.STL
+[0.687s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_right_link.STL
+[0.702s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_left_link.STL
+[0.716s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_right_link.STL
+[0.730s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_left_link.STL
+[0.745s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_right_link.STL
+[0.759s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_left_link.STL
+[0.773s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_right_link.STL
+[0.789s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/Robot_System.xacro
+[0.789s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/WETExplorer_chassis.xacro
+[0.789s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/aluminium_frame.xacro
+[0.790s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/central_frame.xacro
+[0.790s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/chamber.xacro
+[0.790s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/gas_analyzer.xacro
+[0.790s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/gps.xacro
+[0.790s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/imu.xacro
+[0.791s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/accesories/linear_actuator.xacro
+[0.791s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/chassis.xacro
+[0.791s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/chassis_static.xacro
+[0.791s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/cylinder_inertia.xacro
+[0.792s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels.xacro
+[0.792s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels/front_wheel.xacro
+[0.792s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels/pseudowheels.xacro
+[0.792s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels/rear_wheel.xacro
+[0.793s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/urdf/wheels/tracks_static.xacro
+[0.794s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/TCP.STL
+[0.794s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/base_link.STL
+[0.794s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/central_frame_link.STL
+[0.794s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL
+[0.795s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chamber_link.STL
+[0.795s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/chassis.STL
+[0.795s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/coupling_link.STL
+[0.795s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_link.STL
+[0.796s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gas_analyzer_support_link.STL
+[0.796s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_frame_link.STL
+[0.796s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/gps_link.STL
+[0.797s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/imu_link.STL
+[0.797s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_link.STL
+[0.797s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/linear_actuator_support_link.STL
+[0.798s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL
+[0.798s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL
+[0.798s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/prismatic_link.STL
+[0.799s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL
+[0.799s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL
+[0.799s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL
+[0.799s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL
+[0.800s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_left_link.STL
+[0.800s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/WETExplorer/track_right_link.STL
+[0.800s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/aluminium_frame_link.STL
+[0.800s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/base_link.STL
+[0.800s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/chassis.STL
+[0.801s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/collision_chassis.STL
+[0.801s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/aluminium_frame_link.STL
+[0.801s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_link.STL
+[0.801s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/chamber_original.STL
+[0.801s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gas_analyzer_link.STL
+[0.802s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link.STL
+[0.802s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/gps_link_2.STL
+[0.802s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/imu_link.STL
+[0.803s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/extra/linear_actuator_link.STL
+[0.803s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_left_link.STL
+[0.803s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/power_pulley_right_link.STL
+[0.803s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_left_link.STL
+[0.803s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulley_support_right_link.STL
+[0.804s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_left_link.STL
+[0.804s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/pulleys_right_link.STL
+[0.804s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_left_link.STL
+[0.804s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/meshes/track_right_link.STL
+[0.804s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/package_run_dependencies/wetexplorer_description
+[0.805s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/parent_prefix_path/wetexplorer_description
+[0.805s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/ament_prefix_path.sh
+[0.805s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/ament_prefix_path.dsv
+[0.805s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/path.sh
+[0.806s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/environment/path.dsv
+[0.806s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.bash
+[0.806s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.sh
+[0.806s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.zsh
+[0.807s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/local_setup.dsv
+[0.807s] -- Symlinking: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/package.dsv
+[0.822s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/ament_index/resource_index/packages/wetexplorer_description
+[0.822s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.823s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/wetexplorer_descriptionConfig.cmake
+[0.823s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/cmake/wetexplorer_descriptionConfig-version.cmake
+[0.823s] -- Up-to-date symlink: /ros2_ws/install/wetexplorer_description/share/wetexplorer_description/package.xml
+[0.826s] Invoked command in '/ros2_ws/build/wetexplorer_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /ros2_ws/build/wetexplorer_description

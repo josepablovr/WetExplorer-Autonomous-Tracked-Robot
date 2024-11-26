@@ -1,0 +1,67 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from husky_msgs/msg/HuskyStatus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module husky_msgs {
+  module msg {
+    struct HuskyStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "MCU Uptime, in ms")
+      uint32 uptime;
+
+      @verbatim (language="comment", text=
+        "ROS Control loop frequency (PC-side)")
+      double ros_control_loop_freq;
+
+      @verbatim (language="comment", text=
+        "Current draw of platform components, in amps")
+      double mcu_and_user_port_current;
+
+      double left_driver_current;
+
+      double right_driver_current;
+
+      @verbatim (language="comment", text=
+        "Voltage of platform components, in volts")
+      double battery_voltage;
+
+      double left_driver_voltage;
+
+      double right_driver_voltage;
+
+      @verbatim (language="comment", text=
+        "Component temperatures, in C")
+      double left_driver_temp;
+
+      double right_driver_temp;
+
+      double left_motor_temp;
+
+      double right_motor_temp;
+
+      @verbatim (language="comment", text=
+        "Battery capacity (Wh) and charge (%) estimate")
+      uint16 capacity_estimate;
+
+      double charge_estimate;
+
+      @verbatim (language="comment", text=
+        "Husky error/stop conditions")
+      boolean timeout;
+
+      boolean lockout;
+
+      boolean e_stop;
+
+      boolean ros_pause;
+
+      boolean no_battery;
+
+      boolean current_limit;
+    };
+  };
+};

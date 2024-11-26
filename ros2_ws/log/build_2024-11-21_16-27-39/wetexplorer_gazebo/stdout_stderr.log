@@ -1,0 +1,24 @@
+-- Install configuration: ""
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/follow.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/gazebo.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/view.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/kinematics.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/world.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/navigate.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracks.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/display.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/teleop.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked_wetland.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/sim.launch.py
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/localize.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/control.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/empty.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/meshes
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/ros2_ws/src/wetexplorer/wetexplorer_gazebo/urdf": No such file or
+  directory.
+
+[0m

@@ -1,0 +1,7 @@
+[0.062s] Invoking command in '/ros2_ws/build/husky_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_description
+[0.096s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.263s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.274s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.442s] -- Configuring done
+[0.447s] -- Generating done
+[0.448s] -- Build files have been written to: /ros2_ws/build/husky_description

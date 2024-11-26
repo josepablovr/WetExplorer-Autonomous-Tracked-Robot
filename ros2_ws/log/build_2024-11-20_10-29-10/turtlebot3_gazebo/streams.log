@@ -1,0 +1,34 @@
+[0.055s] Invoking command in '/ros2_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3_gazebo
+[0.168s] -- The C compiler identification is GNU 11.4.0
+[0.226s] -- The CXX compiler identification is GNU 11.4.0
+[0.234s] -- Detecting C compiler ABI info
+[0.310s] -- Detecting C compiler ABI info - done
+[0.319s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.319s] -- Detecting C compile features
+[0.320s] -- Detecting C compile features - done
+[0.323s] -- Detecting CXX compiler ABI info
+[0.401s] -- Detecting CXX compiler ABI info - done
+[0.409s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.409s] -- Detecting CXX compile features
+[0.410s] -- Detecting CXX compile features - done
+[0.413s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.564s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.711s] [31mCMake Error at CMakeLists.txt:23 (find_package):
+[0.711s]   By not providing "Findgazebo.cmake" in CMAKE_MODULE_PATH this project has
+[0.711s]   asked CMake to find a package configuration file provided by "gazebo", but
+[0.712s]   CMake did not find one.
+[0.712s] 
+[0.712s]   Could not find a package configuration file provided by "gazebo" with any
+[0.712s]   of the following names:
+[0.712s] 
+[0.712s]     gazeboConfig.cmake
+[0.712s]     gazebo-config.cmake
+[0.712s] 
+[0.712s]   Add the installation prefix of "gazebo" to CMAKE_PREFIX_PATH or set
+[0.712s]   "gazebo_DIR" to a directory containing one of the above files.  If "gazebo"
+[0.713s]   provides a separate development package or SDK, be sure it has been
+[0.713s]   installed.
+[0.713s] 
+[0.713s] [0m
+[0.716s] -- Configuring incomplete, errors occurred!
+[0.717s] See also "/ros2_ws/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".

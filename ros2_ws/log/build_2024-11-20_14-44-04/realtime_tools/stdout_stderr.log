@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target realtime_tools[0m
+[35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[35m[1mConsolidate compiler generated dependencies of target thread_priority[0m
+[35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[  7%] Built target thread_priority
+[ 17%] Built target realtime_tools
+[ 25%] Built target gmock_main
+[ 35%] Built target gmock
+[35m[1mConsolidate compiler generated dependencies of target thread_priority_tests[0m
+[35m[1mConsolidate compiler generated dependencies of target realtime_box_tests[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/realtime_box_best_effort_tests.dir/test/realtime_box_best_effort_tests.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target test_async_function_handler[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/realtime_buffer_tests.dir/test/realtime_buffer_tests.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/realtime_publisher_tests.dir/test/realtime_publisher_tests.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/realtime_clock_tests.dir/test/realtime_clock_tests.cpp.o[0m
+[ 57%] Built target thread_priority_tests
+[ 60%] [32mBuilding CXX object CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o[0m
+[ 67%] Built target realtime_box_tests
+[ 71%] [32mBuilding CXX object CMakeFiles/realtime_publisher_tests_non_polling.dir/test/realtime_publisher_tests_non_polling.cpp.o[0m
+[ 78%] Built target test_async_function_handler
+[ 82%] [32m[1mLinking CXX executable realtime_buffer_tests[0m
+[ 85%] [32m[1mLinking CXX executable realtime_clock_tests[0m
+[ 85%] Built target realtime_clock_tests
+[ 85%] Built target realtime_buffer_tests
+[ 89%] [32m[1mLinking CXX executable realtime_box_best_effort_tests[0m
+[ 89%] Built target realtime_box_best_effort_tests
+[ 92%] [32m[1mLinking CXX executable realtime_server_goal_handle_tests[0m
+[ 92%] Built target realtime_server_goal_handle_tests
+[ 96%] [32m[1mLinking CXX executable realtime_publisher_tests_non_polling[0m
+[ 96%] Built target realtime_publisher_tests_non_polling
+[100%] [32m[1mLinking CXX executable realtime_publisher_tests[0m
+[100%] Built target realtime_publisher_tests

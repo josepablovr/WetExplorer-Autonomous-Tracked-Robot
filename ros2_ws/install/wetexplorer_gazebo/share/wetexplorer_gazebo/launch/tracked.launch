@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load robot description parameter -->
+ 
+
+  <arg name="world_name" default="$(find wetexplorer_gazebo)/worlds/tracked.world"/>
+
+  <env name="GAZEBO_MODEL_PATH" value ="$(find wetexplorer_gazebo)/models"/>
+
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.4"/>
+  <arg name="yaw" default="0.0"/>  
+
+ 
+  <arg name="joystick" default="true" /> 
+
+  <group ns="$(arg robot_namespace)">
+   <include file="$(find wetexplorer_gazebo)/launch/tracks.launch">
+    </include>
+
+    
+    <!-- Spawn robot in gazebo -->
+    <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
+        args="-x 0
+              -y 0
+              -z 0.5
+              -Y 0
+              -unpause
+              -urdf
+              -param robot_description
+              -model WetExplorer              
+              -robot_namespace $(arg robot_namespace)" />
+
+  </group>
+  
+
+</launch>

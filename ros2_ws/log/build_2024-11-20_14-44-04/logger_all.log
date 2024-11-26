@@ -1,0 +1,774 @@
+[0.187s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.187s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77e8b60c3fa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77e8b60c3a30>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77e8b60c3a30>>, mixin_verb=('build',))
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.357s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/ros2_ws'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extension 'ignore_ament_install'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extensions ['colcon_pkg']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extension 'colcon_pkg'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extensions ['colcon_meta']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extension 'colcon_meta'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/articubot_one) by extension 'ros'
+[0.377s] DEBUG:colcon.colcon_core.package_identification:Package 'src/articubot_one' with type 'ros.ament_cmake' and name 'articubot_one'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'ignore'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'ignore_ament_install'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['colcon_pkg']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'colcon_pkg'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['colcon_meta']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'colcon_meta'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['ros']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'ros'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['cmake', 'python']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'cmake'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'python'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extensions ['python_setup_py']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs) by extension 'python_setup_py'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extension 'ignore'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extension 'ignore_ament_install'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extensions ['colcon_pkg']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extension 'colcon_pkg'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extensions ['colcon_meta']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extension 'colcon_meta'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extensions ['ros']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_msgs/control_msgs) by extension 'ros'
+[0.380s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control_msgs/control_msgs' with type 'ros.ament_cmake' and name 'control_msgs'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['ignore', 'ignore_ament_install']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'ignore'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'ignore_ament_install'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['colcon_pkg']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'colcon_pkg'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['colcon_meta']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'colcon_meta'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['ros']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'ros'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['cmake', 'python']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'cmake'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'python'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extensions ['python_setup_py']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel) by extension 'python_setup_py'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extension 'ignore_ament_install'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extensions ['colcon_pkg']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extensions ['colcon_meta']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extension 'colcon_meta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extensions ['ros']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_base) by extension 'ros'
+[0.383s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_base' with type 'ros.ament_cmake' and name 'husky_base'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extension 'colcon_pkg'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extensions ['colcon_meta']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extension 'colcon_meta'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extensions ['ros']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_bringup) by extension 'ros'
+[0.385s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_bringup' with type 'ros.ament_cmake' and name 'husky_bringup'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extension 'ignore'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extension 'ignore_ament_install'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extensions ['colcon_pkg']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_control) by extension 'ros'
+[0.387s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_control' with type 'ros.ament_cmake' and name 'husky_control'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extensions ['colcon_pkg']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extension 'colcon_pkg'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_description) by extension 'ros'
+[0.389s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_description' with type 'ros.ament_cmake' and name 'husky_description'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extensions ['ignore', 'ignore_ament_install']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extension 'ignore'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extension 'ignore_ament_install'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extensions ['colcon_pkg']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extension 'colcon_pkg'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extensions ['colcon_meta']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extension 'colcon_meta'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extensions ['ros']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_desktop) by extension 'ros'
+[0.391s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_desktop' with type 'ros.ament_cmake' and name 'husky_desktop'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extension 'ignore_ament_install'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extensions ['colcon_pkg']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extension 'colcon_pkg'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extensions ['colcon_meta']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extension 'colcon_meta'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extensions ['ros']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_gazebo) by extension 'ros'
+[0.393s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_gazebo' with type 'ros.ament_cmake' and name 'husky_gazebo'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extension 'ignore'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extension 'ignore_ament_install'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extensions ['colcon_pkg']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extension 'colcon_pkg'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extensions ['colcon_meta']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_msgs) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_msgs' with type 'ros.ament_cmake' and name 'husky_msgs'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_navigation) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_navigation) ignored
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extension 'ignore_ament_install'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extensions ['colcon_pkg']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extension 'colcon_pkg'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_robot) by extension 'ros'
+[0.397s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_robot' with type 'ros.ament_cmake' and name 'husky_robot'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extension 'ignore_ament_install'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extensions ['colcon_pkg']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extension 'colcon_pkg'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extensions ['colcon_meta']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extension 'colcon_meta'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extensions ['ros']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_simulator) by extension 'ros'
+[0.398s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_simulator' with type 'ros.ament_cmake' and name 'husky_simulator'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extension 'ignore'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extension 'ignore_ament_install'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extensions ['colcon_pkg']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extension 'colcon_pkg'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extensions ['colcon_meta']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extension 'colcon_meta'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extensions ['ros']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/husky-humble-devel/husky_viz) by extension 'ros'
+[0.399s] DEBUG:colcon.colcon_core.package_identification:Package 'src/husky-humble-devel/husky_viz' with type 'ros.ament_cmake' and name 'husky_viz'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extension 'ignore'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extension 'ignore_ament_install'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extensions ['colcon_pkg']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extension 'colcon_pkg'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extensions ['colcon_meta']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extension 'colcon_meta'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extensions ['ros']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/mapviz_plugins) by extension 'ros'
+[0.403s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mapviz_plugins' with type 'ros.catkin' and name 'mapviz_plugins'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extensions ['colcon_pkg']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extension 'colcon_pkg'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extensions ['colcon_meta']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extension 'colcon_meta'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extensions ['ros']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/realtime_tools) by extension 'ros'
+[0.404s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realtime_tools' with type 'ros.ament_cmake' and name 'realtime_tools'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'ignore'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'ignore_ament_install'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['colcon_pkg']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'colcon_pkg'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['colcon_meta']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'colcon_meta'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['ros']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'ros'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['cmake', 'python']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'cmake'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'python'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extensions ['python_setup_py']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base) by extension 'python_setup_py'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extension 'ignore'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extension 'ignore_ament_install'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extensions ['colcon_pkg']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extension 'colcon_pkg'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extensions ['colcon_meta']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extension 'colcon_meta'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extensions ['ros']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo_base/robo_base) by extension 'ros'
+[0.407s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robo_base/robo_base' with type 'ros.catkin' and name 'robo_base'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extension 'ignore'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extension 'ignore_ament_install'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extensions ['colcon_pkg']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extension 'colcon_pkg'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extensions ['colcon_meta']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extension 'colcon_meta'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extensions ['ros']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/rtcm_msgs) by extension 'ros'
+[0.412s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rtcm_msgs' with type 'ros.ament_cmake' and name 'rtcm_msgs'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extensions ['ignore', 'ignore_ament_install']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extension 'ignore'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extension 'ignore_ament_install'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extensions ['colcon_pkg']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extension 'colcon_pkg'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extensions ['colcon_meta']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extension 'colcon_meta'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extensions ['ros']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/tile_map) by extension 'ros'
+[0.415s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tile_map' with type 'ros.catkin' and name 'tile_map'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['ignore', 'ignore_ament_install']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'ignore'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'ignore_ament_install'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['colcon_pkg']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'colcon_pkg'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['colcon_meta']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'colcon_meta'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['ros']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'ros'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['cmake', 'python']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'cmake'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'python'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extensions ['python_setup_py']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations) by extension 'python_setup_py'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extension 'ignore'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extension 'ignore_ament_install'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extensions ['colcon_pkg']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extension 'colcon_pkg'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extensions ['colcon_meta']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extension 'colcon_meta'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extensions ['ros']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_fake_node) by extension 'ros'
+[0.418s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_simulations/turtlebot3_fake_node' with type 'ros.ament_cmake' and name 'turtlebot3_fake_node'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extension 'ignore'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extension 'ignore_ament_install'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extensions ['colcon_pkg']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extension 'colcon_pkg'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extensions ['colcon_meta']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extension 'colcon_meta'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extensions ['ros']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_gazebo) by extension 'ros'
+[0.420s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_simulations/turtlebot3_gazebo' with type 'ros.ament_cmake' and name 'turtlebot3_gazebo'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extension 'ignore'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extension 'ignore_ament_install'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extensions ['colcon_pkg']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extension 'colcon_pkg'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extensions ['colcon_meta']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extension 'colcon_meta'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extensions ['ros']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_simulations/turtlebot3_simulations) by extension 'ros'
+[0.421s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_simulations/turtlebot3_simulations' with type 'ros.ament_cmake' and name 'turtlebot3_simulations'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['ignore', 'ignore_ament_install']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'ignore'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'ignore_ament_install'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['colcon_pkg']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'colcon_pkg'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['colcon_meta']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'colcon_meta'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['ros']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'ros'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['cmake', 'python']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'cmake'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'python'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extensions ['python_setup_py']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer) by extension 'python_setup_py'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extension 'ignore_ament_install'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extensions ['colcon_pkg']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extension 'colcon_pkg'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extensions ['colcon_meta']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extension 'colcon_meta'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extensions ['ros']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_control) by extension 'ros'
+[0.425s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wetexplorer/wetexplorer_control' with type 'ros.catkin' and name 'wetexplorer_control'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extension 'ignore_ament_install'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extensions ['colcon_pkg']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extension 'colcon_pkg'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extensions ['colcon_meta']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extension 'colcon_meta'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extensions ['ros']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_description) by extension 'ros'
+[0.426s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wetexplorer/wetexplorer_description' with type 'ros.ament_cmake' and name 'wetexplorer_description'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extension 'ignore'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extension 'ignore_ament_install'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extensions ['colcon_pkg']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extension 'colcon_pkg'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_gazebo) by extension 'ros'
+[0.428s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wetexplorer/wetexplorer_gazebo' with type 'ros.catkin' and name 'wetexplorer_gazebo'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extension 'ignore'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extension 'ignore_ament_install'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extensions ['colcon_pkg']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extension 'colcon_pkg'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extensions ['colcon_meta']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extension 'colcon_meta'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extensions ['ros']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_hardware) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wetexplorer/wetexplorer_hardware' with type 'ros.catkin' and name 'wetexplorer_hardware'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extension 'ignore'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extension 'ignore_ament_install'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extensions ['colcon_pkg']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extension 'colcon_pkg'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extensions ['colcon_meta']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/wetexplorer/wetexplorer_navigation) by extension 'ros'
+[0.431s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wetexplorer/wetexplorer_navigation' with type 'ros.catkin' and name 'wetexplorer_navigation'
+[0.431s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.431s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.472s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_args' from command line to 'None'
+[0.472s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_target' from command line to 'None'
+[0.472s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.472s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_clean_cache' from command line to 'False'
+[0.472s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_clean_first' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'cmake_force_configure' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'ament_cmake_args' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'catkin_cmake_args' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'articubot_one' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.473s] DEBUG:colcon.colcon_core.verb:Building package 'articubot_one' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/articubot_one', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/articubot_one', 'merge_install': False, 'path': '/ros2_ws/src/articubot_one', 'symlink_install': False, 'test_result_base': None}
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_args' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_target' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.473s] Level 5:colcon.colcon_core.verb:set package 'control_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.473s] DEBUG:colcon.colcon_core.verb:Building package 'control_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/control_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/control_msgs', 'merge_install': False, 'path': '/ros2_ws/src/control_msgs/control_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_args' from command line to 'None'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_target' from command line to 'None'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.474s] Level 5:colcon.colcon_core.verb:set package 'husky_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.474s] DEBUG:colcon.colcon_core.verb:Building package 'husky_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_description', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_description', 'symlink_install': False, 'test_result_base': None}
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_args' from command line to 'None'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_target' from command line to 'None'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'husky_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.475s] DEBUG:colcon.colcon_core.verb:Building package 'husky_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_msgs', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_target' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_clean_cache' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_clean_first' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'cmake_force_configure' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'ament_cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'catkin_cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mapviz_plugins' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.476s] DEBUG:colcon.colcon_core.verb:Building package 'mapviz_plugins' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/mapviz_plugins', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/mapviz_plugins', 'merge_install': False, 'path': '/ros2_ws/src/mapviz_plugins', 'symlink_install': False, 'test_result_base': None}
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_target' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'realtime_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.477s] DEBUG:colcon.colcon_core.verb:Building package 'realtime_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/realtime_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/realtime_tools', 'merge_install': False, 'path': '/ros2_ws/src/realtime_tools', 'symlink_install': False, 'test_result_base': None}
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_target' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_clean_cache' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_clean_first' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'cmake_force_configure' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'ament_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'catkin_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'robo_base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.478s] DEBUG:colcon.colcon_core.verb:Building package 'robo_base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/robo_base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/robo_base', 'merge_install': False, 'path': '/ros2_ws/src/robo_base/robo_base', 'symlink_install': False, 'test_result_base': None}
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_target' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'rtcm_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.478s] DEBUG:colcon.colcon_core.verb:Building package 'rtcm_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/rtcm_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/rtcm_msgs', 'merge_install': False, 'path': '/ros2_ws/src/rtcm_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_target' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_clean_cache' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_clean_first' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'cmake_force_configure' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'ament_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'catkin_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'tile_map' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.479s] DEBUG:colcon.colcon_core.verb:Building package 'tile_map' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/tile_map', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/tile_map', 'merge_install': False, 'path': '/ros2_ws/src/tile_map', 'symlink_install': False, 'test_result_base': None}
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_target' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_fake_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.480s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_fake_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/turtlebot3_fake_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/turtlebot3_fake_node', 'merge_install': False, 'path': '/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node', 'symlink_install': False, 'test_result_base': None}
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.481s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/turtlebot3_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/turtlebot3_gazebo', 'merge_install': False, 'path': '/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_target' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.481s] DEBUG:colcon.colcon_core.verb:Building package 'wetexplorer_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/wetexplorer_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/wetexplorer_control', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_control', 'symlink_install': False, 'test_result_base': None}
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_target' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.482s] DEBUG:colcon.colcon_core.verb:Building package 'wetexplorer_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/wetexplorer_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/wetexplorer_description', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_description', 'symlink_install': False, 'test_result_base': None}
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.483s] DEBUG:colcon.colcon_core.verb:Building package 'wetexplorer_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/wetexplorer_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/wetexplorer_gazebo', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_target' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.484s] DEBUG:colcon.colcon_core.verb:Building package 'wetexplorer_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/wetexplorer_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/wetexplorer_hardware', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_hardware', 'symlink_install': False, 'test_result_base': None}
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_target' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'wetexplorer_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.485s] DEBUG:colcon.colcon_core.verb:Building package 'wetexplorer_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/wetexplorer_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/wetexplorer_navigation', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_navigation', 'symlink_install': False, 'test_result_base': None}
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_target' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_clean_cache' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_clean_first' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'cmake_force_configure' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'ament_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'catkin_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'husky_base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.486s] DEBUG:colcon.colcon_core.verb:Building package 'husky_base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_base', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_base', 'symlink_install': False, 'test_result_base': None}
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_target' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'husky_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.486s] DEBUG:colcon.colcon_core.verb:Building package 'husky_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_control', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_control', 'symlink_install': False, 'test_result_base': None}
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_target' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_clean_first' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'cmake_force_configure' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'ament_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'husky_viz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.487s] DEBUG:colcon.colcon_core.verb:Building package 'husky_viz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_viz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_viz', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_viz', 'symlink_install': False, 'test_result_base': None}
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_target' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_clean_cache' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_clean_first' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'cmake_force_configure' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'ament_cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'catkin_cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_simulations' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.488s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_simulations' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/turtlebot3_simulations', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/turtlebot3_simulations', 'merge_install': False, 'path': '/ros2_ws/src/turtlebot3_simulations/turtlebot3_simulations', 'symlink_install': False, 'test_result_base': None}
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_args' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_target' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.489s] DEBUG:colcon.colcon_core.verb:Building package 'husky_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_bringup', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_target' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_clean_first' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'cmake_force_configure' from command line to 'False'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'ament_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'husky_desktop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.489s] DEBUG:colcon.colcon_core.verb:Building package 'husky_desktop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_desktop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_desktop', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_desktop', 'symlink_install': False, 'test_result_base': None}
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'husky_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.490s] DEBUG:colcon.colcon_core.verb:Building package 'husky_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_gazebo', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_target' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.491s] DEBUG:colcon.colcon_core.verb:Building package 'husky_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_robot', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_robot', 'symlink_install': False, 'test_result_base': None}
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_target' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'husky_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.492s] DEBUG:colcon.colcon_core.verb:Building package 'husky_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/build/husky_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/install/husky_simulator', 'merge_install': False, 'path': '/ros2_ws/src/husky-humble-devel/husky_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.492s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.493s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.493s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/husky-humble-devel/husky_description' with build type 'ament_cmake'
+[0.494s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/husky-humble-devel/husky_description'
+[0.498s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.499s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.499s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.507s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/husky-humble-devel/husky_msgs' with build type 'ament_cmake'
+[0.507s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/husky-humble-devel/husky_msgs'
+[0.508s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.508s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.512s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node' with build type 'ament_cmake'
+[0.512s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/turtlebot3_simulations/turtlebot3_fake_node'
+[0.512s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.512s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.517s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo' with build type 'ament_cmake'
+[0.517s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo'
+[0.517s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.517s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.521s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/articubot_one' with build type 'ament_cmake'
+[0.521s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/articubot_one'
+[0.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.526s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/control_msgs/control_msgs' with build type 'ament_cmake'
+[0.526s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/control_msgs/control_msgs'
+[0.526s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.526s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.530s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/ros2_ws/src/mapviz_plugins' with build type 'catkin'
+[0.530s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/mapviz_plugins'
+[0.530s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.531s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.535s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/realtime_tools' with build type 'ament_cmake'
+[0.535s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/realtime_tools'
+[0.535s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.535s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.539s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/ros2_ws/src/robo_base/robo_base' with build type 'catkin'
+[0.539s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/robo_base/robo_base'
+[0.539s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.539s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.543s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/rtcm_msgs' with build type 'ament_cmake'
+[0.543s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/rtcm_msgs'
+[0.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.548s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/ros2_ws/src/tile_map' with build type 'catkin'
+[0.548s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/tile_map'
+[0.548s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.548s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.552s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/ros2_ws/src/wetexplorer/wetexplorer_control' with build type 'catkin'
+[0.552s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/wetexplorer/wetexplorer_control'
+[0.552s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.552s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/husky_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_description -- -j12 -l12
+[0.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/husky_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_msgs -- -j12 -l12
+[0.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3_fake_node -- -j12 -l12
+[0.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3_gazebo -- -j12 -l12
+[0.574s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12
+[0.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/control_msgs -- -j12 -l12
+[0.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/mapviz_plugins': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins
+[0.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/realtime_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/realtime_tools -- -j12 -l12
+[0.588s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/robo_base': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base
+[0.593s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12
+[0.602s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/tile_map': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/wetexplorer_control': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control
+[0.627s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/husky_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_description -- -j12 -l12
+[0.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12
+[0.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/husky_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_msgs -- -j12 -l12
+[0.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/husky_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_description
+[0.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/articubot_one
+[0.740s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/wetexplorer_control' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_control
+[0.755s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(articubot_one)
+[0.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/tile_map' returned '1': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map
+[0.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/robo_base' returned '1': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base
+[0.783s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one' for CMake module files
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one' for CMake config files
+[0.788s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/rtcm_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/articubot_one
+[0.792s] Level 1:colcon.colcon_core.shell:create_environment_hook('articubot_one', 'cmake_prefix_path')
+[0.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/install/articubot_one/share/articubot_one/hook/cmake_prefix_path.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/install/articubot_one/share/articubot_one/hook/cmake_prefix_path.dsv'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/install/articubot_one/share/articubot_one/hook/cmake_prefix_path.sh'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one/bin'
+[0.800s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one/lib/pkgconfig/articubot_one.pc'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one/lib/python3.10/site-packages'
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/articubot_one/bin'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/articubot_one/share/articubot_one/package.ps1'
+[0.809s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/install/articubot_one/share/articubot_one/package.dsv'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/articubot_one/share/articubot_one/package.sh'
+[0.812s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/articubot_one/share/articubot_one/package.bash'
+[0.814s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/articubot_one/share/articubot_one/package.zsh'
+[0.815s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/install/articubot_one/share/colcon-core/packages/articubot_one)
+[0.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/build/mapviz_plugins' returned '1': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins
+[0.838s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wetexplorer_control)
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control' for CMake module files
+[0.839s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control' for CMake config files
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control/bin'
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control/lib/pkgconfig/wetexplorer_control.pc'
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control/lib/python3.10/site-packages'
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/wetexplorer_control/bin'
+[0.846s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/wetexplorer_control/share/wetexplorer_control/package.ps1'
+[0.855s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/install/wetexplorer_control/share/wetexplorer_control/package.dsv'
+[0.855s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/wetexplorer_control/share/wetexplorer_control/package.sh'
+[0.856s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/wetexplorer_control/share/wetexplorer_control/package.bash'
+[0.856s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/wetexplorer_control/share/wetexplorer_control/package.zsh'
+[0.857s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/install/wetexplorer_control/share/colcon-core/packages/wetexplorer_control)
+[0.860s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tile_map)
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map' for CMake module files
+[0.863s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map' for CMake config files
+[0.863s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map/bin'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map/lib/pkgconfig/tile_map.pc'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map/lib/python3.10/site-packages'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/tile_map/bin'
+[0.869s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/tile_map/share/tile_map/package.ps1'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/install/tile_map/share/tile_map/package.dsv'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/tile_map/share/tile_map/package.sh'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/tile_map/share/tile_map/package.bash'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/tile_map/share/tile_map/package.zsh'
+[0.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/install/tile_map/share/colcon-core/packages/tile_map)
+[0.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robo_base)
+[0.876s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base' for CMake module files
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base' for CMake config files
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base/bin'
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base/lib/pkgconfig/robo_base.pc'
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base/lib/python3.10/site-packages'
+[0.879s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/install/robo_base/bin'
+[0.879s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/robo_base/share/robo_base/package.ps1'
+[0.880s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/install/robo_base/share/robo_base/package.dsv'
+[0.880s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/robo_base/share/robo_base/package.sh'
+[0.885s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/robo_base/share/robo_base/package.bash'
+[0.886s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/install/robo_base/share/robo_base/package.zsh'
+[0.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/install/robo_base/share/colcon-core/packages/robo_base)
+[32.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[32.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[32.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[32.467s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[32.478s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[32.478s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[32.478s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[32.478s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[32.481s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[32.482s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[32.482s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/install/local_setup.ps1'
+[32.483s] INFO:colcon.colcon_core.shell:Creating prefix util module '/ros2_ws/install/_local_setup_util_ps1.py'
+[32.485s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/install/setup.ps1'
+[32.486s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/install/local_setup.sh'
+[32.487s] INFO:colcon.colcon_core.shell:Creating prefix util module '/ros2_ws/install/_local_setup_util_sh.py'
+[32.487s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/install/setup.sh'
+[32.489s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/install/local_setup.bash'
+[32.489s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/install/setup.bash'
+[32.490s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/install/local_setup.zsh'
+[32.491s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/install/setup.zsh'
