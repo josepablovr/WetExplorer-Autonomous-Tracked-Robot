@@ -1,0 +1,4 @@
+[0.518s] Invoking command in '/ros2_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3_fake_node -- -j12 -l12
+[0.668s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_fake_node[0m
+[0.754s] [100%] Built target turtlebot3_fake_node
+[0.872s] Invoked command in '/ros2_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/turtlebot3_fake_node -- -j12 -l12

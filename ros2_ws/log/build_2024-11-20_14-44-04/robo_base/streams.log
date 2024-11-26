@@ -1,0 +1,29 @@
+[0.049s] Invoking command in '/ros2_ws/build/robo_base': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base
+[0.088s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.088s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.088s]   CMake.
+[0.088s] 
+[0.088s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.088s]   CMake that the project does not need compatibility with older versions.
+[0.088s] 
+[0.089s] [0m
+[0.174s] [31mCMake Error at CMakeLists.txt:7 (find_package):
+[0.175s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.175s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.175s]   CMake did not find one.
+[0.175s] 
+[0.175s]   Could not find a package configuration file provided by "catkin" with any
+[0.175s]   of the following names:
+[0.175s] 
+[0.175s]     catkinConfig.cmake
+[0.175s]     catkin-config.cmake
+[0.176s] 
+[0.176s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.176s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.176s]   provides a separate development package or SDK, be sure it has been
+[0.176s]   installed.
+[0.177s] 
+[0.177s] [0m
+[0.177s] -- Configuring incomplete, errors occurred!
+[0.177s] See also "/ros2_ws/build/robo_base/CMakeFiles/CMakeOutput.log".
+[0.237s] Invoked command in '/ros2_ws/build/robo_base' returned '1': /usr/bin/cmake /ros2_ws/src/robo_base/robo_base -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/robo_base

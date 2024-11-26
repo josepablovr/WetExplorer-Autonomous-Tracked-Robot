@@ -1,0 +1,21 @@
+[0.049s] Invoking command in '/ros2_ws/build/wetexplorer_gazebo': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_gazebo -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo
+[0.104s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.105s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.110s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.111s]   CMake did not find one.
+[0.111s] 
+[0.111s]   Could not find a package configuration file provided by "catkin" with any
+[0.112s]   of the following names:
+[0.112s] 
+[0.112s]     catkinConfig.cmake
+[0.112s]     catkin-config.cmake
+[0.112s] 
+[0.112s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.112s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.112s]   provides a separate development package or SDK, be sure it has been
+[0.113s]   installed.
+[0.113s] 
+[0.113s] [0m
+[0.113s] -- Configuring incomplete, errors occurred!
+[0.113s] See also "/ros2_ws/build/wetexplorer_gazebo/CMakeFiles/CMakeOutput.log".
+[0.114s] Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '1': /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_gazebo -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo

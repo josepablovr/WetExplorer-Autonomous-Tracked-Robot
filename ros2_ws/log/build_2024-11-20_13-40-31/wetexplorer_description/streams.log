@@ -1,0 +1,7 @@
+[0.044s] Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_description
+[0.091s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.234s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.246s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.390s] -- Configuring done
+[0.395s] -- Generating done
+[0.397s] -- Build files have been written to: /ros2_ws/build/wetexplorer_description

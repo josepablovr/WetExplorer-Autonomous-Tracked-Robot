@@ -1,0 +1,10 @@
+[0.049s] Invoking command in '/ros2_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12
+[0.136s] [35m[1mConsolidate compiler generated dependencies of target rtcm_msgs__rosidl_generator_c[0m
+[0.146s] failed to create symbolic link '/ros2_ws/build/rtcm_msgs/ament_cmake_python/rtcm_msgs/rtcm_msgs' because existing path cannot be removed: Is a directory
+[0.151s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_rtcm_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_rtcm_msgs] Error 1
+[0.152s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_rtcm_msgs.dir/all] Error 2
+[0.152s] gmake[1]: *** Waiting for unfinished jobs....
+[0.154s] [  3%] Built target rtcm_msgs__cpp
+[0.161s] [ 12%] Built target rtcm_msgs__rosidl_generator_c
+[0.196s] gmake: *** [Makefile:146: all] Error 2
+[0.244s] Invoked command in '/ros2_ws/build/rtcm_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12

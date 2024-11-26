@@ -1,0 +1,72 @@
+[0.033s] Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/articubot_one
+[0.057s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.264s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.294s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.440s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.464s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.467s] -- Added test 'lint_cmake' to check CMake code style
+[0.469s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.482s] -- Added test 'xmllint' to check XML markup files
+[0.485s] -- Configuring done
+[0.494s] -- Generating done
+[0.496s] -- Build files have been written to: /ros2_ws/build/articubot_one
+[0.501s] Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/articubot_one
+[0.504s] Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12
+[0.569s] Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/articubot_one -- -j12 -l12
+[0.621s] Invoking command in '/ros2_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/articubot_one
+[0.634s] -- Install configuration: ""
+[0.635s] -- Execute custom install script
+[0.636s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_robot.yaml
+[0.651s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/ball_tracker_params_sim.yaml
+[0.666s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/config.rviz
+[0.681s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz
+[0.697s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/empty.yaml
+[0.712s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/gaz_ros2_ctl_use_sim.yaml
+[0.726s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/gz_bridge.yaml
+[0.742s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/joystick.yaml
+[0.756s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/main.rviz
+[0.771s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/map.rviz
+[0.784s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml
+[0.799s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/my_controllers.yaml
+[0.813s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/nav2_params.yaml
+[0.828s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/twist_mux.yaml
+[0.842s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
+[0.857s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/camera.xacro
+[0.872s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/depth_camera.xacro
+[0.886s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/face.xacro
+[0.902s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
+[0.916s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+[0.931s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/lidar.xacro
+[0.945s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/my_robot.urdf
+[0.960s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
+[0.974s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
+[0.989s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/description/ros2_control.xacro
+[1.004s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/ball_tracker.launch.py
+[1.018s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/camera.launch.py
+[1.032s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/joystick.launch.py
+[1.047s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_robot.launch.py
+[1.062s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+[1.076s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/localization_launch.py
+[1.090s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/navigation_launch.py
+[1.104s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/online_async_launch.py
+[1.119s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/rplidar.launch.py
+[1.134s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py
+[1.148s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/launch/sim.launch.py
+[1.163s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/worlds/empty.world
+[1.177s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world
+[1.192s] -- Symlinking: /ros2_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
+[1.207s] -- Symlinking: /ros2_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
+[1.221s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
+[1.236s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv
+[1.251s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.sh
+[1.265s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/environment/path.dsv
+[1.280s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.bash
+[1.294s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.sh
+[1.309s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.zsh
+[1.324s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/local_setup.dsv
+[1.338s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/package.dsv
+[1.353s] -- Symlinking: /ros2_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one
+[1.368s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
+[1.382s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
+[1.397s] -- Symlinking: /ros2_ws/install/articubot_one/share/articubot_one/package.xml
+[1.415s] Invoked command in '/ros2_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/articubot_one

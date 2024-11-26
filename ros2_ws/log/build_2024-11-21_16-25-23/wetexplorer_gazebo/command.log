@@ -1,0 +1,6 @@
+Invoking command in '/ros2_ws/build/wetexplorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo
+Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/wetexplorer/wetexplorer_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/wetexplorer_gazebo
+Invoking command in '/ros2_ws/build/wetexplorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_gazebo -- -j12 -l12
+Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_gazebo -- -j12 -l12
+Invoking command in '/ros2_ws/build/wetexplorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_gazebo
+Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_gazebo

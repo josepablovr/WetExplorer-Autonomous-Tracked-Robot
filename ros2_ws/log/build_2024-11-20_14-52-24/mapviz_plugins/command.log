@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/mapviz_plugins': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins

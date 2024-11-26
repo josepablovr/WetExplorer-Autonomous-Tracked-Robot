@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/rtcm_msgs -- -j12 -l12

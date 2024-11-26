@@ -1,0 +1,4 @@
+gmake[2]: *** Deleting file 'rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp'
+gmake[2]: *** [CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:295: rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:368: CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

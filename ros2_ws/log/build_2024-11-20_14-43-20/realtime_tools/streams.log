@@ -1,0 +1,28 @@
+[0.060s] Invoking command in '/ros2_ws/build/realtime_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/realtime_tools -- -j12 -l12
+[0.595s] [  3%] [32mBuilding CXX object CMakeFiles/realtime_tools.dir/src/realtime_helpers.cpp.o[0m
+[0.596s] [  7%] [32mBuilding CXX object CMakeFiles/thread_priority.dir/src/realtime_helpers.cpp.o[0m
+[0.596s] [ 10%] [32mBuilding CXX object CMakeFiles/realtime_tools.dir/src/realtime_clock.cpp.o[0m
+[0.596s] [ 14%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/humble/src/gtest_vendor/src/gtest-all.cc.o[0m
+[0.597s] [ 17%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[0.599s] [ 21%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[1.388s] [ 25%] [32m[1mLinking CXX shared library libthread_priority.so[0m
+[1.673s] [ 25%] Built target thread_priority
+[2.510s] [ 28%] [32m[1mLinking CXX shared library librealtime_tools.so[0m
+[2.725s] [ 28%] Built target realtime_tools
+[3.067s] [ 32%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[3.125s] [ 32%] Built target gmock_main
+[6.907s] [ 35%] [32m[1mLinking CXX static library libgmock.a[0m
+[7.154s] [ 35%] Built target gmock
+[7.238s] [ 39%] [32mBuilding CXX object CMakeFiles/realtime_box_tests.dir/test/realtime_box_tests.cpp.o[0m
+[7.247s] [ 42%] [32mBuilding CXX object CMakeFiles/thread_priority_tests.dir/test/thread_priority_tests.cpp.o[0m
+[11.282s] [ 46%] [32m[1mLinking CXX executable thread_priority_tests[0m
+[11.545s] [ 50%] [32m[1mLinking CXX executable realtime_box_tests[0m
+[11.995s] [ 50%] Built target realtime_box_tests
+[12.016s] [ 50%] Built target thread_priority_tests
+[12.083s] [ 53%] [32mBuilding CXX object CMakeFiles/test_async_function_handler.dir/test/test_async_function_handler.cpp.o[0m
+[20.702s] [ 57%] [32m[1mLinking CXX executable test_async_function_handler[0m
+[21.127s] [ 57%] Built target test_async_function_handler
+[21.160s] [ 60%] [32mBuilding CXX object CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o[0m
+[22.508s] gmake[2]: *** [CMakeFiles/realtime_server_goal_handle_tests.dir/build.make:76: CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o] Interrupt
+[22.509s] gmake[1]: *** [CMakeFiles/Makefile2:444: CMakeFiles/realtime_server_goal_handle_tests.dir/all] Interrupt
+[22.509s] gmake: *** [Makefile:146: all] Interrupt

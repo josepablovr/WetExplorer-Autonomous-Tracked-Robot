@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/husky_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_msgs -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_msgs

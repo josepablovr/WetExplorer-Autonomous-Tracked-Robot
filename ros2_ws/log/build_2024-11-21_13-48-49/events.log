@@ -1,0 +1,29 @@
+[0.000000] (-) TimerEvent: {}
+[0.000176] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000359] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000466] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000503] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000578] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000662] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000732] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.000782] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.000892] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.000921] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.000948] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.001002] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001031] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001064] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001121] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001154] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001183] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001213] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001240] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001283] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001311] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.001338] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.001364] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001392] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.001422] (husky_desktop) JobQueued: {'identifier': 'husky_desktop', 'dependencies': OrderedDict([('husky_description', '/ros2_ws/install/husky_description'), ('husky_msgs', '/ros2_ws/install/husky_msgs'), ('husky_viz', '/ros2_ws/install/husky_viz')])}
+[0.001534] (husky_desktop) JobStarted: {'identifier': 'husky_desktop'}
+[0.026771] (husky_desktop) JobEnded: {'identifier': 'husky_desktop', 'rc': 1}
+[0.037372] (-) EventReactorShutdown: {}

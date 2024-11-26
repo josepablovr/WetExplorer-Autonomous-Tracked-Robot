@@ -1,0 +1,41 @@
+[0.047s] Invoking command in '/ros2_ws/build/mapviz_plugins': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins
+[0.076s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.080s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.081s]   CMake.
+[0.081s] 
+[0.081s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.081s]   CMake that the project does not need compatibility with older versions.
+[0.081s] 
+[0.081s] [0m
+[0.179s] -- The C compiler identification is GNU 11.4.0
+[0.308s] -- The CXX compiler identification is GNU 11.4.0
+[0.327s] -- Detecting C compiler ABI info
+[0.478s] -- Detecting C compiler ABI info - done
+[0.496s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.496s] -- Detecting C compile features
+[0.497s] -- Detecting C compile features - done
+[0.505s] -- Detecting CXX compiler ABI info
+[0.652s] -- Detecting CXX compiler ABI info - done
+[0.666s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.668s] -- Detecting CXX compile features
+[0.668s] -- Detecting CXX compile features - done
+[0.691s] [31mCMake Error at CMakeLists.txt:31 (find_package):
+[0.691s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.691s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.691s]   CMake did not find one.
+[0.692s] 
+[0.692s]   Could not find a package configuration file provided by "catkin" with any
+[0.692s]   of the following names:
+[0.692s] 
+[0.692s]     catkinConfig.cmake
+[0.692s]     catkin-config.cmake
+[0.692s] 
+[0.692s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.692s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.692s] -- Configuring incomplete, errors occurred!
+[0.693s] See also "/ros2_ws/build/mapviz_plugins/CMakeFiles/CMakeOutput.log".
+[0.693s]   provides a separate development package or SDK, be sure it has been
+[0.693s]   installed.
+[0.693s] 
+[0.693s] [0m
+[0.714s] Invoked command in '/ros2_ws/build/mapviz_plugins' returned '1': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins

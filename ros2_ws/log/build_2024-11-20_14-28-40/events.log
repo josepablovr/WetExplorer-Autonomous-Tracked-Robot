@@ -1,0 +1,45 @@
+[0.000000] (-) TimerEvent: {}
+[0.000142] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000188] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000214] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000233] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000255] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.000273] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.000288] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.000369] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.000400] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.000416] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.000431] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.000446] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.000461] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.000475] (-) JobUnselected: {'identifier': 'ros2_control_demo_description'}
+[0.000490] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_1'}
+[0.000505] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_10'}
+[0.000520] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_11'}
+[0.000535] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_12'}
+[0.000549] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_13'}
+[0.000564] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_14'}
+[0.000579] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_15'}
+[0.000593] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_2'}
+[0.000607] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_3'}
+[0.000622] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_4'}
+[0.000636] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_5'}
+[0.000650] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_6'}
+[0.000665] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_7'}
+[0.000679] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_8'}
+[0.000693] (-) JobUnselected: {'identifier': 'ros2_control_demo_example_9'}
+[0.000707] (-) JobUnselected: {'identifier': 'ros2_control_demo_testing'}
+[0.000722] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.000736] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.000751] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.000776] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.000791] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.000806] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.000824] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.000840] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.000854] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.000868] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.000885] (ros2_control_demos) JobQueued: {'identifier': 'ros2_control_demos', 'dependencies': OrderedDict([('ros2_control_demo_description', '/ros2_ws/install/ros2_control_demo_description'), ('ros2_control_demo_testing', '/ros2_ws/install/ros2_control_demo_testing'), ('ros2_control_demo_example_1', '/ros2_ws/install/ros2_control_demo_example_1'), ('ros2_control_demo_example_10', '/ros2_ws/install/ros2_control_demo_example_10'), ('ros2_control_demo_example_11', '/ros2_ws/install/ros2_control_demo_example_11'), ('ros2_control_demo_example_12', '/ros2_ws/install/ros2_control_demo_example_12'), ('ros2_control_demo_example_14', '/ros2_ws/install/ros2_control_demo_example_14'), ('ros2_control_demo_example_2', '/ros2_ws/install/ros2_control_demo_example_2'), ('ros2_control_demo_example_3', '/ros2_ws/install/ros2_control_demo_example_3'), ('ros2_control_demo_example_4', '/ros2_ws/install/ros2_control_demo_example_4'), ('ros2_control_demo_example_5', '/ros2_ws/install/ros2_control_demo_example_5'), ('ros2_control_demo_example_6', '/ros2_ws/install/ros2_control_demo_example_6'), ('ros2_control_demo_example_7', '/ros2_ws/install/ros2_control_demo_example_7'), ('ros2_control_demo_example_8', '/ros2_ws/install/ros2_control_demo_example_8'), ('ros2_control_demo_example_9', '/ros2_ws/install/ros2_control_demo_example_9'), ('ros2_control_demo_example_13', '/ros2_ws/install/ros2_control_demo_example_13'), ('ros2_control_demo_example_15', '/ros2_ws/install/ros2_control_demo_example_15')])}
+[0.000934] (ros2_control_demos) JobStarted: {'identifier': 'ros2_control_demos'}
+[0.016294] (ros2_control_demos) JobEnded: {'identifier': 'ros2_control_demos', 'rc': 1}
+[0.026728] (-) EventReactorShutdown: {}

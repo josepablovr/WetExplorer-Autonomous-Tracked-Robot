@@ -1,0 +1,28 @@
+[0.044s] Invoking command in '/ros2_ws/build/tile_map': /usr/bin/cmake /ros2_ws/src/tile_map -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/tile_map
+[0.606s] -- Configuring incomplete, errors occurred!
+[0.606s] See also "/ros2_ws/build/tile_map/CMakeFiles/CMakeOutput.log".
+[0.606s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.606s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.606s]   CMake.
+[0.607s] 
+[0.607s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.607s]   CMake that the project does not need compatibility with older versions.
+[0.607s] 
+[0.607s] [0m
+[0.607s] [31mCMake Error at CMakeLists.txt:13 (find_package):
+[0.607s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.607s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.607s]   CMake did not find one.
+[0.607s] 
+[0.608s]   Could not find a package configuration file provided by "catkin" with any
+[0.608s]   of the following names:
+[0.608s] 
+[0.608s]     catkinConfig.cmake
+[0.608s]     catkin-config.cmake
+[0.608s] 
+[0.608s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.608s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.608s]   provides a separate development package or SDK, be sure it has been
+[0.608s]   installed.
+[0.609s] 
+[0.609s] [0m

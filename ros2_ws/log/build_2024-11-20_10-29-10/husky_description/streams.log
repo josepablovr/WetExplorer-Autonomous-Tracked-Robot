@@ -1,0 +1,2 @@
+[0.061s] Invoking command in '/ros2_ws/build/husky_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_description -- -j12 -l12
+[0.141s] Invoked command in '/ros2_ws/build/husky_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_description -- -j12 -l12

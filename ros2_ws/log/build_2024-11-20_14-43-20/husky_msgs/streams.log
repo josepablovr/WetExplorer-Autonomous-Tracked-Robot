@@ -1,0 +1,10 @@
+[0.497s] Invoking command in '/ros2_ws/build/husky_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_msgs -- -j12 -l12
+[0.632s] [35m[1mConsolidate compiler generated dependencies of target husky_msgs__rosidl_generator_c[0m
+[0.643s] failed to create symbolic link '/ros2_ws/build/husky_msgs/ament_cmake_python/husky_msgs/husky_msgs' because existing path cannot be removed: Is a directory
+[0.643s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_husky_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_husky_msgs] Error 1
+[0.645s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_husky_msgs.dir/all] Error 2
+[0.646s] gmake[1]: *** Waiting for unfinished jobs....
+[0.660s] [  3%] Built target husky_msgs__cpp
+[0.675s] [ 12%] Built target husky_msgs__rosidl_generator_c
+[0.680s] gmake: *** [Makefile:146: all] Error 2
+[0.683s] Invoked command in '/ros2_ws/build/husky_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_msgs -- -j12 -l12

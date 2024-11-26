@@ -1,0 +1,4 @@
+Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_description -- -j12 -l12
+Invoked command in '/ros2_ws/build/wetexplorer_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_description -- -j12 -l12
+Invoking command in '/ros2_ws/build/wetexplorer_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_description
+Invoked command in '/ros2_ws/build/wetexplorer_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_description

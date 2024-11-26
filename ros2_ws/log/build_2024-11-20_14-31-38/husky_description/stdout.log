@@ -1,0 +1,55 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /ros2_ws/build/husky_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/launch/description.launch
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/launch/description_launch.py
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/300_mm_sensor_arch.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/300_mm_sensor_arch.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/510_mm_sensor_arch.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/510_mm_sensor_arch.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/lidar_mount.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/lms1xx_mount.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/accessories/lms1xx_mount.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/base_link.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/base_link.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/bumper.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/bumper_extension.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/large_top_plate.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/large_top_plate_collision.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/top_chassis.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/top_chassis.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/top_plate.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/top_plate.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/user_rail.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/user_rail.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/wheel.dae
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/meshes/wheel.stl
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/accessories/intel_realsense.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/accessories/sensor_arch.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/accessories/sick_lms1xx_mount.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/decorations.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/empty.urdf
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/husky.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/husky_macro.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/urdf/wheel.urdf.xacro
+-- Symlinking: /ros2_ws/install/husky_description/share/ament_index/resource_index/package_run_dependencies/husky_description
+-- Symlinking: /ros2_ws/install/husky_description/share/ament_index/resource_index/parent_prefix_path/husky_description
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/environment/ament_prefix_path.sh
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/environment/ament_prefix_path.dsv
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/environment/path.sh
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/environment/path.dsv
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/local_setup.bash
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/local_setup.sh
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/local_setup.zsh
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/local_setup.dsv
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/package.dsv
+-- Symlinking: /ros2_ws/install/husky_description/share/ament_index/resource_index/packages/husky_description
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/cmake/husky_descriptionConfig.cmake
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/cmake/husky_descriptionConfig-version.cmake
+-- Symlinking: /ros2_ws/install/husky_description/share/husky_description/package.xml

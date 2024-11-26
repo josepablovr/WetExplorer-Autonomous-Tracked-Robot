@@ -1,0 +1,51 @@
+[0.036s] Invoking command in '/ros2_ws/build/husky_bringup': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_bringup -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_bringup
+[0.135s] -- The C compiler identification is GNU 11.4.0
+[0.243s] -- The CXX compiler identification is GNU 11.4.0
+[0.255s] -- Detecting C compiler ABI info
+[0.372s] -- Detecting C compiler ABI info - done
+[0.391s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.392s] -- Detecting C compile features
+[0.392s] -- Detecting C compile features - done
+[0.397s] -- Detecting CXX compiler ABI info
+[0.537s] -- Detecting CXX compiler ABI info - done
+[0.551s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.551s] -- Detecting CXX compile features
+[0.552s] -- Detecting CXX compile features - done
+[0.558s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.783s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.071s] -- Configuring done
+[1.076s] -- Generating done
+[1.078s] -- Build files have been written to: /ros2_ws/build/husky_bringup
+[1.084s] Invoked command in '/ros2_ws/build/husky_bringup' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husky-humble-devel/husky_bringup -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_bringup
+[1.087s] Invoking command in '/ros2_ws/build/husky_bringup': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husky_bringup -- -j12 -l12
+[1.155s] Invoked command in '/ros2_ws/build/husky_bringup' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husky_bringup -- -j12 -l12
+[1.206s] Invoking command in '/ros2_ws/build/husky_bringup': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husky_bringup
+[1.219s] -- Install configuration: ""
+[1.219s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config
+[1.220s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/config/mag_config_default.yaml
+[1.220s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch
+[1.220s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/launch/accessories.launch.py
+[1.220s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev
+[1.220s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-clearpath.rules
+[1.221s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/README.md
+[1.221s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-hokuyo.rules
+[1.222s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/52-ftdi.rules
+[1.222s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/41-logitech.rules
+[1.222s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/udev/10-microstrain.rules
+[1.223s] -- Installing: /ros2_ws/install/husky_bringup/lib/husky_bringup/install
+[1.223s] -- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/package_run_dependencies/husky_bringup
+[1.224s] -- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/parent_prefix_path/husky_bringup
+[1.224s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.sh
+[1.224s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/ament_prefix_path.dsv
+[1.225s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.sh
+[1.225s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/environment/path.dsv
+[1.225s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.bash
+[1.226s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.sh
+[1.226s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.zsh
+[1.226s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/local_setup.dsv
+[1.227s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.dsv
+[1.227s] -- Installing: /ros2_ws/install/husky_bringup/share/ament_index/resource_index/packages/husky_bringup
+[1.228s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig.cmake
+[1.228s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/cmake/husky_bringupConfig-version.cmake
+[1.228s] -- Installing: /ros2_ws/install/husky_bringup/share/husky_bringup/package.xml
+[1.231s] Invoked command in '/ros2_ws/build/husky_bringup' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_control:/ros2_ws/install/husky_base:/ros2_ws/install/husky_msgs:/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husky_base/lib:/ros2_ws/install/husky_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husky_bringup

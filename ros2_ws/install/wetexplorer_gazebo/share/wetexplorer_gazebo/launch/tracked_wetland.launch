@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load robot description parameter -->
+ 
+
+  <arg name="world_name" default="$(find max_light_pkg)/worlds/wetland.world"/>
+
+  <env name="GAZEBO_MODEL_PATH" value ="$(find max_light_pkg)/models"/>
+
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.4"/>
+  <arg name="yaw" default="0.0"/>
+
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find husky_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="husky_velocity_controller/cmd_vel"/>
+  </node>
+
+  <!-- Optionally disable teleop control -->
+  <arg name="joystick" default="true" /> 
+  
+
+  <group ns="$(arg robot_namespace)">
+   <include file="$(find max_light_pkg)/launch/tracks.launch">
+    </include>
+
+    <include file="$(find husky_control)/launch/teleop.launch">
+        <arg name="joystick" value="$(arg joystick)" />
+    </include>
+    <!-- Spawn robot in gazebo -->
+    <node name="spawn_maxxii_model" pkg="gazebo_ros" type="spawn_model"
+        args="-x 0
+              -y 0
+              -z 0.5
+              -Y 0
+              -unpause
+              -urdf
+              -param robot_description
+              -model WetExplorer              
+              -robot_namespace $(arg robot_namespace)" />
+
+  </group>
+  
+
+</launch>

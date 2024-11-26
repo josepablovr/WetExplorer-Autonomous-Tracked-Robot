@@ -1,0 +1,37 @@
+[0.022s] Invoking command in '/ros2_ws/build/husky_control': AMENT_PREFIX_PATH=/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_control -- -j12 -l12
+[0.086s] Invoked command in '/ros2_ws/build/husky_control' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/husky_control -- -j12 -l12
+[0.137s] Invoking command in '/ros2_ws/build/husky_control': AMENT_PREFIX_PATH=/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_control
+[0.150s] -- Install configuration: ""
+[0.150s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config
+[0.150s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/teleop_ps4.yaml
+[0.151s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/control.yaml
+[0.151s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/empty.yaml
+[0.151s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/public_interface.yaml
+[0.151s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/teleop_logitech.yaml
+[0.152s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/twist_mux.yaml
+[0.152s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/imu_filter.yaml
+[0.152s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/teleop_interactive_markers.yaml
+[0.152s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/gazebo_interface.yaml
+[0.152s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/config/localization.yaml
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch/control.launch.py
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch/teleop_base.launch.py
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch/teleop.launch
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch/control.launch
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/launch/teleop_joy.launch.py
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/ament_index/resource_index/package_run_dependencies/husky_control
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/ament_index/resource_index/parent_prefix_path/husky_control
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/environment/ament_prefix_path.sh
+[0.153s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/environment/ament_prefix_path.dsv
+[0.154s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/environment/path.sh
+[0.154s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/environment/path.dsv
+[0.154s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/local_setup.bash
+[0.155s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/local_setup.sh
+[0.155s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/local_setup.zsh
+[0.155s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/local_setup.dsv
+[0.155s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/package.dsv
+[0.155s] -- Up-to-date: /ros2_ws/install/husky_control/share/ament_index/resource_index/packages/husky_control
+[0.156s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/cmake/husky_controlConfig.cmake
+[0.156s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/cmake/husky_controlConfig-version.cmake
+[0.156s] -- Up-to-date: /ros2_ws/install/husky_control/share/husky_control/package.xml
+[0.157s] Invoked command in '/ros2_ws/build/husky_control' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husky_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husky_description:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/husky_control

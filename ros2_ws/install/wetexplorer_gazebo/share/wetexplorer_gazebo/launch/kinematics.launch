@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- twist_mux.launch -->
+
+  <node name="twist_mux" pkg="twist_mux" type="twist_mux" output="screen">
+    <param name="yaml_cfg_file" value="$(find max_light_pkg)/config/twist_mux.yaml"/>
+  </node>
+
+
+  <include file="$(find max_light_pkg)/launch/teleop.launch">
+  </include>
+
+  <node pkg="max_light_pkg" type="Inverse_Kinematics_Basic.py" name="Inverse"  />
+  <node pkg="max_light_pkg" type="Forward_Kinematics_Basic.py" name="Forward"  />
+  <node pkg="max_light_pkg" type="Kinematics_Enhanced.py" name="Equivalent_Track"/>
+
+  <node name="velocity_limiter" pkg="WetExplorer" type="velocity_limiter_node" output="screen">
+  </node>
+
+  <node name="forward_kinematics" pkg="WetExplorer" type="forward_kinematics_node" output="screen">
+      <!-- Add any required parameters or remappings here -->
+  </node>
+  <!-- <node pkg="max_light_pkg" type="pseudo_wheels_driver.py" name="Pseudowheels"/> -->
+
+   <node pkg="max_light_pkg" type="dynamic_controller.py" name="dynamic" output="screen" />
+
+
+</launch>

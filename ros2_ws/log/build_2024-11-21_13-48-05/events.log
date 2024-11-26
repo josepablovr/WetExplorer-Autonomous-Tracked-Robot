@@ -1,0 +1,266 @@
+[0.000000] (-) TimerEvent: {}
+[0.000512] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000695] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.000804] (-) JobUnselected: {'identifier': 'husky_base'}
+[0.000871] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.000932] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.000991] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.001041] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.001126] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.001208] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.001331] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.001363] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.001425] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001460] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001503] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001549] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001592] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001627] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001672] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001775] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001806] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001955] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.002029] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.002101] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.002173] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.002286] (husky_msgs) JobQueued: {'identifier': 'husky_msgs', 'dependencies': OrderedDict()}
+[0.002324] (husky_msgs) JobStarted: {'identifier': 'husky_msgs'}
+[0.017779] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'cmake'}
+[0.019351] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'build'}
+[0.020465] (husky_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_msgs', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.099018] (-) TimerEvent: {}
+[0.100313] (husky_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.115901] (husky_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.131600] (husky_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_husky_msgs\n'}
+[0.199147] (-) TimerEvent: {}
+[0.299534] (-) TimerEvent: {}
+[0.399863] (-) TimerEvent: {}
+[0.500187] (-) TimerEvent: {}
+[0.523330] (husky_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.524298] (husky_msgs) StdoutLine: {'line': b'creating husky_msgs.egg-info\n'}
+[0.524563] (husky_msgs) StdoutLine: {'line': b'writing husky_msgs.egg-info/PKG-INFO\n'}
+[0.524831] (husky_msgs) StdoutLine: {'line': b'writing dependency_links to husky_msgs.egg-info/dependency_links.txt\n'}
+[0.525044] (husky_msgs) StdoutLine: {'line': b'writing top-level names to husky_msgs.egg-info/top_level.txt\n'}
+[0.525328] (husky_msgs) StdoutLine: {'line': b"writing manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.530006] (husky_msgs) StdoutLine: {'line': b"reading manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.531349] (husky_msgs) StdoutLine: {'line': b"writing manifest file 'husky_msgs.egg-info/SOURCES.txt'\n"}
+[0.574228] (husky_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_husky_msgs_egg\n'}
+[0.600293] (-) TimerEvent: {}
+[0.696107] (husky_msgs) StdoutLine: {'line': b'[  6%] Built target husky_msgs__cpp\n'}
+[0.700412] (-) TimerEvent: {}
+[0.715775] (husky_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.716009] (husky_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.716269] (husky_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.736707] (husky_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_c.dir/rosidl_generator_c/husky_msgs/msg/detail/husky_status__functions.c.o\x1b[0m\n'}
+[0.800530] (-) TimerEvent: {}
+[0.861871] (husky_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libhusky_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[0.900674] (-) TimerEvent: {}
+[0.927947] (husky_msgs) StdoutLine: {'line': b'[ 22%] Built target husky_msgs__rosidl_generator_c\n'}
+[0.947462] (husky_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.947989] (husky_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[0.949636] (husky_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.000788] (-) TimerEvent: {}
+[1.101152] (-) TimerEvent: {}
+[1.201494] (-) TimerEvent: {}
+[1.301876] (-) TimerEvent: {}
+[1.333808] (husky_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/husky_msgs/msg/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.372453] (husky_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/husky_msgs/msg/detail/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.380391] (husky_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/husky_msgs/msg/detail/dds_fastrtps/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.402015] (-) TimerEvent: {}
+[1.502363] (-) TimerEvent: {}
+[1.602687] (-) TimerEvent: {}
+[1.611974] (husky_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/husky_msgs/msg/detail/husky_status__type_support.c.o\x1b[0m\n'}
+[1.682656] (husky_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking C shared library libhusky_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.702820] (-) TimerEvent: {}
+[1.742812] (husky_msgs) StdoutLine: {'line': b'[ 48%] Built target husky_msgs__rosidl_typesupport_introspection_c\n'}
+[1.752308] (husky_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/husky_msgs/msg/husky_status__type_support.cpp.o\x1b[0m\n'}
+[1.802962] (-) TimerEvent: {}
+[1.809588] (husky_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/husky_msgs/msg/detail/husky_status__type_support_c.cpp.o\x1b[0m\n'}
+[1.811993] (husky_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.889066] (husky_msgs) StdoutLine: {'line': b'[ 58%] Built target husky_msgs__rosidl_typesupport_c\n'}
+[1.903070] (-) TimerEvent: {}
+[2.003441] (-) TimerEvent: {}
+[2.040595] (husky_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.103579] (-) TimerEvent: {}
+[2.113772] (husky_msgs) StdoutLine: {'line': b'[ 61%] Built target husky_msgs__rosidl_typesupport_cpp\n'}
+[2.168601] (husky_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.203715] (-) TimerEvent: {}
+[2.263714] (husky_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.302769] (husky_msgs) StdoutLine: {'line': b'[ 67%] Built target husky_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.303827] (-) TimerEvent: {}
+[2.380202] (husky_msgs) StdoutLine: {'line': b'[ 67%] Built target husky_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.403973] (-) TimerEvent: {}
+[2.433954] (husky_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.504105] (-) TimerEvent: {}
+[2.560500] (husky_msgs) StdoutLine: {'line': b'[ 70%] Built target husky_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.594935] (husky_msgs) StdoutLine: {'line': b'[ 70%] Built target husky_msgs\n'}
+[2.604210] (-) TimerEvent: {}
+[2.630035] (husky_msgs) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.704307] (-) TimerEvent: {}
+[2.804629] (-) TimerEvent: {}
+[2.904958] (-) TimerEvent: {}
+[3.005270] (-) TimerEvent: {}
+[3.105589] (-) TimerEvent: {}
+[3.205917] (-) TimerEvent: {}
+[3.306191] (-) TimerEvent: {}
+[3.406548] (-) TimerEvent: {}
+[3.452202] (husky_msgs) StdoutLine: {'line': b'[ 74%] Built target husky_msgs__py\n'}
+[3.486293] (husky_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_py.dir/rosidl_generator_py/husky_msgs/msg/_husky_status_s.c.o\x1b[0m\n'}
+[3.506664] (-) TimerEvent: {}
+[3.607119] (-) TimerEvent: {}
+[3.707446] (-) TimerEvent: {}
+[3.727594] (husky_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/libhusky_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.798051] (husky_msgs) StdoutLine: {'line': b'[ 80%] Built target husky_msgs__rosidl_generator_py\n'}
+[3.807583] (-) TimerEvent: {}
+[3.832918] (husky_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.833239] (husky_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.834787] (husky_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.907721] (-) TimerEvent: {}
+[4.008074] (-) TimerEvent: {}
+[4.019818] (husky_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.027386] (husky_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.032817] (husky_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.090510] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_c__pyext\n'}
+[4.099027] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.101936] (husky_msgs) StdoutLine: {'line': b'[100%] Built target husky_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.108137] (-) TimerEvent: {}
+[4.121339] (husky_msgs) CommandEnded: {'returncode': 0}
+[4.208240] (-) TimerEvent: {}
+[4.225258] (husky_msgs) JobProgress: {'identifier': 'husky_msgs', 'progress': 'install'}
+[4.240249] (husky_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/husky_msgs'], 'cwd': '/ros2_ws/build/husky_msgs', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[4.254558] (husky_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.254894] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/ament_index/resource_index/rosidl_interfaces/husky_msgs\n'}
+[4.255403] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.255765] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.255990] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/husky_status.h\n'}
+[4.256123] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.256354] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.256510] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__struct.h\n'}
+[4.256726] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__type_support.h\n'}
+[4.256936] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__functions.h\n'}
+[4.257194] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__functions.c\n'}
+[4.257495] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/library_path.sh\n'}
+[4.257937] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/library_path.dsv\n'}
+[4.258516] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_generator_c.so\n'}
+[4.259258] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_generator_c.so" to ""\n'}
+[4.259646] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.259973] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.260210] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.260462] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.260635] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.260807] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.261051] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.261398] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.261597] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.261786] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/husky_status.hpp\n'}
+[4.262030] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.262343] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__traits.hpp\n'}
+[4.262626] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__builder.hpp\n'}
+[4.262816] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__struct.hpp\n'}
+[4.263009] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.263287] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.263402] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.263510] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.263620] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/dds_fastrtps\n'}
+[4.263728] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.263890] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.264288] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.264445] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.264618] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.264810] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.264919] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.265165] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__rosidl_typesupport_introspection_c.h\n'}
+[4.265283] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__type_support.c\n'}
+[4.265477] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.266249] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.266530] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_c.so\n'}
+[4.267123] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.267301] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs\n'}
+[4.267535] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg\n'}
+[4.267689] (husky_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail\n'}
+[4.267806] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__type_support.cpp\n'}
+[4.267969] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/include/husky_msgs/husky_msgs/msg/detail/husky_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.268180] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.268962] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.269161] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_cpp.so\n'}
+[4.269853] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.270021] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/pythonpath.sh\n'}
+[4.270410] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/pythonpath.dsv\n'}
+[4.270830] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs-1.0.8-py3.10.egg-info\n'}
+[4.271057] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs-1.0.8-py3.10.egg-info/top_level.txt\n'}
+[4.271344] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs-1.0.8-py3.10.egg-info/SOURCES.txt\n'}
+[4.271604] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs-1.0.8-py3.10.egg-info/PKG-INFO\n'}
+[4.271857] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs-1.0.8-py3.10.egg-info/dependency_links.txt\n'}
+[4.272068] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs\n'}
+[4.272312] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.272537] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/libhusky_msgs__rosidl_generator_py.so\n'}
+[4.272701] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg\n'}
+[4.272895] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg/_husky_status_s.c\n'}
+[4.273243] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg/__init__.py\n'}
+[4.273536] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg/_husky_status.py\n'}
+[4.273774] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/__init__.py\n'}
+[4.273991] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.274230] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.274558] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.274770] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.274926] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.308336] (-) TimerEvent: {}
+[4.340849] (husky_msgs) StdoutLine: {'line': b"Listing '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs'...\n"}
+[4.341242] (husky_msgs) StdoutLine: {'line': b"Compiling '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/__init__.py'...\n"}
+[4.341515] (husky_msgs) StdoutLine: {'line': b"Listing '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg'...\n"}
+[4.341740] (husky_msgs) StdoutLine: {'line': b"Compiling '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg/__init__.py'...\n"}
+[4.341927] (husky_msgs) StdoutLine: {'line': b"Compiling '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/msg/_husky_status.py'...\n"}
+[4.349368] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.350058] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.350522] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.351220] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.351605] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.352330] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.352592] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_generator_py.so\n'}
+[4.353147] (husky_msgs) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_msgs/lib/libhusky_msgs__rosidl_generator_py.so" to ""\n'}
+[4.353348] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/msg/HuskyStatus.idl\n'}
+[4.353602] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/msg/HuskyStatus.msg\n'}
+[4.354202] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/ament_index/resource_index/package_run_dependencies/husky_msgs\n'}
+[4.354724] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/ament_index/resource_index/parent_prefix_path/husky_msgs\n'}
+[4.355196] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/ament_prefix_path.sh\n'}
+[4.355474] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/ament_prefix_path.dsv\n'}
+[4.355925] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/path.sh\n'}
+[4.356274] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/environment/path.dsv\n'}
+[4.356582] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/local_setup.bash\n'}
+[4.356991] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/local_setup.sh\n'}
+[4.357546] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/local_setup.zsh\n'}
+[4.357897] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/local_setup.dsv\n'}
+[4.358345] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/package.dsv\n'}
+[4.358830] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/ament_index/resource_index/packages/husky_msgs\n'}
+[4.359172] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_generator_cExport.cmake\n'}
+[4.359617] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.360053] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.360547] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.360935] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.361387] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.361819] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.362254] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.362698] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.363087] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.363535] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.363903] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.364312] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.364749] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.365195] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.365606] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.366047] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/export_husky_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.366382] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.366801] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.367267] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.367782] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.368279] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.368801] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.369300] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.370014] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgsConfig.cmake\n'}
+[4.370396] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/cmake/husky_msgsConfig-version.cmake\n'}
+[4.370880] (husky_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_msgs/share/husky_msgs/package.xml\n'}
+[4.375100] (husky_msgs) CommandEnded: {'returncode': 0}
+[4.408465] (-) TimerEvent: {}
+[4.509059] (-) TimerEvent: {}
+[4.521706] (husky_msgs) JobEnded: {'identifier': 'husky_msgs', 'rc': 0}
+[4.522876] (-) EventReactorShutdown: {}

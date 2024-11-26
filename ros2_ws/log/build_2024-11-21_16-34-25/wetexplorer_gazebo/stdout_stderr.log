@@ -1,0 +1,40 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /ros2_ws/build/wetexplorer_gazebo
+-- Install configuration: ""
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/follow.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/gazebo.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/view.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/kinematics.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/world.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/navigate.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracks.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/display.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/teleop.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked_wetland.launch
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/sim.launch.py
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/localize.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/control.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/empty.launch
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/meshes
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/urdf
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/package_run_dependencies/wetexplorer_gazebo
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/parent_prefix_path/wetexplorer_gazebo
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/ament_prefix_path.sh
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/path.sh
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/environment/path.dsv
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.bash
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.sh
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.zsh
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/local_setup.dsv
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/package.dsv
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/ament_index/resource_index/packages/wetexplorer_gazebo
+-- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/wetexplorer_gazeboConfig.cmake
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/cmake/wetexplorer_gazeboConfig-version.cmake
+-- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/package.xml

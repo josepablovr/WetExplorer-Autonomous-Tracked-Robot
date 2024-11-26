@@ -1,0 +1,22 @@
+[0.051s] Invoking command in '/ros2_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/turtlebot3_gazebo
+[0.091s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.208s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.237s] [31mCMake Error at CMakeLists.txt:23 (find_package):
+[0.237s]   By not providing "Findgazebo.cmake" in CMAKE_MODULE_PATH this project has
+[0.237s]   asked CMake to find a package configuration file provided by "gazebo", but
+[0.238s]   CMake did not find one.
+[0.238s] 
+[0.238s]   Could not find a package configuration file provided by "gazebo" with any
+[0.238s]   of the following names:
+[0.238s] 
+[0.238s]     gazeboConfig.cmake
+[0.238s]     gazebo-config.cmake
+[0.238s] 
+[0.238s]   Add the installation prefix of "gazebo" to CMAKE_PREFIX_PATH or set
+[0.239s]   "gazebo_DIR" to a directory containing one of the above files.  If "gazebo"
+[0.239s]   provides a separate development package or SDK, be sure it has been
+[0.239s]   installed.
+[0.239s] 
+[0.239s] [0m
+[0.239s] -- Configuring incomplete, errors occurred!
+[0.239s] See also "/ros2_ws/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".

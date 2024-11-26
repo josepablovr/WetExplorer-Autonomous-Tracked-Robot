@@ -1,0 +1,4 @@
+[0.040s] Invoking command in '/ros2_ws/build/rtcm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ros2_ws/install/ros2_controllers_test_nodes:/opt/ros/humble /usr/bin/cmake /ros2_ws/src/rtcm_msgs -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/rtcm_msgs
+[0.305s] -- The C compiler identification is GNU 11.4.0
+[0.306s] -- The CXX compiler identification is GNU 11.4.0
+[0.306s] -- Detecting C compiler ABI info

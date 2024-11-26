@@ -1,0 +1,55 @@
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  6%] Built target ament_cmake_python_copy_husky_msgs
+running egg_info
+creating husky_msgs.egg-info
+writing husky_msgs.egg-info/PKG-INFO
+writing dependency_links to husky_msgs.egg-info/dependency_links.txt
+writing top-level names to husky_msgs.egg-info/top_level.txt
+writing manifest file 'husky_msgs.egg-info/SOURCES.txt'
+reading manifest file 'husky_msgs.egg-info/SOURCES.txt'
+writing manifest file 'husky_msgs.egg-info/SOURCES.txt'
+[  6%] Built target ament_cmake_python_build_husky_msgs_egg
+[  9%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_c.dir/rosidl_generator_c/husky_msgs/msg/detail/husky_status__functions.c.o[0m
+[ 12%] [32m[1mLinking C shared library libhusky_msgs__rosidl_generator_c.so[0m
+[ 12%] Built target husky_msgs__cpp
+[ 12%] Built target husky_msgs__rosidl_generator_c
+[ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 22%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 22%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/husky_msgs/msg/husky_status__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/husky_msgs/msg/detail/husky_status__type_support.c.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/husky_msgs/msg/husky_status__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/husky_msgs/msg/detail/husky_status__type_support.cpp.o[0m
+[ 48%] [32m[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_c.so[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/husky_msgs/msg/detail/dds_fastrtps/husky_status__type_support.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/husky_msgs/msg/detail/husky_status__type_support_c.cpp.o[0m
+[ 58%] [32m[1mLinking C shared library libhusky_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 58%] Built target husky_msgs__rosidl_typesupport_c
+[ 58%] Built target husky_msgs__rosidl_typesupport_introspection_c
+[ 61%] [32m[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_cpp.so[0m
+[ 64%] [32m[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 64%] Built target husky_msgs__rosidl_typesupport_cpp
+[ 67%] [32m[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 67%] Built target husky_msgs__rosidl_typesupport_introspection_cpp
+[ 67%] Built target husky_msgs__rosidl_typesupport_fastrtps_c
+[ 70%] [32m[1mLinking CXX shared library libhusky_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 70%] Built target husky_msgs__rosidl_typesupport_fastrtps_cpp
+[ 70%] Built target husky_msgs
+[ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 74%] Built target husky_msgs__py
+[ 77%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_generator_py.dir/rosidl_generator_py/husky_msgs/msg/_husky_status_s.c.o[0m
+[ 80%] [32m[1mLinking C shared library rosidl_generator_py/husky_msgs/libhusky_msgs__rosidl_generator_py.so[0m
+[ 80%] Built target husky_msgs__rosidl_generator_py
+[ 90%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/husky_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/husky_msgs/_husky_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/husky_msgs/husky_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target husky_msgs__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target husky_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target husky_msgs__rosidl_typesupport_c__pyext

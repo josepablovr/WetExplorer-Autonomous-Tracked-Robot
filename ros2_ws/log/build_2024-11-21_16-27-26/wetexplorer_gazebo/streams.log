@@ -1,0 +1,33 @@
+[0.021s] Invoking command in '/ros2_ws/build/wetexplorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_gazebo -- -j12 -l12
+[0.063s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.309s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[0.502s] -- Configuring done
+[0.508s] -- Generating done
+[0.510s] -- Build files have been written to: /ros2_ws/build/wetexplorer_gazebo
+[0.547s] Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/wetexplorer_gazebo -- -j12 -l12
+[0.602s] Invoking command in '/ros2_ws/build/wetexplorer_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_gazebo
+[0.614s] -- Install configuration: ""
+[0.615s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch
+[0.615s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/follow.launch
+[0.615s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/gazebo.launch
+[0.615s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/view.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/kinematics.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/world.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/navigate.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracks.launch
+[0.616s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/display.launch
+[0.617s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/teleop.launch
+[0.617s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/tracked_wetland.launch
+[0.617s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/sim.launch.py
+[0.618s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/localize.launch
+[0.618s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/control.launch
+[0.619s] -- Up-to-date: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/launch/empty.launch
+[0.619s] -- Installing: /ros2_ws/install/wetexplorer_gazebo/share/wetexplorer_gazebo/meshes
+[0.620s] [31mCMake Error at cmake_install.cmake:46 (file):
+[0.620s]   file INSTALL cannot find
+[0.621s]   "/ros2_ws/src/wetexplorer/wetexplorer_gazebo/urdf": No such file or
+[0.621s]   directory.
+[0.621s] 
+[0.621s] [0m
+[0.621s] Invoked command in '/ros2_ws/build/wetexplorer_gazebo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/wetexplorer_gazebo

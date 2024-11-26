@@ -1,0 +1,19 @@
+ros-humble-xacro
+ros-humble-ros-gz-bridge
+ros-humble-ros-gz-sim
+ros-humble-joy
+ros-humble-teleop-twist-joy
+ros-humble-twist-stamper
+ros-humble-twist-mux
+ros-humble-ros2-control
+ros-humble-ros2-controllers
+ros-humble-joint-state-publisher
+ros-humble-joint-state-publisher-gui
+ros-humble-ign-ros2-control
+
+
+rosdep update --rosdistro=$ROS_DISTRO
+sudo apt-get update
+rosdep install --from-paths src --ignore-src -r -y
+
+If it fails, it still runs run.sh

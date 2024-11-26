@@ -1,0 +1,29 @@
+[0.048s] Invoking command in '/ros2_ws/build/mapviz_plugins': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins
+[0.091s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.091s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.092s]   CMake.
+[0.092s] 
+[0.092s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.092s]   CMake that the project does not need compatibility with older versions.
+[0.092s] 
+[0.092s] [0m
+[0.102s] -- Configuring incomplete, errors occurred!
+[0.102s] See also "/ros2_ws/build/mapviz_plugins/CMakeFiles/CMakeOutput.log".
+[0.102s] [31mCMake Error at CMakeLists.txt:31 (find_package):
+[0.104s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.104s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.104s]   CMake did not find one.
+[0.104s] 
+[0.104s]   Could not find a package configuration file provided by "catkin" with any
+[0.105s]   of the following names:
+[0.105s] 
+[0.105s]     catkinConfig.cmake
+[0.106s]     catkin-config.cmake
+[0.106s] 
+[0.106s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.107s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.107s]   provides a separate development package or SDK, be sure it has been
+[0.107s]   installed.
+[0.107s] 
+[0.108s] [0m
+[0.127s] Invoked command in '/ros2_ws/build/mapviz_plugins' returned '1': /usr/bin/cmake /ros2_ws/src/mapviz_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/mapviz_plugins

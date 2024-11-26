@@ -1,0 +1,237 @@
+[0.000000] (-) TimerEvent: {}
+[0.000358] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000854] (-) JobUnselected: {'identifier': 'control_msgs'}
+[0.001110] (-) JobUnselected: {'identifier': 'husky_bringup'}
+[0.001205] (-) JobUnselected: {'identifier': 'husky_control'}
+[0.001238] (-) JobUnselected: {'identifier': 'husky_description'}
+[0.001277] (-) JobUnselected: {'identifier': 'husky_desktop'}
+[0.001307] (-) JobUnselected: {'identifier': 'husky_gazebo'}
+[0.001335] (-) JobUnselected: {'identifier': 'husky_msgs'}
+[0.001363] (-) JobUnselected: {'identifier': 'husky_robot'}
+[0.001430] (-) JobUnselected: {'identifier': 'husky_simulator'}
+[0.001463] (-) JobUnselected: {'identifier': 'husky_viz'}
+[0.001491] (-) JobUnselected: {'identifier': 'mapviz_plugins'}
+[0.001519] (-) JobUnselected: {'identifier': 'realtime_tools'}
+[0.001547] (-) JobUnselected: {'identifier': 'robo_base'}
+[0.001574] (-) JobUnselected: {'identifier': 'rtcm_msgs'}
+[0.001602] (-) JobUnselected: {'identifier': 'tile_map'}
+[0.001630] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.001658] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.001699] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.001799] (-) JobUnselected: {'identifier': 'wetexplorer_control'}
+[0.001831] (-) JobUnselected: {'identifier': 'wetexplorer_description'}
+[0.001860] (-) JobUnselected: {'identifier': 'wetexplorer_gazebo'}
+[0.001888] (-) JobUnselected: {'identifier': 'wetexplorer_hardware'}
+[0.001916] (-) JobUnselected: {'identifier': 'wetexplorer_navigation'}
+[0.001948] (husky_base) JobQueued: {'identifier': 'husky_base', 'dependencies': OrderedDict([('husky_msgs', '/ros2_ws/install/husky_msgs')])}
+[0.001999] (husky_base) JobStarted: {'identifier': 'husky_base'}
+[0.022312] (husky_base) JobProgress: {'identifier': 'husky_base', 'progress': 'cmake'}
+[0.022827] (husky_base) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/husky-humble-devel/husky_base', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husky_base'], 'cwd': '/ros2_ws/build/husky_base', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_base'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.099514] (-) TimerEvent: {}
+[0.121437] (husky_base) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199711] (-) TimerEvent: {}
+[0.222718] (husky_base) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.235865] (husky_base) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299784] (-) TimerEvent: {}
+[0.352939] (husky_base) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.365364] (husky_base) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.365757] (husky_base) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.366336] (husky_base) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.371590] (husky_base) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399936] (-) TimerEvent: {}
+[0.500264] (-) TimerEvent: {}
+[0.505245] (husky_base) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.518063] (husky_base) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.518600] (husky_base) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.519605] (husky_base) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.524529] (husky_base) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600380] (-) TimerEvent: {}
+[0.700689] (-) TimerEvent: {}
+[0.746465] (husky_base) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.800820] (-) TimerEvent: {}
+[0.901112] (-) TimerEvent: {}
+[0.914237] (husky_base) StdoutLine: {'line': b'-- Found controller_interface: 2.43.1 (/opt/ros/humble/share/controller_interface/cmake)\n'}
+[1.001226] (-) TimerEvent: {}
+[1.019144] (husky_base) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.032121] (husky_base) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.053092] (husky_base) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.084491] (husky_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.101335] (-) TimerEvent: {}
+[1.125141] (husky_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.201468] (-) TimerEvent: {}
+[1.301814] (-) TimerEvent: {}
+[1.402153] (-) TimerEvent: {}
+[1.502445] (-) TimerEvent: {}
+[1.602783] (-) TimerEvent: {}
+[1.621493] (husky_base) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.628621] (husky_base) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.694834] (husky_base) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.702887] (-) TimerEvent: {}
+[1.793054] (husky_base) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.800206] (husky_base) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.803043] (-) TimerEvent: {}
+[1.824175] (husky_base) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.830123] (husky_base) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.844836] (husky_base) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.861541] (husky_base) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.885454] (husky_base) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.903119] (-) TimerEvent: {}
+[2.003452] (-) TimerEvent: {}
+[2.012372] (husky_base) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.012903] (husky_base) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.103588] (-) TimerEvent: {}
+[2.139676] (husky_base) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.142358] (husky_base) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.203728] (-) TimerEvent: {}
+[2.264067] (husky_base) StdoutLine: {'line': b'-- Found controller_manager: 2.43.1 (/opt/ros/humble/share/controller_manager/cmake)\n'}
+[2.303828] (-) TimerEvent: {}
+[2.349617] (husky_base) StdoutLine: {'line': b'-- Found husky_msgs: 1.0.8 (/ros2_ws/install/husky_msgs/share/husky_msgs/cmake)\n'}
+[2.378956] (husky_base) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.403966] (-) TimerEvent: {}
+[2.416850] (husky_base) StdoutLine: {'line': b'-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[2.444523] (husky_base) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[2.455506] (husky_base) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[2.504059] (-) TimerEvent: {}
+[2.604447] (-) TimerEvent: {}
+[2.700052] (husky_base) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.704579] (-) TimerEvent: {}
+[2.788392] (husky_base) StdoutLine: {'line': b'-- Generating done\n'}
+[2.791284] (husky_base) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/husky_base\n'}
+[2.804715] (-) TimerEvent: {}
+[2.809471] (husky_base) CommandEnded: {'returncode': 0}
+[2.810389] (husky_base) JobProgress: {'identifier': 'husky_base', 'progress': 'build'}
+[2.812745] (husky_base) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/husky_base', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/husky_base', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_base'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[2.904842] (-) TimerEvent: {}
+[2.911827] (husky_base) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message.cpp.o\x1b[0m\n'}
+[2.912314] (husky_base) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/crc.cpp.o\x1b[0m\n'}
+[2.912673] (husky_base) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy_wrapper.cpp.o\x1b[0m\n'}
+[2.912886] (husky_base) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Logger.cpp.o\x1b[0m\n'}
+[2.913964] (husky_base) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_data.cpp.o\x1b[0m\n'}
+[2.915378] (husky_base) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/husky_hardware.cpp.o\x1b[0m\n'}
+[2.919464] (husky_base) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/linux_serial.cpp.o\x1b[0m\n'}
+[2.919821] (husky_base) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_request.cpp.o\x1b[0m\n'}
+[2.920088] (husky_base) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_cmd.cpp.o\x1b[0m\n'}
+[2.920334] (husky_base) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Transport.cpp.o\x1b[0m\n'}
+[2.920572] (husky_base) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Number.cpp.o\x1b[0m\n'}
+[3.004960] (-) TimerEvent: {}
+[3.105676] (-) TimerEvent: {}
+[3.206742] (-) TimerEvent: {}
+[3.307492] (-) TimerEvent: {}
+[3.408028] (-) TimerEvent: {}
+[3.508597] (-) TimerEvent: {}
+[3.609475] (-) TimerEvent: {}
+[3.709930] (-) TimerEvent: {}
+[3.810327] (-) TimerEvent: {}
+[3.910714] (-) TimerEvent: {}
+[4.011101] (-) TimerEvent: {}
+[4.111441] (-) TimerEvent: {}
+[4.211781] (-) TimerEvent: {}
+[4.312080] (-) TimerEvent: {}
+[4.412391] (-) TimerEvent: {}
+[4.512710] (-) TimerEvent: {}
+[4.613066] (-) TimerEvent: {}
+[4.713463] (-) TimerEvent: {}
+[4.813845] (-) TimerEvent: {}
+[4.914112] (-) TimerEvent: {}
+[5.014425] (-) TimerEvent: {}
+[5.114757] (-) TimerEvent: {}
+[5.215117] (-) TimerEvent: {}
+[5.315454] (-) TimerEvent: {}
+[5.415762] (-) TimerEvent: {}
+[5.516126] (-) TimerEvent: {}
+[5.616496] (-) TimerEvent: {}
+[5.716862] (-) TimerEvent: {}
+[5.817260] (-) TimerEvent: {}
+[5.917628] (-) TimerEvent: {}
+[6.017964] (-) TimerEvent: {}
+[6.118279] (-) TimerEvent: {}
+[6.218621] (-) TimerEvent: {}
+[6.318917] (-) TimerEvent: {}
+[6.419243] (-) TimerEvent: {}
+[6.519555] (-) TimerEvent: {}
+[6.619871] (-) TimerEvent: {}
+[6.720168] (-) TimerEvent: {}
+[6.820499] (-) TimerEvent: {}
+[6.920823] (-) TimerEvent: {}
+[7.021164] (-) TimerEvent: {}
+[7.121478] (-) TimerEvent: {}
+[7.221796] (-) TimerEvent: {}
+[7.322105] (-) TimerEvent: {}
+[7.422427] (-) TimerEvent: {}
+[7.522747] (-) TimerEvent: {}
+[7.623075] (-) TimerEvent: {}
+[7.723410] (-) TimerEvent: {}
+[7.823771] (-) TimerEvent: {}
+[7.924085] (-) TimerEvent: {}
+[8.024416] (-) TimerEvent: {}
+[8.124733] (-) TimerEvent: {}
+[8.225070] (-) TimerEvent: {}
+[8.325421] (-) TimerEvent: {}
+[8.425777] (-) TimerEvent: {}
+[8.526109] (-) TimerEvent: {}
+[8.626451] (-) TimerEvent: {}
+[8.726742] (-) TimerEvent: {}
+[8.827112] (-) TimerEvent: {}
+[8.927407] (-) TimerEvent: {}
+[9.027755] (-) TimerEvent: {}
+[9.128117] (-) TimerEvent: {}
+[9.228553] (-) TimerEvent: {}
+[9.323297] (husky_base) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libhusky_hardware.so\x1b[0m\n'}
+[9.328622] (-) TimerEvent: {}
+[9.429052] (-) TimerEvent: {}
+[9.529502] (-) TimerEvent: {}
+[9.629853] (-) TimerEvent: {}
+[9.693146] (husky_base) StdoutLine: {'line': b'[100%] Built target husky_hardware\n'}
+[9.711861] (husky_base) CommandEnded: {'returncode': 0}
+[9.730073] (-) TimerEvent: {}
+[9.795313] (husky_base) JobProgress: {'identifier': 'husky_base', 'progress': 'install'}
+[9.810521] (husky_base) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/husky_base'], 'cwd': '/ros2_ws/build/husky_base', 'env': OrderedDict([('HOSTNAME', 'pablo-computer'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/husky_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/articubot_one:/ros2_ws/install/wetexplorer_description:/opt/ros/humble'), ('PWD', '/ros2_ws/build/husky_base'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/husky_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/husky_msgs:/ros2_ws/install/wetexplorer_description:/ros2_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[9.822670] (husky_base) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.822951] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/husky_hardware.xml\n'}
+[9.823415] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/lib/libhusky_hardware.so\n'}
+[9.825866] (husky_base) StdoutLine: {'line': b'-- Set runtime path of "/ros2_ws/install/husky_base/lib/libhusky_hardware.so" to ""\n'}
+[9.826131] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include\n'}
+[9.826447] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base\n'}
+[9.826579] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy\n'}
+[9.826823] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Message.h\n'}
+[9.827017] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Message_cmd.h\n'}
+[9.827344] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Number.h\n'}
+[9.827620] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/serial.h\n'}
+[9.827736] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Message_request.h\n'}
+[9.827848] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/clearpath.h\n'}
+[9.828025] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Message_data.h\n'}
+[9.828135] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Transport.h\n'}
+[9.828350] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/crc.h\n'}
+[9.828635] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Exception.h\n'}
+[9.828806] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy/Logger.h\n'}
+[9.828908] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/husky_hardware.hpp\n'}
+[9.829178] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/husky_diagnostics.h\n'}
+[9.829389] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/include/husky_base/horizon_legacy_wrapper.h\n'}
+[9.829644] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/launch\n'}
+[9.829804] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/launch/base.launch.py\n'}
+[9.830114] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/library_path.sh\n'}
+[9.830299] (-) TimerEvent: {}
+[9.830588] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/library_path.dsv\n'}
+[9.830909] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/ament_index/resource_index/package_run_dependencies/husky_base\n'}
+[9.831241] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/ament_index/resource_index/parent_prefix_path/husky_base\n'}
+[9.831545] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/ament_prefix_path.sh\n'}
+[9.831856] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/ament_prefix_path.dsv\n'}
+[9.832161] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/path.sh\n'}
+[9.832424] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/environment/path.dsv\n'}
+[9.832666] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/local_setup.bash\n'}
+[9.832878] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/local_setup.sh\n'}
+[9.833152] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/local_setup.zsh\n'}
+[9.833395] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/local_setup.dsv\n'}
+[9.833739] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/package.dsv\n'}
+[9.834109] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/ament_index/resource_index/packages/husky_base\n'}
+[9.834553] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/husky_base\n'}
+[9.834959] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[9.835373] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[9.835736] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[9.835984] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/cmake/husky_baseConfig.cmake\n'}
+[9.836240] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/cmake/husky_baseConfig-version.cmake\n'}
+[9.836507] (husky_base) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/husky_base/share/husky_base/package.xml\n'}
+[9.839113] (husky_base) CommandEnded: {'returncode': 0}
+[9.930431] (-) TimerEvent: {}
+[9.959497] (husky_base) JobEnded: {'identifier': 'husky_base', 'rc': 0}
+[9.960680] (-) EventReactorShutdown: {}
