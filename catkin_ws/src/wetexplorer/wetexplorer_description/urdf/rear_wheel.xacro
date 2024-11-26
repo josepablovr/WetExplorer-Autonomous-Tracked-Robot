@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rear_wheel">
 
-<xacro:include filename="$(find max_light_pkg)/urdf/cylinder_inertia.xacro"/>
+<xacro:include filename="$(find wetexplorer_description)/urdf/cylinder_inertia.xacro"/>
 
 <xacro:macro name="rear_wheel" params="left_right radius length position mu">
 
