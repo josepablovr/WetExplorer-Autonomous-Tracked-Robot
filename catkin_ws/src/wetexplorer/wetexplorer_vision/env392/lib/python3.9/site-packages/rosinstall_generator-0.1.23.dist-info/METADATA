@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: rosinstall-generator
+Version: 0.1.23
+Summary: A tool for generating rosinstall files
+Home-page: http://wiki.ros.org/rosinstall_generator
+Author: Dirk Thomas
+Author-email: dthomas@osrfoundation.org
+Maintainer: ROS Infrastructure Team
+License: BSD
+Project-URL: Source code, https://github.com/ros-infrastructure/rosinstall_generator
+Project-URL: Issue tracker, https://github.com/ros-infrastructure/rosinstall_generator/issues
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
+Requires-Dist: catkin-pkg (>=0.1.28)
+Requires-Dist: PyYAML
+Requires-Dist: rosdistro (>=0.7.3)
+Requires-Dist: rospkg
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: mock ; (python_version < "3.3") and extra == 'test'
+
+A tool for generating rosinstall files
+

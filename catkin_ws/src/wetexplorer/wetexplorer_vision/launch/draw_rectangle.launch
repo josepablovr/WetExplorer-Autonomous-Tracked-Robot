@@ -1,0 +1,10 @@
+<launch>
+    <!-- Launch the draw_rectangle_with_frame node -->
+    <node
+        pkg="wetexplorer_vision"
+        type="draw_rectangle.py"
+        name="draw_rectangle_with_frame"
+        output="screen">
+        <!-- Add any parameters or remappings if needed -->
+    </node>
+</launch>
