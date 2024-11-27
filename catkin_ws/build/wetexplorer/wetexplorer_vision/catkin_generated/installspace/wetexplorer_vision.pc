@@ -1,0 +1,8 @@
+prefix=/catkin_ws/install
+
+Name: wetexplorer_vision
+Description: Description of wetexplorer_vision
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
