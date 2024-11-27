@@ -7,7 +7,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Wetexplorer">
 
   
-  
+  <xacro:include filename="$(find wetexplorer_description)/urdf/camera.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/cylinder_inertia.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/chassis_static.xacro" />
     
@@ -20,6 +20,6 @@
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gas_analyzer.xacro" />
-  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/linear_actuator.xacro" />
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/linear_actuator.xacro" /> -->
 
 </robot>
