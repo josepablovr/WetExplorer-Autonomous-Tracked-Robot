@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="WetExplorer">
+  
+  <!-- Include other Xacro files -->
+  <xacro:include filename="$(find wetexplorer_description)/urdf/WETExplorer_chassis.xacro"/>
+  <xacro:include filename="$(find wetexplorer_description)/urdf/front_wheel.xacro"/>
+  <xacro:include filename="$(find wetexplorer_description)/urdf/rear_wheel.xacro"/>
+  <xacro:include filename="$(find wetexplorer_description)/urdf/imu.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/gps.xacro" />
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/chamber.xacro" /> -->
+  
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/linear_actuator.xacro" /> -->
+  <xacro:include filename="$(find wetexplorer_description)/urdf/central_frame.xacro" /> 
+  <xacro:include filename="$(find wetexplorer_description)/urdf/camera.xacro" /> 
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/mid_front_wheel.xacro"/>
+  <xacro:include filename="$(find wetexplorer_description)/urdf/mid_rear_wheel.xacro"/> -->
+  <xacro:include filename="$(find wetexplorer_description)/urdf/gas_analyzer.xacro" />
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/pseudowheels.xacro" /> -->
+
+  <!-- Define properties -->
+  <xacro:property name="position_left" value="0.3054"/>
+  <xacro:property name="position_right" value="-0.3054"/>
+
+  <xacro:property name="mu" value="0.7"/>
+
+  <!-- Use macros and properties -->
+ 
+  <xacro:front_wheel left_right="left" radius="0.075" length="0.01" position="${position_left}" mu="${mu}"/>
+  <xacro:front_wheel left_right="right" radius="0.075" length="0.01" position="${position_right}" mu="${mu}"/>
+
+  <!-- <xacro:rear_wheel left_right="left" radius="0.09" length="0.123" position="${position_left}" mu="${mu}"/>
+  <xacro:rear_wheel left_right="right" radius="0.09" length="0.123" position="${position_right}" mu="${mu}"/> -->
+
+<!--   <xacro:mid_front_wheel left_right="left" radius="0.055" length="0.123" position="${position_left}"/>
+  <xacro:mid_front_wheel left_right="right" radius="0.055" length="0.123" position="${position_right}"/>
+  <xacro:mid_rear_wheel left_right="left" radius="0.055" length="0.123" position="${position_left}"/>
+  <xacro:mid_rear_wheel left_right="right" radius="0.055" length="0.123" position="${position_right}"/> -->
+  
+  <!-- Gazebo plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+    
+  
+  
+  
+
+ 
+
+</robot>

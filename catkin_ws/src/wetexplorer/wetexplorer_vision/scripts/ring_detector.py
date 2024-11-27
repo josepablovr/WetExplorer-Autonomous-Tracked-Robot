@@ -31,14 +31,14 @@ class RingDetector:
         base_options = core.BaseOptions(
             file_name='/catkin_ws/src/wetexplorer/wetexplorer_vision/scripts/ring2.tflite', use_coral=self.enable_edgetpu, num_threads=self.num_threads)
         detection_options = processor.DetectionOptions(
-            max_results=10, score_threshold=0.7)
+            max_results=10, score_threshold=0.5)
         options = vision.ObjectDetectorOptions(
             base_options=base_options, detection_options=detection_options)
         self.detector = vision.ObjectDetector.create_from_options(options)
 
         self.initialized = False
         # Subscribe to the camera image topic
-        self.image_sub = rospy.Subscriber('/camera/color/image_raw', Image, self.image_callback)
+        self.image_sub = rospy.Subscriber('/image_raw', Image, self.image_callback)
 
         rospy.loginfo("Ring Detector Node initialized.")
 
@@ -49,16 +49,16 @@ class RingDetector:
             image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
 
             # Convert the image from BGR to RGB as required by the TFLite model
-            #rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
             # Create a TensorImage object from the RGB image
-            #input_tensor = vision.TensorImage.create_from_array(rgb_image)
+            input_tensor = vision.TensorImage.create_from_array(rgb_image)
 
             # Run object detection estimation using the model
-            #detection_result = self.detector.detect(input_tensor)
+            detection_result = self.detector.detect(input_tensor)
 
             # Draw keypoints and edges on the input image
-            #image = utils.visualize(image, detection_result)
+            image = utils.visualize(image, detection_result)
 
             # Publish the processed image
             ros_image = self.bridge.cv2_to_imgmsg(image, "bgr8")

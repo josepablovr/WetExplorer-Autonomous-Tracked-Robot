@@ -1,8 +1,9 @@
+
 <launch>
   
   <arg
     name="model" />
-  <param name="robot_description" command="$(find xacro)/xacro $(find wetexplorer_description)/urdf/Robot_System.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro $(find wetexplorer_description)/urdf/Robot_System_Perception.xacro" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wetexplorer_description)/rviz/default.rviz" required="true" />
   <!-- Launch RViz with default configuration -->
 
