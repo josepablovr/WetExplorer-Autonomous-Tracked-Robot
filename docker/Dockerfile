@@ -27,30 +27,11 @@ RUN apt-get update && apt-get install -y \
 # Install Python packages via pip
 RUN pip install ds4drv scipy
 
-# Install Gazebo dependencies
-RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
-    && apt-get update \
-    && apt-get install -y ignition-fortress \
-    && apt-get clean
-
-# Install other dependencies
-RUN apt-get update && apt-get install -y \
-    coinor-libipopt-dev \
-    libnlopt-cxx-dev \
-    && apt-get clean
-
-
-
-
 
 # Install ROS Dependecencies:
-
-
 RUN apt-get update && apt-get install -y \
     ros-humble-urdf \
-    ros-humble-xacro \
-    ros-humble-ros-gz-bridge \
+    ros-humble-xacro \  
     ros-humble-ros-gz-sim\
     ros-humble-joy \
     ros-humble-teleop-twist-joy \
@@ -66,6 +47,33 @@ RUN apt-get update && apt-get install -y \
     ros-humble-rqt \
     ros-humble-rqt-graph \
     && apt-get clean
+
+# Update and install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    lsb-release \
+    gnupg \
+    && rm -rf /var/lib/apt/lists/*
+    
+
+# Add the OSRF Gazebo repository and import the key
+RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] \
+    http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" \
+    | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+
+# Update package lists and install gz-harmonic
+RUN apt-get update && apt-get install -y \
+    gz-harmonic
+
+# Install ROS 2 Humble and ROS-GZ Harmonic
+RUN apt-get install -y \
+    ros-humble-ros-gzharmonic \
+    && rm -rf /var/lib/apt/lists/*
+
+
+
+
 
 # Update package list
 RUN apt-get update
