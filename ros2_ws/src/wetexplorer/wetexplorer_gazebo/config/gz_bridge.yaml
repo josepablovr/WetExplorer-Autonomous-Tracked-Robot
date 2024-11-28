@@ -12,16 +12,32 @@
   direction: GZ_TO_ROS
 
 
-  - ros_topic_name: "imu/data"
+- ros_topic_name: "imu/data"
   gz_topic_name: "imu/data"
   ros_type_name: "sensor_msgs/msg/Imu"
-  gz_type_name: "ignition.msgs.Imu"
+  gz_type_name: "gz.msgs.IMU"
   direction: IGN_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
 
   # gz topic published by Sensors plugin (Camera)
 - ros_topic_name: "camera/camera_info"
-  gz_topic_name: "camera/camera_info"
+  gz_topic_name: "camera/image_raw"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "gz.msgs.CameraInfo"
-  direction: GZ_TO_ROS
+  direction: "GZ_TO_ROS"
+
+
+  # gz topic published by Sensors plugin (TRACK CMD)
+- ros_topic_name: "/wetexplorer/cmd_vel"
+  gz_topic_name: "/model/wetexplorer/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "ignition.msgs.Twist" 
+  direction: ROS_TO_GZ
+
+
+    # gz topic published by Sensors plugin (TRACK CMD)
+- ros_topic_name: "/wetexplorer/cmd_vel"
+  gz_topic_name: "/wetexplorer/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "ignition.msgs.Twist" 
+  direction: ROS_TO_GZ
