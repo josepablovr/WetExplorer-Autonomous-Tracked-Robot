@@ -11,12 +11,13 @@ import os
 
 
 def generate_launch_description():
+    
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_spaceros_gz_sim = get_package_share_directory('wetexplorer_gazebo')
-    gz_launch_path = PathJoinSubstitution([pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])
-    gz_model_path = PathJoinSubstitution([pkg_spaceros_gz_sim, 'models'])
+    pkg_spaceros_gz_sim = get_package_share_directory('wetexplorer_gazebo')   
+    gz_launch_path = PathJoinSubstitution([pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])    
     gz_world_path = PathJoinSubstitution([pkg_spaceros_gz_sim, 'worlds'])
     bridge_params = os.path.join(get_package_share_directory('wetexplorer_gazebo'),'config','gz_bridge.yaml')
+    resource_world_path = '/ros2_ws/src/wetexplorer'
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
@@ -28,8 +29,15 @@ def generate_launch_description():
                                value=[LaunchConfiguration('world'), 
                                       TextSubstitution(text='.world')]),
 
+        # LOAD MODEL PARAMENTER
+        IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource([os.path.join(
+                        get_package_share_directory('wetexplorer_description' ),'launch','description_tracks.launch.py'
+                    )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
+        ),
 
-        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_world_path),
+
+        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', resource_world_path),       
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_launch_path),
@@ -43,13 +51,7 @@ def generate_launch_description():
 
 
 
-
-        # LOAD MODEL PARAMENTER
-        IncludeLaunchDescription(
-                    PythonLaunchDescriptionSource([os.path.join(
-                        get_package_share_directory('wetexplorer_description' ),'launch','description_tracks.launch.py'
-                    )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
-        ),
+       
 
 
         # SPAWNN ENTITY
