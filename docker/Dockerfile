@@ -32,7 +32,6 @@ RUN pip install ds4drv scipy
 RUN apt-get update && apt-get install -y \
     ros-humble-urdf \
     ros-humble-xacro \  
-    ros-humble-ros-gz-sim\
     ros-humble-joy \
     ros-humble-teleop-twist-joy \
     ros-humble-twist-stamper \
@@ -42,8 +41,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-joint-state-publisher \
     ros-humble-joint-state-publisher-gui \
     ros-humble-ign-ros2-control \
-    ros-humble-rviz2 \
-    ros-humble-ros-gz-image \
+    ros-humble-rviz2 \   
     ros-humble-rqt \
     ros-humble-rqt-graph \
     && apt-get clean
@@ -66,7 +64,7 @@ RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyri
 RUN apt-get update && apt-get install -y \
     gz-harmonic
 
-# Install ROS 2 Humble and ROS-GZ Harmonic
+# Install ROS-GZ Harmonic
 RUN apt-get install -y \
     ros-humble-ros-gzharmonic \
     && rm -rf /var/lib/apt/lists/*
