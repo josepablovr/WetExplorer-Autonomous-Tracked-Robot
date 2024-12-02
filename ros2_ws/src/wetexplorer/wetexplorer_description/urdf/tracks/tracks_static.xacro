@@ -34,19 +34,29 @@
         </geometry>
         <material name="black"/>
       </visual>      
+      <collision>
+          <geometry>
+            <mesh
+              filename="package://wetexplorer_description/meshes/track_left_link.STL" />
+          </geometry>
+       
+        </collision>
     </link>
 
     
 
     <joint name="track_left_joint"
-      type="fixed">
+      type="revolute">
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <parent
         link="base_link" />
       <child
-        link="track_left_link" />      
+        link="track_left_link" />
+      <axis
+        xyz="0 1 0" />      
+      <limit velocity="6.5" effort="1000" lower="0" upper="0" />
     </joint>
 
    
@@ -76,13 +86,19 @@
         </geometry>
         <material name="black"/>
       </visual>
+      <collision>          
+          <geometry>
+            <mesh
+              filename="package://wetexplorer_description/meshes/track_right_link.STL" />
+          </geometry>          
+      </collision>
      
 
     </link>
 
     
     <joint name="track_right_joint"
-      type="fixed">
+      type="revolute">
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -91,7 +107,36 @@
       <child
         link="track_right_link" />
       
+      <axis
+        xyz="0 1 0" />
+      <limit velocity="6.5" effort="1000" lower="0" upper="0" />
+      
     </joint>
+
+    <gazebo>
+      <plugin name="gz::sim::systems::TrackedVehicle" filename="gz-sim-tracked-vehicle-system">
+        <body>base_link</body>
+        <left_track><link>track_left_link</link></left_track>
+        <right_track><link>track_right_link</link></right_track>
+        <tracks_separation>0.6108</tracks_separation>
+        <tracks_height>0.18094</tracks_height>
+        <steering_efficiency>0.5</steering_efficiency>
+   
+      </plugin>
+
+      <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
+          <link>track_left_link</link>
+          <min_velocity>-1.0</min_velocity>
+          <max_velocity>1.0</max_velocity>
+       
+      </plugin>
+      <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
+          <link>track_right_link</link>
+          <min_velocity>-1.0</min_velocity>
+          <max_velocity>1.0</max_velocity>
+      </plugin>      
+
+    </gazebo>
 
  
 </robot>

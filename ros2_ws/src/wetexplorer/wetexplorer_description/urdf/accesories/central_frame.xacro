@@ -25,7 +25,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/central_frame_link.STL" />
+          filename="package://wetexplorer_description/meshes/central_frame_link.STL" />
       </geometry>
       <material
         name="">
