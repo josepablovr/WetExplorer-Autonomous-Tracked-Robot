@@ -1,14 +1,41 @@
 # Use ros2_humble-image as the base
-FROM ros:humble-perception
+FROM ros:humble AS deps
 
 # Update package list
 RUN apt-get update
+
+
 
 # Install sudo
 RUN apt-get install -y sudo
 
 # Install software-properties-common
 RUN apt-get install -y software-properties-common
+
+WORKDIR /ros2_ws
+SHELL ["/bin/bash", "-c"]
+
+# Install dependencies
+RUN apt-get update \
+    && apt-get -y --quiet --no-install-recommends install \
+    gcc \
+    git \
+    python3 \
+    python3-pip
+
+RUN pip3 install opencv-python>=4.8.1.78
+RUN pip3 install typing-extensions>=4.4.0
+RUN pip3 install ultralytics==8.3.26
+RUN pip3 install super-gradients==3.7.1
+RUN pip3 install lap==0.5.12    
+
+RUN pip3 install sphinx==8.0.0 sphinx-rtd-theme==3.0.0
+
+
+
+
+
+
 
 # Install system dependencies (libusb, usbutils, etc.)
 RUN apt-get update && apt-get install -y \
@@ -24,34 +51,18 @@ RUN apt-get update && apt-get install -y \
     pip\
     && apt-get clean
 
+
+
+RUN pip3 install sphinx==8.0.0 sphinx-rtd-theme==3.0.0
+
 # Install Python packages via pip
-RUN pip install ds4drv scipy
-
-# Install Gazebo dependencies
-RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
-    && apt-get update \
-    && apt-get install -y ignition-fortress \
-    && apt-get clean
-
-# Install other dependencies
-RUN apt-get update && apt-get install -y \
-    coinor-libipopt-dev \
-    libnlopt-cxx-dev \
-    && apt-get clean
-
-
-
+RUN pip3 install ds4drv scipy
 
 
 # Install ROS Dependecencies:
-
-
 RUN apt-get update && apt-get install -y \
     ros-humble-urdf \
-    ros-humble-xacro \
-    ros-humble-ros-gz-bridge \
-    ros-humble-ros-gz-sim\
+    ros-humble-xacro \  
     ros-humble-joy \
     ros-humble-teleop-twist-joy \
     ros-humble-twist-stamper \
@@ -61,11 +72,58 @@ RUN apt-get update && apt-get install -y \
     ros-humble-joint-state-publisher \
     ros-humble-joint-state-publisher-gui \
     ros-humble-ign-ros2-control \
-    ros-humble-rviz2 \
-    ros-humble-ros-gz-image \
+    ros-humble-rviz2 \   
     ros-humble-rqt \
     ros-humble-rqt-graph \
     && apt-get clean
+
+# Update and install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    lsb-release \
+    gnupg \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Add the OSRF Gazebo repository and import the key
+RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] \
+    http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" \
+    | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+
+# Update package lists and install gz-harmonic
+RUN apt-get update && apt-get install -y \
+    gz-harmonic
+
+# Install ROS-GZ Harmonic
+RUN apt-get install -y \
+    ros-humble-ros-gzharmonic \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Install RealSense SDK
+RUN apt-get update && apt-get install -y \
+    ros-humble-librealsense2*\
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Install and initialize rosdep, then install dependencies
+RUN apt-get update \
+    && apt-get -y install python3-rosdep \
+    && rosdep update \
+    && rosdep install -i --from-paths . --ignore-src -r -y
+
+RUN apt-get update && apt-get install -y \
+    ros-humble-launch-pytest \
+    python3-tqdm \
+    python3-requests \
+    nvidia-cuda-toolkit \
+    nvidia-cuda-dev \
+    && rm -rf /var/lib/apt/lists/*
+    
+
+
+
 
 # Update package list
 RUN apt-get update
@@ -100,6 +158,5 @@ COPY /config/hosts /etc/hosts
 #ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 
 
-# Set working directory
-WORKDIR /ros2_ws
+
 

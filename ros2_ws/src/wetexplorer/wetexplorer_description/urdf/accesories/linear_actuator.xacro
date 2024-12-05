@@ -24,7 +24,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/linear_actuator_support_link.STL" />
+          filename="package://wetexplorer_description/meshes/linear_actuator_support_link.STL" />
       </geometry>
       <material
         name="">
@@ -136,7 +136,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/prismatic_link.STL" />
+          filename="package://wetexplorer_description/meshes/prismatic_link.STL" />
       </geometry>
       <material
         name="">
@@ -215,7 +215,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/coupling_link.STL" />
+          filename="package://wetexplorer_description/meshes/coupling_link.STL" />
       </geometry>
       <material
         name="">
@@ -229,7 +229,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/coupling_link.STL" />
+          filename="package://wetexplorer_description/meshes/coupling_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -270,7 +270,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL" />
+          filename="package://wetexplorer_description/meshes/chamber_holder_link.STL" />
       </geometry>
       <material
         name="">
@@ -284,7 +284,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_holder_link.STL" />
+          filename="package://wetexplorer_description/meshes/chamber_holder_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -336,7 +336,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_link.STL" />
+          filename="package://wetexplorer_description/meshes/chamber_link.STL" />
       </geometry>
       <material
         name="">
@@ -350,7 +350,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/chamber_link.STL" />
+          filename="package://wetexplorer_description/meshes/chamber_link.STL" />
       </geometry>
     </collision>
   </link>

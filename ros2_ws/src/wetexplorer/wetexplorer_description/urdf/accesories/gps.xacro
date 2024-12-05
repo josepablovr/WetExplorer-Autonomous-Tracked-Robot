@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/gps_frame_link.STL" />
+          filename="package://wetexplorer_description/meshes/gps_frame_link.STL" />
       </geometry>
       <material
         name="">
@@ -77,7 +77,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wetexplorer_description/meshes/WETExplorer/gps_link.STL" />
+          filename="package://wetexplorer_description/meshes/gps_link.STL" />
       </geometry>
       <material
         name="">

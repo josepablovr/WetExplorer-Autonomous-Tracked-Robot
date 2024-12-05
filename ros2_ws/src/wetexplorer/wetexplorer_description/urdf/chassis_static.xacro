@@ -52,7 +52,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+            filename="package://wetexplorer_description/meshes/base_link.STL" />
         </geometry>
         <material name="green"/>
       </visual>
@@ -62,7 +62,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/base_link.STL" />
+            filename="package://wetexplorer_description/meshes/base_link.STL" />
         </geometry>
       </collision>
     </link>
@@ -97,7 +97,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_right_link.STL" />
+            filename="package://wetexplorer_description/meshes/power_pulley_right_link.STL" />
         </geometry>
         <material name="grey"/>
       </visual>
@@ -150,7 +150,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/power_pulley_left_link.STL" />
+            filename="package://wetexplorer_description/meshes/power_pulley_left_link.STL" />
         </geometry>
         <material name="grey"/>
       </visual>
@@ -201,7 +201,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_left_link.STL" />
+            filename="package://wetexplorer_description/meshes/pulleys_left_link.STL" />
         </geometry>
         <material name="grey"/>
       </visual>
@@ -251,7 +251,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/pulleys_right_link.STL" />
+            filename="package://wetexplorer_description/meshes/pulleys_right_link.STL" />
         </geometry>
         <material name="grey"/>
       </visual>
@@ -300,7 +300,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_left_link.STL" />
+            filename="package://wetexplorer_description/meshes/pulley_support_left_link.STL" />
         </geometry>
         <material name="red"/>
       </visual>
@@ -349,7 +349,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://wetexplorer_description/meshes/WETExplorer/pulley_support_right_link.STL" />
+            filename="package://wetexplorer_description/meshes/pulley_support_right_link.STL" />
         </geometry>
         <material name="red"/>
       </visual>

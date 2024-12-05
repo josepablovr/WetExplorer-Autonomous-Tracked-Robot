@@ -52,10 +52,9 @@
 
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
-      <bodyName>imu_link</bodyName>
-      <update_rate>250.0</update_rate>
+      <update_rate>1</update_rate>
       <visualize>true</visualize>
-      <topic>imu/data</topic>
+      <topic>imu</topic>
     </sensor>
 
     <!-- <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">

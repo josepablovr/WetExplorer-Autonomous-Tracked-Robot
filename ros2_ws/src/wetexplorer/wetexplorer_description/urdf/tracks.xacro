@@ -11,14 +11,14 @@
   <xacro:include filename="$(find wetexplorer_description)/urdf/cylinder_inertia.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/chassis_static.xacro" />
     
-  <xacro:include filename="$(find wetexplorer_description)/urdf/wheels/tracks_static.xacro" />
-  <xacro:include filename="$(find wetexplorer_description)/urdf/wheels/pseudowheels.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/tracks/tracks_static.xacro" />
+  
 
 
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/aluminium_frame.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/central_frame.xacro" />
-  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
-  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" />
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" /> -->
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gas_analyzer.xacro" />
   <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/linear_actuator.xacro" /> -->
 

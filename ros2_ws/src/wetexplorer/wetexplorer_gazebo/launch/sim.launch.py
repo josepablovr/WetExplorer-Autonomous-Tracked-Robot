@@ -32,7 +32,7 @@ def generate_launch_description():
     )
     
 
-    package_name='articubot_one' 
+    package_name='wetexplorer_gazebo' 
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
