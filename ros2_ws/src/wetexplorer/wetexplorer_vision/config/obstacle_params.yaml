@@ -1,0 +1,2 @@
+obstacle_radius: 0.2  # Radius of the base of the prism
+obstacle_height: 1.0  # Height of the obstacle
