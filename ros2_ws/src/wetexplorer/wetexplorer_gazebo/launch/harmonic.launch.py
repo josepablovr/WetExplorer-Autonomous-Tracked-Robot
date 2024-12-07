@@ -27,7 +27,7 @@ def generate_launch_description():
         ),
         SetLaunchConfiguration(name='world_file', 
                                value=[LaunchConfiguration('world'), 
-                                      TextSubstitution(text='.world')]),
+                                      TextSubstitution(text='.sdf')]),
 
         # LOAD MODEL PARAMENTER
         IncludeLaunchDescription(
@@ -75,6 +75,12 @@ def generate_launch_description():
                 '-p',
                 f'config_file:={bridge_params}',
             ]
-        )
+        ),
+
+       
+
+      
+
+        
 
     ])
