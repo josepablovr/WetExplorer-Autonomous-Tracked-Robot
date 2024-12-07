@@ -21,8 +21,8 @@
 
   # gz topic published by Sensors plugin (Camera)
 
-- ros_topic_name: "camera/info"
-  gz_topic_name: "camera/info"
+- ros_topic_name: "camera/camera_info"
+  gz_topic_name: "camera/camera_info"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "gz.msgs.CameraInfo"
   direction: "GZ_TO_ROS"
@@ -46,4 +46,21 @@
   gz_topic_name: "/model/wetexplorer/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist" 
-  direction: ROS_TO_GZ
+  direction: "ROS_TO_GZ"
+
+
+# Robot Odometry
+
+- ros_topic_name: "/simulation/pose"
+  gz_topic_name: "/model/wetexplorer/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry" 
+  direction: "GZ_TO_ROS"
+
+# Robot TF
+
+- ros_topic_name: "/simulation/wetexplorer_tf"
+  gz_topic_name: "/model/wetexplorer/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V" 
+  direction: "GZ_TO_ROS"
