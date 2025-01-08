@@ -1,0 +1,28 @@
+/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+creating build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info
+writing build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/PKG-INFO
+writing dependency_links to build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/dependency_links.txt
+writing requirements to build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/requires.txt
+writing top-level names to build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/top_level.txt
+writing manifest file 'build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/SOURCES.txt'
+reading manifest file 'build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/SOURCES.txt'
+writing manifest file 'build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/build/lib/wetexplorer_vision_predator
+copying wetexplorer_vision_predator/__init__.py -> /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/build/lib/wetexplorer_vision_predator
+running install
+running install_lib
+creating /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages/wetexplorer_vision_predator
+copying /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/build/lib/wetexplorer_vision_predator/__init__.py -> /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages/wetexplorer_vision_predator
+byte-compiling /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages/wetexplorer_vision_predator/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/ament_index/resource_index/packages
+copying resource/wetexplorer_vision_predator -> /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/ament_index/resource_index/packages
+copying package.xml -> /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator
+running install_egg_info
+Copying build/wetexplorer_vision_predator/wetexplorer_vision_predator.egg-info to /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages/wetexplorer_vision_predator-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/install.log'

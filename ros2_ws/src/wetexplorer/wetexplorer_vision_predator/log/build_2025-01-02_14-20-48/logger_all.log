@@ -1,0 +1,87 @@
+[0.202s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.203s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x775ea8408130>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x775ea85d3b80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x775ea85d3b80>>, mixin_verb=('build',))[0m
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.280s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.281s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator'
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.281s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.298s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage '.' with type 'ros.ament_python' and name 'wetexplorer_vision_predator'[0m
+[0.298s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.298s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.298s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.298s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.299s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_args' from command line to 'None'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_target' from command line to 'None'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_clean_first' from command line to 'False'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'cmake_force_configure' from command line to 'False'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'ament_cmake_args' from command line to 'None'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wetexplorer_vision_predator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.323s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'wetexplorer_vision_predator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator', 'merge_install': False, 'path': '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator', 'symlink_install': False, 'test_result_base': None}[0m
+[0.323s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.324s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.324s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator' with build type 'ament_python'
+[0.324s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wetexplorer_vision_predator', 'ament_prefix_path')
+[0.330s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.330s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/ament_prefix_path.ps1'
+[0.331s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/ament_prefix_path.dsv'
+[0.331s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/ament_prefix_path.sh'
+[0.332s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.332s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.562s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator'
+[0.562s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.562s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.269s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator': PS1=(env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/wetexplorer_vision_predator build --build-base /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/build install --record /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/install.log --single-version-externally-managed install_data[0m
+[1.826s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator' returned '0': PS1=(env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/wetexplorer_vision_predator build --build-base /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/build install --record /ros2_ws/src/wetexplorer/wetexplorer_vision_predator/build/wetexplorer_vision_predator/install.log --single-version-externally-managed install_data[0m
+[1.834s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator' for CMake module files
+[1.834s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator' for CMake config files
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib'
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/bin'
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/pkgconfig/wetexplorer_vision_predator.pc'
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/lib/python3.10/site-packages'
+[1.835s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wetexplorer_vision_predator', 'pythonpath')
+[1.835s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/pythonpath.ps1'
+[1.836s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/pythonpath.dsv'
+[1.836s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/hook/pythonpath.sh'
+[1.836s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/bin'
+[1.836s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(wetexplorer_vision_predator)
+[1.837s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/package.ps1'
+[1.838s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/package.dsv'
+[1.838s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/package.sh'
+[1.839s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/package.bash'
+[1.840s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/wetexplorer_vision_predator/package.zsh'
+[1.841s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/wetexplorer_vision_predator/share/colcon-core/packages/wetexplorer_vision_predator)
+[1.841s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.842s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.842s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[1.842s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.852s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.852s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.852s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.852s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.854s] [34mcolcon.colcon_notification.desktop_notification.notify2[0m [1;30mDEBUG[0m [32mFailed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message[0m
+[1.855s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.855s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/local_setup.ps1'
+[1.857s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/_local_setup_util_ps1.py'
+[1.858s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/setup.ps1'
+[1.861s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/local_setup.sh'
+[1.861s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/_local_setup_util_sh.py'
+[1.862s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/setup.sh'
+[1.864s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/local_setup.bash'
+[1.865s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/setup.bash'
+[1.868s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/local_setup.zsh'
+[1.868s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/ros2_ws/src/wetexplorer/wetexplorer_vision_predator/install/setup.zsh'
