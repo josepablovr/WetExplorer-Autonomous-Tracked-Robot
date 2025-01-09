@@ -117,15 +117,94 @@ RUN apt-get update && apt-get install -y \
     ros-humble-launch-pytest \
     python3-tqdm \
     python3-requests \
-    nvidia-cuda-toolkit \
-    nvidia-cuda-dev \
     && rm -rf /var/lib/apt/lists/*
     
 
+RUN sudo add-apt-repository ppa:deadsnakes/ppa
+RUN apt update && apt install -y --no-install-recommends \
+    software-properties-common \
+    build-essential \
+    wget \
+    curl \
+    libssl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libffi-dev \
+    python3-pip \
+    python3-venv \
+    python3.8 \
+    python3.8-venv \
+    python3.8-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 
 
 # Update package list
+RUN apt-get update
+
+
+
+
+# Install OverlapPredator Requirements
+RUN pip3 install --no-cache-dir \   
+    numpy==1.26.4 \ 
+    torchaudio \
+    nibabel \
+    tqdm \
+    easydict \
+    scipy \
+    coloredlog \
+    PyYAML \
+    scikit_learn \
+    tensorboardX \
+    vtk_visualizer \
+    h5py \
+    coloredlogs \
+    gitpython
+
+RUN pip install --no-cache-dir \
+    wcwidth \
+    pure-eval \
+    ptyprocess \
+    fastjsonschema \
+    dash-table \
+    dash-html-components \
+    dash-core-components \
+    addict \
+    widgetsnbextension \
+    werkzeug \
+    traitlets \
+    tenacity \
+    retrying \
+    pyquaternion \
+    prompt_toolkit \
+    pexpect \
+    parso \
+    nest-asyncio \
+    jupyterlab-widgets \
+    itsdangerous \
+    executing \
+    exceptiongroup \
+    configargparse \   
+    asttokens \
+    stack_data \
+    plotly \
+    matplotlib-inline \
+    jupyter-core \
+    jedi \    
+    comm \
+    ipython \    
+    Werkzeug \
+    nbformat \
+    ipywidgets
+
+RUN pip3 install --no-cache-dir --no-deps \
+    dash \
+    Flask \
+    open3d==0.18.0
+
 RUN apt-get update
 
 # Create a non-root user
