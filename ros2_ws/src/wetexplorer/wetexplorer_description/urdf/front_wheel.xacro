@@ -23,7 +23,7 @@
         <xacro:cylinder_inertia mass="${mass}" radius="${radius}" length="${length}"/>
     </link>
 
-    <joint name="front_${left_right}_wheel_joint" type="continuous">
+    <joint name="${left_right}_wheel_joint" type="continuous">
         <origin xyz="0.18601 ${position} -0.1259" rpy=" -1.570796 0 0" />
         <parent link="base_link" />
         <child link="front_${left_right}_wheel" />
@@ -31,15 +31,7 @@
   
     </joint>
 
-    <transmission name="trans_front_${left_right}_wheel">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="front_${left_right}_wheel_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor_front_${left_right}_wheel">
-        <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
+    
 
     <gazebo reference="front_${left_right}_wheel">
         <gravity>true</gravity>

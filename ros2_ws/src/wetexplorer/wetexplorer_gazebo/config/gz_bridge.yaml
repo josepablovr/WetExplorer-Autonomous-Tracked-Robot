@@ -19,6 +19,13 @@
   direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
 
+- ros_topic_name: "navsat/fix"
+  gz_topic_name: "navsat/fix"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
+
+
   # gz topic published by Sensors plugin (Camera)
 
 - ros_topic_name: "camera/camera_info"

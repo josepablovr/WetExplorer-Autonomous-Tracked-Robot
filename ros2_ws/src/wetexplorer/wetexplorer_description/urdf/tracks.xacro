@@ -17,9 +17,16 @@
 
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/aluminium_frame.xacro" />
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/central_frame.xacro" />
-  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
-  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" /> -->
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/imu.xacro" />
+  <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gps.xacro" /> -
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/gas_analyzer.xacro" />
   <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/linear_actuator.xacro" /> -->
-
+  <xacro:include filename="$(find wetexplorer_description)/urdf/front_wheel.xacro"/>
+  <xacro:include filename="$(find wetexplorer_description)/urdf/wheel_controller.xacro"/>
+  <xacro:property name="mu" value="0.7"/>
+  <xacro:property name="position_left" value="0.3054"/>
+  <xacro:property name="position_right" value="-0.3054"/>
+  <xacro:front_wheel left_right="left" radius="0.075" length="0.01" position="${position_left}" mu="${mu}"/>
+  <xacro:front_wheel left_right="right" radius="0.075" length="0.01" position="${position_right}" mu="${mu}"/>
+  <xacro:wheel_control name="wheels"/>
 </robot>

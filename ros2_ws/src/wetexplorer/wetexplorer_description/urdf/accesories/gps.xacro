@@ -111,21 +111,21 @@
 
   <gazebo reference="gps_frame_link">
       <material>Gazebo/LightGrey</material>
+      
   </gazebo>
 
   <gazebo reference="gps_link">
       <material>Gazebo/Black</material>
+      <sensor name="gps_sensor" type="navsat">
+        <always_on>1</always_on>
+        <update_rate>5.0</update_rate>
+        <topic>navsat/fix</topic>
+        <gz_frame_id>base_link</gz_frame_id>
+      </sensor>
   </gazebo>
 
 
 
 
-  <gazebo>
-    <sensor name="navsat_sensor" type="navsat">
-      <always_on>1</always_on>
-      <update_rate>5.0</update_rate>
-      <topic>navsat/fix</topic>
-    </sensor>
-  </gazebo>
 
 </robot>

@@ -55,7 +55,7 @@ def generate_launch_description():
 
     # Launch all nodes
     return launch.LaunchDescription([
-        joint_state_publisher_node,
+        #joint_state_publisher_node,
         #joint_state_publisher_gui_node,
         robot_state_publisher_node,
         #rviz_node

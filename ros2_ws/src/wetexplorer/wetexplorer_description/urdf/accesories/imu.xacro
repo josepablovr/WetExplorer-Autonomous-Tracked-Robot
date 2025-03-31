@@ -38,24 +38,76 @@
     <child link="imu_link" />
     <axis xyz="0 0 1" />
   </joint>
-
+  
   <gazebo reference="imu_link">
       <material>Gazebo/Grey</material>
+      <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>250</update_rate>
+        <enable_orientation>1</enable_orientation>
+        <visualize>true</visualize>
+        <topic>imu/data</topic>
+        <gz_frame_id>base_link</gz_frame_id>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
   </gazebo>
 
 
-  <gazebo>
-
-    <plugin filename="gz-sim-imu-system"
-        name="gz::sim::systems::Imu">
-    </plugin>
-
-    <sensor name="imu_sensor" type="imu">
-      <always_on>1</always_on>
-      <update_rate>1</update_rate>
-      <visualize>true</visualize>
-      <topic>imu</topic>
-    </sensor>
+ 
+   
 
     <!-- <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
     
@@ -69,7 +121,7 @@
       <headingDrift>0.00</headingDrift>
       <headingGaussianNoise>0.0</headingGaussianNoise>
     </plugin> -->
-  </gazebo>
+
 
 
 </robot>
