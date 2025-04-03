@@ -1,0 +1,8 @@
+builtin_interfaces/Time stamp
+bool upper_limit_switch
+bool lower_limit_switch
+bool contact_switch_1
+bool contact_switch_2
+bool contact_switch_3
+bool calibration_state
+float32 distance_mm
