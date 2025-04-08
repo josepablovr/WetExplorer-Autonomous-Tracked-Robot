@@ -27,7 +27,7 @@ private:
 
     const double max_linear_velocity_ = 0.5;
     const double max_linear_acceleration_ = 0.15;
-    const double max_linear_deceleration_ = 0.25;
+    const double max_linear_deceleration_ = 0.5;
     const double max_angular_velocity_ = 1.0;
     const double max_angular_acceleration_ = 0.1;
     const double max_angular_deceleration_ = 0.25;
@@ -90,16 +90,9 @@ private:
 
 int main(int argc, char **argv)
 {
+   
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<SafeCommands>();
-
-    rclcpp::Rate rate(10); // 10 Hz
-    while (rclcpp::ok())
-    {
-        rclcpp::spin_some(node);
-        rate.sleep();
-    }
-
+    rclcpp::spin(std::make_shared<SafeCommands>());
     rclcpp::shutdown();
     return 0;
 }
