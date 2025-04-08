@@ -14,7 +14,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
-
+find_package(std_srvs REQUIRED)
+find_package(wetexplorer_hardware REQUIRED)
 
 ############
 # BUILD NODES
@@ -59,6 +60,22 @@ ament_target_dependencies(safe_commands_node
   geometry_msgs
 )
 
+
+add_executable(6d_pose_caller src/6d_pose_caller.cpp)
+
+
+ament_target_dependencies(6d_pose_caller rclcpp sensor_msgs std_srvs)
+
+
+
+add_executable(joy_lift_controller src/joy_lift_controller.cpp)
+ament_target_dependencies(joy_lift_controller
+  rclcpp
+  sensor_msgs
+  rclcpp_action
+  wetexplorer_hardware
+)
+
 ########################
 # INSTALL TARGETS
 ########################
@@ -68,7 +85,13 @@ install(TARGETS
   forward_kinematics_sim
   robot_control_node
   safe_commands_node
+  6d_pose_caller
+  joy_lift_controller
   DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY config launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
 ament_package()

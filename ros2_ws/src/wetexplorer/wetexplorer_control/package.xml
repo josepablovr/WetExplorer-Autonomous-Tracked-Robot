@@ -17,7 +17,10 @@
   <depend>geometry_msgs</depend>
   <depend>tf2</depend>
   <depend>tf2_geometry_msgs</depend>
-
+  <depend>teleop_twist_joy</depend>
+  <depend>twist_mux</depend>
+  <depend>joy</depend>
+  <depend>interactive_marker_twist_server</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
