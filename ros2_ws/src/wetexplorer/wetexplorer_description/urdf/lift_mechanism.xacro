@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lift">
+
+  
+
+    <link
+    name="lift_link">
+    <inertial>
+      <origin
+        xyz="-0.119779698853501 9.16495172448425E-05 0.0443358769142836"
+        rpy="0 0 0" />
+      <mass
+        value="0.76499134941493" />
+      <inertia
+        ixx="0.00129808307546918"
+        ixy="2.54928069953603E-08"
+        ixz="0.000239960553820585"
+        iyy="0.00174936321672588"
+        iyz="1.82772162016907E-09"
+        izz="0.00161331626135285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/lift_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/lift_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="lift_joint"
+    type="prismatic">
+    <origin
+      xyz="0.53912 -0.0001 0.45488"
+      rpy="0 0 0" />
+    <parent
+      link="lift_frame_link" />
+    <child
+      link="lift_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0.0"
+      upper="0.3"
+      effort="10000"
+      velocity="0.2" />
+    <dynamics damping="3.0" friction="0.3"/>
+  </joint>
+  <link
+    name="chamber_link">
+    <inertial>
+      <origin
+        xyz="0.000409317672121268 2.94724821534855E-06 0.143226956075467"
+        rpy="0 0 0" />
+      <mass
+        value="4.3" />
+      <inertia
+        ixx="0.04329"
+        ixy="1.50514554271366E-09"
+        ixz="0.0021668"
+        iyy="0.047853"
+        iyz="7.00946726672268E-10"
+        izz="0.02963376" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/chamber_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/chamber_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="chamber_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0001 -0.37"
+      rpy="0 0 0" />
+    <parent
+      link="lift_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-0.2"
+      upper="0"
+      effort="100"
+      velocity="0.2" />
+    <dynamics
+      damping="0.05"
+      friction="0.3" />
+  </joint>
+
+ 
+</robot>

@@ -76,7 +76,7 @@
 
     
 
-    <link name="power_pulley_right_link">
+    <link name="sprocket_right_link">
       <inertial>
         <origin
           xyz="0.0 0.0 0.0"
@@ -113,7 +113,7 @@
     </link>
 
       <joint
-      name="power_pulley_right_joint"
+      name="sprocket_right_joint"
       type="continuous">
       <origin
         xyz="-0.078721 -0.30457 0.0704"
@@ -121,7 +121,7 @@
       <parent
         link="base_link" />
       <child
-        link="power_pulley_right_link" />
+        link="sprocket_right_link" />
       <axis
         xyz="0 1 0" />
     </joint>
@@ -129,7 +129,7 @@
 
 
 
-    <link name="power_pulley_left_link">
+    <link name="sprocket_left_link">
       <inertial>
         <origin
           xyz="0 0 0"
@@ -166,7 +166,7 @@
     </link>
 
     <joint
-      name="power_pulley_left_joint"
+      name="sprocket_left_joint"
       type="continuous">
       <origin
         xyz="-0.078721 0.30443 0.0704"
@@ -174,7 +174,7 @@
       <parent
         link="base_link" />
       <child
-        link="power_pulley_left_link" />
+        link="sprocket_left_link" />
       <axis
         xyz="0 1 0" />
     </joint>

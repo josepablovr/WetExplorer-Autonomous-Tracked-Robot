@@ -1,42 +1,58 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu">
 
-  <!-- IMU Link -->
-  <link name="imu_link">
+  <link
+    name="imu_link">
     <inertial>
-      <origin xyz="-0.00144144958218404 8.57757393428608E-05 0.000661614742153149" rpy="0 0 0" />
-      <mass value="0.00959464796722065" />
-      <inertia 
-        ixx="1.30281027931082E-06" 
-        ixy="-1.56746685836304E-11" 
-        ixz="4.93823028160914E-11" 
-        iyy="1.27869196687108E-06" 
-        iyz="-6.22065563257926E-09" 
-        izz="2.51111665492873E-06" />
+      <origin
+        xyz="0.0055655602260675 -0.00292820256170392 -0.00130118633552501"
+        rpy="0 0 0" />
+      <mass
+        value="0.0218886437543552" />
+      <inertia
+        ixx="4.619031605549E-06"
+        ixy="6.09459742090583E-07"
+        ixz="-6.70691041223252E-07"
+        iyy="3.90481536378184E-06"
+        iyz="3.27283112860456E-07"
+        izz="6.9165264373137E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://wetexplorer_description/meshes/extra/imu_link.STL" />
+        <mesh
+          filename="package://wetexplorer_description/meshes/imu_link.STL" />
       </geometry>
-      <material name="">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://wetexplorer_description/meshes/extra/imu_link.STL" />
+        <mesh
+          filename="package://wetexplorer_description/meshes/imu_link.STL" />
       </geometry>
-    </collision> -->
+    </collision>
   </link>
-
-  <!-- IMU Joint -->
-  <joint name="imu_joint" type="fixed">
-    <origin xyz="0.00278 0 0.16463" rpy="0 0 0" />
-    <parent link="base_link" />
-    <child link="imu_link" />
-    <axis xyz="0 0 1" />
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.06745 0 0.16966"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
   </joint>
   
   <gazebo reference="imu_link">
