@@ -11,12 +11,17 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-#include <fstream>
-#include <termios.h>
-#include <fcntl.h>
-#include <unistd.h>
+                                                                #include <wetexplorer_hardware/serial_device.h>
+#include <sys/ioctl.h>
+#include <linux/serial.h>
+#include <sensor_msgs/msg/joint_state.hpp>
+
 
 using namespace std::chrono_literals;
+
+using namespace std::chrono_literals;
+
+enum class JointState { PAIRING, STATUS, CALIBRATE, MOVE };
 
 class LiftingJointInterface : public rclcpp::Node {
 public:
@@ -25,18 +30,39 @@ public:
   using GoalHandleCalibrate = rclcpp_action::ServerGoalHandle<Calibrate>;
   using GoalHandleMoveJoint = rclcpp_action::ServerGoalHandle<MoveJoint>;
 
-  LiftingJointInterface() : Node("lifting_joint_interface") {
+  LiftingJointInterface() : Node("lifting_joint_interface"), state_(JointState::PAIRING) {
     device_name_ = this->declare_parameter<std::string>("device_name", "/dev/ttyACM0");
     baudrate_ = this->declare_parameter<int>("baudrate", 115200);
     is_paired_ = false;
-    is_executing_action_ = false;
+    calibration_started_ = false;
+    move_started_ = false;
 
-    openSerialPort();
+    if (serial_.connect(device_name_, baudrate_) != 0) {
+      RCLCPP_FATAL(this->get_logger(), "Failed to connect to serial device");
+      rclcpp::shutdown();
+      return;
+    }
+
+    // Always apply DTR/RTS after successful connection
+    RCLCPP_INFO(this->get_logger(), "Applying DTR/RTS setup...");
+    int modem_bits = 0;
+    if (ioctl(serial_.getHandle(), TIOCMGET, &modem_bits) == 0) {
+      modem_bits |= TIOCM_DTR;
+      modem_bits |= TIOCM_RTS;
+      ioctl(serial_.getHandle(), TIOCMSET, &modem_bits);
+      usleep(10000);  // Let device settle
+      RCLCPP_INFO(this->get_logger(), "DTR/RTS lines toggled");
+    } else {
+      RCLCPP_WARN(this->get_logger(), "Failed to configure DTR/RTS lines");
+    }
+    
+     
 
     publisher_ = this->create_publisher<wetexplorer_hardware::msg::LiftingJointStatus>(
       "lifting_joint_status", 10);
 
-    pairing_timer_ = this->create_wall_timer(50ms, std::bind(&LiftingJointInterface::sendPairing, this));
+    //pairing_timer_ = this->create_wall_timer(50ms, std::bind(&LiftingJointInterface::sendPairing, this));
+    status_timer_ = this->create_wall_timer(33ms, std::bind(&LiftingJointInterface::loop, this));
 
     action_server_calibrate_ = rclcpp_action::create_server<Calibrate>(
       this, "calibrate",
@@ -49,88 +75,122 @@ public:
       std::bind(&LiftingJointInterface::handle_goal_move_joint, this, std::placeholders::_1, std::placeholders::_2),
       std::bind(&LiftingJointInterface::handle_cancel, this, std::placeholders::_1),
       std::bind(&LiftingJointInterface::execute_move_joint, this, std::placeholders::_1));
+
+  
+    joint_state_pub_ = this->create_publisher<sensor_msgs::msg::JointState>(
+  "/joint_states", 10);
+
   }
 
 private:
+  std::shared_ptr<GoalHandleCalibrate> active_calibrate_goal_;
+  std::shared_ptr<GoalHandleMoveJoint> active_move_goal_;
   std::string device_name_;
   int baudrate_;
-  int serial_fd_;
   bool is_paired_;
-  bool is_executing_action_;
+  bool calibration_started_;
+  bool move_started_;
+  JointState state_;
+  std::string pending_move_command_;
 
+  SerialDevice serial_;
   rclcpp::Publisher<wetexplorer_hardware::msg::LiftingJointStatus>::SharedPtr publisher_;
   rclcpp::TimerBase::SharedPtr pairing_timer_;
   rclcpp::TimerBase::SharedPtr status_timer_;
-
   rclcpp_action::Server<Calibrate>::SharedPtr action_server_calibrate_;
   rclcpp_action::Server<MoveJoint>::SharedPtr action_server_move_joint_;
-
-  void openSerialPort() {
-    serial_fd_ = open(device_name_.c_str(), O_RDWR | O_NOCTTY);
-    if (serial_fd_ < 0) {
-      RCLCPP_ERROR(this->get_logger(), "Failed to open serial port");
-      rclcpp::shutdown();
-      return;
-    }
-    struct termios tty;
-    tcgetattr(serial_fd_, &tty);
-    cfsetispeed(&tty, baudrate_);
-    cfsetospeed(&tty, baudrate_);
-    tty.c_cflag |= (CLOCAL | CREAD);
-    tty.c_cflag &= ~CSIZE;
-    tty.c_cflag |= CS8;
-    tty.c_cflag &= ~PARENB;
-    tty.c_cflag &= ~CSTOPB;
-    tcsetattr(serial_fd_, TCSANOW, &tty);
-  }
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
 
   void sendPairing() {
     RCLCPP_INFO(this->get_logger(), "Executing sendPairing()");
-    if (is_paired_) return;   
+    if (is_paired_) return;
 
-    ssize_t bytes_written = write(serial_fd_, "PAIRING\r", 8);
-    if (bytes_written != 8) {
-      RCLCPP_WARN(this->get_logger(), "PAIRING command may not have been fully written (wrote %ld bytes)", bytes_written);
-    } else {
-      RCLCPP_INFO(this->get_logger(), "PAIRING command written successfully (%ld bytes)", bytes_written);
-    }
-    std::string response = readSerial(1000);
+    serial_.writeLine("PAIRING\r");
+    rclcpp::sleep_for(1ms);
+    std::string response = serial_.readLine(1000);
     RCLCPP_INFO(this->get_logger(), "Pairing response: '%s'", response.c_str());
-    if (response == "PAIRED") {
+
+    if (response == "PAIRED\n") {
       RCLCPP_INFO(this->get_logger(), "Device Paired");
       is_paired_ = true;
-      pairing_timer_->cancel();
-      startStatusPolling();
-    }
-    else {
-      RCLCPP_INFO(this->get_logger(), "Device not Paired, trying again");
+      state_ = JointState::STATUS;
+      //pairing_timer_->cancel();
     }
   }
 
-  void startStatusPolling() {
-    RCLCPP_INFO(this->get_logger(), "Executing startStatusPolling()");
-    status_timer_ = this->create_wall_timer(33ms, [this]() {
-      if (!is_executing_action_) {
-        write(serial_fd_, "STATUS\r", 7);
-        std::string resp = readSerial(30);
-        RCLCPP_INFO(this->get_logger(), "Pairing response: '%s'", resp.c_str());
+  void loop() {
+    std::string command;
+    if (!is_paired_ && state_ != JointState::PAIRING) {
+      state_ = JointState::PAIRING;
+    }
+
+    std::string resp;
+
+    switch (state_) {
+      case JointState::PAIRING:{
+        RCLCPP_INFO(this->get_logger(), "Pairing CONTROLLER");        
+        serial_.writeLine("PAIRING\r");
+        rclcpp::sleep_for(1ms);
+        std::string response = serial_.readLine(1000);
+        RCLCPP_INFO(this->get_logger(), "Pairing response: '%s'", response.c_str());    
+        if (response == "PAIRED") {
+          RCLCPP_INFO(this->get_logger(), "Device Paired");
+          is_paired_ = true;
+          state_ = JointState::STATUS;}        
+        break;}
+      case JointState::STATUS:
+        RCLCPP_INFO(this->get_logger(), "CHECKING STATUS");  
+        serial_.writeLine("STATUS\r");
+        resp = serial_.readLine(1000);
+        RCLCPP_INFO(this->get_logger(), "Status response: '%s'", resp.c_str());    
         if (!resp.empty()) publishStatus(resp);
-      }
-    });
-  }
-
-  std::string readSerial(int timeout_ms) {
-    std::string result;
-    char c;
-    auto start = std::chrono::steady_clock::now();
-    while (std::chrono::steady_clock::now() - start < std::chrono::milliseconds(timeout_ms)) {
-      int n = read(serial_fd_, &c, 1);
-      if (n > 0) {
-        if (c == '\n') break;
-        result += c;
-      }
+        break;
+      case JointState::CALIBRATE:
+        RCLCPP_INFO(this->get_logger(), "CALIBRATING LINEAR DISTANCE");
+        if(!calibration_started_){
+          serial_.writeLine("CALIBRATE\r");
+          calibration_started_ = true;}
+        resp = serial_.readLine(1000);
+        RCLCPP_INFO(this->get_logger(), "Calibration response: '%s'", resp.c_str());
+        if (resp == "CALIBRATION DONE") {
+          if (active_calibrate_goal_) {
+            auto result = std::make_shared<Calibrate::Result>();
+            result->success = true;
+            active_calibrate_goal_->succeed(result);
+            active_calibrate_goal_.reset();
+          }
+          calibration_started_ = false;
+          state_ = JointState::STATUS;
+        } else if (resp == "CALIBRATING") {
+          RCLCPP_INFO(this->get_logger(), "Still calibrating...");
+        }
+        break;
+      case JointState::MOVE:
+        RCLCPP_INFO(this->get_logger(), "MOVING LIFT");
+        if(!move_started_){
+          serial_.writeLine(pending_move_command_);
+          move_started_ = true;}
+        resp = serial_.readLine(1000);
+        RCLCPP_INFO(this->get_logger(), "Status response: '%s'", resp.c_str());
+        if (resp.find("GOAL REACHED") != std::string::npos) {
+          if (active_move_goal_) {
+            auto result = std::make_shared<MoveJoint::Result>();
+            result->success = true;
+            active_move_goal_->succeed(result);
+            active_move_goal_.reset();
+          }
+          move_started_ = false;
+          state_ = JointState::STATUS;
+        } else if (!resp.empty()) {
+          publishStatus(resp);
+          if (active_move_goal_) {
+            auto feedback = std::make_shared<MoveJoint::Feedback>();
+            feedback->distance_mm = std::stoi(resp.substr(1, 3));
+            active_move_goal_->publish_feedback(feedback);
+          }
+        }
+        break;
     }
-    return result;
   }
 
   void publishStatus(const std::string &data) {
@@ -143,16 +203,38 @@ private:
     msg.contact_switch_1 = data[9] == '1';
     msg.contact_switch_2 = data[11] == '1';
     msg.contact_switch_3 = data[13] == '1';
-    msg.calibration_state = false;  // default unless changed
+    msg.calibration_state = (state_ == JointState::CALIBRATE);
     publisher_->publish(msg);
+    publishJointState(msg.distance_mm);
   }
+
+
+  void publishJointState(double position_mm) {
+  sensor_msgs::msg::JointState joint_msg;
+  joint_msg.header.stamp = this->get_clock()->now();
+  joint_msg.name.push_back("lift_joint");
+  joint_msg.position.push_back(position_mm / 1000.0);  // convert mm to meters
+  joint_state_pub_->publish(joint_msg);
+}
+
 
   rclcpp_action::GoalResponse handle_goal_calibrate(const rclcpp_action::GoalUUID &, std::shared_ptr<const Calibrate::Goal>) {
     return is_paired_ ? rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE : rclcpp_action::GoalResponse::REJECT;
   }
 
-  rclcpp_action::GoalResponse handle_goal_move_joint(const rclcpp_action::GoalUUID &, std::shared_ptr<const MoveJoint::Goal>) {
-    return is_paired_ ? rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE : rclcpp_action::GoalResponse::REJECT;
+  rclcpp_action::GoalResponse handle_goal_move_joint(
+    const rclcpp_action::GoalUUID & uuid,
+    std::shared_ptr<const MoveJoint::Goal> goal)
+  {
+    if (active_move_goal_ && active_move_goal_->is_active()) {
+      RCLCPP_INFO(this->get_logger(), "Canceling active goal to accept a new one.");
+      active_move_goal_->abort(std::make_shared<MoveJoint::Result>());
+      active_move_goal_.reset();
+      state_ = JointState::STATUS;
+    }
+    move_started_ = false;
+    return is_paired_ ? rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE
+                      : rclcpp_action::GoalResponse::REJECT;
   }
 
   rclcpp_action::CancelResponse handle_cancel(const std::shared_ptr<void>) {
@@ -160,48 +242,16 @@ private:
   }
 
   void execute_calibrate(const std::shared_ptr<GoalHandleCalibrate> goal_handle) {
-    RCLCPP_INFO(this->get_logger(), "Executing execute_calibrate()");
-    is_executing_action_ = true;
-    write(serial_fd_, "CALIBRATE\r", 6);
-    rclcpp::Rate rate(20);
-    while (rclcpp::ok()) {
-      write(serial_fd_, "CALIBRATE\r", 6);
-      std::string resp = readSerial(20);
-      RCLCPP_INFO(this->get_logger(), "Pairing response: '%s'", resp.c_str());
-      if (resp == "CALIBRATION DONE") break;
-      rate.sleep();
-    }
-    auto result = std::make_shared<Calibrate::Result>();
-    result->success = true;
-    goal_handle->succeed(result);
-    is_executing_action_ = false;
+    active_calibrate_goal_ = goal_handle;
+    state_ = JointState::CALIBRATE;
   }
 
   void execute_move_joint(const std::shared_ptr<GoalHandleMoveJoint> goal_handle) {
-    is_executing_action_ = true;
+    active_move_goal_ = goal_handle;  
     std::stringstream cmd;
-    cmd << "MV " << goal_handle->get_goal()->distance_mm << "\n";
-    write(serial_fd_, cmd.str().c_str(), cmd.str().length());
-
-    auto start_time = this->now();
-    rclcpp::Rate rate(30);
-    while (rclcpp::ok()) {
-      std::string resp = readSerial(10);
-      if (!resp.empty()) {
-        auto feedback = std::make_shared<MoveJoint::Feedback>();
-        feedback->distance_mm = std::stoi(resp.substr(1, 3));
-        goal_handle->publish_feedback(feedback);
-        publishStatus(resp);
-      }
-      if ((this->now() - start_time).seconds() > 3.0) break;
-      rate.sleep();
-    }
-
-    auto result = std::make_shared<MoveJoint::Result>();
-    result->success = true;
-    goal_handle->succeed(result);
-    is_executing_action_ = false;
-  }
+    cmd << "MV " << goal_handle->get_goal()->distance_mm << "\r";
+    pending_move_command_ = cmd.str(); 
+    state_ = JointState::MOVE;  }
 };
 
 int main(int argc, char **argv) {
