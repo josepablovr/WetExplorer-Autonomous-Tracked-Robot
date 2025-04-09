@@ -29,24 +29,39 @@ int SerialDevice::connect(const std::string& port, int baudrate) {
     disconnect();
   }
 
+  // STEP 1: Kick USB CDC with open-close
+  int kick_fd = open(port.c_str(), O_RDWR | O_NOCTTY);
+  if (kick_fd != SERIAL_INVALID_HANDLE) {
+    close(kick_fd);
+    usleep(10000);  // short delay
+  }
+
+  // STEP 2: Now open the actual handle
   handle_ = open(port.c_str(), O_RDWR | O_NOCTTY);
   if (handle_ == SERIAL_INVALID_HANDLE) {
     RCLCPP_ERROR(rclcpp::get_logger("SerialDevice"), "Failed to open serial port.");
     return SERIAL_ERROR;
-  } 
+  }
+
+  // STEP 3: Toggle DTR/RTS
   int modem_bits = 0;
   ioctl(handle_, TIOCMGET, &modem_bits);
   modem_bits &= ~TIOCM_DTR;
   ioctl(handle_, TIOCMSET, &modem_bits);
   usleep(10000);
-  modem_bits |= TIOCM_DTR;
+  modem_bits |= TIOCM_DTR | TIOCM_RTS;
   ioctl(handle_, TIOCMSET, &modem_bits);
   usleep(10000);
 
   RCLCPP_INFO(rclcpp::get_logger("SerialDevice"), "Opened port '%s' successfully.", port.c_str());
 
+  // STEP 4: Configure port settings (simulate SET_LINE_CODING)
   termios tty{};
-  tcgetattr(handle_, &tty);
+  if (tcgetattr(handle_, &tty) != 0) {
+    RCLCPP_ERROR(rclcpp::get_logger("SerialDevice"), "Failed to get termios attributes");
+    close(handle_);
+    return SERIAL_ERROR;
+  }
 
   cfsetospeed(&tty, baudrate);
   cfsetispeed(&tty, baudrate);
@@ -63,7 +78,11 @@ int SerialDevice::connect(const std::string& port, int baudrate) {
   tty.c_cc[VTIME] = 1;
 
   tcflush(handle_, TCIFLUSH);
-  tcsetattr(handle_, TCSANOW, &tty);
+  if (tcsetattr(handle_, TCSANOW, &tty) != 0) {
+    RCLCPP_ERROR(rclcpp::get_logger("SerialDevice"), "Failed to apply termios attributes");
+    close(handle_);
+    return SERIAL_ERROR;
+  }
 
   return SERIAL_SUCCESS;
 }
