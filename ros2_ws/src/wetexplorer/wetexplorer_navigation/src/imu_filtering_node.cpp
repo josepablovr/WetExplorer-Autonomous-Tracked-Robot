@@ -1,211 +1,178 @@
+// ROS 2 port of the SensorOffsetCorrector node
+
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <geometry_msgs/msg/transform_stamped.hpp>
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2/LinearMath/Matrix3x3.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2_ros/transform_broadcaster.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <Eigen/Geometry>
+#include <memory>
 #include <cmath>
-#include <array>
-#include <optional>
-#include <vector>
 
-class SensorOffsetCorrector : public rclcpp::Node
-{
+class SensorOffsetCorrector : public rclcpp::Node {
 public:
-    SensorOffsetCorrector() : Node("sensor_offset_corrector"), publish_transform_(false)
-    {
-        imu_sub_ = this->create_subscription<sensor_msgs::msg::Imu>(
-            "/imu/data", 10,
-            std::bind(&SensorOffsetCorrector::imuCallback, this, std::placeholders::_1));
+  SensorOffsetCorrector() : Node("sensor_offset_corrector"), publish_transform(false), acceleration_calibration(false) {
+    imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
+      "/imu/data_transformed", 10,
+      std::bind(&SensorOffsetCorrector::imuCallback, this, std::placeholders::_1));
 
-        imu_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data_filtered", 10);
-        gravity_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/gravity", 10);
+    imu_publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data_filtered", 10);
+    imu_publisher2_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/gravity", 10);
 
-        if (publish_transform_)
-            tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
+    br_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
 
-        alpha_acc_ = 0.05;
-        alpha_ang_vel_ = 0.5;
-        alpha_grav_ = 0.3;
+    alpha_acc = 0.05;
+    alpha_ang_vel = 0.5;
+    alpha_grav = 0.3;
 
-        sample_frequency_ = 250.0;
-        cutoff_frequency_ = 50.0;
-        max_acc_ = 1.0;
-        max_vel_ = 1.0;
-        min_acc_ = 0.01;
-        max_acc_grav_ = 9.8 + max_acc_;
-        calibration_time_ = 0.1;
+    prev_acc = Eigen::Vector3d::Zero();
+    prev_ang_vel = Eigen::Vector3d::Zero();
+    prev_grav = Eigen::Vector3d::Zero();
 
-        acceleration_calibration_ = false;
-    }
+    initial_yaw = last_yaw = yaw_drift = yaw_output = 0.0;
+
+    max_acc = 1.0;
+    max_vel = 1.0;
+    max_acc_grav = 9.81 + max_acc;
+    min_acc = 0.01;
+    calibration_time = 0.1;
+    gravity_magnitude = 0.0;
+  }
 
 private:
-    // ROS interfaces
-    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub_;
-    rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_pub_, gravity_pub_;
-    std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
-
-    // Parameters and state
-    bool publish_transform_;
-    double alpha_acc_, alpha_ang_vel_, alpha_grav_;
-    double sample_frequency_, cutoff_frequency_;
-    double max_acc_, max_vel_, min_acc_;
-    double max_acc_grav_;
-    double calibration_time_;
-
-    bool acceleration_calibration_;
-    std::optional<rclcpp::Time> init_calib_time_;
-    std::optional<double> gravity_magnitude_;
-
-    std::array<double, 3> prev_acc_{};
-    std::array<double, 3> prev_ang_vel_{};
-    std::array<double, 3> prev_grav_{};
-    std::optional<double> initial_yaw_;
-    double yaw_offset_ = 0.0, yaw_drift_ = 0.0, yaw_output_ = 0.0;
-
-    double saturate(double value, double min_value, double max_value)
-    {
-        return std::max(min_value, std::min(value, max_value));
+  void imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg) {
+    if (!acceleration_calibration) {
+      calibrateAcceleration(msg);
+      return;
     }
 
-    double lowPassFilter(double new_val, std::optional<double> prev_val, double alpha)
-    {
-        return prev_val ? alpha * new_val + (1.0 - alpha) * *prev_val : new_val;
+    double roll, pitch, yaw;
+    tf2::Quaternion quat;
+    tf2::fromMsg(msg->orientation, quat);
+    tf2::Matrix3x3(quat).getRPY(roll, pitch, yaw);
+
+    roll = roll + M_PI;
+    pitch = -pitch;
+    yaw = -yaw;
+
+    if (initial_yaw == 0.0) initial_yaw = yaw;
+    yaw -= initial_yaw;
+    last_yaw = yaw;
+    yaw += yaw_drift;
+    yaw_output = yaw;
+
+    tf2::Quaternion corrected_quat;
+    corrected_quat.setRPY(roll, pitch, yaw_output);
+
+    sensor_msgs::msg::Imu corrected_imu = *msg;
+    corrected_imu.orientation = tf2::toMsg(corrected_quat);
+
+    Eigen::Vector3d grav(msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
+    Eigen::Vector3d filtered_grav = lowPassFilter(grav, prev_grav, alpha_grav);    
+    filtered_grav = saturateVector(filtered_grav, -max_acc_grav, max_acc_grav);
+    
+    Eigen::Vector3d g = gravityRemover(roll, pitch);
+    
+    Eigen::Vector3d acc = filtered_grav - g;
+    Eigen::Vector3d filtered_acc = lowPassFilter(acc, prev_acc, alpha_acc);
+    filtered_acc = saturateVector(filtered_acc, -max_acc, max_acc);
+    filtered_acc = accRejection(filtered_acc);
+
+    Eigen::Vector3d ang_vel(msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z);
+    Eigen::Vector3d filtered_ang_vel = lowPassFilter(ang_vel, prev_ang_vel, alpha_ang_vel);
+    filtered_ang_vel = saturateVector(filtered_ang_vel, -max_vel, max_vel);
+
+    prev_acc = filtered_acc;
+    prev_ang_vel = filtered_ang_vel;
+    prev_grav = filtered_grav;
+
+    corrected_imu.angular_velocity.x = filtered_ang_vel.x();
+    corrected_imu.angular_velocity.y = filtered_ang_vel.y();
+    corrected_imu.angular_velocity.z = filtered_ang_vel.z();
+
+    corrected_imu.linear_acceleration.x = filtered_acc.x();
+    corrected_imu.linear_acceleration.y = filtered_acc.y();
+    corrected_imu.linear_acceleration.z = filtered_acc.z();
+
+    imu_publisher_->publish(corrected_imu);
+
+    corrected_imu.linear_acceleration.x = g.x();
+    corrected_imu.linear_acceleration.y = g.y();
+    corrected_imu.linear_acceleration.z = g.z();
+
+    imu_publisher2_->publish(corrected_imu);
+
+    if (publish_transform) {
+      geometry_msgs::msg::TransformStamped t;
+      t.header.stamp = this->now();
+      t.header.frame_id = "world";
+      t.child_frame_id = "base_link";
+      t.transform.rotation = corrected_imu.orientation;
+      br_->sendTransform(t);
     }
+  }
 
-    double accRejection(double acc)
-    {
-        if (std::abs(acc) <= min_acc_) return 0.0;
-        return acc < 0.0 ? acc + min_acc_ : acc - min_acc_;
+  Eigen::Vector3d lowPassFilter(const Eigen::Vector3d& new_val, const Eigen::Vector3d& prev_val, double alpha) {
+    return prev_val.isZero() ? new_val : alpha * new_val + (1 - alpha) * prev_val;
+  }
+
+  Eigen::Vector3d saturateVector(const Eigen::Vector3d& vec, double min_val, double max_val) {
+    Eigen::Vector3d result = vec;
+    for (int i = 0; i < 3; ++i) {
+      result[i] = std::max(std::min(vec[i], max_val), min_val);
     }
+    return result;
+  }
 
-    std::tuple<double, double> calculateAngles(double ax, double ay, double az)
-    {
-        double roll = std::atan2(ay, std::sqrt(ax * ax + az * az));
-        double pitch = std::atan2(-ax, std::sqrt(ay * ay + az * az));
-        return {roll, pitch};
+  Eigen::Vector3d accRejection(const Eigen::Vector3d& acc) {
+    Eigen::Vector3d result = acc;
+    for (int i = 0; i < 3; ++i) {
+      if (fabs(acc[i]) <= min_acc) result[i] = 0.0;
+      else if (acc[i] < 0.0) result[i] += min_acc;
+      else result[i] -= min_acc;
     }
+    return result;
+  }
 
-    std::tuple<double, double, double> anglesToVector(double roll, double pitch, double magnitude)
-    {
-        double ax = -magnitude * std::sin(pitch);
-        double ay = magnitude * std::sin(roll) * std::cos(pitch);
-        double az = magnitude * std::cos(roll) * std::cos(pitch);
-        return {ax, ay, az};
+  void calibrateAcceleration(const sensor_msgs::msg::Imu::SharedPtr& msg) {
+    if (!init_calib_time_.nanoseconds()) {
+      init_calib_time_ = this->now();
+    } else {
+      rclcpp::Time now = this->now();
+      Eigen::Vector3d grav(msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
+      Eigen::Vector3d filtered_grav = lowPassFilter(grav, prev_grav, 0.001);
+      if ((now - init_calib_time_).seconds() >= calibration_time) {
+        gravity_magnitude = filtered_grav.norm();
+        RCLCPP_INFO(this->get_logger(), "GRAVITY MAGNITUDE: %f", gravity_magnitude);
+        acceleration_calibration = true;
+      }
     }
+  }
 
-    void calibrateAcceleration(const sensor_msgs::msg::Imu &msg)
-    {
-        if (!init_calib_time_) {
-            init_calib_time_ = now();
-            return;
-        }
+  Eigen::Vector3d gravityRemover(double roll, double pitch) {
+    Eigen::Vector3d g;
+    g.x() = -gravity_magnitude * sin(pitch);
+    g.y() = gravity_magnitude * sin(roll) * cos(pitch);
+    g.z() = gravity_magnitude * cos(roll) * cos(pitch);
+    return g;
+  }
 
-        double gx = lowPassFilter(msg.linear_acceleration.x, prev_grav_[0], 0.001);
-        double gy = lowPassFilter(msg.linear_acceleration.y, prev_grav_[1], 0.001);
-        double gz = lowPassFilter(msg.linear_acceleration.z, prev_grav_[2], 0.001);
+  bool publish_transform;
+  double alpha_acc, alpha_ang_vel, alpha_grav, max_acc, max_vel, max_acc_grav, min_acc;
+  double initial_yaw, yaw_drift, yaw_output, last_yaw, calibration_time, gravity_magnitude;
+  bool acceleration_calibration;
+  rclcpp::Time init_calib_time_;
 
-        if ((now() - *init_calib_time_).seconds() >= calibration_time_) {
-            gravity_magnitude_ = 9.7;
-            acceleration_calibration_ = true;
-            RCLCPP_INFO(this->get_logger(), "Gravity magnitude calibrated: %f", *gravity_magnitude_);
-        }
-    }
-
-    void imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg)
-    {
-        if (!acceleration_calibration_) {
-            calibrateAcceleration(*msg);
-            return;
-        }
-
-        tf2::Quaternion q_orig(
-            msg->orientation.x,
-            msg->orientation.y,
-            msg->orientation.z,
-            msg->orientation.w);
-
-        double roll, pitch, yaw;
-        tf2::Matrix3x3(q_orig).getRPY(roll, pitch, yaw);
-
-        roll += M_PI;     // add 180 deg
-        pitch = -pitch;   // negate pitch
-        yaw = -yaw;
-
-        if (!initial_yaw_) initial_yaw_ = yaw;
-        yaw = yaw - *initial_yaw_ + yaw_offset_;
-        yaw_output_ = yaw + yaw_drift_;
-
-        tf2::Quaternion q_corrected;
-        q_corrected.setRPY(roll, pitch, yaw_output_);
-        q_corrected.normalize();
-
-        auto corrected = *msg;
-        corrected.orientation = tf2::toMsg(q_corrected);
-
-        std::array<double, 3> filtered_grav = {
-            saturate(lowPassFilter(msg->linear_acceleration.x, prev_grav_[0], alpha_grav_), -max_acc_grav_, max_acc_grav_),
-            saturate(lowPassFilter(msg->linear_acceleration.y, prev_grav_[1], alpha_grav_), -max_acc_grav_, max_acc_grav_),
-            saturate(lowPassFilter(msg->linear_acceleration.z, prev_grav_[2], alpha_grav_), -max_acc_grav_, max_acc_grav_)
-        };
-        prev_grav_ = filtered_grav;
-
-        auto [gx, gy, gz] = anglesToVector(roll, pitch, *gravity_magnitude_);
-
-        std::array<double, 3> acc = {
-            saturate(lowPassFilter(filtered_grav[0] - gx, prev_acc_[0], alpha_acc_), -max_acc_, max_acc_),
-            saturate(lowPassFilter(filtered_grav[1] - gy, prev_acc_[1], alpha_acc_), -max_acc_, max_acc_),
-            saturate(lowPassFilter(filtered_grav[2] - gz, prev_acc_[2], alpha_acc_), -max_acc_, max_acc_)
-        };
-
-        for (auto &a : acc) a = accRejection(a);
-        prev_acc_ = acc;
-
-        corrected.linear_acceleration.x = acc[0];
-        corrected.linear_acceleration.y = acc[1];
-        corrected.linear_acceleration.z = acc[2];
-
-        std::array<double, 3> ang = {
-            saturate(lowPassFilter(msg->angular_velocity.x, prev_ang_vel_[0], alpha_ang_vel_), -max_vel_, max_vel_),
-            saturate(lowPassFilter(msg->angular_velocity.y, prev_ang_vel_[1], alpha_ang_vel_), -max_vel_, max_vel_),
-            saturate(lowPassFilter(msg->angular_velocity.z, prev_ang_vel_[2], alpha_ang_vel_), -max_vel_, max_vel_)
-        };
-        prev_ang_vel_ = ang;
-
-        corrected.angular_velocity.x = ang[0];
-        corrected.angular_velocity.y = ang[1];
-        corrected.angular_velocity.z = ang[2];
-
-        corrected.orientation_covariance = {
-            0.0001, 0, 0,
-            0, 0.0001, 0,
-            0, 0, 0.0001
-        };
-        corrected.angular_velocity_covariance = {
-            0.0001225, 0, 0,
-            0, 0.0001225, 0,
-            0, 0, 0.0001225
-        };
-        corrected.linear_acceleration_covariance = {
-            0.000864, 0, 0,
-            0, 0.000864, 0,
-            0, 0, 0.000864
-        };
-
-        imu_pub_->publish(corrected);
-
-        corrected.linear_acceleration.x = gx;
-        corrected.linear_acceleration.y = gy;
-        corrected.linear_acceleration.z = gz;
-        gravity_pub_->publish(corrected);
-    }
+  Eigen::Vector3d prev_acc, prev_ang_vel, prev_grav;
+  rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscriber_;
+  rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_publisher_, imu_publisher2_;
+  std::shared_ptr<tf2_ros::TransformBroadcaster> br_;
 };
 
-int main(int argc, char **argv)
-{
-    rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<SensorOffsetCorrector>());
-    rclcpp::shutdown();
-    return 0;
+int main(int argc, char **argv) {
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<SensorOffsetCorrector>());
+  rclcpp::shutdown();
+  return 0;
 }
