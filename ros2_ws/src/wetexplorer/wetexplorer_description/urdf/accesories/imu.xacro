@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu">
 
   <link
-    name="imu_link">
+    name="imu_link_target">
     <inertial>
       <origin
         xyz="0.0055655602260675 -0.00292820256170392 -0.00130118633552501"
@@ -42,11 +42,31 @@
     </collision>
   </link>
   <joint
-    name="imu_joint"
+    name="imu_joint_target"
     type="fixed">
     <origin
       xyz="0.06745 0 0.16966"
       rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link_target" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+  <link
+    name="imu_link">    
+  </link>
+
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.06745 0 0.16966"
+      rpy="-3.141592654 0 0" />
     <parent
       link="base_link" />
     <child
@@ -55,7 +75,7 @@
       xyz="0 0 0" />
   </joint>
   
-  <gazebo reference="imu_link">
+  <gazebo reference="imu_link_target">
       <material>Gazebo/Grey</material>
       <sensor name="imu_sensor" type="imu">
         <always_on>true</always_on>
