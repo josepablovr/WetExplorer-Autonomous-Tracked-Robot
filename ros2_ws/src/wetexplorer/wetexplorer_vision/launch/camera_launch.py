@@ -7,6 +7,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
+
+
 def generate_launch_description():
     # Declare launch arguments
     config_file_arg = DeclareLaunchArgument(
@@ -19,7 +21,7 @@ def generate_launch_description():
     json_file_path_arg = DeclareLaunchArgument(
         'preset_file',
         default_value=os.path.join(
-            get_package_share_directory('wetexplorer_vision'), 'config', 'HighAccuracyPreset.json'),
+            get_package_share_directory('wetexplorer_vision'), 'config', 'hdensity.json'),
         description='Path to the RealSense preset file'
     )
     
