@@ -24,7 +24,7 @@ setup(
     entry_points={
     'console_scripts': [
         'model_converter = wetexplorer_vision_predator.model_converter:main',
-        'pose = wetexplorer_vision_predator.demo:main'
+        'pose = wetexplorer_vision_predator.publish_pose_node:main'
     ],
 },
 

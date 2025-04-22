@@ -6,13 +6,13 @@ import numpy as np
 from .registration_predator import Predator  # Import the function
 from cv_bridge import CvBridge
 from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
-
+from std_srvs.srv import Trigger
 from sensor_msgs.msg import CameraInfo, Image
 from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallbackGroup
 class PosePublisherNode(Node):
     def __init__(self):
         super().__init__('pose_publisher_node')
-        self.declare_parameter('parent_frame', 'camera_link')  # Parent frame
+        self.declare_parameter('parent_frame', 'camera_color_optical_frame')  # Parent frame
         self.declare_parameter('child_frame', 'object')  # Child frame
         self.parent_frame = self.get_parameter('parent_frame').value
         self.child_frame = self.get_parameter('child_frame').value
@@ -20,59 +20,79 @@ class PosePublisherNode(Node):
         # Initialize a TransformBroadcaster
         self.tf_broadcaster = TransformBroadcaster(self)
 
-        
+        self.max_iterations = 5
 
-        self.registration = Predator()
+        self.registration = None
 
         best_effort_qos = QoSProfile(
             reliability=QoSReliabilityPolicy.BEST_EFFORT,
             history=QoSHistoryPolicy.KEEP_LAST,
-            depth=10  # Specify the queue size
+            depth=1  # Specify the queue size
         )
+        self.pointcloud = None
 
-
-        self.camera_callback_group = MutuallyExclusiveCallbackGroup()
-        self.publish_callback_group = MutuallyExclusiveCallbackGroup()
+        #self.camera_callback_group = MutuallyExclusiveCallbackGroup()
+        #self.publish_callback_group = MutuallyExclusiveCallbackGroup()
 
         # Subscriptions
         self.camera_info_sub = self.create_subscription(
             CameraInfo,
-            '/camera/camera/aligned_depth_to_color/camera_info',
+            '/camera/depth/camera_info',
             self.camera_info_callback,
-            qos_profile=best_effort_qos,
-            callback_group=self.camera_callback_group
+            qos_profile=best_effort_qos
+            #callback_group=self.camera_callback_group
         )
         self.depth_image_sub = self.create_subscription(
             Image,
-            '/camera/masked_depth_image',
+            '/camera/masked_depth',
             self.depth_image_callback,
-            qos_profile=best_effort_qos,
-            callback_group=self.
-            camera_callback_group
+            qos_profile=best_effort_qos
+            #callback_group=self.camera_callback_group
         )
 
 
-        # self.timer = self.create_timer(
-        #     1,  # Publish at 10 Hz
-        #     self.publish_transform,
-        #     callback_group=self.camera_callback_group
-        # )
+        # Service client to trigger transform publishing
+        self.service_client = self.create_service(
+            Trigger,
+            'trigger_publish_transform',
+            self.handle_trigger
+        )
+        self.get_logger().info('Service server for publishing transform ready.')
 
 
         self.bridge = CvBridge()
         self.camera_info = None
         self.depth_image = None
 
+    def handle_trigger(self, request, response):
+        
+        self.get_logger().info('Service request received. Publishing transform...')
+
+        if self.registration is None:
+            self.registration = Predator()
+            self.registration.initialize()
+        else:
+            self.get_logger().info('Initialized Class.')            
+
+
+        self.publish_transform()
+        response.success = True
+        response.message = 'Transform published successfully.'
+        return response
+    
     def camera_info_callback(self, msg):
         self.camera_info = msg
-        self.get_logger().info('Received Camera info.')
-        self.publish_transform()
+        #self.get_logger().info('Received Camera info.')
+        
 
     def depth_image_callback(self, msg):
         self.depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="passthrough")
+        self.pointcloud = self.generate_pointcloud()
+        #self.publish_transform()
+        
         self.get_logger().info('Received Depth image.')
 
-    def generate_pointcloud(self):
+    def generate_pointcloud2(self):
         if self.camera_info is None or self.depth_image is None:
             self.get_logger().error('Missing camera info or depth image.')
             return None
@@ -93,13 +113,44 @@ class PosePublisherNode(Node):
                     points.append([x, y, z])
         return np.array(points, dtype=np.float32)
     
+
+    def generate_pointcloud(self):
+        if self.camera_info is None or self.depth_image is None:
+            self.get_logger().error('Missing camera info or depth image.')
+            return None
+
+        h, w = self.depth_image.shape
+        u, v = np.meshgrid(np.arange(w), np.arange(h))
+
+        z = self.depth_image * 0.01
+        x = (u - self.camera_info.k[2]) * z / self.camera_info.k[0]
+        y = (v - self.camera_info.k[5]) * z / self.camera_info.k[4]
+
+        mask = z > 0
+        pointcloud = np.stack((x[mask], y[mask], z[mask]), axis=-1)
+        return pointcloud
+    
     def publish_transform(self):
         try:
             # Call the Predate_Pose function to get the transformation matrix
             
-            points = self.generate_pointcloud()
-            transformation_matrix = self.registration.run_Estimation(points)
-
+            
+            self.get_logger().info('Running Estimation...')
+            current_iterations = 0
+            while True:
+                transformation_matrix = self.registration.run_Estimation(self.pointcloud).copy()
+                # self.get_logger().info('Checking Registration ...')
+                # if self.registration.validate_object_transform(transformation_matrix):
+                #     self.get_logger().info('Registration Quality meet the requirements - GOOD')
+                #     break
+                # elif current_iterations > self.max_iterations:
+                #     self.get_logger().error('Registration Failed.')
+                #     return False
+                # else:
+                #     current_iterations += 1
+                #     self.get_logger().info('Running Estimation... Again')
+                break
+                
             # Ensure it's a NumPy array and divide translation by 10 if needed
             transformation_matrix = np.array(transformation_matrix).copy()
             transformation_matrix[:3, 3] /= 10
@@ -166,13 +217,18 @@ class PosePublisherNode(Node):
         return q
 
 def main(args=None):
+    # rclpy.init(args=args)
+    # node = PosePublisherNode()
+    # executor = rclpy.executors.MultiThreadedExecutor()
+    # executor.add_node(node)
+    # executor.spin()
+    # node.destroy_node()
+    # rclpy.shutdown()
+
     rclpy.init(args=args)
     node = PosePublisherNode()
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(node)
-    executor.spin()
+    rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
-
 if __name__ == '__main__':
     main()
