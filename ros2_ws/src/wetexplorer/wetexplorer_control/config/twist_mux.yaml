@@ -9,8 +9,12 @@ twist_mux:
         topic   : twist_marker_server/cmd_vel
         timeout : 0.5
         priority: 8
-      external:
+      nav_low:
         topic   : commands/cmd_vel
+        timeout : 0.5
+        priority: 2    
+      nav_high:
+        topic   : cmd_vel
         timeout : 0.5
         priority: 1
     locks:

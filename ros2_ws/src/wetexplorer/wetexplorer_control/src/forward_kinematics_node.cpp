@@ -3,6 +3,7 @@
 #include <nav_msgs/msg/odometry.hpp>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <sensor_msgs/msg/joint_state.hpp>
 #include <cmath>
 #include <string>
 #include <sstream>
@@ -30,6 +31,11 @@ public:
         // Publish to /odometry/forward_kinematics
         odom_pub_ = this->create_publisher<nav_msgs::msg::Odometry>(
             "/odometry/forward_kinematics", 10);
+
+        joint_state_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10);
+        pos_left_ = 0.0;
+        pos_right_ = 0.0;
+            
     }
 
 private:
@@ -75,7 +81,25 @@ private:
         double V_x = (v_L + v_R) / 2.0;
         double theta_dot = (v_R - v_L) / tracks_separation_;
 
+        
+        double dt = (this->now() - last_time_).seconds();
+        pos_left_ += omega_L * dt;
+        pos_right_ += omega_R * dt;
+
+        sensor_msgs::msg::JointState js_msg;
+        js_msg.header.stamp = this->now();
+        js_msg.name = {
+        "sprocket_left_joint", "sprocket_right_joint",
+        "track_left_joint", "track_right_joint"
+        };
+        js_msg.position = {
+        pos_left_, pos_right_,
+        0.0, 0.0
+        };
+
+        joint_state_pub_->publish(js_msg);
         publishOdometry(V_x, theta_dot);
+
     }
 
     // Publish a nav_msgs/Odometry with updated pose
@@ -118,6 +142,9 @@ private:
     // Subscriptions/Pubs
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr velocity_sub_;
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
+    double pos_left_, pos_right_;
+
 
     // Robot parameters
     double tracks_separation_;

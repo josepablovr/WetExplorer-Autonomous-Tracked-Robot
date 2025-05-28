@@ -17,12 +17,13 @@ public:
 
   JoyLiftController() : Node("joy_lift_controller"), current_position_mm_(0) {
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
-      "/joy_teleop/joy", 10, std::bind(&JoyLiftController::joyCallback, this, _1));
+      "/joy_teleop/joy", 1, std::bind(&JoyLiftController::joyCallback, this, _1));
 
     joint_sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "/joint_states", 10, std::bind(&JoyLiftController::jointCallback, this, _1));
 
     action_client_ = rclcpp_action::create_client<MoveJoint>(this, "/move_joint");
+    direction_ = 0;
 
     RCLCPP_INFO(this->get_logger(), "JoyLiftController node started.");
   }
@@ -33,6 +34,7 @@ private:
   rclcpp_action::Client<MoveJoint>::SharedPtr action_client_;
 
   double current_position_mm_;
+  double direction_;
 
   void jointCallback(const sensor_msgs::msg::JointState::SharedPtr msg) {
     for (size_t i = 0; i < msg->name.size(); ++i) {
@@ -42,6 +44,8 @@ private:
       }
     }
   }
+
+
 
   void joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg) {
     if (msg->axes.empty()) return;
@@ -53,13 +57,28 @@ private:
 
     int new_goal = static_cast<int>(current_position_mm_);
 
+    RCLCPP_INFO(this->get_logger(), "Current Distance: %d mm", new_goal);
     if (direction == 1.0f) {
-      new_goal -=  5;
+      new_goal -=  30;
+      direction_ = -1.0f;
+      new_goal = std::clamp(new_goal, 0, 300);
+      sendGoal(new_goal);
     } else if (direction == -1.0f) {
-      new_goal += 5;
+      new_goal += 30;
+      direction_ = 1.0f;
+      new_goal = std::clamp(new_goal, 0, 300);
+      sendGoal(new_goal);
     }
-    new_goal = std::clamp(new_goal, 0, 300);
-    sendGoal(new_goal);
+    else if (direction == 0.0f){
+      new_goal = new_goal + direction_*5.0;
+      if (direction_ != 0.0) {
+        new_goal = std::clamp(new_goal, 0, 300);
+        sendGoal(new_goal);
+      }
+      direction_ = 0.0;
+    }
+    
+    
   }
   
   void sendGoal(int target_mm) {
