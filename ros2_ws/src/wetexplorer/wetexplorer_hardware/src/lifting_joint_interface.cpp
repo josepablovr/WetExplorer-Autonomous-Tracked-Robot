@@ -178,6 +178,8 @@ private:
         RCLCPP_INFO(this->get_logger(), "MOVING LIFT");
         
         if(!move_started_){
+       
+          RCLCPP_INFO(this->get_logger(), "Command: '%s'", pending_move_command_.c_str());
           serial_.writeLine(pending_move_command_);
           move_started_ = true;}        
         resp = serial_.readLine(1000);
@@ -189,7 +191,7 @@ private:
             active_move_goal_->succeed(result);
             active_move_goal_.reset();
           }
-          move_started_ = false;
+          
           resp = serial_.readLine(10);
           state_ = JointState::STATUS;
         } else if (!resp.empty()) {
@@ -242,9 +244,10 @@ private:
       active_move_goal_->abort(std::make_shared<MoveJoint::Result>());
       active_move_goal_.reset();
       state_ = JointState::STATUS;
+      move_started_ = false;
       serial_.readLine(10);
     }
-    move_started_ = false;
+    
     return is_paired_ ? rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE
                       : rclcpp_action::GoalResponse::REJECT;
   }
