@@ -17,6 +17,17 @@ public:
       radius_sprocket_(0.075),
       x_(0.0),
       y_(0.0),
+      cov_x_(0.0),
+      cov_y_(0.0),
+      cov_theta_(0.0),
+      alpha1_(0.000118),
+      alpha2_(0.35),
+      alpha3_(0.0),
+      alpha4_(0.15),
+      alpha5_(7.61e-5),
+      alpha6_(9e-6),
+      offset_bvx_(1.2e-4),
+      offset_bomega_(5e-6),
       theta_(0.0),
       last_time_(this->now())
     {
@@ -74,69 +85,102 @@ private:
         publishOdometry(V_x, theta_dot);
     }
 
-    void publishOdometry(double linear_velocity, double angular_velocity)
+   
+
+    void publishOdometry(double V, double omega)
     {
         auto current_time = this->now();
         double dt = (current_time - last_time_).seconds();
 
-        theta_ += angular_velocity * dt;
-        x_ += linear_velocity * dt * std::cos(theta_);
-        y_ += linear_velocity * dt * std::sin(theta_);
+        // --- Model variances (expected values, not samples) ---
+        double e_vx = alpha1_ * V + alpha2_ * omega + offset_bvx_;
+        double e_vy = alpha3_ * V + alpha4_ * omega;
+        double e_theta = alpha5_ * V + alpha6_ * omega + offset_bomega_;
 
-        nav_msgs::msg::Odometry odom_msg;
-        odom_msg.header.stamp = current_time;
-        odom_msg.header.frame_id = "odom";
-        odom_msg.child_frame_id = "base_link";
+        double b_vx = std::pow(e_vx,2);
+        double b_vy = std::pow(e_vy,2);
+        double b_theta = std::pow(e_theta,2);
 
-        odom_msg.pose.pose.position.x = x_;
-        odom_msg.pose.pose.position.y = y_;
-        odom_msg.pose.pose.position.z = 0.0;
+
+        // --- Pose integration using midpoint rule ---
+        double delta_theta = omega * dt;
+        double theta_mid = theta_ + 0.5 * delta_theta;
+        double delta_x = V * std::cos(theta_mid) * dt;
+        double delta_y = V * std::sin(theta_mid) * dt;
+
+
+        x_ += delta_x;
+        y_ += delta_y;
+        theta_ += delta_theta;
+
+        // --- Model variances (expected values, not samples) ---
+        double e_dx = e_vx*dt ;
+        double e_dy = e_vy*dt;
+        double e_dtheta = e_theta*dt;
+
+        double b_dx = dt*b_vx;
+        double b_dy = dt*b_vy;
+        double b_dtheta = dt*b_theta;
+
+        // if (std::abs(V) <= 0.005) {
+        //     b_dx = 0.00;
+        //     b_dy = 0.00;
+        // }
+
+        // if (std::abs(omega) <= 0.005) {
+        //     b_dtheta = 0.0000;
+        // }
+
+        // --- Accumulate pose covariance ---
+        cov_x_ += b_dx;
+        cov_y_ += b_dy;
+        cov_theta_ += b_dtheta;
+
+        // --- Prepare odometry message ---
+        nav_msgs::msg::Odometry odom;
+        odom.header.stamp = current_time;
+        odom.header.frame_id = "odom";
+        odom.child_frame_id = "base_link";
+
+        odom.pose.pose.position.x = x_;
+        odom.pose.pose.position.y = y_;
+        odom.pose.pose.position.z = 0.0;
 
         tf2::Quaternion q;
         q.setRPY(0.0, 0.0, theta_);
-        odom_msg.pose.pose.orientation = tf2::toMsg(q);
+        odom.pose.pose.orientation = tf2::toMsg(q);
 
-        odom_msg.twist.twist.linear.x = linear_velocity;
-        odom_msg.twist.twist.angular.z = angular_velocity;
+        odom.twist.twist.linear.x = V;
+        odom.twist.twist.angular.z = omega;
 
+        // --- Pose covariance (x, y, yaw only) ---
+        for (int i = 0; i < 36; ++i)
+            odom.pose.covariance[i] = 0.0;
 
-        // Set covariance values
+        odom.pose.covariance[0] = cov_x_;       // x
+        odom.pose.covariance[7] = cov_y_;       // y
+        odom.pose.covariance[35] = cov_theta_;  // yaw
+        
+        // --- Twist covariance ---
         for (int i = 0; i < 36; ++i) {
             if (i == 0) {
-              
-                if (abs(linear_velocity) <= 0.05){
-                  odom_msg.twist.covariance[i] = 0.000001; 
-                }
-                else {
-                  odom_msg.twist.covariance[i] = 0.000001; 
-                }
+                odom.twist.covariance[i] = (std::abs(V) <= 0.005) ? 0.0001 : (b_vx);
             } else if (i == 7) {
-                
-                if (abs(linear_velocity) <= 0.05){
-                  odom_msg.twist.covariance[i] = 0.0001; 
-                }
-                else {
-                  odom_msg.twist.covariance[i] = 0.0001; 
-                }
-                
-            } else if (i == 35) {
-                if (abs(angular_velocity) <= 0.05){
-                  odom_msg.twist.covariance[i] = 0.00001; 
-                }
-                else {
-                  odom_msg.twist.covariance[i] = 0.5;
-                }
-                 
+                odom.twist.covariance[i] = (std::abs(omega) <= 0.005) ? 0.0001 : (b_vy);
+            }
+             else if (i == 35) {
+                odom.twist.covariance[i] = (std::abs(omega) <= 0.005) ? 0.0001 : b_theta;
             } else if (i == 14 || i == 21 || i == 28) {
-                odom_msg.twist.covariance[i] = 99999.0;
+                odom.twist.covariance[i] = 99999.0;
             } else {
-                odom_msg.twist.covariance[i] = 0.0;
+                odom.twist.covariance[i] = 0.0;
             }
         }
 
-        odom_pub_->publish(odom_msg);
+        odom_pub_->publish(odom);
         last_time_ = current_time;
     }
+
 
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
@@ -144,6 +188,23 @@ private:
     double tracks_separation_;
     double gear_ratio_;
     double radius_sprocket_;
+
+   
+
+    // --- Position covariance accumulation ---
+    double cov_x_;
+    double cov_y_;
+    double cov_theta_;
+
+    double alpha1_;
+    double alpha2_;
+    double alpha3_;
+    double alpha4_;
+    double alpha5_;
+    double alpha6_;
+    double offset_bvx_;
+    double offset_bomega_;
+
 
     double x_, y_, theta_;
     rclcpp::Time last_time_;
