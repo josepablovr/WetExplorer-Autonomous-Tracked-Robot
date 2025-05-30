@@ -18,6 +18,11 @@
   gz_type_name: "gz.msgs.IMU"
   direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
+- ros_topic_name: "imu_heading/data"
+  gz_topic_name: "imu_heading/data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
 - ros_topic_name: "navsat/fix"
   gz_topic_name: "navsat/fix"
@@ -25,6 +30,11 @@
   gz_type_name: "gz.msgs.NavSat"
   direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
+- ros_topic_name: "gps/ref"
+  gz_topic_name: "gps/ref"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
   # gz topic published by Sensors plugin (Camera)
 
@@ -66,12 +76,19 @@
   direction: "GZ_TO_ROS"
 
  # gz topic published by Sensors plugin (TRACK CMD)
-- ros_topic_name: "/wetexplorer/cmd_vel"
+- ros_topic_name: "/WetExplorer/cmd_vel"
   gz_topic_name: "/model/wetexplorer/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist" 
   direction: "ROS_TO_GZ"
 
+
+ # gz topic published by Sensors plugin (TRACK CMD)
+- ros_topic_name: "/WetExplorer/cmd_vel"
+  gz_topic_name: "/model/wetexplorer/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "ignition.msgs.Twist" 
+  direction: "GZ_TO_ROS"
 
 # Robot Odometry
 - ros_topic_name: "/simulation/pose"
