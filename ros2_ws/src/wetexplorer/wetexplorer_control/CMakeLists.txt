@@ -30,6 +30,8 @@ ament_target_dependencies(forward_kinematics_node
   geometry_msgs
   tf2
   tf2_geometry_msgs
+  sensor_msgs
+
 )
 
 
