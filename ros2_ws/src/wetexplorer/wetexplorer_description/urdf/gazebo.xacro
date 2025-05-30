@@ -10,7 +10,7 @@
             <joint_name>track_right_joint</joint_name>
             <joint_name>sprocket_right_joint</joint_name>
             <joint_name>sprocket_left_joint</joint_name>     
-            <!-- <joint_name>lift_joint</joint_name>               -->
+            <joint_name>lift_joint</joint_name>              
         </plugin>
     </gazebo>
 

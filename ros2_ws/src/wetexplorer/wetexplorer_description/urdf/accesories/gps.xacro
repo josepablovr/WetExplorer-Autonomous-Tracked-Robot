@@ -116,11 +116,50 @@
 
   <gazebo reference="gps_link">
       <material>Gazebo/Black</material>
-      <sensor name="gps_sensor" type="navsat">
+      <sensor name="gps_sensor" type="gps">
         <always_on>1</always_on>
         <update_rate>5.0</update_rate>
         <topic>navsat/fix</topic>
         <gz_frame_id>base_link</gz_frame_id>
+        <gps>
+          <position_sensing>
+            <horizontal>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00000001</stddev>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00000001</stddev>
+              </noise>
+            </vertical>
+          </position_sensing>
+        </gps>
+      </sensor>
+
+       <sensor name="gps_sensor_truth" type="gps">
+        <always_on>1</always_on>
+        <update_rate>50.0</update_rate>
+        <topic>gps/ref</topic>
+        <gz_frame_id>base_link</gz_frame_id>
+        <gps>
+          <position_sensing>
+            <horizontal>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0000000</stddev>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0000000</stddev>
+              </noise>
+            </vertical>
+          </position_sensing>
+        </gps>
       </sensor>
   </gazebo>
 

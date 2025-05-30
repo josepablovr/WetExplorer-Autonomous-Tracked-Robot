@@ -46,7 +46,7 @@
     name="camera1_joint"
     type="fixed">
     <origin
-      xyz="0.76557 0.117 0.35625"
+      xyz="0.76557 0.117 0.455898357942271"
       rpy="0 1.3963 0" />
     <parent
       link="base_link" />
@@ -74,6 +74,39 @@
   </joint>
 
 
+  <link name="camera1_calib">      
+    </link>
+
+
+  <joint name="camera1_calib_joint"
+      type="fixed">
+      <origin
+        xyz="0.768379569054 0.148829653859 0.454491734505"
+        rpy="0 0 0 " />
+      <parent
+        link="base_link" />
+      <child
+        link="camera1_calib" />
+      <axis
+        xyz="0 0 0" />
+  </joint>
+  <link name="camera_link">      
+    </link>
+  <joint name="orbbec_joint"
+      type="fixed">
+      <origin
+        xyz="0.0 0.023878177 0.0"
+        rpy="0 1.3963 0" />
+      <parent
+        link="camera1_calib" />
+      <child
+        link="camera_link" />
+      <axis
+        xyz="0 0 0" />
+  </joint>
+
+
+
 
   <gazebo reference="camera1_link">
       <material>Gazebo/Black</material>
@@ -91,7 +124,7 @@
                   <height>480</height>
               </image>
               <clip>
-                  <near>0.3</near>
+                  <near>0.1</near>
                   <far>5.0</far>
               </clip>
           </camera>
