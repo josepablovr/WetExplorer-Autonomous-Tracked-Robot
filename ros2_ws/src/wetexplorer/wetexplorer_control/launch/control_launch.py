@@ -3,8 +3,10 @@ from launch.substitutions import EnvironmentVariable, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 import os
-
-
+from launch.actions import (DeclareLaunchArgument, SetEnvironmentVariable, 
+                            IncludeLaunchDescription, SetLaunchConfiguration)
+from ament_index_python.packages import get_package_share_directory
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     """Launch WetExplorer control stack with optional simulated clock.
 
@@ -39,6 +41,7 @@ def generate_launch_description():
         "config",
         "twist_mux.yaml",
     ])
+    ld = LaunchDescription()
 
     # ──────────────────────────────────────────────────────────────────────────────
     # Nodes
@@ -93,69 +96,25 @@ def generate_launch_description():
         output="screen",
         parameters=[sim_time_param],
     )
-   
 
-    if sim_env:
-        camera1_topic_info = "/camera1/camera_info"
-        camera2_topic_info = "/camera2/camera_info"
-        camera1_topic_depth = "/camera1/depth_raw"
-        camera2_topic_depth = "/camera2/depth_raw"
-        camera1_topic_image = "/camera1/image_raw"
-        camera2_topic_image = "/camera2/image_raw"
+    if not sim_env:
+        print("USING REAL TIME PARAMETERS")
+        robot_description = IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource([os.path.join(
+                        get_package_share_directory('wetexplorer_description' ),'launch','description_tracks.launch.py'
+                    )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'false'}.items()
+        )
+        ld.add_action(robot_description)
     else:
-        camera1_topic_info = "/camera/depth/camera_info"
-        camera2_topic_info = "/camera2/camera_info"
-        camera1_topic_depth = "/camera/depth/image_raw"
-        camera2_topic_depth = "/camera2/depth_raw"
-        camera1_topic_image = "/camera/color/image_raw"
-        camera2_topic_image = "/camera2/image_raw"
-        
+        print("USING SIM TIME PARAMETERS")
 
 
-    node_depth_mux = Node(
-        package="topic_tools",
-        executable="mux",
-        name="mux_depth",
-        output="screen",
-        arguments=[
-            "/camera/depth/raw",
-            camera1_topic_depth,
-            camera2_topic_depth,
-        ],
-        parameters=[sim_time_param],
-    )
-
-    node_image_mux = Node(
-        package="topic_tools",
-        executable="mux",
-        name="mux_color",
-        output="screen",
-        arguments=[
-            "/camera/image/raw",
-            camera1_topic_image,
-            camera2_topic_image,
-        ],
-        parameters=[sim_time_param],
-    )
-
-    node_camera_info_mux = Node(
-        package="topic_tools",
-        executable="mux",
-        name="mux_info",
-        output="screen",
-        arguments=[
-            "/camera/camera_info",
-            camera1_topic_info,
-            camera2_topic_info,
-        ],
-        parameters=[sim_time_param],
-    )
+    
 
     # ──────────────────────────────────────────────────────────────────────────────
     # Launch description
     # ──────────────────────────────────────────────────────────────────────────────
-    ld = LaunchDescription()
-
+    
     # Tele‑op first for readability
     ld.add_action(node_joy)
     ld.add_action(node_teleop_twist_joy)
@@ -165,8 +124,5 @@ def generate_launch_description():
     ld.add_action(node_safe_commands)
     ld.add_action(node_joy_lift)
 
-    ld.add_action(node_depth_mux)
-    ld.add_action(node_image_mux)
-    ld.add_action(node_camera_info_mux)
 
     return ld

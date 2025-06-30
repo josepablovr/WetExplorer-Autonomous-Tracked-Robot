@@ -39,7 +39,7 @@ int main() {
     double theta_measured = 0.5; // Example angular velocity (rad/s)
     
     // Alpha coefficients
-    double alpha1 = 0.01;
+    double alpha1 = 0.005;
     double alpha2 = 0.025;
     double alpha3 = 0.001;
     double alpha4 = 0.1;
