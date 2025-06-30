@@ -125,7 +125,7 @@ void RingLayer::ringsCallback(
 {
   rings_.clear();
   for (auto & m : msg->markers) {
-    double radius = 0.5 * m.scale.x;
+    double radius = 0.2; 
     rings_.emplace_back(m.pose.position, radius);
   }
   need_recalculation_ = true;
@@ -168,7 +168,7 @@ void RingLayer::updateCosts(
     unsigned int cx, cy;
     if (!master_grid.worldToMap(center.x, center.y, cx, cy)) {
       continue;
-    }
+    }    
     int radius_cells = std::ceil(rr / res);
 
     for (int dy = -radius_cells; dy <= radius_cells; ++dy) {
