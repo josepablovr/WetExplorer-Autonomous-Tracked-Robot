@@ -14,6 +14,7 @@ find_package(rclcpp_action REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
+
 # Generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LiftingJointStatus.msg"

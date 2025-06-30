@@ -190,6 +190,7 @@ private:
             result->success = true;
             active_move_goal_->succeed(result);
             active_move_goal_.reset();
+            move_started_ = false;
           }
           
           resp = serial_.readLine(10);
@@ -239,6 +240,8 @@ private:
     const rclcpp_action::GoalUUID & uuid,
     std::shared_ptr<const MoveJoint::Goal> goal)
   {
+
+    RCLCPP_INFO(this->get_logger(), "Received new goal: %d mm", goal->distance_mm);
     if (active_move_goal_ && active_move_goal_->is_active()) {
       RCLCPP_INFO(this->get_logger(), "Canceling active goal to accept a new one.");
       active_move_goal_->abort(std::make_shared<MoveJoint::Result>());
