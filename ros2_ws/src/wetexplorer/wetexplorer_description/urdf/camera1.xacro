@@ -114,7 +114,7 @@
       <sensor name="depth_camera1" type="depth">
           <pose> 0 0 0 0 0 0 </pose>
           <visualize>true</visualize>
-          <update_rate>5</update_rate>
+          <update_rate>15</update_rate>
           <camera>
               <camera_info_topic>camera1/camera_info</camera_info_topic>
               <horizontal_fov>1.518</horizontal_fov>
@@ -134,7 +134,7 @@
       <sensor name="visual_camera1" type="camera">
           <pose> 0 0 0 0 0 0 </pose>
           <visualize>true</visualize>
-          <update_rate>5</update_rate>
+          <update_rate>15</update_rate>
           <camera>
               <camera_info_topic>camera1/camera_info</camera_info_topic>
               <horizontal_fov>1.518</horizontal_fov>

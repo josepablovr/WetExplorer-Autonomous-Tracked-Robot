@@ -25,7 +25,7 @@
   <xacro:include filename="$(find wetexplorer_description)/urdf/wheel_controller.xacro"/>
   <xacro:include filename="$(find wetexplorer_description)/urdf/accesories/lift_frame.xacro"/>
   <xacro:include filename="$(find wetexplorer_description)/urdf/camera1.xacro"/>
-  <xacro:include filename="$(find wetexplorer_description)/urdf/camera2.xacro"/>
+  <!-- <xacro:include filename="$(find wetexplorer_description)/urdf/camera2.xacro"/> -->
   <xacro:include filename="$(find wetexplorer_description)/urdf/gazebo.xacro"/>
   <xacro:include filename="$(find wetexplorer_description)/urdf/lift_mechanism.xacro"/>
   <xacro:property name="mu" value="0.7"/>

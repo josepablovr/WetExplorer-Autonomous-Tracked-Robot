@@ -67,8 +67,36 @@
       velocity="0.2" />
     <dynamics damping="3.0" friction="0.3"/>
   </joint>
+
+  <link name="chamber_link">
+  </link>
+
+
+  
+  <joint
+    name="chamber_fixed_joint"
+    type="fixed">
+    <origin  
+      xyz="0.53912 -0.0001 -0.15"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-0.2"
+      upper="0"
+      effort="100"
+      velocity="0.2" />
+    <dynamics
+      damping="0.05"
+      friction="0.3" />
+  </joint>
+
   <link
-    name="chamber_link">
+    name="chamber_link_22">
     <inertial>
       <origin
         xyz="0.000409317672121268 2.94724821534855E-06 0.143226956075467"
@@ -116,7 +144,7 @@
     <parent
       link="lift_link" />
     <child
-      link="chamber_link" />
+      link="chamber_link_22" />
     <axis
       xyz="0 0 0" />
     <limit
