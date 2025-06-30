@@ -22,143 +22,9 @@ from lib.utils import load_obj, setup_seed,natural_key, load_config
 from lib.benchmark_utils import ransac_pose_estimation, to_o3d_pcd, get_blue, get_yellow, to_tensor
 from lib.trainer import Trainer
 from lib.loss import MetricLoss
-from scipy.spatial.transform import Rotation as R
-
 import shutil
 setup_seed(0)
-
-
-class Predator():
-
-    def __init__(self):
-        self.config_path = os.path.join(cwd, 'configs/test/indoor.yaml')
-        self.initialized = False
-        
-
-    def initialize(self):
-        config = load_config(self.config_path)
-        config = edict(config)
-        if config.gpu_mode:
-            config.device = torch.device('cuda')
-        else:
-            config.device = torch.device('cpu')
-        
-        # model initialization
-        config.architecture = [
-            'simple',
-            'resnetb',
-            ]
-        for i in range(config.num_layers-1):
-            config.architecture.append('resnetb_strided')
-            config.architecture.append('resnetb')
-            config.architecture.append('resnetb')
-        for i in range(config.num_layers-2):
-            config.architecture.append('nearest_upsample')
-            config.architecture.append('unary')
-        config.architecture.append('nearest_upsample')
-        config.architecture.append('last_unary')
-        config.model = KPFCNN(config).to(config.device)
-        print("Config Done")
-        # create dataset and dataloader
-        #neighborhood_limits = np.array([38, 36, 36, 38])
-        info_train = load_obj(config.train_info)
-        train_set = IndoorDataset(info_train,config,data_augmentation=True)
-        _, self.neighborhood_limits = get_dataloader(dataset=train_set,
-                                        batch_size=config.batch_size,
-                                        shuffle=True,
-                                        num_workers=0,
-                                        )
-        self.demo_set = ThreeDMatchDemo(config, config.src_pcd, config.tgt_pcd)
-                
-        # load pretrained weights
-        assert config.pretrain != None
-        state = torch.load(config.pretrain,weights_only=False)
-        config.model.load_state_dict(state['state_dict'])
-
-        self.config = config
-        self.load_CAD_model()
-        self.initialized = True
-        return True
-        
-    def load_CAD_model(self):
-        self.demo_set = ThreeDMatchDemo(self.config, self.config.src_pcd, self.config.tgt_pcd)
-        self.demo_set._get_CAD_model()
-        
-    
-    def update_PointCloud(self, tgt_array):
-        self.demo_set._update_Real_model(tgt_array)
-        self.demo_loader, _ = get_dataloader(dataset=self.demo_set,
-                                        batch_size=self.config.batch_size,
-                                        shuffle=False,
-                                        num_workers=1,
-                                        neighborhood_limits=self.neighborhood_limits)
-
-    def run_Estimation(self, tgt_array):
-        self.update_PointCloud(tgt_array)
-        print("Running Predator...")
-        transformation = estimate(self.config, self.demo_loader)        
-        print("Finsihed Predator...")
-        return transformation.copy()
-
-        
-    
-
-
-
-    def validate_object_transform(self,tsfm, offset_world = 70, threshold = 30):
-        """
-        Validate the object transformation by checking its rotation in the world frame.
-
-        Args:
-            tsfm (numpy.ndarray): 4x4 transformation matrix of the object in the origin frame.
-            offset_world (float): Offset applied to the world frame rotation (in degrees).
-            threshold (float): Maximum allowed deviation for rotations (in degrees).
-
-        Returns:
-            bool: True if all conditions are met, False otherwise.
-        """
-        # Extract the rotation matrix (top-left 3x3 part of tsfm)
-        rotation_object = tsfm[:3, :3].copy()
-
-        # Define the rotations to form the world frame
-        rotation_x_neg90 = R.from_euler('x', 0, degrees=True).as_matrix()
-        rotation_z_neg90 = R.from_euler('z', 0, degrees=True).as_matrix()
-        rotation_offset = R.from_euler('x', offset_world, degrees=True).as_matrix()
-
-        # Combine rotations for the world frame
-        rotation_world_base = np.dot(rotation_z_neg90, rotation_x_neg90)
-        rotation_world = np.dot(rotation_offset, rotation_world_base)
-
-        # Transform the object's rotation into the world frame
-        R_world_inv = rotation_world.T  # For a rotation matrix, the inverse is the transpose
-        R_object_in_world = np.dot(R_world_inv, rotation_object)
-
-        # Convert the object's rotation in the world frame to Euler angles
-        r_object_in_world = R.from_matrix(R_object_in_world)
-        euler_object_in_world = r_object_in_world.as_euler('xyz', degrees=True)
-
-        # Extract individual rotations in the world frame
-        rotation_x_world, rotation_y_world, rotation_z_world = euler_object_in_world
-
-        # Check conditions
-        is_z_within_limit_world = abs(rotation_z_world) < threshold
-        is_x_within_limit_world = abs(rotation_x_world) < threshold
-
-        # Print results (optional for debugging)
-        print("Object in World Frame Rotations:")
-        print(f"X: {rotation_x_world}°, Y: {rotation_y_world}°, Z: {rotation_z_world}°")
-        print(f"Z rotation within limit (< {threshold}°): {is_z_within_limit_world}")
-        print(f"X rotation within limit (< {threshold}°): {is_x_within_limit_world}")
-
-        # Return True if all conditions are met, otherwise False
-        return is_z_within_limit_world and is_x_within_limit_world
-
-
-
-        
-       
-   
-
+from scipy.spatial.transform import Rotation as R
 
 class ThreeDMatchDemo(Dataset):
     """
@@ -174,9 +40,6 @@ class ThreeDMatchDemo(Dataset):
         self.config = config
         self.src_path = src_path
         self.tgt_path = tgt_path
-        self.config = config
-        self.src_path = src_path
-        self.tgt_path = tgt_path
 
 
         self.src_pcd = None       
@@ -186,39 +49,42 @@ class ThreeDMatchDemo(Dataset):
    
    
 
-
     def __len__(self):
         return 1
-    
-
-    def _get_CAD_model(self):
-        src_pcd = o3d.io.read_point_cloud(self.src_path)        
-        src_pcd = src_pcd.voxel_down_sample(0.025)      
-        self.src_pcd = np.array(src_pcd.points).astype(np.float32)
-        print(f"Source Number of Points: {len(self.src_pcd)}")
-        self.src_feats=np.ones_like(self.src_pcd[:,:1]).astype(np.float32)        
-
-
-    def _update_Real_model(self, tgt_array=None):
-        if tgt_array is not None:
-            self.tgt_pcd = tgt_array
-        else:
-            tgt_pcd = o3d.io.read_point_cloud(self.tgt_path)
-            tgt_pcd = tgt_pcd.voxel_down_sample(0.025)
-            self.tgt_pcd = np.array(tgt_pcd.points).astype(np.float32)
-
-        print(f"Target Number of Points: {len(self.tgt_pcd)}")
-        self.tgt_feats=np.ones_like(self.tgt_pcd[:,:1]).astype(np.float32)        
-       
 
 
     def __getitem__(self,item): 
-        #self._update_Real_model()
+        # get pointcloud
+   
+        
+        # src_pcd = torch.load(self.src_path).to(torch.float32)
+        # src_pcd = src_pcd.numpy()        
+        # tgt_pcd = torch.load(self.tgt_path).to(torch.float32)
+        # tgt_pcd = tgt_pcd.numpy()   
+
+        # print("SOURCE")
+        
+        #print(f"Source Number of Points: {len(src_pcd)}")      
+        #print(f"Target Number of Points: {len(tgt_pcd)}")
+        
+        src_pcd = o3d.io.read_point_cloud(self.src_path)
+        tgt_pcd = o3d.io.read_point_cloud(self.tgt_path)
+        src_pcd = src_pcd.voxel_down_sample(0.0045)
+        tgt_pcd = tgt_pcd.voxel_down_sample(0.0045)
+        src_pcd = np.array(src_pcd.points).astype(np.float32)
+        tgt_pcd = np.array(tgt_pcd.points).astype(np.float32)
+        print(f"Source Number of Points: {len(src_pcd)}")      
+        print(f"Target Number of Points: {len(tgt_pcd)}")
+
+        src_feats=np.ones_like(src_pcd[:,:1]).astype(np.float32)
+        tgt_feats=np.ones_like(tgt_pcd[:,:1]).astype(np.float32)
+
+        # fake the ground truth information
         rot = np.eye(3).astype(np.float32)
         trans = np.ones((3,1)).astype(np.float32)
         correspondences = torch.ones(1,2).long()
 
-        return self.src_pcd,self.tgt_pcd,self.src_feats,self.tgt_feats,rot,trans, correspondences, self.src_pcd, self.tgt_pcd, torch.ones(1)
+        return src_pcd,tgt_pcd,src_feats,tgt_feats,rot,trans, correspondences, src_pcd, tgt_pcd, torch.ones(1)
 
 def lighter(color, percent):
     '''assumes color is rgb between (0, 0, 0) and (1,1,1)'''
@@ -230,7 +96,8 @@ def lighter(color, percent):
 
 def draw_registration_result(src_raw, tgt_raw, src_overlap, tgt_overlap, src_saliency, tgt_saliency, tsfm):
     ########################################
-    # 1. input point cloud 
+    # 1. input point cloud
+ 
     src_pcd_before = to_o3d_pcd(src_raw)
     tgt_pcd_before = to_o3d_pcd(tgt_raw)
     src_pcd_before.paint_uniform_color(get_yellow())
@@ -317,7 +184,7 @@ def estimate(config, demo_loader):
         # forward pass
        
         feats, scores_overlap, scores_saliency = config.model(inputs)  #[N1, C1], [N2, C2]
-        print("TGT and SRC Loaded")
+      
     
         pcd = inputs['points'][0]
         len_src = inputs['stack_lengths'][0][0]
@@ -355,11 +222,11 @@ def estimate(config, demo_loader):
         ########################################
         # run ransac and draw registration
         tsfm = ransac_pose_estimation(src_pcd, tgt_pcd, src_feats, tgt_feats, mutual=False)
-        #print("TSFM: ", tsfm)
+        print("TSFM: ", tsfm)
         transformation = tsfm.copy()
         #transformation[:3, 3] /= 10
-        #print("Type: ", type(transformation))
-        #print("TSFM: ", transformation)
+       
+      
 
         roll = np.radians(0)  # Rotation around X-axis
         pitch = np.radians(0)  # Rotation around Y-axis
@@ -392,15 +259,91 @@ def estimate(config, demo_loader):
         rotation_matrix[:3, :3] = R_xyz  # Set the 3x3 rotation part
         transformation = rotation_matrix @ transformation  # Apply rotation
         
-        #draw_registration_result(src_raw, tgt_raw, src_overlap, tgt_overlap, src_saliency, tgt_saliency, tsfm)
+        
+
+        src_icp = copy.deepcopy(src_pcd)
+        tgt_icp = copy.deepcopy(tgt_pcd)
+        src_icp = to_o3d_pcd(src_icp)
+        tgt_icp = to_o3d_pcd(tgt_icp)
+
+        radius_normal = 0.0045 * 2
+        src_icp.estimate_normals(o3d.geometry.KDTreeSearchParamHybrid(radius=radius_normal, max_nn=30))
+        tgt_icp.estimate_normals(o3d.geometry.KDTreeSearchParamHybrid(radius=radius_normal, max_nn=30))
+        distance_threshold_icp = 0.0045 * 0.5
+        result_icp = o3d.pipelines.registration.registration_icp(
+            src_icp, tgt_icp, distance_threshold_icp,
+            tsfm,
+            o3d.pipelines.registration.TransformationEstimationPointToPlane(),
+            o3d.pipelines.registration.ICPConvergenceCriteria(max_iteration=2000)
+        )
+        tsfm = result_icp.transformation
+
+        print("ICP: ", tsfm)
+
+        validate_object_transform(tsfm, offset_world = 70, threshold = 30)
+
+        draw_registration_result(src_raw, tgt_raw, src_overlap, tgt_overlap, src_saliency, tgt_saliency, tsfm)
         return transformation
 
 
-   
-    
+def validate_object_transform(tsfm, offset_world, threshold):
+    """
+    Validate the object transformation by checking its rotation in the world frame.
+
+    Args:
+        tsfm (numpy.ndarray): 4x4 transformation matrix of the object in the origin frame.
+        offset_world (float): Offset applied to the world frame rotation (in degrees).
+        threshold (float): Maximum allowed deviation for rotations (in degrees).
+
+    Returns:
+        bool: True if all conditions are met, False otherwise.
+    """
+    # Extract the rotation matrix (top-left 3x3 part of tsfm)
+    rotation_object = tsfm[:3, :3].copy()
+
+    # Define the rotations to form the world frame
+    rotation_x_neg90 = R.from_euler('x', 0, degrees=True).as_matrix()
+    rotation_z_neg90 = R.from_euler('z', 0, degrees=True).as_matrix()
+    rotation_offset = R.from_euler('x', offset_world, degrees=True).as_matrix()
+
+    # Combine rotations for the world frame
+    rotation_world_base = np.dot(rotation_z_neg90, rotation_x_neg90)
+    rotation_world = np.dot(rotation_offset, rotation_world_base)
+
+    # Transform the object's rotation into the world frame
+    R_world_inv = rotation_world.T  # For a rotation matrix, the inverse is the transpose
+    R_object_in_world = np.dot(R_world_inv, rotation_object)
+
+    # Convert the object's rotation in the world frame to Euler angles
+    r_object_in_world = R.from_matrix(R_object_in_world)
+    euler_object_in_world = r_object_in_world.as_euler('xyz', degrees=True)
+
+    # Extract individual rotations in the world frame
+    rotation_x_world, rotation_y_world, rotation_z_world = euler_object_in_world
+
+    # Check conditions
+    is_z_within_limit_world = abs(rotation_z_world) < threshold
+    is_x_within_limit_world = abs(rotation_x_world) < threshold
+
+    # Print results (optional for debugging)
+    print("Object in World Frame Rotations:")
+    print(f"X: {rotation_x_world}°, Y: {rotation_y_world}°, Z: {rotation_z_world}°")
+    print(f"Z rotation within limit (< {threshold}°): {is_z_within_limit_world}")
+    print(f"X rotation within limit (< {threshold}°): {is_x_within_limit_world}")
+
+    # Return True if all conditions are met, otherwise False
+    return is_z_within_limit_world and is_x_within_limit_world
+
+# Define a utility to convert a rotation matrix to a transformation matrix
+def create_transformation(rotation_matrix, translation=np.zeros(3)):
+    transformation = np.eye(4)
+    transformation[:3, :3] = rotation_matrix
+    transformation[:3, 3] = translation
+    return transformation
 
 
 def Predate_Pose():
+   
     config_path = os.path.join(cwd, 'configs/test/indoor.yaml')
     config = load_config(config_path)
     config = edict(config)
@@ -426,16 +369,17 @@ def Predate_Pose():
     config.model = KPFCNN(config).to(config.device)
     
     # create dataset and dataloader
-    info_train = load_obj(config.train_info)
-    train_set = IndoorDataset(info_train,config,data_augmentation=True)
+    neighborhood_limits = np.array([38, 36, 36, 38])
+    #info_train = load_obj(config.train_info)
+    #train_set = IndoorDataset(info_train,config,data_augmentation=True)
+    
     demo_set = ThreeDMatchDemo(config, config.src_pcd, config.tgt_pcd)
-    demo_set._get_CAD_model()
 
-    _, neighborhood_limits = get_dataloader(dataset=train_set,
-                                        batch_size=config.batch_size,
-                                        shuffle=True,
-                                        num_workers=config.num_workers,
-                                        )
+    # _, neighborhood_limits = get_dataloader(dataset=train_set,
+    #                                     batch_size=config.batch_size,
+    #                                     shuffle=True,
+    #                                     num_workers=config.num_workers,
+    #                                     )
     demo_loader, _ = get_dataloader(dataset=demo_set,
                                         batch_size=config.batch_size,
                                         shuffle=False,
@@ -446,15 +390,16 @@ def Predate_Pose():
     assert config.pretrain != None
     state = torch.load(config.pretrain,weights_only=False)
     config.model.load_state_dict(state['state_dict'])
+
+    # do pose estimation
     transformation = estimate(config, demo_loader)
     return transformation
 
 
 
+
+
+
+
 if __name__ == '__main__':
-    #Predate_Pose()
-
-
-    Registration = Predator()
-
-    Registration.run_Estimation()
+    Predate_Pose()
