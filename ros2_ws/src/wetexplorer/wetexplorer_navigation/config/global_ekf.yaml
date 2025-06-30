@@ -53,7 +53,7 @@ ekf_global_node:
     imu0_linear_acceleration_rejection_threshold: 10.0 #
     imu0_pose_rejection_threshold: 5.0           # Note the difference in parameter names
     imu0_twist_rejection_threshold: 5.0
-
+                    
     process_noise_covariance: [0.0025, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0025,  0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0,    0.00025,  0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
