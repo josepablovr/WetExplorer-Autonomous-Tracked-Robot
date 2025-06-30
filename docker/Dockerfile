@@ -1,19 +1,56 @@
 # Use ros2_humble-image as the base
 FROM ros:humble AS deps
 
+
+
+WORKDIR /ros2_ws
+SHELL ["/bin/bash", "-c"]
+
+
+
+RUN sudo rm /etc/apt/sources.list.d/ros2-latest.list
+RUN sudo rm /usr/share/keyrings/ros2-latest-archive-keyring.gpg
+
+RUN sudo apt update && sudo apt install -y curl ca-certificates
+RUN set -e \
+    && ROS_APT_SOURCE_VERSION="$(curl -fsSL https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest \
+        | grep -m1 '"tag_name"' | cut -d '"' -f4)" \
+    && curl -fsSL -o /tmp/ros2-apt-source.deb \
+        "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" \
+    && apt-get update \
+    && apt-get install -y /tmp/ros2-apt-source.deb \
+    && rm /tmp/ros2-apt-source.deb
+RUN sudo apt-get update
+RUN sudo apt-get install -y ros-humble-nav2-bringup
+
 # Update package list
 RUN apt-get update
 
 
 
 # Install sudo
-RUN apt-get install -y sudo
+RUN apt-get install -y sudo \
+    curl
 
 # Install software-properties-common
 RUN apt-get install -y software-properties-common
 
-WORKDIR /ros2_ws
-SHELL ["/bin/bash", "-c"]
+# Install ROS Dependecencies:
+RUN apt-get update && apt-get install -y --fix-missing\
+    ros-humble-urdf \
+    ros-humble-xacro \
+    ros-humble-joy \
+    ros-humble-teleop-twist-joy \
+    ros-humble-twist-stamper \
+    ros-humble-twist-mux \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-joint-state-publisher \
+    ros-humble-joint-state-publisher-gui \ 
+    ros-humble-rviz2 \   
+    ros-humble-rqt \
+    ros-humble-rqt-graph \
+    && apt-get clean
 
 # Install dependencies
 RUN apt-get update \
@@ -30,11 +67,6 @@ RUN pip3 install super-gradients==3.7.1
 RUN pip3 install lap==0.5.12    
 
 RUN pip3 install sphinx==8.0.0 sphinx-rtd-theme==3.0.0
-
-
-
-
-
 
 
 # Install system dependencies (libusb, usbutils, etc.)
@@ -56,26 +88,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install sphinx==8.0.0 sphinx-rtd-theme==3.0.0
 
 # Install Python packages via pip
-RUN pip3 install ds4drv scipy
+RUN apt-get update && pip3 install ds4drv scipy
 
 
-# Install ROS Dependecencies:
-RUN apt-get update && apt-get install -y \
-    ros-humble-urdf \
-    ros-humble-xacro \  
-    ros-humble-joy \
-    ros-humble-teleop-twist-joy \
-    ros-humble-twist-stamper \
-    ros-humble-twist-mux \
-    ros-humble-ros2-control \
-    ros-humble-ros2-controllers \
-    ros-humble-joint-state-publisher \
-    ros-humble-joint-state-publisher-gui \
-    ros-humble-ign-ros2-control \
-    ros-humble-rviz2 \   
-    ros-humble-rqt \
-    ros-humble-rqt-graph \
-    && apt-get clean
 
 # Update and install necessary dependencies
 RUN apt-get update && apt-get install -y \
@@ -91,6 +106,8 @@ RUN curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyri
     http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" \
     | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 
+
+RUN sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 # Update package lists and install gz-harmonic
 RUN apt-get update && apt-get install -y \
     gz-harmonic
@@ -207,6 +224,21 @@ RUN pip3 install --no-cache-dir --no-deps \
 
 RUN apt-get update
 
+
+#ros-humble-imu-tools
+#ros-humble-plotjuggler-ros
+#ros-humble-navigation2
+#ros-humble-robot-localization
+
+RUN apt-get install -y \
+    ros-humble-imu-tools \
+    ros-humble-plotjuggler-ros \
+    ros-humble-navigation2 \
+    ros-humble-robot-localization \
+    ros-humble-nav2-bringup \
+    ros-humble-nav2-costmap-2d \
+    && rm -rf /var/lib/apt/lists/*
+
 # Create a non-root user
 ARG USERNAME=ros
 ARG USER_UID=1000
@@ -229,7 +261,7 @@ RUN usermod -aG dialout ${USERNAME}
 # Copy config files
 COPY /config/.bashrc /home/ros/.bashrc
 COPY /config/hosts /etc/hosts
-#COPY entrypoint.sh /entrypoint.shcolco
+#COPY entrypoint.sh /entrypoint.sh
 
 
 
