@@ -3,7 +3,7 @@
 /*********************************************************************
  * BSD 3-Clause License
  * 
- * Adapted MoveTCP action server with TCP pose publishing
+ * Adapted MoveTCP action server with “ref” parameter support
  *********************************************************************/
 
 #include <memory>
@@ -40,14 +40,24 @@ public:
     goal_active_(false),
     steady_count_(0)
   {
+    // Declare and read "ref" parameter (either "odom" or "map")
+    this->declare_parameter<std::string>("ref", "map");
+    this->get_parameter("ref", ref_frame_);
+
+    // Decide odometry subscription topic based on ref_frame_
+    std::string odom_topic = (ref_frame_ == "odom") 
+                              ? "/odometry/local" 
+                              : "/odometry/global";
+
     // Publishers & subscribers
     cmd_vel_pub_ = create_publisher<geometry_msgs::msg::Twist>(
       "/commands/cmd_vel", 10);
+
     pose_pub_ = create_publisher<geometry_msgs::msg::PoseStamped>(
       "/odometry/tcp", 10);
 
     odom_sub_ = create_subscription<nav_msgs::msg::Odometry>(
-      "/odometry/global", 10,
+      odom_topic, 10,
       std::bind(&MoveTcpActionServer::odomCallback, this, std::placeholders::_1));
 
     // Action server
@@ -59,16 +69,16 @@ public:
       std::bind(&MoveTcpActionServer::handleAccepted, this, std::placeholders::_1));
 
     // Controller params
-    tolerance_ = 0.05;
+    tolerance_ = 0.03;
     max_v_      = 0.1;
     max_w_      = 0.1;
     KPxte_ = 0.0;
-    KPp_ = 1.0;
-    KPt_ = 0.1;
-    KIp_ = 0.0;
+    KPp_   = 1.0;
+    KPt_   = 0.1;
+    KIp_   = 0.0;
     KIxte_ = 0.0;
-    KIt_ = 0.0;
-    position_integral_ = 0.0;
+    KIt_   = 0.0;
+    position_integral_    = 0.0;
     orientation_integral_ = 0.0;
     cross_track_integral_ = 0.0;
   }
@@ -81,8 +91,8 @@ private:
   rclcpp_action::Server<MoveTCP>::SharedPtr                    action_server_;
 
   // TF
-  tf2_ros::Buffer        tf_buffer_;
-  tf2_ros::TransformListener tf_listener_;
+  tf2_ros::Buffer             tf_buffer_;
+  tf2_ros::TransformListener  tf_listener_;
 
   // Current TCP pose
   double cur_x_{0}, cur_y_{0}, cur_yaw_{0};
@@ -97,45 +107,59 @@ private:
   double KPp_, KPxte_, KPt_;
   double KIp_, KIxte_, KIt_;
   double position_integral_, orientation_integral_, cross_track_integral_;
+
+  // "ref" frame: "odom" or "map"
+  std::string ref_frame_;
+
   double computeDistance(double x1, double y1, double x2, double y2) {
-        return std::sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-    }
+    return std::sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
+  }
+
   // === Odometry callback: compute & publish TCP pose ===
   void odomCallback(const nav_msgs::msg::Odometry::SharedPtr /*msg*/)
   {
     try {
-      // 1) odom -> base_link
-      auto tf_map_base = tf_buffer_.lookupTransform(
-        "map", "base_link", tf2::TimePointZero);
+      // 1) ref_frame_ -> base_link
+      auto tf_ref_base = tf_buffer_.lookupTransform(
+        ref_frame_, "base_link", tf2::TimePointZero);
+
       // 2) base_link -> chamber_link
       auto tf_base_chamber = tf_buffer_.lookupTransform(
         "base_link", "chamber_link", tf2::TimePointZero);
 
-      // Rotation & translation odom->base
+      // Rotation & translation (ref->base)
       tf2::Quaternion q1; 
-      tf2::fromMsg(tf_map_base.transform.rotation, q1);
+      tf2::fromMsg(tf_ref_base.transform.rotation, q1);
       tf2::Matrix3x3 R1_mat(q1);
       Eigen::Matrix3d R1;
-      for (int i=0;i<3;++i) for (int j=0;j<3;++j)
-        R1(i,j) = R1_mat[i][j];
+      for (int i=0; i<3; ++i) {
+        for (int j=0; j<3; ++j) {
+          R1(i,j) = R1_mat[i][j];
+        }
+      }
       Eigen::Vector3d T1(
-        tf_map_base.transform.translation.x,
-        tf_map_base.transform.translation.y,
-        tf_map_base.transform.translation.z);
+        tf_ref_base.transform.translation.x,
+        tf_ref_base.transform.translation.y,
+        tf_ref_base.transform.translation.z
+      );
 
-      // Rotation & translation base->chamber
+      // Rotation & translation (base->chamber)
       tf2::Quaternion q2;
       tf2::fromMsg(tf_base_chamber.transform.rotation, q2);
       tf2::Matrix3x3 R2_mat(q2);
       Eigen::Matrix3d R2;
-      for (int i=0;i<3;++i) for (int j=0;j<3;++j)
-        R2(i,j) = R2_mat[i][j];
+      for (int i=0; i<3; ++i) {
+        for (int j=0; j<3; ++j) {
+          R2(i,j) = R2_mat[i][j];
+        }
+      }
       Eigen::Vector3d T2(
         tf_base_chamber.transform.translation.x,
         tf_base_chamber.transform.translation.y,
-        tf_base_chamber.transform.translation.z);
+        tf_base_chamber.transform.translation.z
+      );
 
-      // Combined
+      // Combined transform (ref->chamber)
       Eigen::Matrix3d R  = R1 * R2;
       Eigen::Vector3d T  = R1 * T2 + T1;
 
@@ -146,7 +170,7 @@ private:
       // Publish TCP pose
       geometry_msgs::msg::PoseStamped pose_msg;
       pose_msg.header.stamp    = this->get_clock()->now();
-      pose_msg.header.frame_id = "odom";
+      pose_msg.header.frame_id = ref_frame_;
       pose_msg.pose.position.x = x;
       pose_msg.pose.position.y = y;
       pose_msg.pose.position.z = 0.0;
@@ -160,8 +184,8 @@ private:
       cur_x_   = x;
       cur_y_   = y;
       cur_yaw_ = yaw;
-
-    } catch (const tf2::TransformException & ex) {
+    }
+    catch (const tf2::TransformException & ex) {
       RCLCPP_WARN(this->get_logger(),
                   "TF lookup failed in odomCallback: %s",
                   ex.what());
@@ -237,24 +261,36 @@ private:
         return;
       }
 
-
+      // Compute heading & control
       double alpha = std::atan2(dy, dx);
       double beta = alpha - cur_yaw_;
       beta = std::fmod(beta + M_PI, 2 * M_PI);
       if (beta < 0) beta += 2 * M_PI;
       beta -= M_PI;
 
-      double cross_track = std::sqrt(dx * dx + dy * dy) * std::sin(beta);
-      double pos_error = std::sqrt(dx * dx + dy * dy);
- 
+      double cross_track = std::sqrt(dx*dx + dy*dy) * std::sin(beta);
+      double pos_error   = std::sqrt(dx*dx + dy*dy);
+
+      // Gain scheduling
       if (pos_error >= 0.30) {
-          KPt_ = 0.5; KPp_ = 1.0; max_w_ = 0.5;
-      } else if (pos_error >= 0.10) {
-          KPt_ = 0.3; KPp_ = 1.0; max_w_ = 0.2;
-      } else if (pos_error >= 0.02) {
-          KPt_ = 0.05; KPp_ = 0.5; max_w_ = 0.05;
-      } else {
-          KPt_ = 0.0; KPp_ = 0.0; max_w_ = 0.05;
+        KPt_        = 0.5;
+        KPp_        = 1.3;
+        max_w_      = 0.5;
+      }
+      else if (pos_error >= 0.10) {
+        KPt_        = 0.3;
+        KPp_        = 1.3;
+        max_w_      = 0.2;
+      }
+      else if (pos_error >= 0.005) {
+        KPt_        = 0.1;
+        KPp_        = 1.0;
+        max_w_      = 0.05;
+      }
+      else {
+        KPt_        = 0.0;
+        KPp_        = 0.0;
+        max_w_      = 0.05;
       }
 
       double ori_error = alpha - cur_yaw_;
@@ -262,16 +298,18 @@ private:
       if (ori_error < 0) ori_error += 2 * M_PI;
       ori_error -= M_PI;
 
-      position_integral_ += pos_error;
+      position_integral_    += pos_error;
       orientation_integral_ += ori_error;
       cross_track_integral_ += cross_track;
 
-      position_integral_ = std::clamp(position_integral_, -1.0, 1.0);
+      position_integral_    = std::clamp(position_integral_, -1.0, 1.0);
       orientation_integral_ = std::clamp(orientation_integral_, -1.0, 1.0);
       cross_track_integral_ = std::clamp(cross_track_integral_, -1.0, 1.0);
 
       double v = KPp_ * pos_error + KIp_ * position_integral_;
-      double w = KPt_ * ori_error + KPxte_ * cross_track + KIt_ * orientation_integral_ + KIxte_ * cross_track_integral_;
+      double w = KPt_ * ori_error + KPxte_ * cross_track
+                 + KIt_ * orientation_integral_
+                 + KIxte_ * cross_track_integral_;
 
       v = std::clamp(v, -max_v_, max_v_);
       w = std::clamp(w, -max_w_, max_w_);

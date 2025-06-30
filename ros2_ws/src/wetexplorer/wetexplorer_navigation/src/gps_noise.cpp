@@ -40,7 +40,7 @@ private:
     // Publish modified message
     publisher_->publish(out_msg);
   }
-
+  
   rclcpp::Subscription<sensor_msgs::msg::NavSatFix>::SharedPtr subscription_;
   rclcpp::Publisher<sensor_msgs::msg::NavSatFix>::SharedPtr publisher_;
 };

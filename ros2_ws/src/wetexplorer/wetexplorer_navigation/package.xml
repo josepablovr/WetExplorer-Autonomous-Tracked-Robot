@@ -31,6 +31,11 @@
   <depend>mapviz</depend>
   <depend>mapviz_plugins</depend>
   <depend>tile_map</depend>
+  <exec_depend>rtabmap_odom</exec_depend>
+  <exec_depend>rtabmap_slam</exec_depend>
+  <exec_depend>rtabmap_util</exec_depend>
+  <exec_depend>rtabmap_rviz_plugins</exec_depend>
+  <exec_depend>rtabmap_viz</exec_depend>
 
   <!-- Testing -->
   <test_depend>ament_lint_auto</test_depend>

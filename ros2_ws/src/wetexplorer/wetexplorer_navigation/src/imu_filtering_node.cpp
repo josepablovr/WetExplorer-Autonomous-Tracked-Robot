@@ -14,7 +14,7 @@ class SensorOffsetCorrector : public rclcpp::Node {
 public:
   SensorOffsetCorrector() : Node("sensor_offset_corrector"), publish_transform(false), acceleration_calibration(false) {
     imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
-      "/imu/data_transformed", 10,
+      "/imu/data_raw", 10,
       std::bind(&SensorOffsetCorrector::imuCallback, this, std::placeholders::_1));
 
     imu_publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data_filtered", 10);

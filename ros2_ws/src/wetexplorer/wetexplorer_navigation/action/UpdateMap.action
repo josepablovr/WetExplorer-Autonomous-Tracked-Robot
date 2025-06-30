@@ -1,0 +1,10 @@
+# ============== Goal ==============
+# (no fields; calling this action means “run one localization step and update my internal map”)
+
+---
+# ============= Result ============
+geometry_msgs/PoseStamped[] poses
+
+---
+# ============ Feedback ===========
+# (none for now)
