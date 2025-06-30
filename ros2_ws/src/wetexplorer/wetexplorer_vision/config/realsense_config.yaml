@@ -14,4 +14,4 @@ align_depth:
   enable: true
 
 # Preset JSON file path (to be dynamically updated by the launch file)
-json_file_path: '/ros2_ws/src/wetexplorer/wetexplorer_vision/config/HighAccuracyPreset.json'
+json_file_path: '/ros2_ws/src/wetexplorer/wetexplorer_vision/config/hdensity.json'
