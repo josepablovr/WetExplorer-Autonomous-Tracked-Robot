@@ -194,19 +194,19 @@
         <include>
             <uri>model://wetexplorer_gazebo/models/ring</uri>
             <name>ring_1</name>
-            <pose>4.0 4.0 0.0 0 0 0</pose>
+            <pose>1.0 1.0 0.0 0 0 0</pose>
         </include>
 
         <include>
             <uri>model://wetexplorer_gazebo/models/ring</uri>
             <name>ring_2</name>
-            <pose>4.0 -4.0 0.0 0 0 0</pose>
+            <pose>-1.0 1.5 0.0 0 0 0</pose>
         </include>
 
         <include>
             <uri>model://wetexplorer_gazebo/models/ring</uri>
             <name>ring_3</name>
-            <pose>8.0 0.0 0.0 0 0 0</pose>
+            <pose>4.0 0.0 0.0 0 0 0</pose>
         </include>
 
         <spherical_coordinates>

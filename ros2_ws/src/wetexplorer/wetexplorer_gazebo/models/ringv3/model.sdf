@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <model name="ring">
+  <model name="ringv3">
     <!-- Set the model as static -->
     <static>true</static>
     
@@ -23,7 +23,7 @@
        <pose>-0.15 0.15 -0.055 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://wetexplorer_gazebo/models/ring/meshes/tube_mesh.stl</uri>
+            <uri>model://wetexplorer_gazebo/models/ringv3/meshes/ring_v3.STL</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
 <!-- 
@@ -43,7 +43,7 @@
         <pose>-0.15 0.15 -0.055 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://wetexplorer_gazebo/models/ring/meshes/tube_mesh.stl</uri>
+            <uri>model://wetexplorer_gazebo/models/ringv3/meshes/ring_v3.STL</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
@@ -53,7 +53,8 @@
           <diffuse>0 0 1 1</diffuse>   <!-- Blue diffuse color -->
           <specular>0.1 0.1 0.1 1</specular> <!-- Small specular highlight -->
           <emissive>0 0 0 1</emissive> <!-- No emissive light -->
-        </material>
+      </material>
+
       </visual>
     </link>
   </model>
