@@ -316,7 +316,7 @@
 #define _AMAX			21
 #define _ACTR			22
 #define _ADB			23
-#defClosedine _ALIN			24
+#define _ALIN			24
 #define _AINA			25
 #define _AMINA			26
 #define _AMAXA			27
