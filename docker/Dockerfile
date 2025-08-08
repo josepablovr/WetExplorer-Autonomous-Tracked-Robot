@@ -8,9 +8,6 @@ SHELL ["/bin/bash", "-c"]
 
 
 
-RUN sudo rm /etc/apt/sources.list.d/ros2-latest.list
-RUN sudo rm /usr/share/keyrings/ros2-latest-archive-keyring.gpg
-
 RUN sudo apt update && sudo apt install -y curl ca-certificates
 RUN set -e \
     && ROS_APT_SOURCE_VERSION="$(curl -fsSL https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest \
@@ -232,6 +229,7 @@ RUN apt-get update
 
 RUN apt-get install -y \
     ros-humble-imu-tools \
+    ros-humble-imu-transformer \
     ros-humble-plotjuggler-ros \
     ros-humble-navigation2 \
     ros-humble-robot-localization \
