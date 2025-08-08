@@ -29,7 +29,7 @@ private:
     void odometry_callback(const nav_msgs::msg::Odometry::SharedPtr msg) {
         RCLCPP_DEBUG(this->get_logger(), "Odometry callback triggered");
         try {
-            auto transform_odom_base_link = tf_buffer_.lookupTransform("odom", "base_link", tf2::TimePointZero);
+            auto transform_odom_base_link = tf_buffer_.lookupTransform("map", "base_link", tf2::TimePointZero);
             auto transform_base_link_chamber = tf_buffer_.lookupTransform("base_link", "chamber_link", tf2::TimePointZero);
             RCLCPP_DEBUG(this->get_logger(), "TF lookup successful for both transforms");
 
