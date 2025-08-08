@@ -1,0 +1,6 @@
+# wetexplorer_navigation/action/SpinYaw.action
+float64 target_yaw          # Goal
+---
+bool    success             # Result
+---
+float64 remaining_angle     # Feedback

@@ -28,6 +28,7 @@ find_package(nav2_costmap_2d REQUIRED)
 find_package(pluginlib         REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(wetexplorer_hardware REQUIRED)
+find_package(wetexplorer_control REQUIRED)
 
 include_directories(include)
 
@@ -37,12 +38,16 @@ add_executable(position_controller_node src/position_controller_node.cpp)
 add_executable(odometry_tcp_node src/odometry_tcp_node.cpp)
 add_executable(goal_publisher src/goal_publisher.cpp)
 add_executable(map_server_node src/map_server_node.cpp)
-add_executable(gps_noise_node src/gps_noise.cpp)
+add_executable(gps_noise_node src/gps_sim_noise.cpp)
+add_executable(heading_covariance src/heading_covariance.cpp)
+add_executable(gps_error src/gps_error_model.cpp)
 add_executable(ground_truth_node src/ground_truth.cpp)
-add_executable(error_display_node src/error_display.cpp)
+add_executable(error_display_node src/velocity_error_publisher.cpp)
 #add_executable(dummy_map_node src/dummy_map.cpp)
 add_executable(ring_path_planner src/ring_path_planner.cpp)
+add_executable(spin_control_action_server src/spin_control_action_server.cpp)
 
+add_executable(error_publisher src/position_error_publisher.cpp)
 add_executable(6d_pose_caller src/6d_pose_caller.cpp)
 
 ament_target_dependencies(6d_pose_caller rclcpp rclcpp_action sensor_msgs std_srvs)
@@ -52,6 +57,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/MoveTCP.action"
   "action/LocalizeObject.action"
   "action/UpdateMap.action"
+  "action/SpinYaw.action"
   DEPENDENCIES
     builtin_interfaces
     geometry_msgs
@@ -106,7 +112,7 @@ rosidl_target_interfaces(position_controller_node ${PROJECT_NAME} "rosidl_typesu
 rosidl_target_interfaces(ring_path_planner ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(map_server_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(6d_pose_caller ${PROJECT_NAME} "rosidl_typesupport_cpp")
-
+rosidl_target_interfaces(spin_control_action_server ${PROJECT_NAME} "rosidl_typesupport_cpp")
 ament_target_dependencies(odometry_tcp_node
   rclcpp
   nav_msgs
@@ -151,6 +157,18 @@ ament_target_dependencies(gps_noise_node
   sensor_msgs  
 )
 
+ament_target_dependencies(gps_error
+  rclcpp
+  sensor_msgs  
+  nav_msgs
+)
+
+ament_target_dependencies(heading_covariance
+  rclcpp
+  sensor_msgs  
+  nav_msgs
+)
+
 ament_target_dependencies(ground_truth_node
   rclcpp
   sensor_msgs  
@@ -164,6 +182,14 @@ ament_target_dependencies(error_display_node
   rclcpp
   sensor_msgs 
   nav_msgs
+)
+
+
+ament_target_dependencies(error_publisher
+  rclcpp
+  sensor_msgs 
+  nav_msgs
+  std_msgs
 )
 
 ament_target_dependencies(ring_path_planner
@@ -190,6 +216,14 @@ ament_target_dependencies(ring_layer_plugin
   pluginlib  
 )
 
+ament_target_dependencies(spin_control_action_server
+  rclcpp
+  rclcpp_action
+  geometry_msgs
+  nav_msgs
+  tf2
+  tf2_geometry_msgs)
+
 install(DIRECTORY launch config action
   DESTINATION share/${PROJECT_NAME}
 )
@@ -206,11 +240,15 @@ install(
     goal_publisher
     map_server_node
     gps_noise_node
+    gps_error
+    heading_covariance
     ground_truth_node
     error_display_node
     ring_path_planner
     ring_layer_plugin
     6d_pose_caller
+    spin_control_action_server
+    error_publisher
   RUNTIME DESTINATION lib/${PROJECT_NAME}
   LIBRARY DESTINATION lib/${PROJECT_NAME}
 )
