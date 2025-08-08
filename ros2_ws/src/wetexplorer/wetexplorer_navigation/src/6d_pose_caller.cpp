@@ -19,7 +19,7 @@ class PoseCaller : public rclcpp::Node
 {
 public:
   PoseCaller()
-  : Node("pose_caller"), prev_button_state_(0)
+  : Node("pose_caller"), prev_button_state_(0), prev_button_state_triangle_(0)
   {
     // 1) Create subscription to /joy_teleop/joy
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
@@ -29,7 +29,10 @@ public:
     // 2) Create an action‐client for /localize_object
     localize_client_ = rclcpp_action::create_client<LocalizeObj>(
       this, "localize_object_light");
-
+    
+    // 2) Create an action‐client for /localize_object
+    localize_client_accurate_ = rclcpp_action::create_client<LocalizeObj>(
+      this, "localize_object");
     // Wait up to a few seconds for the action server to appear
     RCLCPP_INFO(get_logger(), "Waiting for /localize_object action server...");
     if (!localize_client_->wait_for_action_server(5s)) {
@@ -46,17 +49,21 @@ private:
   void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
   {
     int current_button_state = msg->buttons[0];
-
+    int current_button_triangle_state = msg->buttons[2];
     // Detect rising edge of button 0
     if (current_button_state == 1 && prev_button_state_ == 0) {
-      RCLCPP_INFO(get_logger(), "Button 0 pressed. Sending LocalizeObject goal...");
-      send_localize_goal();
+      RCLCPP_INFO(get_logger(), "Button 0 pressed. Sending LocalizeObject Light goal...");
+      send_localize_goal(0);
+    }
+    else if (current_button_triangle_state == 1 && prev_button_state_triangle_ == 0) {
+      RCLCPP_INFO(get_logger(), "Button 2 pressed. Sending LocalizeObject goal...");
+      send_localize_goal(2);
     }
     prev_button_state_ = current_button_state;
   }
 
   // Send an empty goal to /localize_object
-  void send_localize_goal()
+  void send_localize_goal(int button)
   {
     if (!localize_client_->action_server_is_ready()) {
       RCLCPP_WARN(get_logger(),
@@ -118,13 +125,18 @@ private:
       };
 
     // Actually send the goal
-    localize_client_->async_send_goal(goal_msg, send_options);
+    if (button==0){
+      localize_client_->async_send_goal(goal_msg, send_options);}
+    else if (button==2){
+      localize_client_accurate_->async_send_goal(goal_msg, send_options);}
   }
 
   // -- members --
   rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
   rclcpp_action::Client<LocalizeObj>::SharedPtr                localize_client_;
+  rclcpp_action::Client<LocalizeObj>::SharedPtr                localize_client_accurate_;
   int prev_button_state_;
+  int prev_button_state_triangle_;
 };
 
 int main(int argc, char ** argv)
