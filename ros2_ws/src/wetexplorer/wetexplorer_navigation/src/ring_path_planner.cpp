@@ -10,6 +10,7 @@
 #include <nav2_msgs/action/navigate_to_pose.hpp>
 #include <nav2_msgs/action/spin.hpp>
 #include <wetexplorer_navigation/action/move_tcp.hpp>
+#include <wetexplorer_navigation/action/spin_yaw.hpp>
 #include <wetexplorer_navigation/action/update_map.hpp>
 #include <wetexplorer_hardware/action/move_joint.hpp>
 #include <tf2_ros/buffer.h>
@@ -30,7 +31,8 @@ using namespace std::chrono_literals;
 
 using GetState   = lifecycle_msgs::srv::GetState;
 using Navigate   = nav2_msgs::action::NavigateToPose;
-using Spin   = nav2_msgs::action::Spin;
+//using Spin   = nav2_msgs::action::Spin;
+using Spin   = wetexplorer_navigation::action::SpinYaw;
 using MoveTCP    = wetexplorer_navigation::action::MoveTCP;
 using UpdateMap  = wetexplorer_navigation::action::UpdateMap;
 using MoveJoint = wetexplorer_hardware::action::MoveJoint;
@@ -46,7 +48,7 @@ using LocalizeObjGoalHandle = rclcpp_action::ClientGoalHandle<LocalizeObj>;
 class RingPathPlanner : public rclcpp::Node
 {
 public:
-  enum class State { IDLE, START, GLOBAL_APPROACH, ROUGH_OBJECT_LOCALIZATION, SPIN, OBJECT_LOCALIZATION, LOCAL_APPROACH, PICK_UP, PUT_DOWN, BACKUP, FINISHED };
+  enum class State { IDLE, START, GLOBAL_APPROACH, ROUGH_OBJECT_LOCALIZATION, SPIN, FORWARD, OBJECT_LOCALIZATION, LOCAL_APPROACH, PICK_UP, PUT_DOWN, BACKUP, FINISHED };
   
   RingPathPlanner()
   : Node("ring_path_planner"),
@@ -60,6 +62,7 @@ public:
     dist_(0.0, 1.5),
     start_yaw_(0.0),
     current_yaw_(0.0),
+    pos_error_(0.0),
     yaw_correction_(0.0),
     tf_buffer_(this->get_clock()),
     tf_listener_(tf_buffer_)
@@ -98,10 +101,10 @@ public:
 
     // Action & service clients
     nav2_client_       = rclcpp_action::create_client<Navigate>(this, "/navigate_to_pose");
-    nav2_spin_client_       = rclcpp_action::create_client<Spin>(this, "/spin");
+    nav2_spin_client_       = rclcpp_action::create_client<Spin>(this, "/spin_control"); //spin
     local_client_      = rclcpp_action::create_client<MoveTCP>(this, "/MoveTCP");
     update_map_client_ = rclcpp_action::create_client<UpdateMap>(this, "/update_map");
-    localize_client_ = rclcpp_action::create_client<LocalizeObj>(this, "/localize_object_light");
+    localize_client_ = rclcpp_action::create_client<LocalizeObj>(this, "/localize_object");
     bt_client_         = create_client<GetState>("/bt_navigator/get_state");
     back_up_client_ = rclcpp_action::create_client<BackUp>(this, "backup");
     action_client_ = rclcpp_action::create_client<MoveJoint>(this, "/move_joint");
@@ -209,6 +212,9 @@ private:
         break;
       case State::SPIN:
         doSpin();
+        break;
+      case State::FORWARD:
+        doForward();
         break;
       case State::OBJECT_LOCALIZATION:
         doObjectLocalization();
@@ -344,7 +350,7 @@ private:
         RCLCPP_INFO(get_logger(),
           "Global approach succeeded → waiting 7 s before update_map");
         delay_timer_ = create_wall_timer(
-          7s,
+          4s,
           [this]() {
             delay_timer_->cancel();
             transitionTo(State::ROUGH_OBJECT_LOCALIZATION);
@@ -447,10 +453,14 @@ private:
 
     //--------------------------------------------------------------------
     // 2.  Compute bearing robot → object  (robot position already in odom)
-    //--------------------------------------------------------------------
-    const double dx = ps_odom.pose.position.x - current_pos_.first;
-    const double dy = ps_odom.pose.position.y - current_pos_.second;
-    const double yaw_to_object = std::atan2(dy, dx)-current_yaw_;            // radians, (-π, π]
+    //-------------------------------------------------------------------
+    
+    
+    
+    double dx = ps_odom.pose.position.x - current_pos_.first;
+    double dy = ps_odom.pose.position.y - current_pos_.second;
+    best_path_[current_goal_idx_] = {ps_odom.pose.position.x, ps_odom.pose.position.y};
+    double yaw_to_object = std::atan2(dy, dx);            // radians, (-π, π]
     yaw_correction_ = yaw_to_object;
     //--------------------------------------------------------------------
     // 3.  Use it (log, store, convert to quaternion …)
@@ -514,6 +524,7 @@ private:
               pose_stamped.header.frame_id.c_str());
             
             processLocalizedObject(wrapped_result.result->pose);
+            
             transitionTo(State::SPIN);
             break;
           }
@@ -544,13 +555,18 @@ private:
       return;
     }
 
+    auto [gx, gy] = best_path_[current_goal_idx_];
+    double dx  = gx - current_pos_.first;
+    double dy  = gy - current_pos_.second;
+    pos_error_   = std::sqrt(dx*dx + dy*dy);
+
     //------------------------------------------------------------------
     // 2.  Build the goal
     //------------------------------------------------------------------
     Spin::Goal goal_msg;
     goal_msg.target_yaw     = static_cast<float>(yaw_correction_);           // required
-    goal_msg.time_allowance =                                            // optional
-        rclcpp::Duration::from_seconds(15.0);  // 0 → no timeout
+    // goal_msg.time_allowance =                                            // optional
+    //     rclcpp::Duration::from_seconds(15.0);  // 0 → no timeout
 
       
 
@@ -574,7 +590,7 @@ private:
         {
           // feedback->angular_distance_traveled is in radians
           RCLCPP_DEBUG(get_logger(), "Spun %.2f / %.2f rad",
-                      feedback->angular_distance_traveled,
+                      feedback->remaining_angle, //angular_distance_traveled
                       yaw_correction_);
         };
 
@@ -585,13 +601,16 @@ private:
             case rclcpp_action::ResultCode::SUCCEEDED: {
               const auto &res = wr.result;              
               RCLCPP_INFO(get_logger(),
-                          "Spin finished in %.2fs",
-                          rclcpp::Duration(res->total_elapsed_time).seconds());
+                          "Spin Finished");
               delay_timer_ = create_wall_timer(
-              7s,
+              1s,
               [this]() {
                 delay_timer_->cancel();
-                transitionTo(State::OBJECT_LOCALIZATION);
+
+                if (pos_error_ > 1.25){
+                  transitionTo(State::FORWARD);}
+                else{
+                transitionTo(State::OBJECT_LOCALIZATION);}
               });
               
               
@@ -614,6 +633,65 @@ private:
     //------------------------------------------------------------------
     nav2_spin_client_->async_send_goal(goal_msg, options);
   }
+
+
+  void doForward()
+  {
+    auto [gx, gy] = best_path_[current_goal_idx_];
+    double dx  = gx - current_pos_.first;
+    double dy  = gy - current_pos_.second;
+    double yaw = std::atan2(dy, dx);
+    double px = gx - 0.45*std::cos(yaw);
+    double py = gy - 0.45*std::sin(yaw);
+
+    if (!local_client_->wait_for_action_server(2s)) {
+      RCLCPP_ERROR(get_logger(), "MoveTCP action server unavailable");
+      transitionTo(State::FINISHED);
+      return;
+    }
+
+    MoveTCP::Goal goal_msg;
+    goal_msg.target_pose.header.frame_id = ref_frame_;
+    goal_msg.target_pose.header.stamp    = now();
+    goal_msg.target_pose.pose.position.x = px;
+    goal_msg.target_pose.pose.position.y = py;
+    goal_msg.target_pose.pose.orientation.w = 1.0;  // facing default
+
+    auto opts = rclcpp_action::Client<MoveTCP>::SendGoalOptions{};
+    opts.goal_response_callback = [](auto) { /* ignore */ };
+
+    opts.feedback_callback =
+      [](auto, auto fb) {
+        RCLCPP_DEBUG(rclcpp::get_logger("ring_path_planner"),
+          "remaining distance=%.2f", fb->remaining_distance);
+      };
+
+    RCLCPP_INFO(get_logger(),
+      "Ring number=%zu local approach", current_goal_idx_ + 1);
+
+    opts.result_callback =
+      [this](const LocalGoalH::WrappedResult & res) {
+        if (res.code == rclcpp_action::ResultCode::SUCCEEDED) {
+          RCLCPP_INFO(get_logger(), "Local approach succeeded");
+           
+          delay_timer_ = create_wall_timer(
+          4s,
+          [this]() {
+            delay_timer_->cancel();
+            transitionTo(State::OBJECT_LOCALIZATION);
+          });
+          
+          
+          
+        } else {
+          RCLCPP_ERROR(get_logger(), "Local approach failed");
+          transitionTo(State::FINISHED);
+        }
+      };
+
+    local_client_->async_send_goal(goal_msg, opts);
+  }
+
   // --------------------------------------------------------------------------
   // 3) Local approach: send MoveTCP goal to the ring itself
   // --------------------------------------------------------------------------
@@ -652,10 +730,10 @@ private:
           RCLCPP_INFO(get_logger(), "Local approach succeeded");
           ++current_goal_idx_;  
           delay_timer_ = create_wall_timer(
-          5s,
+          2s,
           [this]() {
             delay_timer_->cancel();
-            transitionTo(State::PUT_DOWN);
+            transitionTo(State::BACKUP);
           });
           
           
@@ -683,7 +761,7 @@ private:
 
     // Create and populate the goal
     auto goal_msg = MoveJoint::Goal();
-    goal_msg.distance_mm = 170;
+    goal_msg.distance_mm = 120;
 
     // Define send options with a result callback
     rclcpp_action::Client<MoveJoint>::SendGoalOptions send_opts;
@@ -946,6 +1024,7 @@ private:
   double                    start_yaw_;
   double                    current_yaw_;
   double                    yaw_correction_;
+  double                    pos_error_;
   std::vector<size_t> rings_index_;
 
 
