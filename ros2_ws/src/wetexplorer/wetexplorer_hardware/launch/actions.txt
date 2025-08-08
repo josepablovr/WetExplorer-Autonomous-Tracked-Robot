@@ -1,0 +1,2 @@
+ros2 action send_goal /calibrate wetexplorer_hardware/action/Calibrate "{}"
+ros2 action send_goal /move_joint wetexplorer_hardware/action/MoveJoint "{distance_mm: 150}"

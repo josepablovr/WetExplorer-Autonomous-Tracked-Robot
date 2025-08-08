@@ -1,0 +1,10 @@
+bool out_0
+bool out_1
+bool out_2
+bool out_3
+bool out_4
+bool out_5
+bool out_6
+bool out_7
+int64 pwm_sx
+int64 pwm_dx

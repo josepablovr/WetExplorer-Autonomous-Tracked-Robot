@@ -7,7 +7,7 @@
   <xacro:property name="radius" value="0.015" />
   <xacro:property name="length" value="0.2" />
 
-  <link name="chamber_link">
+  <link name="tcp_frame">
 
       <inertial>
           <origin xyz="0 0 0"/>
@@ -34,7 +34,7 @@
   </link>
 
 
-
+  <link name="chamber_link">
   <joint name="chamber_joint"
     type="prismatic">
     <origin
@@ -43,7 +43,7 @@
     <parent
       link="base_link" />
     <child
-      link="chamber_link" />
+      link="tcp_frame" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -52,6 +52,21 @@
       effort="75"
       velocity="0.2" />
     <dynamics damping="3.0" friction="0.3"/>
+  </joint>
+
+  
+  <joint name="chamber_fixed_joint"
+    type="fixed">
+    <origin
+      xyz="0.48712 0 0.00"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chamber_link" />
+    <axis
+      xyz="0 0 1" />
+    
   </joint>
 
 
@@ -128,7 +143,7 @@
 
   <joint name="chamber_joint_2" type="revolute">
     <origin xyz="0 0 -0.1" rpy="0 0 0" />
-    <parent link="chamber_link" />
+    <parent link="tcp_frame" />
     <child link="chamber_link_2" />
     <axis xyz="1 0 0" />
     <dynamics dampling="1000.0" friction="0.3"/>    

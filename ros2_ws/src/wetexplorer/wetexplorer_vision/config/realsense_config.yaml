@@ -1,0 +1,17 @@
+# realsense_config.yaml
+
+# RealSense Camera Parameters
+rgb_camera:
+  color_profile: '640x480x15'
+
+depth_module:
+  depth_profile: '640x480x15'
+
+enable_depth: true
+enable_color: true
+
+align_depth:
+  enable: true
+
+# Preset JSON file path (to be dynamically updated by the launch file)
+json_file_path: '/ros2_ws/src/wetexplorer/wetexplorer_vision/config/hdensity.json'

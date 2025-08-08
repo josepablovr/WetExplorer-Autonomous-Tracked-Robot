@@ -18,32 +18,88 @@
   gz_type_name: "gz.msgs.IMU"
   direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
+- ros_topic_name: "imu_heading/data"
+  gz_topic_name: "imu_heading/data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
+
+- ros_topic_name: "navsat/fix"
+  gz_topic_name: "navsat/fix"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
+
+- ros_topic_name: "gps/ref"
+  gz_topic_name: "gps/ref"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_IGN
 
   # gz topic published by Sensors plugin (Camera)
 
-- ros_topic_name: "camera/info"
-  gz_topic_name: "camera/info"
+- ros_topic_name: "camera1/camera_info"
+  gz_topic_name: "camera1/camera_info"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "gz.msgs.CameraInfo"
   direction: "GZ_TO_ROS"
 
 
-- ros_topic_name: "camera/image_raw"
-  gz_topic_name: "camera/image_raw"
+- ros_topic_name: "camera1/image_raw"
+  gz_topic_name: "camera1/image_raw"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "gz.msgs.Image"
   direction: "GZ_TO_ROS"
 
-- ros_topic_name: "camera/depth_raw"
-  gz_topic_name: "camera/depth_raw"
+- ros_topic_name: "camera1/depth_raw"
+  gz_topic_name: "camera1/depth_raw"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "gz.msgs.Image"
   direction: "GZ_TO_ROS"
 
+- ros_topic_name: "camera2/camera_info"
+  gz_topic_name: "camera2/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "camera2/image_raw"
+  gz_topic_name: "camera2/image_raw"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "camera2/depth_raw"
+  gz_topic_name: "camera2/depth_raw"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: "GZ_TO_ROS"
 
  # gz topic published by Sensors plugin (TRACK CMD)
-- ros_topic_name: "/wetexplorer/cmd_vel"
+- ros_topic_name: "/WetExplorer/cmd_vel"
   gz_topic_name: "/model/wetexplorer/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist" 
-  direction: ROS_TO_GZ
+  direction: "ROS_TO_GZ"
+
+
+ # gz topic published by Sensors plugin (TRACK CMD)
+- ros_topic_name: "/WetExplorer/cmd_vel"
+  gz_topic_name: "/model/wetexplorer/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "ignition.msgs.Twist" 
+  direction: "GZ_TO_ROS"
+
+# Robot Odometry
+- ros_topic_name: "/simulation/pose"
+  gz_topic_name: "/model/wetexplorer/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry" 
+  direction: "GZ_TO_ROS"
+
+# Robot TF
+- ros_topic_name: "/simulation/wetexplorer_tf"
+  gz_topic_name: "/model/wetexplorer/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V" 
+  direction: "GZ_TO_ROS"

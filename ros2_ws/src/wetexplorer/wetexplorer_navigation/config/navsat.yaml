@@ -1,0 +1,25 @@
+navsat_transform:
+  ros__parameters:
+    frequency: 30.0
+    delay: 3.0
+    magnetic_declination_radians: 0.0
+    yaw_offset: -1.570796327
+    zero_altitude: true
+    broadcast_utm_transform: true
+    publish_filtered_gps: true
+    use_odometry_yaw: false
+    wait_for_datum: false
+    # datum: [38.161491, -122.4546443, 0.0] # pre-set datum if needed, [lat, lon, yaw]
+
+navsat_transform_truth:
+  ros__parameters:
+    frequency: 50.0
+    delay: 3.0
+    magnetic_declination_radians: 0.0
+    yaw_offset: 3.14159265359
+    zero_altitude: true
+    broadcast_utm_transform: true
+    publish_filtered_gps: true
+    use_odometry_yaw: false
+    wait_for_datum: false
+    # datum: [38.161491, -122.4546443, 0.0] # pre-set datum if needed, [lat, lon, yaw]

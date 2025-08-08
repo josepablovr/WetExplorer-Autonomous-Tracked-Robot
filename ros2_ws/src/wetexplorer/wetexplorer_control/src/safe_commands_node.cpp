@@ -1,123 +1,113 @@
-#include <ros/ros.h>
-#include <geometry_msgs/Twist.h>
+#include <rclcpp/rclcpp.hpp>
+#include <geometry_msgs/msg/twist.hpp>
 #include <cmath>
 
-class SafeCommands
+class SafeCommands : public rclcpp::Node
 {
 public:
     SafeCommands()
+    : Node("safe_commands"),
+      last_linear_velocity_(0.0),
+      last_angular_velocity_(0.0),
+      last_time_(this->now())
     {
-        // Initialize the subscriber and publisher
-        cmd_vel_sub_ = nh_.subscribe("/cmd_vel_out", 10, &SafeCommands::cmdVelCallback, this);
-        safe_cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("/WetExplorer/cmd_vel", 10);
+        using std::placeholders::_1;
 
-        // Initialize last velocities to zero
-        last_linear_velocity_ = 0.0;
-        last_angular_velocity_ = 0.0;
+        cmd_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
+            "/cmd_vel_out", 10, std::bind(&SafeCommands::cmdVelCallback, this, _1));
+
+        safe_cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/WetExplorer/cmd_vel", 10);
     }
 
 private:
-    ros::NodeHandle nh_;
-    ros::Subscriber cmd_vel_sub_;
-    ros::Publisher safe_cmd_vel_pub_;
-
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr safe_cmd_vel_pub_;
+    rclcpp::Time last_time_;
     double last_linear_velocity_;
     double last_angular_velocity_;
+    
 
-    const double max_linear_velocity_ = 0.5;            // m/s
-    const double max_linear_acceleration_ = 0.15;        // m/s^2 (acceleration)r
-    const double max_linear_deceleration_ = 0.25;        // m/s^2 (deceleration)
-    const double max_angular_velocity_ = 1.0;           // rad/s
-    const double max_angular_acceleration_ = 0.1;      // rad/s^2 (acceleration)
-    const double max_angular_deceleration_ = 0.25;      // rad/s^2 (deceleration)
-    const double velocity_threshold_ = 0.01;             // m/s, threshold below which no limits are applied
+    const double max_linear_velocity_ = 0.5;
+    const double max_linear_acceleration_ = 0.5;
+    const double max_linear_deceleration_ = 2.5;
+    const double max_angular_velocity_ = 1.0;
+    const double max_angular_acceleration_ = 0.5;
+    const double max_angular_deceleration_ = 1.0;
+    const double velocity_threshold_ = 0.01;
+   
 
-    void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
+    void cmdVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
     {
-        geometry_msgs::Twist safe_cmd;
+        geometry_msgs::msg::Twist safe_cmd;
 
-        // Handle linear velocity and acceleration
         double linear_velocity = msg->linear.x;
-        double linear_acceleration = (linear_velocity - last_linear_velocity_) / 0.1; // Assuming 10 Hz rate
+        double angular_velocity = msg->angular.z;
 
+        rclcpp::Time current_time = this->now();
+        double dt = (current_time - last_time_).seconds();
+        last_time_ = current_time;
+        // Avoid very small or zero dt
+        if (dt < 1e-6)
+            dt = 1e-6;
+        else if (dt > 0.5){
+            RCLCPP_WARN(this->get_logger(), "Large dt (%.3f s), resetting velocity history", dt);
+            last_linear_velocity_ = msg->linear.x;
+            last_angular_velocity_ = msg->angular.z;
+            dt = 0.1; // fallback to a default reasonable value
+        }
+
+        double linear_acceleration = (linear_velocity - last_linear_velocity_) / dt;
+        double angular_acceleration = (angular_velocity - last_angular_velocity_) / dt;
+
+        // --- Linear velocity limiting ---
         if (std::fabs(linear_velocity) > velocity_threshold_)
         {
-            // Apply velocity limit
-            if (std::fabs(linear_velocity) > max_linear_velocity_)
-            {
-                linear_velocity = std::copysign(max_linear_velocity_, linear_velocity);
-            }
+            // Clamp velocity
+            linear_velocity = std::copysign(
+                std::min(std::fabs(linear_velocity), max_linear_velocity_), linear_velocity);
 
-            // Apply appropriate acceleration or deceleration limit
-            if (linear_acceleration > 0) // Accelerating
+            // Clamp acceleration/deceleration
+            if (linear_acceleration > 0 && std::fabs(linear_acceleration) > max_linear_acceleration_)
             {
-                if (std::fabs(linear_acceleration) > max_linear_acceleration_)
-                {
-                    linear_velocity = last_linear_velocity_ + std::copysign(max_linear_acceleration_ * 0.1, linear_velocity - last_linear_velocity_);
-                }
+                linear_velocity = last_linear_velocity_ + std::copysign(max_linear_acceleration_ * dt, linear_velocity - last_linear_velocity_);
             }
-            else if (linear_acceleration < 0) // Decelerating
+            else if (linear_acceleration < 0 && std::fabs(linear_acceleration) > max_linear_deceleration_)
             {
-                if (std::fabs(linear_acceleration) > max_linear_deceleration_)
-                {
-                    linear_velocity = last_linear_velocity_ + std::copysign(max_linear_deceleration_ * 0.1, linear_velocity - last_linear_velocity_);
-                }
+                linear_velocity = last_linear_velocity_ + std::copysign(max_linear_deceleration_ * dt, linear_velocity - last_linear_velocity_);
             }
         }
 
-        // Handle angular velocity and acceleration
-        double angular_velocity = msg->angular.z;
-        double angular_acceleration = (angular_velocity - last_angular_velocity_) / 0.1; // Assuming 10 Hz rate
-
+        // --- Angular velocity limiting ---
         if (std::fabs(angular_velocity) > velocity_threshold_)
         {
-            // Apply velocity limit
-            if (std::fabs(angular_velocity) > max_angular_velocity_)
-            {
-                angular_velocity = std::copysign(max_angular_velocity_, angular_velocity);
-            }
+            angular_velocity = std::copysign(
+                std::min(std::fabs(angular_velocity), max_angular_velocity_), angular_velocity);
 
-            // Apply appropriate acceleration or deceleration limit
-            if (angular_acceleration > 0) // Accelerating
+            if (angular_acceleration > 0 && std::fabs(angular_acceleration) > max_angular_acceleration_)
             {
-                if (std::fabs(angular_acceleration) > max_angular_acceleration_)
-                {
-                    angular_velocity = last_angular_velocity_ + std::copysign(max_angular_acceleration_ * 0.1, angular_velocity - last_angular_velocity_);
-                }
+                angular_velocity = last_angular_velocity_ + std::copysign(max_angular_acceleration_ * dt, angular_velocity - last_angular_velocity_);
             }
-            else if (angular_acceleration < 0) // Decelerating
+            else if (angular_acceleration < 0 && std::fabs(angular_acceleration) > max_angular_deceleration_)
             {
-                if (std::fabs(angular_acceleration) > max_angular_deceleration_)
-                {
-                    angular_velocity = last_angular_velocity_ + std::copysign(max_angular_deceleration_ * 0.1, angular_velocity - last_angular_velocity_);
-                }
+                angular_velocity = last_angular_velocity_ + std::copysign(max_angular_deceleration_ * dt, angular_velocity - last_angular_velocity_);
             }
         }
 
-        // Set the safe velocities
         safe_cmd.linear.x = linear_velocity;
         safe_cmd.angular.z = angular_velocity;
 
-        // Publish the safe command
-        safe_cmd_vel_pub_.publish(safe_cmd);
+        safe_cmd_vel_pub_->publish(safe_cmd);
 
-        // Update the last velocities
         last_linear_velocity_ = linear_velocity;
         last_angular_velocity_ = angular_velocity;
     }
 };
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "safe_commands");
-    SafeCommands safe_commands;
-
-    ros::Rate rate(50); // 10 Hz
-    while (ros::ok())
-    {
-        ros::spinOnce();
-        rate.sleep();
-    }
-
+   
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<SafeCommands>());
+    rclcpp::shutdown();
     return 0;
 }

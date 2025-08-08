@@ -1,206 +1,259 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(wetexplorer_navigation)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(std_srvs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(lifecycle_msgs REQUIRED)
+find_package(nav2_costmap_2d REQUIRED)
+find_package(pluginlib         REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(wetexplorer_hardware REQUIRED)
+find_package(wetexplorer_control REQUIRED)
+
+include_directories(include)
+
+add_executable(imu_covariance_node src/imu_covariance_node.cpp)
+add_executable(imu_filtering_node src/imu_filtering_node.cpp)
+add_executable(position_controller_node src/position_controller_node.cpp)
+add_executable(odometry_tcp_node src/odometry_tcp_node.cpp)
+add_executable(goal_publisher src/goal_publisher.cpp)
+add_executable(map_server_node src/map_server_node.cpp)
+add_executable(gps_noise_node src/gps_sim_noise.cpp)
+add_executable(heading_covariance src/heading_covariance.cpp)
+add_executable(gps_error src/gps_error_model.cpp)
+add_executable(ground_truth_node src/ground_truth.cpp)
+add_executable(error_display_node src/velocity_error_publisher.cpp)
+#add_executable(dummy_map_node src/dummy_map.cpp)
+add_executable(ring_path_planner src/ring_path_planner.cpp)
+add_executable(spin_control_action_server src/spin_control_action_server.cpp)
+
+add_executable(error_publisher src/position_error_publisher.cpp)
+add_executable(6d_pose_caller src/6d_pose_caller.cpp)
+
+ament_target_dependencies(6d_pose_caller rclcpp rclcpp_action sensor_msgs std_srvs)
+
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "action/MoveTCP.action"
+  "action/LocalizeObject.action"
+  "action/UpdateMap.action"
+  "action/SpinYaw.action"
+  DEPENDENCIES
+    builtin_interfaces
+    geometry_msgs
+)
+
+
+
+ament_export_dependencies(rosidl_default_runtime)
+
+# Allow including the generated action headers
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+
+add_library(ring_layer_plugin SHARED
+  src/ring_layer.cpp
+)
+
+ament_target_dependencies(imu_covariance_node
+  rclcpp
+  std_msgs  
+  geometry_msgs
+  sensor_msgs
+)
+
+ament_target_dependencies(imu_filtering_node
+  rclcpp
+  std_msgs  
+  geometry_msgs
+  sensor_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+)
+
+
+
+ament_target_dependencies(position_controller_node
+  rclcpp
+  std_msgs
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  Eigen3
+  std_srvs  
+  rclcpp_action
+)
+# Link the generated action interface into your node
+rosidl_target_interfaces(position_controller_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
+rosidl_target_interfaces(ring_path_planner ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(map_server_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(6d_pose_caller ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(spin_control_action_server ${PROJECT_NAME} "rosidl_typesupport_cpp")
+ament_target_dependencies(odometry_tcp_node
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  Eigen3
+)
+
+ament_target_dependencies(goal_publisher
+  rclcpp
+  std_msgs  
+  geometry_msgs
+  sensor_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+)
+
+ament_target_dependencies(map_server_node
+  rclcpp
+  std_msgs  
+  geometry_msgs
+  visualization_msgs
+  sensor_msgs
+  nav_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  rclcpp_action
+)
+
+#ament_target_dependencies(dummy_map_node
+#  rclcpp
+#  visualization_msgs
+#  geometry_msgs
+#)
+
+ament_target_dependencies(gps_noise_node
+  rclcpp
+  sensor_msgs  
+)
+
+ament_target_dependencies(gps_error
+  rclcpp
+  sensor_msgs  
+  nav_msgs
+)
+
+ament_target_dependencies(heading_covariance
+  rclcpp
+  sensor_msgs  
+  nav_msgs
+)
+
+ament_target_dependencies(ground_truth_node
+  rclcpp
+  sensor_msgs  
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  nav_msgs
+)
+
+ament_target_dependencies(error_display_node
+  rclcpp
+  sensor_msgs 
+  nav_msgs
+)
+
+
+ament_target_dependencies(error_publisher
+  rclcpp
+  sensor_msgs 
+  nav_msgs
   std_msgs
 )
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
-
-
-## Uncomment this if the package has a setup.py. This macro ensures
-## modules and global scripts declared therein get installed
-## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
-
-################################################
-## Declare ROS messages, services and actions ##
-################################################
-
-## To declare and build messages, services or actions from within this
-## package, follow these steps:
-## * Let MSG_DEP_SET be the set of packages whose message types you use in
-##   your messages/services/actions (e.g. std_msgs, actionlib_msgs, ...).
-## * In the file package.xml:
-##   * add a build_depend tag for "message_generation"
-##   * add a build_depend and a exec_depend tag for each package in MSG_DEP_SET
-##   * If MSG_DEP_SET isn't empty the following dependency has been pulled in
-##     but can be declared for certainty nonetheless:
-##     * add a exec_depend tag for "message_runtime"
-## * In this file (CMakeLists.txt):
-##   * add "message_generation" and every package in MSG_DEP_SET to
-##     find_package(catkin REQUIRED COMPONENTS ...)
-##   * add "message_runtime" and every package in MSG_DEP_SET to
-##     catkin_package(CATKIN_DEPENDS ...)
-##   * uncomment the add_*_files sections below as needed
-##     and list every .msg/.srv/.action file to be processed
-##   * uncomment the generate_messages entry below
-##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
-
-## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
-
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
-
-## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
-
-## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
-
-################################################
-## Declare ROS dynamic reconfigure parameters ##
-################################################
-
-## To declare and build dynamic reconfigure parameters within this
-## package, follow these steps:
-## * In the file package.xml:
-##   * add a build_depend and a exec_depend tag for "dynamic_reconfigure"
-## * In this file (CMakeLists.txt):
-##   * add "dynamic_reconfigure" to
-##     find_package(catkin REQUIRED COMPONENTS ...)
-##   * uncomment the "generate_dynamic_reconfigure_options" section below
-##     and list every .cfg file to be processed
-
-## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
-#   cfg/DynReconf2.cfg
-# )
-
-###################################
-## catkin specific configuration ##
-###################################
-## The catkin_package macro generates cmake config files for your package
-## Declare things to be passed to dependent projects
-## INCLUDE_DIRS: uncomment this if your package contains header files
-## LIBRARIES: libraries you create in this project that dependent projects also need
-## CATKIN_DEPENDS: catkin_packages dependent projects also need
-## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES wetexplorer_navigation
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+ament_target_dependencies(ring_path_planner
+  rclcpp
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  nav_msgs
+  visualization_msgs
+  lifecycle_msgs
+  rclcpp_action
+  nav2_msgs
+  std_srvs
+  sensor_msgs
+  wetexplorer_hardware
 )
 
-###########
-## Build ##
-###########
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
+ament_target_dependencies(ring_layer_plugin
+  rclcpp
+  visualization_msgs
+  nav2_costmap_2d
+  nav_msgs
+  pluginlib  
 )
 
-## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/wetexplorer_navigation.cpp
-# )
+ament_target_dependencies(spin_control_action_server
+  rclcpp
+  rclcpp_action
+  geometry_msgs
+  nav_msgs
+  tf2
+  tf2_geometry_msgs)
 
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+install(DIRECTORY launch config action
+  DESTINATION share/${PROJECT_NAME}
+)
 
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/wetexplorer_navigation_node.cpp)
 
-## Rename C++ executable without prefix
-## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+install(
+  TARGETS
+    imu_covariance_node  
+    imu_filtering_node
+    position_controller_node
+    odometry_tcp_node
+    goal_publisher
+    map_server_node
+    gps_noise_node
+    gps_error
+    heading_covariance
+    ground_truth_node
+    error_display_node
+    ring_path_planner
+    ring_layer_plugin
+    6d_pose_caller
+    spin_control_action_server
+    error_publisher
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+  LIBRARY DESTINATION lib/${PROJECT_NAME}
+)
 
-#############
-## Install ##
-#############
 
-# all install targets should use catkin DESTINATION variables
-# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
-
-## Mark executable scripts (Python etc.) for installation
-## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
-
-## Mark executables for installation
-## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
-# install(TARGETS ${PROJECT_NAME}_node
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
-
-## Mark libraries for installation
-## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html
-# install(TARGETS ${PROJECT_NAME}
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
-# )
-
-## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
-
-## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
-
-#############
-## Testing ##
-#############
-
-## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_wetexplorer_navigation.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
-# endif()
-
-## Add folders to be run by python nosetests
-# catkin_add_nosetests(test)
+pluginlib_export_plugin_description_file(nav2_costmap_2d ring_layer.xml)
+ament_export_libraries(ring_layer_plugin)
+ament_package()

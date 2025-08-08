@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="camera">
+
+  
+  <link
+    name="camera1_link">
+    <inertial>
+      <origin
+        xyz="-0.0131182411372806 0.000373990072271901 -0.000195973766208279"
+        rpy="0 0 0" />
+      <mass
+        value="0.0460883337703012" />
+      <inertia
+        ixx="5.83719963366224E-05"
+        ixy="2.47510070128998E-07"
+        ixz="-1.0827158801375E-07"
+        iyy="5.78042618984764E-06"
+        iyz="1.07254851043995E-07"
+        izz="5.79281012663685E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/camera1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/camera1_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="camera1_joint"
+    type="fixed">
+    <origin
+      xyz="0.76557 0.117 0.455898357942271"
+      rpy="0 1.3963 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="camera1_link_output">      
+    </link>
+
+
+  <joint name="camera1_joint_output"
+      type="fixed">
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="-1.5708 0 -1.5708 " />
+      <parent
+        link="camera1_link" />
+      <child
+        link="camera1_link_output" />
+      <axis
+        xyz="0 0 0" />
+  </joint>
+
+
+  <link name="camera1_calib">      
+    </link>
+
+
+  <joint name="camera1_calib_joint"
+      type="fixed">
+      <origin
+        xyz="0.768379569054 0.148829653859 0.454491734505"
+        rpy="0 0 0 " />
+      <parent
+        link="base_link" />
+      <child
+        link="camera1_calib" />
+      <axis
+        xyz="0 0 0" />
+  </joint>
+  <link name="camera_link">      
+    </link>
+  <joint name="orbbec_joint"
+      type="fixed">
+      <origin
+        xyz="0.0 0.023878177 0.0"
+        rpy="0 1.3963 0" />
+      <parent
+        link="camera1_calib" />
+      <child
+        link="camera_link" />
+      <axis
+        xyz="0 0 0" />
+  </joint>
+
+
+
+
+  <gazebo reference="camera1_link">
+      <material>Gazebo/Black</material>
+
+      <sensor name="depth_camera1" type="depth">
+          <pose> 0 0 0 0 0 0 </pose>
+          <visualize>true</visualize>
+          <update_rate>15</update_rate>
+          <camera>
+              <camera_info_topic>camera1/camera_info</camera_info_topic>
+              <horizontal_fov>1.518</horizontal_fov>
+              <image>
+                  <format>R8G8B8</format>
+                  <width>640</width>
+                  <height>480</height>
+              </image>
+              <clip>
+                  <near>0.1</near>
+                  <far>5.0</far>
+              </clip>
+          </camera>
+          <topic>camera1/depth_raw</topic>
+          <gz_frame_id>camera1_link_output</gz_frame_id>
+      </sensor>
+      <sensor name="visual_camera1" type="camera">
+          <pose> 0 0 0 0 0 0 </pose>
+          <visualize>true</visualize>
+          <update_rate>15</update_rate>
+          <camera>
+              <camera_info_topic>camera1/camera_info</camera_info_topic>
+              <horizontal_fov>1.518</horizontal_fov>
+              <image>
+                  <format>R8G8B8</format>
+                  <width>640</width>
+                  <height>480</height>
+              </image>
+              <clip>
+                  <near>0.3</near>
+                  <far>5.0</far>
+              </clip>
+          </camera>
+          <topic>camera1/image_raw</topic>
+          <gz_frame_id>camera1_link_output</gz_frame_id>
+      </sensor>
+  </gazebo>
+
+    <!-- <gazebo reference="camera_link">
+
+        <material>Gazebo/Gray</material>
+        <sensor name="camera" type="camera">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>5</update_rate>
+            <camera>
+                <horizontal_fov>1.5184</horizontal_fov>
+                <image>
+                    <format>R8G8B8</format>
+                    <width>1280</width>
+                    <height>720</height>
+                </image>
+                <clip>
+                    <near>0.2</near>
+                    <far>6.0</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_output</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo> -->
+</robot>

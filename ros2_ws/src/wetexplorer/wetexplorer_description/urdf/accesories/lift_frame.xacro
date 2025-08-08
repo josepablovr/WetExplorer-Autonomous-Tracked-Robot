@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gas">
+
+  
+
+  <link
+    name="lift_frame_link">
+    <inertial>
+      <origin
+        xyz="0.384602614047704 0.00516056535095322 0.379395344023061"
+        rpy="0 0 0" />
+      <mass
+        value="1.66740244337728" />
+      <inertia
+        ixx="0.0159803258854863"
+        ixy="2.91741868178475E-07"
+        ixz="-6.6154980601123E-06"
+        iyy="0.0182992559780835"
+        iyz="8.33022359577223E-08"
+        izz="0.00461536634329923" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/extra/lift_frame_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wetexplorer_description/meshes/lift_frame_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="lift_frame_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lift_frame_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+
+
+  <gazebo reference="lift_frame_link">
+      <material>Gazebo/LightGrey</material>
+  </gazebo>
+
+ 
+
+</robot>

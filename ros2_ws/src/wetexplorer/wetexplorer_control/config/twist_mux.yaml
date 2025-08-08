@@ -1,24 +1,27 @@
-# twist_mux.yaml
-
-topics:
-  - name: teleop
-    topic: /joy_teleop/cmd_vel
-    timeout: 0.5
-    priority: 100
-
-  - name: command
-    topic: /commands/cmd_vel
-    timeout: 0.5
-    priority: 50
-
-
-  - name: autonomous
-    topic: /cmd_vel_trajectory
-    timeout: 0.5
-    priority: 25
-
-
-    
+twist_mux:
+  ros__parameters:
+    topics:
+      joy:
+        topic   : joy_teleop/cmd_vel
+        timeout : 0.5
+        priority: 10
+      interactive_marker:
+        topic   : twist_marker_server/cmd_vel
+        timeout : 0.5
+        priority: 8
+      nav_low:
+        topic   : commands/cmd_vel
+        timeout : 0.5
+        priority: 2    
+      nav_high:
+        topic   : cmd_vel
+        timeout : 0.5
+        priority: 1
+    locks:
+      e_stop:
+        topic   : e_stop
+        timeout : 0.0
+        priority: 255
 
 
 

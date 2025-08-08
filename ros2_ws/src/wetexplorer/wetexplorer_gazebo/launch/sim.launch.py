@@ -7,6 +7,7 @@ from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
+from launch.actions import AppendEnvironmentVariable
 
 from launch_ros.actions import Node
 
@@ -24,10 +25,10 @@ def generate_launch_description():
     package_name='wetexplorer_description' 
 
 
-
+    
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rsp.launch.py'
+                    get_package_share_directory(package_name),'launch','description_tracks.launch.py'
                 )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
     )
     
@@ -63,10 +64,18 @@ def generate_launch_description():
     # Run the spawner node from the ros_gz_sim package. The entity name doesn't really matter if you only have a single robot.
     spawn_entity = Node(package='ros_gz_sim', executable='create',
                         arguments=['-topic', 'robot_description',
-                                   '-name', 'wetexplorer',
-                                   'z', '10.0'],
+                                   '-name', 'wetexplorer',                                   
+                                   '-x', '0.0',
+                                   '-y', '0.0',
+                                   '-z', '0.5',],
                         output='screen')
     
+    set_env_vars_resources = AppendEnvironmentVariable(
+        'GZ_SIM_RESOURCE_PATH',
+        os.path.join(get_package_share_directory('wetexplorer_description'),
+                     'meshes'))
+
+
     package_name='wetexplorer_gazebo' 
     bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
     ros_gz_bridge = Node(
@@ -103,9 +112,11 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         world_arg,
+        set_env_vars_resources,
         gazebo,
         spawn_entity,
-        ros_gz_bridge       
+        ros_gz_bridge     
     ])
+
 
 #export GAZEBO_MODEL_PATH=$/ros2_ws/install/wetexplorer_description/share/wetexplorer_description

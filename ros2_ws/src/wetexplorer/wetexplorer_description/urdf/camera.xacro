@@ -62,7 +62,7 @@
       type="fixed">
       <origin
         xyz="0.0 0.0 0.0"
-        rpy="-1.5708 0 1.5708 " />
+        rpy="-1.5708 0 -1.5708 " />
       <parent
         link="camera_link" />
       <child
@@ -85,8 +85,8 @@
               <horizontal_fov>1.518</horizontal_fov>
               <image>
                   <format>R8G8B8</format>
-                  <width>1280</width>
-                  <height>720</height>
+                  <width>640</width>
+                  <height>480</height>
               </image>
               <clip>
                   <near>0.3</near>
@@ -105,8 +105,8 @@
               <horizontal_fov>1.518</horizontal_fov>
               <image>
                   <format>R8G8B8</format>
-                  <width>1280</width>
-                  <height>720</height>
+                  <width>640</width>
+                  <height>480</height>
               </image>
               <clip>
                   <near>0.3</near>

@@ -17,17 +17,18 @@ def generate_launch_description():
     gz_launch_path = PathJoinSubstitution([pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])    
     gz_world_path = PathJoinSubstitution([pkg_spaceros_gz_sim, 'worlds'])
     bridge_params = os.path.join(get_package_share_directory('wetexplorer_gazebo'),'config','gz_bridge.yaml')
+    controller_params = os.path.join(get_package_share_directory('wetexplorer_gazebo'),'config','wheels_controller.yaml')
     resource_world_path = '/ros2_ws/src/wetexplorer'
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            default_value='empty',
-            choices=['empty', 'mars', 'enceladus'],
+            default_value='rings',
+            choices=['empty', 'rings', 'enceladus'],
             description='World to load into Gazebo'
         ),
         SetLaunchConfiguration(name='world_file', 
                                value=[LaunchConfiguration('world'), 
-                                      TextSubstitution(text='.world')]),
+                                      TextSubstitution(text='.sdf')]),
 
         # LOAD MODEL PARAMENTER
         IncludeLaunchDescription(
@@ -47,7 +48,6 @@ def generate_launch_description():
                 'on_exit_shutdown': 'True'
             }.items(),
         ),
-
 
 
 
@@ -75,6 +75,27 @@ def generate_launch_description():
                 '-p',
                 f'config_file:={bridge_params}',
             ]
-        )
+        ),
+
+        # Node(
+        # package="controller_manager",
+        # executable="ros2_control_node", 
+        # parameters=[controller_params],
+        # output="both",),
+
+        # Node(
+        # package="controller_manager",
+        # executable="spawner",
+        # arguments=["joint_state_broadcaster"],
+        # ),
+
+        # Node(
+        # package="controller_manager",
+        # executable="spawner",
+        # arguments=["r6bot_controller", "--param-file", controller_params],
+        #      )
+      
+
+        
 
     ])

@@ -1,0 +1,9 @@
+# ---------------------- Goal ----------------------
+# (empty goal; just “start localization now”)
+
+---
+# -------------------- Result ---------------------
+geometry_msgs/PoseStamped pose
+---
+# ------------------- Feedback -------------------
+# (no feedback for now)

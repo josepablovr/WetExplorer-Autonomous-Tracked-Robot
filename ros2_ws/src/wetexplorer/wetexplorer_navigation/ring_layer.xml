@@ -1,0 +1,5 @@
+<library path="ring_layer_plugin">
+  <class type="wetexplorer_navigation::RingLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Converts each circle in /map_rings into lethal obstacle costs in the Nav2 costmap.</description>
+  </class>
+</library>
