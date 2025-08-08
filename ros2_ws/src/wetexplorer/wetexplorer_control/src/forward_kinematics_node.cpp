@@ -87,12 +87,12 @@ private:
         double omega_R = (omega_R_rpm * 2.0 * M_PI) / 60.0;
 
         // Convert rad/s -> linear m/s (accounting for gear ratio & sprocket radius)
-        double v_L = (omega_L * radius_sprocket_) / gear_ratio_;
-        double v_R = (omega_R * radius_sprocket_) / gear_ratio_;
+        double v_L = 1.01695*(omega_L * radius_sprocket_) / gear_ratio_;
+        double v_R = 1.0169*(omega_R * radius_sprocket_) / gear_ratio_;
 
         // Forward kinematic equations
         double V_x = (v_L + v_R) / 2.0;
-        double theta_dot = (v_R - v_L) / tracks_separation_;
+        double theta_dot = 0.84*(v_R - v_L) / tracks_separation_;
 
         
         double dt = (this->now() - last_time_).seconds();
