@@ -134,7 +134,7 @@ controller_server:
       regulated_linear_scaling_min_speed: 0.25
       use_rotate_to_heading: true
       allow_reversing: false
-      rotate_to_heading_min_angle: 0.785
+      rotate_to_heading_min_angle: 0.5
       max_angular_accel: 3.2
       max_robot_pose_search_dist: 10.0
       stateful: true
@@ -190,7 +190,7 @@ global_costmap:
       publish_frequency: 1.0
       global_frame: odom
       robot_base_frame: base_link
-      robot_radius: 0.45
+      robot_radius: 0.5
       resolution: 0.05
       # When using GPS navigation you will potentially traverse huge environments which are not practical to
       # fit on a big static costmap. Thus it is recommended to use a rolling global costmap large enough to
@@ -327,7 +327,7 @@ behavior_server:
     simulate_ahead_time: 2.0
     max_rotational_vel: 0.3
     min_rotational_vel: 0.4
-    rotational_acc_lim: 0.3
+    rotational_acc_lim: 0.1
 
 waypoint_follower:
   ros__parameters:
