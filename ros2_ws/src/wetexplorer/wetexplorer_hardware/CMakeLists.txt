@@ -55,7 +55,7 @@ install(TARGETS lifting_joint_interface
 )
 
 # Install interface and launch files
-install(DIRECTORY action msg launch
+install(DIRECTORY action msg launch config
   DESTINATION share/${PROJECT_NAME}
 )
 
