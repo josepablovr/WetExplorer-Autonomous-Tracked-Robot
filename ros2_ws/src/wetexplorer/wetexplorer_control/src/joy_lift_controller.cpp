@@ -60,7 +60,7 @@ private:
     RCLCPP_INFO(this->get_logger(), "Current Distance: %d mm", new_goal);
     if (direction == 1.0f) {
       new_goal -=  30;
-      direction_ = -1.0f;action_client_->async_send_goal(goal_msg);
+      direction_ = -1.0f;
       new_goal = std::clamp(new_goal, 0, 300);
       sendGoal(new_goal);
     } else if (direction == -1.0f) {
