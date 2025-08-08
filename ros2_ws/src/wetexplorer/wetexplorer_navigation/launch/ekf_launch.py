@@ -29,7 +29,7 @@ def generate_launch_description():
         output="screen",
         parameters=[{"use_sim_time": sim_env}],
     )
-    ld.add_action(node_6d_pose)
+    #ld.add_action(node_6d_pose)
     # 1) Local EKF (node_6d_pose)
     ekf_local =  Node(
             package="robot_localization",
@@ -44,6 +44,41 @@ def generate_launch_description():
 
     # 2) If ref == "map": run global EKF, navsat_transform, gps_noise
     if ref_env == "map":
+
+        gps_error =  Node(
+            package="wetexplorer_navigation",
+            executable="gps_error",
+            name="gps_error_model",
+            output="screen",
+            parameters=[ekf_local_params, {"use_sim_time": sim_env}],
+            
+            
+        )
+        ld.add_action(gps_error)
+
+        heading_cov =  Node(
+            package="wetexplorer_navigation",
+            executable="heading_covariance",
+            name="heading_covariance",
+            output="screen",
+            parameters=[ekf_local_params, {"use_sim_time": sim_env}],
+            
+            
+        )
+        ld.add_action(heading_cov)
+
+        error_publisher =  Node(
+            package="wetexplorer_navigation",
+            executable="error_publisher",
+            name="ground_truth_error_publisher",
+            output="screen",
+            parameters=[ekf_local_params, {"use_sim_time": sim_env}],
+            
+            
+        )
+        ld.add_action(error_publisher)
+
+
         ekf_global = Node(
             package="robot_localization",
             executable="ekf_node",
@@ -61,8 +96,8 @@ def generate_launch_description():
                 output="screen",
                 parameters=[navsat_params, {"use_sim_time": sim_env}],
                 remappings=[
-                    ("imu", "imu_heading/data"),
-                    ("gps/fix", "navsat/fix_cov"),
+                    ("imu", "gps/navheading"),
+                    ("gps/fix", "gps/fix"),
                     ("gps/filtered", "gps/filtered"),
                     ("odometry/gps", "odometry/gps"),
                     ("odometry/filtered", "odometry/global"),
@@ -94,7 +129,7 @@ def generate_launch_description():
     else:
         forward_kinematics = Node(
             package="wetexplorer_control",
-            executable="forward_kinematics",
+            executable="forward_kinematics_node",
             name="forward_kinematics",
             output="screen",
             parameters=[{"use_sim_time": sim_env}],
@@ -110,7 +145,7 @@ def generate_launch_description():
                 output="screen",
                 parameters=[navsat_params, {"use_sim_time": sim_env}],
                 remappings=[
-                    ("imu", "imu_heading/data"),
+                    ("imu", "gps/data"),
                     ("gps/fix", "gps/ref"),
                     ("gps/filtered", "gps/filtered_2"),
                     ("odometry/gps", "odometry/gps_ref"),
