@@ -67,10 +67,20 @@ def generate_launch_description():
         output="screen",
     )
 
+    node_lift = Node(
+    package="wetexplorer_hardware",
+    executable="lifting_joint_interface",
+    name="lifting_joint_interface",
+    parameters=[
+        {"device_name": "/dev/ttyACM0"},
+        {"baudrate": 115200}
+    ]
+    )
+
     return LaunchDescription([
         base_imu_node,
         imu_transformer,
         imu_signal_processing,
-        gemini_camera_launch,
+        node_lift,
         robo_base_node,
     ])
