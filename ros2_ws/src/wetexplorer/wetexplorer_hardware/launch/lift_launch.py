@@ -13,7 +13,7 @@ def generate_launch_description():
     executable="lifting_joint_interface",
     name="lifting_joint_interface",
     parameters=[
-        {"device_name": "/dev/ttyACM0"},
+        {"device_name": "/dev/ttyLift"},
         {"baudrate": 115200}
     ]
     )
