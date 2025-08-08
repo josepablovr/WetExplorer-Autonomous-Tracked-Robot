@@ -11,7 +11,7 @@ class RobotControl : public rclcpp::Node
 public:
     RobotControl()
     : Node("robot_control_node"),
-      radius_sprocket_(0.083),
+      radius_sprocket_(0.076678), //0.083
       track_separation_(0.6103),
       b_(0.6108),
       gear_ratio_(30.0),
@@ -24,6 +24,7 @@ public:
 
         motor_cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/robo/cmd_vel", 10);
         angular_velocity_pub_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("/angular_velocity_cmd", 10);
+        b_ *=1.19;
     }
 
 private:
@@ -77,9 +78,9 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr angular_velocity_pub_;
 
     // Constants
-    const double radius_sprocket_;
+    double radius_sprocket_;
     const double track_separation_;
-    const double b_;
+    double b_;
     double gear_ratio_;
     double vel_max_rpm_;
 };
