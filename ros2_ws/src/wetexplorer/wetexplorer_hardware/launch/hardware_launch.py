@@ -4,6 +4,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
 from launch_ros.actions import Node
+import os
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
@@ -72,9 +74,27 @@ def generate_launch_description():
     executable="lifting_joint_interface",
     name="lifting_joint_interface",
     parameters=[
-        {"device_name": "/dev/ttyACM0"},
+        {"device_name": "/dev/tty_Lift"},
         {"baudrate": 115200}
     ]
+    )
+    
+
+    gps_config_directory = os.path.join(
+    get_package_share_directory('wetexplorer_hardware'),
+    'config'
+    )
+
+    gps_params = os.path.join(gps_config_directory, 'gps.yaml')
+
+    ublox_gps_node = Node(
+        package='ublox_gps',
+        executable='ublox_gps_node',
+        name='ublox_gps_node',
+        namespace='gps',           # -> topics like /gps/fix, /gps/navsatfix, etc.
+        output='both',
+        parameters=[gps_params],        
+        remappings=[('ublox_gps_node/fix', 'fix')]  # /gps/ublox_gps_node/fix → /gps/fix
     )
 
     return LaunchDescription([
@@ -82,5 +102,7 @@ def generate_launch_description():
         imu_transformer,
         imu_signal_processing,
         node_lift,
+        node_lift,
         robo_base_node,
+        ublox_gps_node,
     ])
