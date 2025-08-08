@@ -57,7 +57,7 @@ private:
 
     int new_goal = static_cast<int>(current_position_mm_);
 
-    RCLCPP_INFO(this->get_logger(), "Current Distance: %d mm", new_goal);
+    //RCLCPP_INFO(this->get_logger(), "Current Distance: %d mm", new_goal);
     if (direction == 1.0f) {
       new_goal -=  30;
       direction_ = -1.0f;
