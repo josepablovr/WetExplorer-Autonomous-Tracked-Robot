@@ -154,6 +154,20 @@ def generate_launch_description():
     )
     ld.add_action(position_controller)
 
+    spin_control_action_server = Node(
+        package="wetexplorer_navigation",
+        executable="spin_control_action_server",
+        name="spin_control_action_server",
+        output="screen",
+        parameters=[
+            {"use_sim_time": sim_env},
+            {"ref": ref_env}
+        ]
+    )
+    ld.add_action(spin_control_action_server)
+
+    
+
     goal_publisher = Node(
         package="wetexplorer_navigation",
         executable="goal_publisher",
