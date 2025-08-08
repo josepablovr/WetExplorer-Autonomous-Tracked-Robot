@@ -81,7 +81,7 @@
   <joint name="camera1_calib_joint"
       type="fixed">
       <origin
-        xyz="0.768379569054 0.148829653859 0.454491734505"
+        xyz="0.768379569054 0.148829653859 0.543491734505"
         rpy="0 0 0 " />
       <parent
         link="base_link" />
