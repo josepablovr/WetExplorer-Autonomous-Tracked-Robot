@@ -61,7 +61,7 @@ WetExplorer is a tracked robot that navigates autonomously in wetlands, locating
 To inspect the robot model, use the following command:
 
 ```
-roslaunch wetexplorer_description view.launch
+ros2 launch wetexplorer_description description_tracks.launch.py
 ```
 
 <img src="imgs/Visualize.png" alt="GZ" width="400"/>
@@ -73,40 +73,43 @@ roslaunch wetexplorer_description view.launch
 Launch the simulation in a world with various objects to test the tracked robot’s traversability:
 
 ```
-roslaunch wetexplorer_gazebo tracked.launch
+ros2 launch wetexplorer_gazebo harmonic.launch.py
 ```
 
 <img src="imgs/gazebo.gif" alt="GZ" width="400"/>
 
-### Run the Controller
+### Run the Control Node
 
 Enable the robot to receive commands from the Bluetooth joystick:
 
 ```
-roslaunch wetexplorer_control kinematics.launch
+ros2 launch wetexplorer_control control_launch.py
 ```
 
 ### Launch the Hardware Interfaces
 
 ```
-roslaunch wetexplorer_hardware hardware.launch
+ros2 launch wetexplorer_hardware hardware_launch.py
 ```
 
-### Launch the Sensor Fusion Node
+### Launch Navigation Stack
 
 ```
-roslaunch wetexplorer_navigation localize.launch
+ros2 launch wetexplorer_navigation navigation_launch.py
 ```
 
 Compare the different odometry techniques’ performance:
 
 <img src="imgs/localization.png" alt="GZ" width="600"/>
 
-### Enable Goal-Based Navigation
 
+
+
+### Launch Computer Vision Node
 ```
-roslaunch wetexplorer_navigation follow.launch
+ros2 launch wetexplorer_vision  vision_launch.py
 ```
+
 
 # Setup of the System
 
@@ -152,7 +155,7 @@ This will run a container named "cont" with the following features:
 - Set the container user as **ros**.
 - Allow incoming network connections.
 - Enable the Display server to run windowed applications.
-- Map the folder **catkin_ws** into the container for persistent storage.
+- Map the folder **ros2_ws** into the container for persistent storage.
 - Include device group permissions with a custom device group rule.
 
 Run the following command:
@@ -200,27 +203,27 @@ Download [u-center](https://www.u-blox.com/en/product/u-center) and run it.
 
 #### 1. Build the `nmea_msgs` package
 ```
-catkin_make --only-pkg-with-deps nmea_msgs
+colcon build --packages-select nmea_msgs
 ```
 
 #### 2. Build the `ntrip_ros` package
 ```
-catkin_make --only-pkg-with-deps ntrip_ros
+colcon build --packages-select ntrip_ros
 ```
 
 #### 3. Build the `ublox` package
 ```
-catkin_make --only-pkg-with-deps ublox
+colcon build --packages-select ublox
 ```
 
 #### 4. Build the `wetexplorer_hardware` package
 ```
-catkin_make --only-pkg-with-deps wetexplorer_hardware
+colcon build --packages-select wetexplorer_hardware
 ```
 
 #### Launch GPS Node
 ```
-roslaunch wetexplorer_hardware gps.launch
+ros2 launch wetexplorer_hardware gps.launch
 ```
 
 
@@ -237,18 +240,18 @@ Note: the default platform comes with an open-loop mode and receives power perce
 #### 1. Build the package
 To build the robot base package, run the following command:
 
-    catkin_make --only-pkg-with-deps robo_base
+    colcon build --packages-select robo_base
 
 #### 2. Allow ROS commands
 Start by launching the ROS node to enable command modes:
 
-    roslaunch robo_base mode.launch
+    ros2 launch robo_base mode.launch
 Note: It is very important to run this node at first in order to allow the motors to receive direct velocity commands.
 
 ### 3. Start the server mode
 To start the base server, run:
 
-    roslaunch robo_base base.launch
+    ros2 launch robo_base base.launch
 
 ### Note:
-This work has been entirely developed by myself, José Vásquez.
+This work has been entirely developed by myself, under the supervision of Professor Xuping Zhang.
