@@ -118,7 +118,7 @@
   <joint name="gps_joint2"
     type="fixed">
     <origin
-      xyz="00.10541 0.3 0.53942"
+      xyz="00.10541 0.3 0.71942"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -129,8 +129,7 @@
   </joint>
 
   <gazebo reference="gps_frame_link">
-      <material>Gazebo/LightGrey</material>
-      
+      <material>Gazebo/LightGrey</material>      
   </gazebo>
 
   <gazebo reference="gps_link">
