@@ -102,7 +102,6 @@ def generate_launch_description():
         imu_transformer,
         imu_signal_processing,
         node_lift,
-        node_lift,
         robo_base_node,
         ublox_gps_node,
     ])
