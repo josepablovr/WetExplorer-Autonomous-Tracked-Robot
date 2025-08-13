@@ -54,8 +54,7 @@ public:
       "/commands/cmd_vel", 10);
     error_vel_pub_ = create_publisher<geometry_msgs::msg::Twist>(
       "/error_tcp", 10);
-    error_vel_pub_ = create_publisher<geometry_msgs::msg::Twist>(
-      "/error_tcp", 10);
+ 
     pose_pub_ = create_publisher<geometry_msgs::msg::PoseStamped>(
       "/odometry/tcp", 10);
 
@@ -90,7 +89,7 @@ public:
 private:
   // ROS interfaces
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr       cmd_vel_pub_;
-  rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr       error_vel_pub_;
+
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr       error_vel_pub_;
   rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr      odom_sub_;
@@ -259,7 +258,6 @@ private:
       }
 
       if (steady_count_ >= 150) {
-      if (steady_count_ >= 150) {
         cmd_vel_pub_->publish(geometry_msgs::msg::Twist{});
         result->success = true;
         goal_handle->succeed(result);
@@ -290,15 +288,7 @@ private:
       double direction = std::copysign(1.0,dx_bl);
       
       
-      double ori_error = alpha - cur_yaw_;
-      ori_error = std::fmod(ori_error + M_PI, 2 * M_PI);
-      if (ori_error < 0) ori_error += 2 * M_PI;
-      ori_error -= M_PI;
-
-      double dx_bl =  std::cos(cur_yaw_) * dx + std::sin(cur_yaw_) * dy;   // forward-axis component
-      //double dy_bl = -std::sin(cur_yaw_) * dx + std::cos(cur_yaw_) * dy;   // left-axis  component
-      double direction = std::copysign(1.0,dx_bl);
-      
+            
       // Gain scheduling
       if (pos_error >= 0.30) {
         KPt_        = 1.0;
@@ -309,13 +299,11 @@ private:
         KIp_        = 0.1;
         KIt_        = 0.02;
         direction = 1.0;
-        KIp_        = 0.1;
-        KIt_        = 0.02;
-        direction = 1.0;
+        
       }
       else if (pos_error >= 0.15) {
         KPt_        = 1.0;
-        KPp_        = 1.0;
+        KPp_        = 1.0;}
       else if (pos_error >= 0.15) {
         KPt_        = 1.0;
         KPp_        = 1.0;
@@ -323,10 +311,7 @@ private:
         KIp_        = 0.1;
         KIt_        = 0.02;
         direction = 1.0;
-        
-        KIp_        = 0.1;
-        KIt_        = 0.02;
-        direction = 1.0;
+       
         
       }
       else if (pos_error >= 0.005) {
@@ -337,26 +322,22 @@ private:
         KIp_        = 0.05;
         KIt_        = 0.02;
         max_w_      = 0.1;
-        KIp_        = 0.05;
-        KIt_        = 0.02;
+    
       }
       else if (pos_error < 0.005){
         KPt_        = 0.00;
         KPp_        = 0.00;
+      }
       else if (pos_error < 0.005){
         KPt_        = 0.00;
         KPp_        = 0.00;
         max_w_      = 0.05;
         KIp_        = 0.005;
         if (ori_error < 0.02) //1.1grad
-        KIt_        = 0.02;
-        else
-        KIt_        = 0.00;
-        KIp_        = 0.005;
-        if (ori_error < 0.02) //1.1grad
-        KIt_        = 0.02;
-        else
-        KIt_        = 0.00;
+          KIt_        = 0.02;
+        else {
+          KIt_        = 0.00;
+          KIp_        = 0.005;}
       }
 
       
@@ -388,9 +369,7 @@ private:
       cmd.angular.z = ori_error;
       error_vel_pub_->publish(cmd);
 
-      cmd.linear.x  = pos_error;
-      cmd.angular.z = ori_error;
-      error_vel_pub_->publish(cmd);
+    
 
       rate.sleep();
     }
