@@ -12,7 +12,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     # Use env var SIM=true/false to switch remaps
     sim_env = os.getenv("sim", "true").lower() == "true"
-
+    config_filename = ''
     if sim_env:
         # SIM — map to camera1 topics
         remaps = [
@@ -21,6 +21,7 @@ def generate_launch_description():
             ('/camera/image/raw',   '/camera1/image_raw'),
         ]
         params = [{'use_sim_time': True}]
+        config_filename = 'yolo_config_sim.yaml'
     else:
         # REAL — map to hardware topics
         remaps = [
@@ -29,9 +30,10 @@ def generate_launch_description():
             ('/camera/image/raw',   '/camera/color/image_raw'),
         ]
         params = [{'use_sim_time': False}]
+        config_filename = 'yolo_config_real.yaml'
 
     # Load YOLO config
-    config_filename = 'yolo_config.yaml'
+    
     config_path = os.path.join(
         get_package_share_directory('wetexplorer_perception'),
         'config',

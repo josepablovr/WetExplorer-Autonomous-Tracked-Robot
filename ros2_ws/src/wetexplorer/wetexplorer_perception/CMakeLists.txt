@@ -63,7 +63,7 @@ install(TARGETS object_depth_cloud_node rgbd_map_node object_localizer
   DESTINATION lib/${PROJECT_NAME})
 
 # (Optional) install params/launch files if you add them later
-install(DIRECTORY config launch
+install(DIRECTORY config launch models
   DESTINATION share/${PROJECT_NAME}
 )
 
