@@ -50,9 +50,17 @@ public:
     tf_refresh_every_n_     = this->declare_parameter<int>("tf_refresh_every_n", 0);
     map_max_radius_         = this->declare_parameter<double>("map_max_radius", 0.0);
     depth_scale_uint16_     = this->declare_parameter<double>("depth_scale_uint16", 1.0); // mm->m
-
+    use_sim_time_ = this->get_parameter("use_sim_time").as_bool();
     map_frame_  = "map";
     base_frame_ = "base_link";
+
+
+    if (use_sim_time_){
+      mask_path_ = "/ros2_ws/src/wetexplorer/wetexplorer_vision/wetexplorer_vision/chamber_mask.png";
+    }
+    else{
+      mask_path_ = "/workspaces/ros2_ws/src/wetexplorer/wetexplorer_vision/wetexplorer_vision/chamber_mask.png";
+    }
 
     // --- QoS ---
     rclcpp::QoS sensor_qos = rclcpp::SensorDataQoS();
@@ -142,6 +150,8 @@ private:
                          0,0,1,0,
                          0,0,0,1};
 
+                         
+  bool use_sim_time_ = false;
   // ROS I/O
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cloud_full_, pub_cloud_delta_;
   std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image>> image_sub_;
