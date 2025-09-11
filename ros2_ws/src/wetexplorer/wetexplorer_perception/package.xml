@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>wetexplorer_perception</name>
+  <version>0.0.1</version>
+  <description>Perception utilities: object-masked depth cloud publisher.</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>message_filters</depend>
+  <depend>cv_bridge</depend>
+  <depend>yolo_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>wetexplorer_navigation</depend>
+  <depend>wetexplorer_vision_predator</depend>
+
+  
+
+
+
+  <!-- OpenCV is brought in by cv_bridge, but declare explicitly -->
+  <exec_depend>opencv</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
