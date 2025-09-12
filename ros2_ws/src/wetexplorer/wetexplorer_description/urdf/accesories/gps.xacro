@@ -98,7 +98,7 @@
   <joint name="gps_joint"
     type="fixed">
     <origin
-      xyz="0.10541 0.28651 0.53942"
+      xyz="0.10541 0.3 0.71942"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -118,7 +118,7 @@
   <joint name="gps_joint2"
     type="fixed">
     <origin
-      xyz="00.10541 0.3 0.53942"
+      xyz="00.10541 0.3 0.71942"
       rpy="0 0 0" />
     <parent
       link="base_link" />

@@ -9,7 +9,7 @@ ekf_global_node:
     sensor_timeout: 1.0
     publish_tf: true
     print_diagnostics: false
-    frequency: 30.0
+    frequency: 20.0
     odom0: /odometry/local
     odom0_config: [false, false, false,
                   false, false, false,

@@ -9,7 +9,7 @@ ekf_node_odom:
     sensor_timeout: 1.0
     publish_tf: true
     print_diagnostics: false
-    frequency: 50.0
+    frequency: 30.0
     odom0: /odometry/forward_kinematics
     odom0_config: [false, false, false,
                   false, false, false,

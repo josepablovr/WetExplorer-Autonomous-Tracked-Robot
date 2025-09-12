@@ -74,8 +74,8 @@ public:
     tolerance_ = 0.03;
     max_v_      = 0.1;
     max_w_      = 0.1;
-    KPxte_ = 0.1;
-    KPxte_ = 0.1;
+    KPxte_ = 0.0;
+    KPxte_ = 0.;
     KPp_   = 1.0;
     KPt_   = 0.1;
     KIp_   = 0.0;
@@ -288,22 +288,19 @@ private:
       double direction = std::copysign(1.0,dx_bl);
       
       
+      RCLCPP_INFO(get_logger(), "Position Error: %.3f | Orientation Error: %.3f", pos_error);
             
       // Gain scheduling
       if (pos_error >= 0.30) {
         KPt_        = 1.0;
-        KPp_        = 1.0;
-        KPt_        = 1.0;
-        KPp_        = 110;
+        KPp_        = 1.0;       
         max_w_      = 0.5;
         KIp_        = 0.1;
         KIt_        = 0.02;
         direction = 1.0;
         
       }
-      else if (pos_error >= 0.15) {
-        KPt_        = 1.0;
-        KPp_        = 1.0;}
+    
       else if (pos_error >= 0.15) {
         KPt_        = 1.0;
         KPp_        = 1.0;
@@ -314,30 +311,26 @@ private:
        
         
       }
-      else if (pos_error >= 0.005) {
-        KPt_        = 1.0;
-        KPt_        = 1.0;
-        KPp_        = 1.0;
+      else if (pos_error >= 0.005) {      
+        KPt_        = 0.2;
+        KPp_        = 0.2;
         max_w_      = 0.1;
         KIp_        = 0.05;
         KIt_        = 0.02;
-        max_w_      = 0.1;
+       
     
       }
-      else if (pos_error < 0.005){
-        KPt_        = 0.00;
-        KPp_        = 0.00;
-      }
+      
       else if (pos_error < 0.005){
         KPt_        = 0.00;
         KPp_        = 0.00;
         max_w_      = 0.05;
         KIp_        = 0.005;
         if (ori_error < 0.02) //1.1grad
-          KIt_        = 0.02;
+          KIt_        = 0.0;
         else {
-          KIt_        = 0.00;
-          KIp_        = 0.005;}
+          KIt_        = 0.02;
+          KIp_        = 0.000;}
       }
 
       
@@ -356,7 +349,7 @@ private:
                  + KIt_ * orientation_integral_
                  + KIxte_ * cross_track_integral_;
 
-      v = std::clamp(direction*v, -max_v_, max_v_);
+   
       v = std::clamp(direction*v, -max_v_, max_v_);
       w = std::clamp(w, -max_w_, max_w_);
 
