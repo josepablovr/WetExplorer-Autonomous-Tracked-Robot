@@ -237,6 +237,13 @@ RUN apt-get install -y \
     ros-humble-nav2-costmap-2d \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install -y \
+    ros-humble-rtabmap \
+    ros-humble-rtabmap-rviz-plugins \
+    ros-humble-rtabmap-slam \
+    ros-humble-rtabmap-sync \
+    && rm -rf /var/lib/apt/lists/*
+
 # Create a non-root user
 ARG USERNAME=ros
 ARG USER_UID=1000
