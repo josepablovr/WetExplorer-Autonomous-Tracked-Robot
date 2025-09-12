@@ -54,6 +54,7 @@ public:
       "/commands/cmd_vel", 10);
     error_vel_pub_ = create_publisher<geometry_msgs::msg::Twist>(
       "/error_tcp", 10);
+ 
     pose_pub_ = create_publisher<geometry_msgs::msg::PoseStamped>(
       "/odometry/tcp", 10);
 
@@ -73,7 +74,8 @@ public:
     tolerance_ = 0.03;
     max_v_      = 0.1;
     max_w_      = 0.1;
-    KPxte_ = 0.1;
+    KPxte_ = 0.0;
+    KPxte_ = 0.;
     KPp_   = 1.0;
     KPt_   = 0.1;
     KIp_   = 0.0;
@@ -87,6 +89,7 @@ public:
 private:
   // ROS interfaces
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr       cmd_vel_pub_;
+
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr       error_vel_pub_;
   rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr      odom_sub_;
@@ -127,7 +130,7 @@ private:
 
       // 2) base_link -> chamber_link
       auto tf_base_chamber = tf_buffer_.lookupTransform(
-        "base_link", "TCP_prediction", tf2::TimePointZero);
+        "base_link", "chamber_link", tf2::TimePointZero);
 
       // Rotation & translation (ref->base)
       tf2::Quaternion q1; 
@@ -261,6 +264,7 @@ private:
         RCLCPP_INFO(get_logger(), "MoveTCP goal succeeded");
         goal_active_ = false;
         steady_count_ = 0;
+        steady_count_ = 0;
         return;
       }
 
@@ -283,15 +287,20 @@ private:
       //double dy_bl = -std::sin(cur_yaw_) * dx + std::cos(cur_yaw_) * dy;   // left-axis  component
       double direction = std::copysign(1.0,dx_bl);
       
+      
+      RCLCPP_INFO(get_logger(), "Position Error: %.3f | Orientation Error: %.3f", pos_error);
+            
       // Gain scheduling
       if (pos_error >= 0.30) {
         KPt_        = 1.0;
-        KPp_        = 110;
+        KPp_        = 1.0;       
         max_w_      = 0.5;
         KIp_        = 0.1;
         KIt_        = 0.02;
         direction = 1.0;
+        
       }
+    
       else if (pos_error >= 0.15) {
         KPt_        = 1.0;
         KPp_        = 1.0;
@@ -299,26 +308,32 @@ private:
         KIp_        = 0.1;
         KIt_        = 0.02;
         direction = 1.0;
+       
         
       }
-      else if (pos_error >= 0.005) {
-        KPt_        = 1.0;
-        KPp_        = 1.0;
+      else if (pos_error >= 0.005) {      
+        KPt_        = 0.2;
+        KPp_        = 0.2;
         max_w_      = 0.1;
         KIp_        = 0.05;
         KIt_        = 0.02;
+       
+    
       }
+      
       else if (pos_error < 0.005){
         KPt_        = 0.00;
         KPp_        = 0.00;
         max_w_      = 0.05;
         KIp_        = 0.005;
         if (ori_error < 0.02) //1.1grad
-        KIt_        = 0.02;
-        else
-        KIt_        = 0.00;
+          KIt_        = 0.0;
+        else {
+          KIt_        = 0.02;
+          KIp_        = 0.000;}
       }
 
+      
       
 
       position_integral_    += pos_error;
@@ -334,6 +349,7 @@ private:
                  + KIt_ * orientation_integral_
                  + KIxte_ * cross_track_integral_;
 
+   
       v = std::clamp(direction*v, -max_v_, max_v_);
       w = std::clamp(w, -max_w_, max_w_);
 
@@ -345,6 +361,8 @@ private:
       cmd.linear.x  = pos_error;
       cmd.angular.z = ori_error;
       error_vel_pub_->publish(cmd);
+
+    
 
       rate.sleep();
     }

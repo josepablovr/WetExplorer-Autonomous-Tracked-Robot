@@ -11,7 +11,6 @@
 #include <nav2_msgs/action/spin.hpp>
 #include <wetexplorer_navigation/action/move_tcp.hpp>
 #include <wetexplorer_navigation/action/spin_yaw.hpp>
-#include <wetexplorer_navigation/action/spin_yaw.hpp>
 #include <wetexplorer_navigation/action/update_map.hpp>
 #include <wetexplorer_hardware/action/move_joint.hpp>
 #include <tf2_ros/buffer.h>
@@ -32,8 +31,6 @@ using namespace std::chrono_literals;
 
 using GetState   = lifecycle_msgs::srv::GetState;
 using Navigate   = nav2_msgs::action::NavigateToPose;
-//using Spin   = nav2_msgs::action::Spin;
-using Spin   = wetexplorer_navigation::action::SpinYaw;
 //using Spin   = nav2_msgs::action::Spin;
 using Spin   = wetexplorer_navigation::action::SpinYaw;
 using MoveTCP    = wetexplorer_navigation::action::MoveTCP;
@@ -106,11 +103,11 @@ public:
     // Action & service clients
     nav2_client_       = rclcpp_action::create_client<Navigate>(this, "/navigate_to_pose");
     nav2_spin_client_       = rclcpp_action::create_client<Spin>(this, "/spin_control"); //spin
-    nav2_spin_client_       = rclcpp_action::create_client<Spin>(this, "/spin_control"); //spin
+    
     local_client_      = rclcpp_action::create_client<MoveTCP>(this, "/MoveTCP");
     update_map_client_ = rclcpp_action::create_client<UpdateMap>(this, "/update_map");
     localize_client_ = rclcpp_action::create_client<LocalizeObj>(this, "/localize_object");
-    localize_client_ = rclcpp_action::create_client<LocalizeObj>(this, "/localize_object");
+  
     bt_client_         = create_client<GetState>("/bt_navigator/get_state");
     back_up_client_ = rclcpp_action::create_client<BackUp>(this, "backup");
     action_client_ = rclcpp_action::create_client<MoveJoint>(this, "/move_joint");
@@ -568,10 +565,7 @@ private:
     double dx  = gx - current_pos_.first;
     double dy  = gy - current_pos_.second;
     pos_error_   = std::sqrt(dx*dx + dy*dy);
-
     yaw_correction_ = std::atan2(dy, dx);
-
-    
 
     
     //------------------------------------------------------------------
@@ -753,7 +747,7 @@ private:
           1s,
           [this]() {
             delay_timer_->cancel();
-            transitionTo(State::BACKUP);
+            transitionTo(State::PUT_DOWN);
           });
           
           

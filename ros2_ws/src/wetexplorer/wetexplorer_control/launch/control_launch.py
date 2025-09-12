@@ -64,6 +64,15 @@ def generate_launch_description():
         parameters=[filepath_config_joy, sim_time_param],
     )
 
+    node_6d_pose = Node(
+        package="wetexplorer_navigation",
+        executable="6d_pose_caller",
+        name="object_pose_caller",
+        output="screen",
+        parameters=[sim_time_param],
+    )
+    ld.add_action(node_6d_pose)
+
     node_inverse_kinematics = Node(
         package="wetexplorer_control",
         executable="robot_control_node",
