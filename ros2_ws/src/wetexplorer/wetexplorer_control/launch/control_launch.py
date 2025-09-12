@@ -108,8 +108,34 @@ def generate_launch_description():
     else:
         print("USING SIM TIME PARAMETERS")
 
+        # Node for transforming IMU frames
+        imu_transformer = Node(
+            package='imu_transformer',
+            executable='imu_transformer_node',
+            name='imu_data_transformer',
+            output='screen',
+            remappings=[
+                ('imu_in', 'imu/data_raw'),
+                ('imu_out', 'imu/data_transformed')
+            ],
+            parameters=[{
+                'target_frame': 'imu_link_target'  # check this name
+            }]
+        )
 
-    
+        # Node for signal processing
+        imu_signal_processing = Node(
+            package='wetexplorer_navigation',
+            executable='imu_filtering_node',
+            name='imu_filtering_node',
+            output='screen'
+        )
+
+        ld.add_action(imu_transformer)
+        ld.add_action(imu_signal_processing)
+
+
+        
 
     # ──────────────────────────────────────────────────────────────────────────────
     # Launch description
