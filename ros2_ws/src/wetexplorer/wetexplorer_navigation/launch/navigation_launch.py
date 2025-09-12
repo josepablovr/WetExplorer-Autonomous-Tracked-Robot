@@ -24,7 +24,14 @@ def generate_launch_description():
 
 
     ld = LaunchDescription()
-
+    node_6d_pose = Node(
+        package="wetexplorer_navigation",
+        executable="6d_pose_caller",
+        name="object_pose_caller",
+        output="screen",
+        parameters=[{"use_sim_time": sim_env}],
+    )
+    ld.add_action(node_6d_pose)
     
     # 1) Local EKF (node_6d_pose)
     ekf_local =  Node(
@@ -97,6 +104,16 @@ def generate_launch_description():
         )
         ld.add_action(forward_kinematics)
 
+    tcp_predictor =  Node(
+            package="wetexplorer_navigation",
+            executable="tcp_prediction_node",
+            name="tcp_predictor",
+            output="screen",
+            parameters=[{"use_sim_time": sim_env}],
+            
+    )
+    ld.add_action(tcp_predictor)
+    
     # 4) If sim is true: launch simulation-only nodes
     if sim_env:
         navsat_truth = Node(

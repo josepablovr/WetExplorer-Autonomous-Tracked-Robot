@@ -46,6 +46,7 @@ add_executable(error_display_node src/velocity_error_publisher.cpp)
 #add_executable(dummy_map_node src/dummy_map.cpp)
 add_executable(ring_path_planner src/ring_path_planner.cpp)
 add_executable(spin_control_action_server src/spin_control_action_server.cpp)
+add_executable(tcp_prediction_node src/tcp_prediction_node.cpp)
 
 add_executable(error_publisher src/position_error_publisher.cpp)
 add_executable(6d_pose_caller src/6d_pose_caller.cpp)
@@ -80,6 +81,9 @@ ament_target_dependencies(imu_covariance_node
   std_msgs  
   geometry_msgs
   sensor_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
 )
 
 ament_target_dependencies(imu_filtering_node
@@ -224,6 +228,13 @@ ament_target_dependencies(spin_control_action_server
   tf2
   tf2_geometry_msgs)
 
+
+
+ament_target_dependencies(tcp_prediction_node
+  rclcpp sensor_msgs geometry_msgs tf2 tf2_ros tf2_geometry_msgs)
+
+
+
 install(DIRECTORY launch config action
   DESTINATION share/${PROJECT_NAME}
 )
@@ -249,11 +260,19 @@ install(
     6d_pose_caller
     spin_control_action_server
     error_publisher
+    tcp_prediction_node    
   RUNTIME DESTINATION lib/${PROJECT_NAME}
   LIBRARY DESTINATION lib/${PROJECT_NAME}
+)
+
+install(TARGETS ring_layer_plugin
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
 )
 
 
 pluginlib_export_plugin_description_file(nav2_costmap_2d ring_layer.xml)
 ament_export_libraries(ring_layer_plugin)
+
 ament_package()

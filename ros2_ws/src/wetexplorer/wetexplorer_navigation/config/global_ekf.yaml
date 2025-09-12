@@ -5,7 +5,7 @@ ekf_global_node:
     odom_frame: odom
     base_link_frame: base_link
     world_frame: map
-    two_d_mode: true
+    two_d_mode: false
     sensor_timeout: 1.0
     publish_tf: true
     print_diagnostics: false
@@ -54,6 +54,20 @@ ekf_global_node:
     imu0_linear_acceleration_rejection_threshold: 10.0 #
     imu0_pose_rejection_threshold: 5.0           # Note the difference in parameter names
     imu0_twist_rejection_threshold: 5.0
+
+    imu1: /imu/data_filtered
+    imu1_config: [false, false, false,
+                  true, true, false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false]
+    imu1_differential: false
+    imu1_relative: false
+    imu1_queue_size: 1
+    imu1_remove_gravitational_acceleration: false
+    imu1_linear_acceleration_rejection_threshold: 10.0 #
+    imu1_pose_rejection_threshold: 5.0           # Note the difference in parameter names
+    imu1_twist_rejection_threshold: 5.0
     
     process_noise_covariance: [4.0e-4, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    4.0e-4,  0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
@@ -70,12 +84,12 @@ ekf_global_node:
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    10.0,   0.0,    0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    10.0,   0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.01]
-    initial_state_covariance: [1.0, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
-                              0.0,    1.0,  0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+    initial_state_covariance: [1e-9, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                              0.0,    1e-9,  0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0,    1e-9,  0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
-                              0.0,    0.0,    0.0,     1e-9,   0.0,    0.0,     0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
-                              0.0,    0.0,    0.0,    0.0,     1e-9,   0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
-                              0.0,    0.0,    0.0,    0.0,    0.0,     1.0,  0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                              0.0,    0.0,    0.0,     1.0,   0.0,    0.0,     0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                              0.0,    0.0,    0.0,    0.0,     1.0,   0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                              0.0,    0.0,    0.0,    0.0,    0.0,     1e-9,  0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    1e-9,    0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     1e-9,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     1e-9,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
