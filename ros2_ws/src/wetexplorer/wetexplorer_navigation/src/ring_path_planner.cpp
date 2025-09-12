@@ -52,7 +52,7 @@ class RingPathPlanner : public rclcpp::Node
 {
 public:
   enum class State { IDLE, START, GLOBAL_APPROACH, ROUGH_OBJECT_LOCALIZATION, SPIN, FORWARD, OBJECT_LOCALIZATION, LOCAL_APPROACH, PICK_UP, PUT_DOWN, BACKUP, FINISHED };
-  enum class State { IDLE, START, GLOBAL_APPROACH, ROUGH_OBJECT_LOCALIZATION, SPIN, FORWARD, OBJECT_LOCALIZATION, LOCAL_APPROACH, PICK_UP, PUT_DOWN, BACKUP, FINISHED };
+ 
   
   RingPathPlanner()
   : Node("ring_path_planner"),
@@ -66,7 +66,6 @@ public:
     dist_(0.0, 1.5),
     start_yaw_(0.0),
     current_yaw_(0.0),
-    pos_error_(0.0),
     pos_error_(0.0),
     yaw_correction_(0.0),
     tf_buffer_(this->get_clock()),
@@ -222,10 +221,7 @@ private:
         break;
       case State::FORWARD:
         doForward();
-        break;
-      case State::FORWARD:
-        doForward();
-        break;
+        break;     
       case State::OBJECT_LOCALIZATION:
         doObjectLocalization();
         break;
@@ -474,12 +470,6 @@ private:
     //-------------------------------------------------------------------
     
     
-    
-    double dx = ps_odom.pose.position.x - current_pos_.first;
-    double dy = ps_odom.pose.position.y - current_pos_.second;
-    best_path_[current_goal_idx_] = {ps_odom.pose.position.x, ps_odom.pose.position.y};
-    double yaw_to_object = std::atan2(dy, dx);            // radians, (-π, π]
-    yaw_correction_ = yaw_to_object;
     //--------------------------------------------------------------------
     // 3.  Use it (log, store, convert to quaternion …)
     //--------------------------------------------------------------------
@@ -579,11 +569,11 @@ private:
     double dy  = gy - current_pos_.second;
     pos_error_   = std::sqrt(dx*dx + dy*dy);
 
-    auto [gx, gy] = best_path_[current_goal_idx_];
-    double dx  = gx - current_pos_.first;
-    double dy  = gy - current_pos_.second;
-    pos_error_   = std::sqrt(dx*dx + dy*dy);
+    yaw_correction_ = std::atan2(dy, dx);
 
+    
+
+    
     //------------------------------------------------------------------
     // 2.  Build the goal
     //------------------------------------------------------------------
@@ -629,7 +619,7 @@ private:
               const auto &res = wr.result;              
               RCLCPP_INFO(get_logger(),
                           "Spin Finished");
-                          "Spin Finished");
+                   
               delay_timer_ = create_wall_timer(
               4s,
               [this]() {
@@ -721,63 +711,6 @@ private:
   }
 
 
-
-  void doForward()
-  {
-    auto [gx, gy] = best_path_[current_goal_idx_];
-    double dx  = gx - current_pos_.first;
-    double dy  = gy - current_pos_.second;
-    double yaw = std::atan2(dy, dx);
-    double px = gx - 0.45*std::cos(yaw);
-    double py = gy - 0.45*std::sin(yaw);
-
-    if (!local_client_->wait_for_action_server(2s)) {
-      RCLCPP_ERROR(get_logger(), "MoveTCP action server unavailable");
-      transitionTo(State::FINISHED);
-      return;
-    }
-
-    MoveTCP::Goal goal_msg;
-    goal_msg.target_pose.header.frame_id = ref_frame_;
-    goal_msg.target_pose.header.stamp    = now();
-    goal_msg.target_pose.pose.position.x = px;
-    goal_msg.target_pose.pose.position.y = py;
-    goal_msg.target_pose.pose.orientation.w = 1.0;  // facing default
-
-    auto opts = rclcpp_action::Client<MoveTCP>::SendGoalOptions{};
-    opts.goal_response_callback = [](auto) { /* ignore */ };
-
-    opts.feedback_callback =
-      [](auto, auto fb) {
-        RCLCPP_DEBUG(rclcpp::get_logger("ring_path_planner"),
-          "remaining distance=%.2f", fb->remaining_distance);
-      };
-
-    RCLCPP_INFO(get_logger(),
-      "Ring number=%zu local approach", current_goal_idx_ + 1);
-
-    opts.result_callback =
-      [this](const LocalGoalH::WrappedResult & res) {
-        if (res.code == rclcpp_action::ResultCode::SUCCEEDED) {
-          RCLCPP_INFO(get_logger(), "Local approach succeeded");
-           
-          delay_timer_ = create_wall_timer(
-          4s,
-          [this]() {
-            delay_timer_->cancel();
-            transitionTo(State::OBJECT_LOCALIZATION);
-          });
-          
-          
-          
-        } else {
-          RCLCPP_ERROR(get_logger(), "Local approach failed");
-          transitionTo(State::FINISHED);
-        }
-      };
-
-    local_client_->async_send_goal(goal_msg, opts);
-  }
 
   // --------------------------------------------------------------------------
   // 3) Local approach: send MoveTCP goal to the ring itself
@@ -1112,7 +1045,7 @@ private:
   double                    current_yaw_;
   double                    yaw_correction_;
   double                    pos_error_;
-  double                    pos_error_;
+
   std::vector<size_t> rings_index_;
 
 

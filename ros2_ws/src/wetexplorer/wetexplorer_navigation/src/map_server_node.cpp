@@ -189,7 +189,7 @@ private:
       marker.color.a         = 0.6f;
       output.markers.push_back(marker);
     }
-
+    
     pub_->publish(output);
     RCLCPP_DEBUG(get_logger(),
       "[map_server] Published %zu rings", output.markers.size());
@@ -215,7 +215,7 @@ private:
       "[update_map] Cancel requested");
     return rclcpp_action::CancelResponse::ACCEPT;
   }
-
+  
   // Execute the update_map action: calls localize_object and then returns all ring poses
   //--------------------------------------------------------------------
   void executeUpdateMap(
@@ -249,7 +249,7 @@ private:
           goal_handle->abort(std::make_shared<UpdateMapAction::Result>());
           return;
         }
-
+          
         //------------------------------------------------------------
         // B) Transform pose into map frame
         //------------------------------------------------------------

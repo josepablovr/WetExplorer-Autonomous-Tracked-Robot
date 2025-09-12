@@ -1,5 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/imu.hpp>
+#include <tf2_ros/transform_broadcaster.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 class ImuCovarianceNode : public rclcpp::Node
 {
@@ -12,7 +15,7 @@ public:
         imu_sub_ = this->create_subscription<sensor_msgs::msg::Imu>(
             "/imu/data", 10, std::bind(&ImuCovarianceNode::imuCallback, this, _1));
 
-        imu_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data_raw", 10);
+        imu_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data_transformed", 10);
 
         // Example covariance values
         orientation_covariance_ = {0.0001, 0, 0,
@@ -36,7 +39,16 @@ private:
         modified_msg.orientation_covariance = orientation_covariance_;
         modified_msg.angular_velocity_covariance = angular_velocity_covariance_;
         modified_msg.linear_acceleration_covariance = linear_acceleration_covariance_;
+        double roll, pitch, yaw;
 
+        tf2::Quaternion quat;
+        tf2::fromMsg(msg->orientation, quat);
+        tf2::Matrix3x3(quat).getRPY(roll, pitch, yaw);
+        roll = roll - M_PI;
+        pitch = -pitch;
+        tf2::Quaternion corrected_quat;
+        corrected_quat.setRPY(roll, pitch, yaw);
+        modified_msg.orientation = tf2::toMsg(corrected_quat);
         imu_pub_->publish(modified_msg);
     }
 

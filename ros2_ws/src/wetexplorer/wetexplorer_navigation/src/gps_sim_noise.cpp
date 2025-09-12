@@ -16,7 +16,7 @@ public:
 
     // Publisher for NavSatFix with modified covariance
     publisher_ = this->create_publisher<sensor_msgs::msg::NavSatFix>(
-      "/navsat/fix_cov", 10
+      "/gps/fix", 10
     );
 
     RCLCPP_INFO(this->get_logger(), "NavSatCovNode initialized, republishing to '/navsat/fix_cov'.");
@@ -32,9 +32,9 @@ private:
     // Covariance values: [0.000196, 0.0, 0.0,
     //                    0.0, 0.000196, 0.0,
     //                    0.0, 0.0, 0.000144]
-    out_msg.position_covariance = {0.00019600000000000002, 0.0, 0.0,
-                                  0.0, 0.00019600000000000002, 0.0,
-                                  0.0, 0.0, 0.000144};
+    out_msg.position_covariance = {0.000225, 0.0, 0.0,
+                                  0.0, 0.000225, 0.0,
+                                  0.0, 0.0, 0.000361};
     out_msg.position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_DIAGONAL_KNOWN;
 
     // Publish modified message
